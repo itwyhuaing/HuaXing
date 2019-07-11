@@ -1,0 +1,5 @@
+platform :ios,'9.0'
+target "HuaXing" do
+#pod 'MJRefresh', '~> 3.1.12'
+#pod 'CYLTabBarController', '~> 1.10.0'
+end

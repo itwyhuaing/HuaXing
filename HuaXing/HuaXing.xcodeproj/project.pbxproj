@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		469E585822D77F560077AE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585622D77F560077AE51 /* Main.storyboard */; };
+		469E585A22D77F580077AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E585922D77F580077AE51 /* Assets.xcassets */; };
+		469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585B22D77F580077AE51 /* LaunchScreen.storyboard */; };
+		469E586022D77F580077AE51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 469E585F22D77F580077AE51 /* main.m */; };
+		469E586E22D780A80077AE51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469E586A22D780A70077AE51 /* ViewController.m */; };
+		469E586F22D780A80077AE51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 469E586B22D780A70077AE51 /* AppDelegate.m */; };
+		EB6AE177C7EA7003A1C5C670 /* libPods-HuaXing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F68DAD5807E4BD3BF2EB8C94 /* libPods-HuaXing.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0DC983F95E75035A569B180B /* Pods-HuaXing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaXing.debug.xcconfig"; path = "Target Support Files/Pods-HuaXing/Pods-HuaXing.debug.xcconfig"; sourceTree = "<group>"; };
+		469E584D22D77F560077AE51 /* HuaXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		469E585722D77F560077AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		469E585922D77F580077AE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		469E585C22D77F580077AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		469E585E22D77F580077AE51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		469E585F22D77F580077AE51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		469E586922D780A70077AE51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		469E586A22D780A70077AE51 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		469E586B22D780A70077AE51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		469E586D22D780A70077AE51 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B0663E3085F4D37C652073DA /* Pods-HuaXing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaXing.release.xcconfig"; path = "Target Support Files/Pods-HuaXing/Pods-HuaXing.release.xcconfig"; sourceTree = "<group>"; };
+		F68DAD5807E4BD3BF2EB8C94 /* libPods-HuaXing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HuaXing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		469E584A22D77F560077AE51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB6AE177C7EA7003A1C5C670 /* libPods-HuaXing.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3481AF048D8EB8C186E2C3C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DC983F95E75035A569B180B /* Pods-HuaXing.debug.xcconfig */,
+				B0663E3085F4D37C652073DA /* Pods-HuaXing.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		42F7935B5D58CA2944FA35EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F68DAD5807E4BD3BF2EB8C94 /* libPods-HuaXing.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		469E584422D77F560077AE51 = {
+			isa = PBXGroup;
+			children = (
+				469E584F22D77F560077AE51 /* HuaXing */,
+				469E584E22D77F560077AE51 /* Products */,
+				3481AF048D8EB8C186E2C3C4 /* Pods */,
+				42F7935B5D58CA2944FA35EF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		469E584E22D77F560077AE51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				469E584D22D77F560077AE51 /* HuaXing.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		469E584F22D77F560077AE51 /* HuaXing */ = {
+			isa = PBXGroup;
+			children = (
+				469E586822D780A70077AE51 /* Main */,
+				469E586722D780A70077AE51 /* Func */,
+				469E586622D780A70077AE51 /* Class */,
+				469E585622D77F560077AE51 /* Main.storyboard */,
+				469E585922D77F580077AE51 /* Assets.xcassets */,
+				469E585B22D77F580077AE51 /* LaunchScreen.storyboard */,
+				469E585E22D77F580077AE51 /* Info.plist */,
+				469E585F22D77F580077AE51 /* main.m */,
+			);
+			path = HuaXing;
+			sourceTree = "<group>";
+		};
+		469E586622D780A70077AE51 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		469E586722D780A70077AE51 /* Func */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Func;
+			sourceTree = "<group>";
+		};
+		469E586822D780A70077AE51 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				469E586922D780A70077AE51 /* AppDelegate.h */,
+				469E586B22D780A70077AE51 /* AppDelegate.m */,
+				469E586D22D780A70077AE51 /* ViewController.h */,
+				469E586A22D780A70077AE51 /* ViewController.m */,
+				469E586C22D780A70077AE51 /* Base */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		469E586C22D780A70077AE51 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		469E584C22D77F560077AE51 /* HuaXing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 469E586322D77F580077AE51 /* Build configuration list for PBXNativeTarget "HuaXing" */;
+			buildPhases = (
+				5BD9280562667C60D69964D9 /* [CP] Check Pods Manifest.lock */,
+				469E584922D77F560077AE51 /* Sources */,
+				469E584A22D77F560077AE51 /* Frameworks */,
+				469E584B22D77F560077AE51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HuaXing;
+			productName = HuaXing;
+			productReference = 469E584D22D77F560077AE51 /* HuaXing.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		469E584522D77F560077AE51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = HuaXing;
+				TargetAttributes = {
+					469E584C22D77F560077AE51 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 469E584822D77F560077AE51 /* Build configuration list for PBXProject "HuaXing" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 469E584422D77F560077AE51;
+			productRefGroup = 469E584E22D77F560077AE51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				469E584C22D77F560077AE51 /* HuaXing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		469E584B22D77F560077AE51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */,
+				469E585A22D77F580077AE51 /* Assets.xcassets in Resources */,
+				469E585822D77F560077AE51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BD9280562667C60D69964D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HuaXing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		469E584922D77F560077AE51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				469E586E22D780A80077AE51 /* ViewController.m in Sources */,
+				469E586022D77F580077AE51 /* main.m in Sources */,
+				469E586F22D780A80077AE51 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		469E585622D77F560077AE51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				469E585722D77F560077AE51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		469E585B22D77F580077AE51 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				469E585C22D77F580077AE51 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		469E586122D77F580077AE51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		469E586222D77F580077AE51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		469E586422D77F580077AE51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DC983F95E75035A569B180B /* Pods-HuaXing.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 45542K4894;
+				INFOPLIST_FILE = HuaXing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = www.TongXin.com.HuaXing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		469E586522D77F580077AE51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0663E3085F4D37C652073DA /* Pods-HuaXing.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 45542K4894;
+				INFOPLIST_FILE = HuaXing/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = www.TongXin.com.HuaXing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		469E584822D77F560077AE51 /* Build configuration list for PBXProject "HuaXing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				469E586122D77F580077AE51 /* Debug */,
+				469E586222D77F580077AE51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		469E586322D77F580077AE51 /* Build configuration list for PBXNativeTarget "HuaXing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				469E586422D77F580077AE51 /* Debug */,
+				469E586522D77F580077AE51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 469E584522D77F560077AE51 /* Project object */;
+}
