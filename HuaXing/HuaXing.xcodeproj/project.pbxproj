@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26024BEE22D8A1FD00143425 /* HXBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BED22D8A1FD00143425 /* HXBaseVC.m */; };
+		26024BF122D8A21600143425 /* HXTabAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BF022D8A21600143425 /* HXTabAdapter.m */; };
+		26024BF422D8A24800143425 /* CourseGridVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BF322D8A24800143425 /* CourseGridVC.m */; };
+		26024BF722D8A25900143425 /* PersonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BF622D8A25900143425 /* PersonVC.m */; };
+		26024BFA22D8A2EA00143425 /* HXNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BF922D8A2EA00143425 /* HXNavigationVC.m */; };
 		469E585822D77F560077AE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585622D77F560077AE51 /* Main.storyboard */; };
 		469E585A22D77F580077AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E585922D77F580077AE51 /* Assets.xcassets */; };
 		469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585B22D77F580077AE51 /* LaunchScreen.storyboard */; };
@@ -18,6 +23,16 @@
 
 /* Begin PBXFileReference section */
 		0DC983F95E75035A569B180B /* Pods-HuaXing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaXing.debug.xcconfig"; path = "Target Support Files/Pods-HuaXing/Pods-HuaXing.debug.xcconfig"; sourceTree = "<group>"; };
+		26024BEC22D8A1FD00143425 /* HXBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXBaseVC.h; sourceTree = "<group>"; };
+		26024BED22D8A1FD00143425 /* HXBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXBaseVC.m; sourceTree = "<group>"; };
+		26024BEF22D8A21600143425 /* HXTabAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXTabAdapter.h; sourceTree = "<group>"; };
+		26024BF022D8A21600143425 /* HXTabAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXTabAdapter.m; sourceTree = "<group>"; };
+		26024BF222D8A24800143425 /* CourseGridVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseGridVC.h; sourceTree = "<group>"; };
+		26024BF322D8A24800143425 /* CourseGridVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseGridVC.m; sourceTree = "<group>"; };
+		26024BF522D8A25900143425 /* PersonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonVC.h; sourceTree = "<group>"; };
+		26024BF622D8A25900143425 /* PersonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonVC.m; sourceTree = "<group>"; };
+		26024BF822D8A2EA00143425 /* HXNavigationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNavigationVC.h; sourceTree = "<group>"; };
+		26024BF922D8A2EA00143425 /* HXNavigationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXNavigationVC.m; sourceTree = "<group>"; };
 		469E584D22D77F560077AE51 /* HuaXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E585722D77F560077AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		469E585922D77F580077AE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,13 +59,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26024BEB22D8A1EE00143425 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				26024BEC22D8A1FD00143425 /* HXBaseVC.h */,
+				26024BED22D8A1FD00143425 /* HXBaseVC.m */,
+				26024BF822D8A2EA00143425 /* HXNavigationVC.h */,
+				26024BF922D8A2EA00143425 /* HXNavigationVC.m */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		26AD64C222D81B2C0087D3EB /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				26024BEF22D8A21600143425 /* HXTabAdapter.h */,
+				26024BF022D8A21600143425 /* HXTabAdapter.m */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		26AD64C622D81C010087D3EB /* Func */ = {
+			isa = PBXGroup;
+			children = (
+				26AD64C822D81C010087D3EB /* Grid */,
+				26AD64C722D81C010087D3EB /* Person */,
+			);
+			path = Func;
+			sourceTree = "<group>";
+		};
+		26AD64C722D81C010087D3EB /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				26024BF522D8A25900143425 /* PersonVC.h */,
+				26024BF622D8A25900143425 /* PersonVC.m */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		26AD64C822D81C010087D3EB /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				26024BF222D8A24800143425 /* CourseGridVC.h */,
+				26024BF322D8A24800143425 /* CourseGridVC.m */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
 		3481AF048D8EB8C186E2C3C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				0DC983F95E75035A569B180B /* Pods-HuaXing.debug.xcconfig */,
 				B0663E3085F4D37C652073DA /* Pods-HuaXing.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,9 +144,8 @@
 		469E584F22D77F560077AE51 /* HuaXing */ = {
 			isa = PBXGroup;
 			children = (
+				26AD64C622D81C010087D3EB /* Func */,
 				469E586822D780A70077AE51 /* Main */,
-				469E586722D780A70077AE51 /* Func */,
-				469E586622D780A70077AE51 /* Class */,
 				469E585622D77F560077AE51 /* Main.storyboard */,
 				469E585922D77F580077AE51 /* Assets.xcassets */,
 				469E585B22D77F580077AE51 /* LaunchScreen.storyboard */,
@@ -95,37 +155,17 @@
 			path = HuaXing;
 			sourceTree = "<group>";
 		};
-		469E586622D780A70077AE51 /* Class */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Class;
-			sourceTree = "<group>";
-		};
-		469E586722D780A70077AE51 /* Func */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Func;
-			sourceTree = "<group>";
-		};
 		469E586822D780A70077AE51 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				26024BEB22D8A1EE00143425 /* BaseVC */,
+				26AD64C222D81B2C0087D3EB /* Tab */,
 				469E586922D780A70077AE51 /* AppDelegate.h */,
 				469E586B22D780A70077AE51 /* AppDelegate.m */,
 				469E586D22D780A70077AE51 /* ViewController.h */,
 				469E586A22D780A70077AE51 /* ViewController.m */,
-				469E586C22D780A70077AE51 /* Base */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		469E586C22D780A70077AE51 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,7 +265,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				469E586E22D780A80077AE51 /* ViewController.m in Sources */,
+				26024BF422D8A24800143425 /* CourseGridVC.m in Sources */,
+				26024BEE22D8A1FD00143425 /* HXBaseVC.m in Sources */,
 				469E586022D77F580077AE51 /* main.m in Sources */,
+				26024BFA22D8A2EA00143425 /* HXNavigationVC.m in Sources */,
+				26024BF722D8A25900143425 /* PersonVC.m in Sources */,
+				26024BF122D8A21600143425 /* HXTabAdapter.m in Sources */,
 				469E586F22D780A80077AE51 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +423,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.TongXin.com.HuaXing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -396,7 +441,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.TongXin.com.HuaXing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
