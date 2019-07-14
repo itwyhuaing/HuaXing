@@ -10,7 +10,6 @@
 		26024BEE22D8A1FD00143425 /* HXBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BED22D8A1FD00143425 /* HXBaseVC.m */; };
 		26024BF122D8A21600143425 /* HXTabAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BF022D8A21600143425 /* HXTabAdapter.m */; };
 		26024BF422D8A24800143425 /* CourseGridVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BF322D8A24800143425 /* CourseGridVC.m */; };
-		26024BF722D8A25900143425 /* PersonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BF622D8A25900143425 /* PersonVC.m */; };
 		26024BFA22D8A2EA00143425 /* HXNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BF922D8A2EA00143425 /* HXNavigationVC.m */; };
 		469E585822D77F560077AE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585622D77F560077AE51 /* Main.storyboard */; };
 		469E585A22D77F580077AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E585922D77F580077AE51 /* Assets.xcassets */; };
@@ -18,6 +17,23 @@
 		469E586022D77F580077AE51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 469E585F22D77F580077AE51 /* main.m */; };
 		469E586E22D780A80077AE51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469E586A22D780A70077AE51 /* ViewController.m */; };
 		469E586F22D780A80077AE51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 469E586B22D780A70077AE51 /* AppDelegate.m */; };
+		46BC169922DA347A00A70F23 /* UIAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC169722DA347A00A70F23 /* UIAdapter.m */; };
+		46BC16B222DA3A9C00A70F23 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC169B22DA3A9C00A70F23 /* UIView+Addition.m */; };
+		46BC16B322DA3A9C00A70F23 /* UIImage+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC169F22DA3A9C00A70F23 /* UIImage+Addition.m */; };
+		46BC16B422DA3A9C00A70F23 /* NSArray+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16A222DA3A9C00A70F23 /* NSArray+Addition.m */; };
+		46BC16B522DA3A9C00A70F23 /* NSDate+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16A522DA3A9C00A70F23 /* NSDate+Addition.m */; };
+		46BC16B622DA3A9C00A70F23 /* NSDictionary+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16A622DA3A9C00A70F23 /* NSDictionary+Addition.m */; };
+		46BC16B722DA3A9C00A70F23 /* NSObject+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16A722DA3A9C00A70F23 /* NSObject+Addition.m */; };
+		46BC16B822DA3A9C00A70F23 /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16A922DA3A9C00A70F23 /* UIColor+Addition.m */; };
+		46BC16B922DA3A9C00A70F23 /* NSMutableDictionary+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16AC22DA3A9C00A70F23 /* NSMutableDictionary+Addition.m */; };
+		46BC16BA22DA3A9C00A70F23 /* UIFont+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16AD22DA3A9C00A70F23 /* UIFont+Addition.m */; };
+		46BC16BB22DA3A9C00A70F23 /* NSData+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16B022DA3A9C00A70F23 /* NSData+Addition.m */; };
+		46BC16BC22DA3A9C00A70F23 /* NSString+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16B122DA3A9C00A70F23 /* NSString+Addition.m */; };
+		46BC16C222DA3D4D00A70F23 /* PersonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16BE22DA3D4D00A70F23 /* PersonVC.m */; };
+		46BC16C522DA3D7900A70F23 /* PersonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16C422DA3D7900A70F23 /* PersonManager.m */; };
+		46BC16C822DA3D9D00A70F23 /* PersonDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16C722DA3D9D00A70F23 /* PersonDataModel.m */; };
+		46BC16CB22DAC2DD00A70F23 /* PersonMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16CA22DAC2DD00A70F23 /* PersonMainView.m */; };
+		46BC16CE22DAF0B900A70F23 /* BriefInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16CD22DAF0B900A70F23 /* BriefInfoCell.m */; };
 		EB6AE177C7EA7003A1C5C670 /* libPods-HuaXing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F68DAD5807E4BD3BF2EB8C94 /* libPods-HuaXing.a */; };
 /* End PBXBuildFile section */
 
@@ -29,8 +45,6 @@
 		26024BF022D8A21600143425 /* HXTabAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXTabAdapter.m; sourceTree = "<group>"; };
 		26024BF222D8A24800143425 /* CourseGridVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseGridVC.h; sourceTree = "<group>"; };
 		26024BF322D8A24800143425 /* CourseGridVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseGridVC.m; sourceTree = "<group>"; };
-		26024BF522D8A25900143425 /* PersonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonVC.h; sourceTree = "<group>"; };
-		26024BF622D8A25900143425 /* PersonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonVC.m; sourceTree = "<group>"; };
 		26024BF822D8A2EA00143425 /* HXNavigationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNavigationVC.h; sourceTree = "<group>"; };
 		26024BF922D8A2EA00143425 /* HXNavigationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXNavigationVC.m; sourceTree = "<group>"; };
 		469E584D22D77F560077AE51 /* HuaXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +57,43 @@
 		469E586A22D780A70077AE51 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		469E586B22D780A70077AE51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		469E586D22D780A70077AE51 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		46BC169322DA33FC00A70F23 /* HuaXing.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuaXing.pch; sourceTree = "<group>"; };
+		46BC169422DA343200A70F23 /* HXConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXConfig.h; sourceTree = "<group>"; };
+		46BC169722DA347A00A70F23 /* UIAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAdapter.m; sourceTree = "<group>"; };
+		46BC169822DA347A00A70F23 /* UIAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAdapter.h; sourceTree = "<group>"; };
+		46BC169B22DA3A9C00A70F23 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
+		46BC169C22DA3A9C00A70F23 /* UIColor+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Addition.h"; sourceTree = "<group>"; };
+		46BC169D22DA3A9C00A70F23 /* NSObject+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Addition.h"; sourceTree = "<group>"; };
+		46BC169E22DA3A9C00A70F23 /* NSDictionary+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Addition.h"; sourceTree = "<group>"; };
+		46BC169F22DA3A9C00A70F23 /* UIImage+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Addition.m"; sourceTree = "<group>"; };
+		46BC16A022DA3A9C00A70F23 /* UIFont+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Addition.h"; sourceTree = "<group>"; };
+		46BC16A122DA3A9C00A70F23 /* NSMutableDictionary+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Addition.h"; sourceTree = "<group>"; };
+		46BC16A222DA3A9C00A70F23 /* NSArray+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Addition.m"; sourceTree = "<group>"; };
+		46BC16A322DA3A9C00A70F23 /* NSString+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Addition.h"; sourceTree = "<group>"; };
+		46BC16A422DA3A9C00A70F23 /* NSData+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Addition.h"; sourceTree = "<group>"; };
+		46BC16A522DA3A9C00A70F23 /* NSDate+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Addition.m"; sourceTree = "<group>"; };
+		46BC16A622DA3A9C00A70F23 /* NSDictionary+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Addition.m"; sourceTree = "<group>"; };
+		46BC16A722DA3A9C00A70F23 /* NSObject+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Addition.m"; sourceTree = "<group>"; };
+		46BC16A822DA3A9C00A70F23 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		46BC16A922DA3A9C00A70F23 /* UIColor+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Addition.m"; sourceTree = "<group>"; };
+		46BC16AA22DA3A9C00A70F23 /* NSArray+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Addition.h"; sourceTree = "<group>"; };
+		46BC16AB22DA3A9C00A70F23 /* Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Addition.h; sourceTree = "<group>"; };
+		46BC16AC22DA3A9C00A70F23 /* NSMutableDictionary+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Addition.m"; sourceTree = "<group>"; };
+		46BC16AD22DA3A9C00A70F23 /* UIFont+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Addition.m"; sourceTree = "<group>"; };
+		46BC16AE22DA3A9C00A70F23 /* UIImage+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Addition.h"; sourceTree = "<group>"; };
+		46BC16AF22DA3A9C00A70F23 /* NSDate+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Addition.h"; sourceTree = "<group>"; };
+		46BC16B022DA3A9C00A70F23 /* NSData+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Addition.m"; sourceTree = "<group>"; };
+		46BC16B122DA3A9C00A70F23 /* NSString+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Addition.m"; sourceTree = "<group>"; };
+		46BC16BE22DA3D4D00A70F23 /* PersonVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonVC.m; sourceTree = "<group>"; };
+		46BC16BF22DA3D4D00A70F23 /* PersonVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonVC.h; sourceTree = "<group>"; };
+		46BC16C322DA3D7900A70F23 /* PersonManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonManager.h; sourceTree = "<group>"; };
+		46BC16C422DA3D7900A70F23 /* PersonManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonManager.m; sourceTree = "<group>"; };
+		46BC16C622DA3D9D00A70F23 /* PersonDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonDataModel.h; sourceTree = "<group>"; };
+		46BC16C722DA3D9D00A70F23 /* PersonDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonDataModel.m; sourceTree = "<group>"; };
+		46BC16C922DAC2DD00A70F23 /* PersonMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonMainView.h; sourceTree = "<group>"; };
+		46BC16CA22DAC2DD00A70F23 /* PersonMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonMainView.m; sourceTree = "<group>"; };
+		46BC16CC22DAF0B900A70F23 /* BriefInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BriefInfoCell.h; sourceTree = "<group>"; };
+		46BC16CD22DAF0B900A70F23 /* BriefInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BriefInfoCell.m; sourceTree = "<group>"; };
 		B0663E3085F4D37C652073DA /* Pods-HuaXing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HuaXing.release.xcconfig"; path = "Target Support Files/Pods-HuaXing/Pods-HuaXing.release.xcconfig"; sourceTree = "<group>"; };
 		F68DAD5807E4BD3BF2EB8C94 /* libPods-HuaXing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HuaXing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,8 +142,9 @@
 		26AD64C722D81C010087D3EB /* Person */ = {
 			isa = PBXGroup;
 			children = (
-				26024BF522D8A25900143425 /* PersonVC.h */,
-				26024BF622D8A25900143425 /* PersonVC.m */,
+				46BC16BD22DA3D4D00A70F23 /* Controller */,
+				46BC16C122DA3D4D00A70F23 /* Model */,
+				46BC16C022DA3D4D00A70F23 /* View */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -144,8 +196,14 @@
 		469E584F22D77F560077AE51 /* HuaXing */ = {
 			isa = PBXGroup;
 			children = (
-				26AD64C622D81C010087D3EB /* Func */,
+				469E586922D780A70077AE51 /* AppDelegate.h */,
+				469E586B22D780A70077AE51 /* AppDelegate.m */,
+				469E586D22D780A70077AE51 /* ViewController.h */,
+				469E586A22D780A70077AE51 /* ViewController.m */,
 				469E586822D780A70077AE51 /* Main */,
+				46BC169522DA345400A70F23 /* Class */,
+				46BC169222DA33D100A70F23 /* Macro */,
+				26AD64C622D81C010087D3EB /* Func */,
 				469E585622D77F560077AE51 /* Main.storyboard */,
 				469E585922D77F580077AE51 /* Assets.xcassets */,
 				469E585B22D77F580077AE51 /* LaunchScreen.storyboard */,
@@ -160,12 +218,96 @@
 			children = (
 				26024BEB22D8A1EE00143425 /* BaseVC */,
 				26AD64C222D81B2C0087D3EB /* Tab */,
-				469E586922D780A70077AE51 /* AppDelegate.h */,
-				469E586B22D780A70077AE51 /* AppDelegate.m */,
-				469E586D22D780A70077AE51 /* ViewController.h */,
-				469E586A22D780A70077AE51 /* ViewController.m */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		46BC169222DA33D100A70F23 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				46BC169322DA33FC00A70F23 /* HuaXing.pch */,
+				46BC169422DA343200A70F23 /* HXConfig.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		46BC169522DA345400A70F23 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				46BC169A22DA3A9C00A70F23 /* Addition */,
+				46BC169622DA347A00A70F23 /* UIAdapter */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		46BC169622DA347A00A70F23 /* UIAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				46BC169822DA347A00A70F23 /* UIAdapter.h */,
+				46BC169722DA347A00A70F23 /* UIAdapter.m */,
+			);
+			path = UIAdapter;
+			sourceTree = "<group>";
+		};
+		46BC169A22DA3A9C00A70F23 /* Addition */ = {
+			isa = PBXGroup;
+			children = (
+				46BC169B22DA3A9C00A70F23 /* UIView+Addition.m */,
+				46BC169C22DA3A9C00A70F23 /* UIColor+Addition.h */,
+				46BC169D22DA3A9C00A70F23 /* NSObject+Addition.h */,
+				46BC169E22DA3A9C00A70F23 /* NSDictionary+Addition.h */,
+				46BC169F22DA3A9C00A70F23 /* UIImage+Addition.m */,
+				46BC16A022DA3A9C00A70F23 /* UIFont+Addition.h */,
+				46BC16A122DA3A9C00A70F23 /* NSMutableDictionary+Addition.h */,
+				46BC16A222DA3A9C00A70F23 /* NSArray+Addition.m */,
+				46BC16A322DA3A9C00A70F23 /* NSString+Addition.h */,
+				46BC16A422DA3A9C00A70F23 /* NSData+Addition.h */,
+				46BC16A522DA3A9C00A70F23 /* NSDate+Addition.m */,
+				46BC16A622DA3A9C00A70F23 /* NSDictionary+Addition.m */,
+				46BC16A722DA3A9C00A70F23 /* NSObject+Addition.m */,
+				46BC16A822DA3A9C00A70F23 /* UIView+Addition.h */,
+				46BC16A922DA3A9C00A70F23 /* UIColor+Addition.m */,
+				46BC16AA22DA3A9C00A70F23 /* NSArray+Addition.h */,
+				46BC16AB22DA3A9C00A70F23 /* Addition.h */,
+				46BC16AC22DA3A9C00A70F23 /* NSMutableDictionary+Addition.m */,
+				46BC16AD22DA3A9C00A70F23 /* UIFont+Addition.m */,
+				46BC16AE22DA3A9C00A70F23 /* UIImage+Addition.h */,
+				46BC16AF22DA3A9C00A70F23 /* NSDate+Addition.h */,
+				46BC16B022DA3A9C00A70F23 /* NSData+Addition.m */,
+				46BC16B122DA3A9C00A70F23 /* NSString+Addition.m */,
+			);
+			path = Addition;
+			sourceTree = "<group>";
+		};
+		46BC16BD22DA3D4D00A70F23 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				46BC16BF22DA3D4D00A70F23 /* PersonVC.h */,
+				46BC16BE22DA3D4D00A70F23 /* PersonVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		46BC16C022DA3D4D00A70F23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46BC16C922DAC2DD00A70F23 /* PersonMainView.h */,
+				46BC16CA22DAC2DD00A70F23 /* PersonMainView.m */,
+				46BC16CC22DAF0B900A70F23 /* BriefInfoCell.h */,
+				46BC16CD22DAF0B900A70F23 /* BriefInfoCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		46BC16C122DA3D4D00A70F23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				46BC16C322DA3D7900A70F23 /* PersonManager.h */,
+				46BC16C422DA3D7900A70F23 /* PersonManager.m */,
+				46BC16C622DA3D9D00A70F23 /* PersonDataModel.h */,
+				46BC16C722DA3D9D00A70F23 /* PersonDataModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,12 +406,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BC16B622DA3A9C00A70F23 /* NSDictionary+Addition.m in Sources */,
+				46BC16B822DA3A9C00A70F23 /* UIColor+Addition.m in Sources */,
+				46BC16C822DA3D9D00A70F23 /* PersonDataModel.m in Sources */,
 				469E586E22D780A80077AE51 /* ViewController.m in Sources */,
+				46BC16B922DA3A9C00A70F23 /* NSMutableDictionary+Addition.m in Sources */,
+				46BC16C522DA3D7900A70F23 /* PersonManager.m in Sources */,
+				46BC16CE22DAF0B900A70F23 /* BriefInfoCell.m in Sources */,
 				26024BF422D8A24800143425 /* CourseGridVC.m in Sources */,
+				46BC16B522DA3A9C00A70F23 /* NSDate+Addition.m in Sources */,
+				46BC169922DA347A00A70F23 /* UIAdapter.m in Sources */,
 				26024BEE22D8A1FD00143425 /* HXBaseVC.m in Sources */,
 				469E586022D77F580077AE51 /* main.m in Sources */,
+				46BC16BC22DA3A9C00A70F23 /* NSString+Addition.m in Sources */,
+				46BC16B722DA3A9C00A70F23 /* NSObject+Addition.m in Sources */,
+				46BC16BB22DA3A9C00A70F23 /* NSData+Addition.m in Sources */,
+				46BC16BA22DA3A9C00A70F23 /* UIFont+Addition.m in Sources */,
+				46BC16C222DA3D4D00A70F23 /* PersonVC.m in Sources */,
 				26024BFA22D8A2EA00143425 /* HXNavigationVC.m in Sources */,
-				26024BF722D8A25900143425 /* PersonVC.m in Sources */,
+				46BC16B322DA3A9C00A70F23 /* UIImage+Addition.m in Sources */,
+				46BC16B222DA3A9C00A70F23 /* UIView+Addition.m in Sources */,
+				46BC16B422DA3A9C00A70F23 /* NSArray+Addition.m in Sources */,
+				46BC16CB22DAC2DD00A70F23 /* PersonMainView.m in Sources */,
 				26024BF122D8A21600143425 /* HXTabAdapter.m in Sources */,
 				469E586F22D780A80077AE51 /* AppDelegate.m in Sources */,
 			);
@@ -416,6 +574,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45542K4894;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HuaXing/Macro/HuaXing.pch;
 				INFOPLIST_FILE = HuaXing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -434,6 +594,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 45542K4894;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HuaXing/Macro/HuaXing.pch;
 				INFOPLIST_FILE = HuaXing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

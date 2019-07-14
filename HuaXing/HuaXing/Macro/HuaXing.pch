@@ -1,0 +1,17 @@
+//
+//  HuaXing.pch
+//  HuaXing
+//
+//  Created by wangyinghua on 2019/7/13.
+//  Copyright © 2019 HuaXing. All rights reserved.
+//
+
+#ifndef HuaXing_pch
+#define HuaXing_pch
+
+#import <UIKit/UIKit.h>
+#import "Addition.h"
+#import "UIAdapter.h"
+#import <SDAutoLayout/SDAutoLayout.h>
+
+#endif /* HuaXing_pch */
