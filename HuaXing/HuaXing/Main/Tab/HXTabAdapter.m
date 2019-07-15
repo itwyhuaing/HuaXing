@@ -73,10 +73,14 @@
         _items = [NSMutableArray new];
         NSDictionary *dic1 = @{
                                CYLTabBarItemTitle:@"首页",
+                               CYLTabBarItemImage:@"tab_grid_normal",
+                               CYLTabBarItemSelectedImage:@"tab_grid_pressed"
                                };
         
         NSDictionary *dic4 = @{
                                CYLTabBarItemTitle:@"我的",
+                               CYLTabBarItemImage:@"tab_my_normal",
+                               CYLTabBarItemSelectedImage:@"tab_my_pressed"
                                };
         [_items addObjectsFromArray:@[dic1,dic4]];
     }
