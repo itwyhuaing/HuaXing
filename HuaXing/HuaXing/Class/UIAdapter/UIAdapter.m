@@ -20,6 +20,11 @@
     return CGRectGetHeight([UIScreen mainScreen].bounds);
 }
 
++ (CGFloat)tabBarHeight {
+    CYLTabBarController *tabVC = [self cyl_tabBarController];
+    return CGRectGetHeight(tabVC.tabBar.frame);
+}
+
 + (CGFloat)Scale47Width {
     return CGRectGetWidth([UIScreen mainScreen].bounds)/375.0;
 }

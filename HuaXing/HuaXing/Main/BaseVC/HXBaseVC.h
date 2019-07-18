@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HXBaseVC : UIViewController
 
+
+/**
+ 是否可手势返回 -- 默认为YES，
+ */
+@property (nonatomic, assign) BOOL canGestureBack;
+
 @end
 
 NS_ASSUME_NONNULL_END

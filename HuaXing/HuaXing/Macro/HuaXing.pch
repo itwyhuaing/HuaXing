@@ -9,9 +9,11 @@
 #ifndef HuaXing_pch
 #define HuaXing_pch
 
-#import <UIKit/UIKit.h>
-#import "Addition.h"
-#import "UIAdapter.h"
-#import <SDAutoLayout/SDAutoLayout.h>
+    #import <UIKit/UIKit.h>
+    #import <SDAutoLayout/SDAutoLayout.h>
+    #import <CYLTabBarController/CYLTabBarController.h>
+    #import "HXConfig.h"
+    #import "Addition.h"
+    #import "UIAdapter.h"
 
 #endif /* HuaXing_pch */

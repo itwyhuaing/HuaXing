@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 设备高度
 + (CGFloat)deviceHeight;
 
+// 底部标签栏的高度
++ (CGFloat)tabBarHeight;
+
 // 以 4.7 inch 屏为基准的宽度比例
 + (CGFloat)Scale47Width;
 
@@ -33,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 828x1792({414,896})         @2x       6.1                      iPhoneXR
 + (BOOL)device6_1Inch;
 
-//1242x2688({414, 896})        @3x        6.5            iPhoneX/S Max
+//1242x2688({414, 896})        @3x        6.5            iPhoneX/S  Max
 + (BOOL)device6_5Inch;
 
 

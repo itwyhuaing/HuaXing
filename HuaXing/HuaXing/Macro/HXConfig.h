@@ -9,5 +9,6 @@
 #ifndef HXConfig_h
 #define HXConfig_h
 
+#define HXWeakSelf     __weak typeof(self) weakSelf = self;
 
 #endif /* HXConfig_h */
