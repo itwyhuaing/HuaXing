@@ -36,10 +36,10 @@
 }
 
 - (void)customizeInterface {
-    UIFont *unSelectFont = [UIFont systemFontOfSize:10];
-    UIColor *unSelectColor = [UIColor colorWithHexString:@"#333333"];
-    UIFont *selectFont = [UIFont systemFontOfSize:10];
-    UIColor *selectColor = [UIColor colorWithHexString:@"#1300FE"];
+    UIFont *unSelectFont = [UIAdapter font10];
+    UIColor *unSelectColor = [UIAdapter lightBlack];
+    UIFont *selectFont = [UIAdapter font10];
+    UIColor *selectColor = [UIAdapter mainBlue];
     
     NSMutableDictionary *attributDicNor = [NSMutableDictionary dictionary];
     [attributDicNor setValue:unSelectFont forKey:NSFontAttributeName];

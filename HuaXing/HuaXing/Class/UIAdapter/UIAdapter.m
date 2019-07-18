@@ -10,6 +10,44 @@
 
 @implementation UIAdapter
 
+#pragma mark ------ 项目常用几种字体
+
++ (UIFont *)font10 {
+    return [UIFont systemFontOfSize:10.0];
+}
+
++ (UIFont *)font15 {
+    return [UIFont systemFontOfSize:15.0];
+}
+
++ (UIFont *)font17{
+    return [UIFont systemFontOfSize:17.0];
+}
+
+#pragma mark ------ 项目常用几种颜色
+
++ (UIColor *)mainBlue {
+    return [UIColor colorWithHexString:@"#3FA2FF"];
+}
+
++ (UIColor *)lightGray {
+    return [UIColor colorWithHexString:@"#EDEDED" alpha:1.0];
+}
+
++ (UIColor *)lightBlack {
+    return [UIColor colorWithHexString:@"#333333" alpha:1.0];
+}
+
++ (UIColor *)maskLightBlack {
+    return [UIColor colorWithHexString:@"#000" alpha:0.3];
+}
+
+#pragma mark ------ 设备尺寸相关参数
+
++ (CGFloat)lrGap {
+    return 20.0 * [UIAdapter Scale47Width];
+}
+
 // 设备宽度
 + (CGFloat)deviceWidth {
     return CGRectGetWidth([UIScreen mainScreen].bounds);

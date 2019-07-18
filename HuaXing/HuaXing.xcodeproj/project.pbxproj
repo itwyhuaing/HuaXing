@@ -14,6 +14,7 @@
 		2627405B22DDDDBA00951856 /* CourseConfigVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2627405A22DDDDBA00951856 /* CourseConfigVC.m */; };
 		2627405E22DEED4C00951856 /* HXPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2627405D22DEED4C00951856 /* HXPickView.m */; };
 		26496F5C22E06825002D0C0E /* HXDatePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26496F5B22E06825002D0C0E /* HXDatePickView.m */; };
+		466105B022E0B53900A4CAF8 /* CourseConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 466105AF22E0B53900A4CAF8 /* CourseConfigView.m */; };
 		469E585822D77F560077AE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585622D77F560077AE51 /* Main.storyboard */; };
 		469E585A22D77F580077AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E585922D77F580077AE51 /* Assets.xcassets */; };
 		469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585B22D77F580077AE51 /* LaunchScreen.storyboard */; };
@@ -56,6 +57,8 @@
 		2627405D22DEED4C00951856 /* HXPickView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXPickView.m; sourceTree = "<group>"; };
 		26496F5A22E06825002D0C0E /* HXDatePickView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXDatePickView.h; sourceTree = "<group>"; };
 		26496F5B22E06825002D0C0E /* HXDatePickView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXDatePickView.m; sourceTree = "<group>"; };
+		466105AE22E0B53900A4CAF8 /* CourseConfigView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseConfigView.h; sourceTree = "<group>"; };
+		466105AF22E0B53900A4CAF8 /* CourseConfigView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseConfigView.m; sourceTree = "<group>"; };
 		469E584D22D77F560077AE51 /* HuaXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E585722D77F560077AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		469E585922D77F580077AE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 		2627405722DDDB9A00951856 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				466105AE22E0B53900A4CAF8 /* CourseConfigView.h */,
+				466105AF22E0B53900A4CAF8 /* CourseConfigView.m */,
 				2627405C22DEED4C00951856 /* HXPickView.h */,
 				2627405D22DEED4C00951856 /* HXPickView.m */,
 				26496F5A22E06825002D0C0E /* HXDatePickView.h */,
@@ -448,6 +453,7 @@
 				46BC16B622DA3A9C00A70F23 /* NSDictionary+Addition.m in Sources */,
 				2627405822DDDB9A00951856 /* CourseGridVC.m in Sources */,
 				26496F5C22E06825002D0C0E /* HXDatePickView.m in Sources */,
+				466105B022E0B53900A4CAF8 /* CourseConfigView.m in Sources */,
 				46BC16B822DA3A9C00A70F23 /* UIColor+Addition.m in Sources */,
 				46BC16C822DA3D9D00A70F23 /* PersonDataModel.m in Sources */,
 				469E586E22D780A80077AE51 /* ViewController.m in Sources */,

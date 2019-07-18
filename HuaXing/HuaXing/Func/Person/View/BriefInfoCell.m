@@ -38,7 +38,7 @@
     .bottomEqualToView(self.contentView)
     .heightIs(1.0);
     self.themLabel.sd_layout
-    .leftEqualToView(self.contentView).offset(20.0)
+    .leftSpaceToView(self.contentView, 20.0)
     .topEqualToView(self.contentView)
     .bottomEqualToView(line);
     [self.themLabel setSingleLineAutoResizeWithMaxWidth:100.0 * [UIAdapter Scale47Width]];
@@ -54,12 +54,12 @@
     .bottomEqualToView(line);
     [self setupAutoHeightWithBottomView:self.themLabel bottomMargin:0.0];
     
-    self.themLabel.font                         = [UIFont systemFontOfSize:15.0];
-    self.themLabel.textColor                    = [UIColor colorWithHexString:@"#333333" alpha:1.0];
-    self.detailLabel.font                         = [UIFont systemFontOfSize:15.0];
-    self.detailLabel.textColor                    = [UIColor colorWithHexString:@"#333333" alpha:1.0];
+    self.themLabel.font                         = [UIAdapter font15];
+    self.themLabel.textColor                    = [UIAdapter lightBlack];
+    self.detailLabel.font                         = [UIAdapter font15];
+    self.detailLabel.textColor                    = [UIAdapter lightBlack];
     self.detailLabel.textAlignment = NSTextAlignmentRight;
-    line.backgroundColor = [UIColor colorWithHexString:@"#EDEDED" alpha:1.0];
+    line.backgroundColor = [UIAdapter lightGray];
 }
 
 -(void)setData:(ItemDataModel *)data {

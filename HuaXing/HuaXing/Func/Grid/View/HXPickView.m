@@ -58,7 +58,7 @@
     .topEqualToView(bv)
     .widthIs(60.0);
     
-    self.backgroundColor = [UIColor colorWithHexString:@"#000" alpha:0.3];
+    self.backgroundColor = [UIAdapter maskLightBlack];
     self.dp.backgroundColor = [UIColor whiteColor];
     self.dp.datePickerMode = UIDatePickerModeDate;
     self.dp.locale = [NSLocale localeWithLocaleIdentifier:@"zh-Hans"];
@@ -74,7 +74,7 @@
 - (void)modifyButton:(UIButton *)btn title:(NSString *)title tag:(NSInteger)tag titileColor:(UIColor *)clr {
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:clr forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:17.0];
+    btn.titleLabel.font = [UIAdapter font17];
     btn.tag = tag;
     [btn addTarget:self action:@selector(eventClick:) forControlEvents:UIControlEventTouchUpInside];
 }

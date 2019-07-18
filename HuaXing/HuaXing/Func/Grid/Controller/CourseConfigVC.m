@@ -7,12 +7,14 @@
 //
 
 #import "CourseConfigVC.h"
+#import "CourseConfigView.h"
 #import "HXDatePickView.h"
 
 @interface CourseConfigVC ()
 
-@property (nonatomic,strong) HXDatePickView *datePkv;
-@property (nonatomic,strong) HXDatePickView *timePkv;
+@property (nonatomic,strong) CourseConfigView   *ccv;
+@property (nonatomic,strong) HXDatePickView     *datePkv;
+@property (nonatomic,strong) HXDatePickView     *timePkv;
 
 
 @end
@@ -21,11 +23,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self addDatePickView];
+    [self addMainView];
+}
+
+- (void)addMainView {
+    [self.view addSubview:self.ccv];
+    self.ccv.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
 }
 
 - (void)addDatePickView {
     [self.datePkv showOnSView:self.view];
+}
+
+- (void)addTimePickView {
+    [self.timePkv showOnSView:self.view];
+}
+
+-(CourseConfigView *)ccv {
+    if (!_ccv) {
+        _ccv = [[CourseConfigView alloc] init];
+    }
+    return _ccv;
 }
 
 

@@ -34,9 +34,9 @@
         return;
     }
     self.navigationController.navigationBarHidden = FALSE;
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"#3FA2FF"]] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIAdapter mainBlue]] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithHexString:@"#3FA2FF"];
+    self.navigationController.navigationBar.barTintColor = [UIAdapter mainBlue];
     self.navigationController.navigationBar.translucent = NO;
     [self.navigationController.navigationBar setTitleTextAttributes:@{
                                                                       NSFontAttributeName:[UIFont boldSystemFontOfSize:17.0],
