@@ -7,65 +7,21 @@
 //
 
 #import "CourseConfigView.h"
-
-@interface HeaderView ()
-
-@property (nonatomic,strong) UILabel        *themLabel;
-@property (nonatomic,strong) UITextField    *courseCountField;
-
-@end
-
-@implementation HeaderView
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        
-    }
-    return self;
-}
-
-- (void)configUI {
-    [self addSubview:self.themLabel];
-    [self addSubview:self.courseCountField];
-    self.themLabel.sd_layout
-    .leftSpaceToView(self, [UIAdapter lrGap])
-    .topEqualToView(self)
-    .bottomEqualToView(self);
-    [self.themLabel setSingleLineAutoResizeWithMaxWidth:60.0];
-    self.courseCountField.sd_layout
-    .rightSpaceToView(self, [UIAdapter lrGap])
-    .topEqualToView(self)
-    .bottomEqualToView(self)
-    .widthIs(60.0);
-}
-
--(UILabel *)themLabel {
-    if (!_themLabel) {
-        _themLabel = [UILabel new];
-        _themLabel.font = [UIAdapter font15];
-        _themLabel.textColor = [UIAdapter lightBlack];
-    }
-    return _themLabel;
-}
-
--(UITextField *)courseCountField {
-    if (!_courseCountField) {
-        _courseCountField = [UITextField new];
-        _courseCountField.keyboardType = UIKeyboardTypeNumberPad;
-        _courseCountField.placeholder = @"请输入有几节课";
-        _courseCountField.font = [UIAdapter font15];
-        _courseCountField.textColor = [UIAdapter lightBlack];
-    }
-    return _courseCountField;
-}
-
-@end
+#import "CourseHeaderView.h"
+#import "HXCourseItemsPKV.h"
+#import "CourseTimeInfoCell.h"
 
 @interface CourseConfigView ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong) UITableView *table;
+
+@property (nonatomic,strong) CourseHeaderView  *firstHv;
+
+@property (nonatomic,strong) CourseHeaderView  *secondHv;
+
+// 数据
+@property (nonatomic,strong) NSMutableArray<ItemTimeModel *> *amItems;
+@property (nonatomic,strong) NSMutableArray<ItemTimeModel *> *pmItems;
 
 @end
 
@@ -75,6 +31,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        _amItems = [NSMutableArray new];
+        _pmItems = [NSMutableArray new];
         [self configUI];
     }
     return self;
@@ -85,6 +43,36 @@
     self.table.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
 }
 
+- (void)updateTableWithCourseItems:(NSString *)itemsCount section:(NSInteger)section {
+    // 数据组装
+    if (section == 0) {
+        [self fillTheArr:self.amItems count:[itemsCount integerValue]];
+    }else if (section == 1) {
+        [self fillTheArr:self.pmItems count:[itemsCount integerValue]];
+    }
+    // 刷新
+    [self.table reloadSections:[NSIndexSet indexSetWithIndex:section] withRowAnimation:UITableViewRowAnimationNone];
+}
+
+- (void)fillTheArr:(NSMutableArray *)data count:(NSInteger)cou{
+    [data removeAllObjects];
+    for (NSInteger s = 0; s < cou; s ++) {
+        ItemTimeModel *f = [ItemTimeModel new];
+        f.themTxt = [NSString stringWithFormat:@"第%ld节",s + 1];
+        f.detailTxt = @"点击设置课程时间";
+        f.rightIConName = @"personal_arrow";
+        [data addObject:f];
+    }
+}
+
+- (void)updateHeaderViewWithThem:(nullable NSString *)them tipMessage:(NSString *)msg section:(NSInteger)section {
+    if (section == 0) {
+        [self.firstHv updateContentWithThem:them tipMessage:msg];
+    }else if (section == 1){
+        [self.secondHv updateContentWithThem:them tipMessage:msg];
+    }
+}
+
 #pragma mark ------ UITableViewDelegate,UITableViewDataSource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -92,21 +80,24 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 30;
+    NSInteger items = section == 0 ? self.amItems.count : self.pmItems.count;
+    return items;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [UITableViewCell new];
-    cell.textLabel.text = [NSString stringWithFormat:@"S:%ld - R:%ld",indexPath.section,indexPath.row];
+    CourseTimeInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_CourseTimeInfoCell];
+    cell.data = indexPath.section == 0 ? self.amItems[indexPath.row] : self.pmItems[indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60.0;
+    ItemTimeModel *dataModel = indexPath.section == 0 ? self.amItems[indexPath.row] : self.pmItems[indexPath.row];
+    return [tableView cellHeightForIndexPath:indexPath model:dataModel keyPath:@"data" cellClass:[CourseTimeInfoCell class] contentViewWidth:[UIAdapter deviceWidth]];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 30.0;
+    return 55.0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -114,10 +105,7 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIButton *hv = [UIButton buttonWithType:UIButtonTypeCustom];
-    [hv addTarget:self action:@selector(eventClick:) forControlEvents:UIControlEventTouchUpInside];
-    hv.tag = section;
-    hv.backgroundColor = section  == 0 ? [UIColor redColor] : [UIColor orangeColor];
+    UIView *hv =section == 0 ? self.firstHv : self.secondHv;
     return hv;
 }
 
@@ -127,8 +115,11 @@
     return fv;
 }
 
-- (void)eventClick:(UIButton *)btn {
-    NSLog(@" \n %s - %ld \n ",__FUNCTION__,btn.tag);
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:FALSE];
+    if (_delegate && [_delegate respondsToSelector:@selector(courseConfigView:didSelectRowAtIndexPath:)]) {
+        [_delegate courseConfigView:self didSelectRowAtIndexPath:indexPath];
+    }
 }
 
 #pragma mark ------ lazy load
@@ -136,10 +127,40 @@
 -(UITableView *)table {
     if (!_table) {
         _table = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _table.separatorStyle = UITableViewCellSelectionStyleNone;
+        [_table registerClass:[CourseTimeInfoCell class] forCellReuseIdentifier:cell_CourseTimeInfoCell];
         _table.delegate = (id)self;
         _table.dataSource = (id)self;
     }
     return _table;
+}
+
+-(CourseHeaderView *)firstHv {
+    if (!_firstHv) {
+        _firstHv = [CourseHeaderView new];
+        [_firstHv updateContentWithThem:@"上午几节课 ？" tipMessage:@"点击选择"];
+        HXWeakSelf
+        _firstHv.headerEventBlock = ^{
+            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigView:headerEventLocation:)]) {
+                [weakSelf.delegate courseConfigView:weakSelf headerEventLocation:0];
+            }
+        };
+    }
+    return _firstHv;
+}
+
+-(CourseHeaderView *)secondHv {
+    if (!_secondHv) {
+        _secondHv = [CourseHeaderView new];
+        [_secondHv updateContentWithThem:@"下午几节课 ？" tipMessage:@"点击选择"];
+        HXWeakSelf
+        _secondHv.headerEventBlock = ^{
+            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigView:headerEventLocation:)]) {
+                [weakSelf.delegate courseConfigView:weakSelf headerEventLocation:1];
+            }
+        };
+    }
+    return _secondHv;
 }
 
 @end

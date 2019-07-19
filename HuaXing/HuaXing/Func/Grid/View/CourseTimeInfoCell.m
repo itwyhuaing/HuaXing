@@ -1,14 +1,14 @@
 //
-//  BriefInfoCell.m
+//  CourseTimeInfoCell.m
 //  HuaXing
 //
-//  Created by wangyinghua on 2019/7/14.
+//  Created by hnbwyh on 2019/7/19.
 //  Copyright © 2019 HuaXing. All rights reserved.
 //
 
-#import "BriefInfoCell.h"
+#import "CourseTimeInfoCell.h"
 
-@interface BriefInfoCell ()
+@interface CourseTimeInfoCell ()
 
 @property (nonatomic,strong)    UILabel         *themLabel;
 @property (nonatomic,strong)    UILabel         *detailLabel;
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation BriefInfoCell
+@implementation CourseTimeInfoCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -33,12 +33,12 @@
     [self.contentView addSubview:self.iconImgV];
     [self.contentView addSubview:line];
     line.sd_layout
-    .leftSpaceToView(self.contentView, [UIAdapter lrGap])
+    .leftSpaceToView(self.contentView, [UIAdapter lrGap] * 2.0)
     .rightEqualToView(self.contentView)
     .bottomEqualToView(self.contentView)
     .heightIs(1.0);
     self.themLabel.sd_layout
-    .leftSpaceToView(self.contentView, [UIAdapter lrGap])
+    .leftEqualToView(line)
     .topEqualToView(self.contentView)
     .bottomEqualToView(line);
     [self.themLabel setSingleLineAutoResizeWithMaxWidth:100.0 * [UIAdapter Scale47Width]];
@@ -62,15 +62,15 @@
     line.backgroundColor = [UIAdapter lightGray];
 }
 
--(void)setData:(ItemDataModel *)data {
+-(void)setData:(ItemTimeModel *)data {
     if (data) {
         _data = data;
         self.themLabel.text = data.themTxt;
         self.detailLabel.text = data.detailTxt;
         self.iconImgV.image = [UIImage imageNamed:data.rightIConName];
-//        self.themLabel.backgroundColor = [UIColor redColor];
-//        self.detailLabel.backgroundColor = [UIColor orangeColor];
-//        self.iconImgV.backgroundColor = [UIColor cyanColor];
+        //        self.themLabel.backgroundColor = [UIColor redColor];
+        //        self.detailLabel.backgroundColor = [UIColor orangeColor];
+        //        self.iconImgV.backgroundColor = [UIColor cyanColor];
     }
 }
 

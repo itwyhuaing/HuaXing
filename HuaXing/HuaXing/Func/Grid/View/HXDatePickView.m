@@ -8,6 +8,9 @@
 
 #import "HXDatePickView.h"
 
+#define kEventCancelTag 100
+#define kEventConfirmTag 101
+
 @interface HXDatePickView ()
 
 @property (nonatomic,strong) UIDatePicker *dp;
@@ -69,8 +72,8 @@
         self.dp.datePickerMode = UIDatePickerModeDate;
     }
     self.dp.locale = [NSLocale localeWithLocaleIdentifier:@"zh-Hans"];
-    [self modifyButton:leftBtn title:@"取消" tag:100 titileColor:[UIColor redColor]];
-    [self modifyButton:rightBtn title:@"确定" tag:101 titileColor:[UIColor blackColor]];
+    [self modifyButton:leftBtn title:@"取消" tag:kEventCancelTag titileColor:[UIColor redColor]];
+    [self modifyButton:rightBtn title:@"确定" tag:kEventConfirmTag titileColor:[UIColor blackColor]];
     
     bv.backgroundColor = [UIColor whiteColor];
     //    leftBtn.backgroundColor = [UIColor greenColor];
@@ -87,12 +90,10 @@
 }
 
 -(void)eventClick:(UIButton *)sender {
-    if (sender.tag == 101) {
-        [self dismiss];
+    if (sender.tag == kEventConfirmTag) {
         [self dealDate];
-    }else {
-        [self dismiss];
     }
+    [self dismiss];
 }
 
 - (void)dealDate {

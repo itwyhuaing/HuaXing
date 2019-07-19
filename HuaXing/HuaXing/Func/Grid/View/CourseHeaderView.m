@@ -1,14 +1,15 @@
 //
-//  BriefInfoCell.m
+//  CourseHeaderView.m
 //  HuaXing
 //
-//  Created by wangyinghua on 2019/7/14.
+//  Created by hnbwyh on 2019/7/19.
 //  Copyright © 2019 HuaXing. All rights reserved.
 //
 
-#import "BriefInfoCell.h"
+#import "CourseHeaderView.h"
 
-@interface BriefInfoCell ()
+
+@interface CourseHeaderView ()
 
 @property (nonatomic,strong)    UILabel         *themLabel;
 @property (nonatomic,strong)    UILabel         *detailLabel;
@@ -16,41 +17,43 @@
 
 @end
 
-@implementation BriefInfoCell
+@implementation CourseHeaderView
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
     if (self) {
         [self configUI];
     }
     return self;
 }
 
+
 - (void)configUI {
     UILabel *line = [UILabel new];
-    [self.contentView addSubview:self.themLabel];
-    [self.contentView addSubview:self.detailLabel];
-    [self.contentView addSubview:self.iconImgV];
-    [self.contentView addSubview:line];
+    [self addSubview:self.themLabel];
+    [self addSubview:self.detailLabel];
+    [self addSubview:self.iconImgV];
+    [self addSubview:line];
     line.sd_layout
-    .leftSpaceToView(self.contentView, [UIAdapter lrGap])
-    .rightEqualToView(self.contentView)
-    .bottomEqualToView(self.contentView)
+    .leftSpaceToView(self, 0.0)
+    .rightEqualToView(self)
+    .bottomEqualToView(self)
     .heightIs(1.0);
     self.themLabel.sd_layout
-    .leftSpaceToView(self.contentView, [UIAdapter lrGap])
-    .topEqualToView(self.contentView)
+    .leftEqualToView(line)
+    .topEqualToView(self)
     .bottomEqualToView(line);
     [self.themLabel setSingleLineAutoResizeWithMaxWidth:100.0 * [UIAdapter Scale47Width]];
     self.iconImgV.sd_layout
-    .rightSpaceToView(self.contentView, 24.0 * [UIAdapter Scale47Width])
+    .rightSpaceToView(self, 24.0 * [UIAdapter Scale47Width])
     .widthIs(5.0 * [UIAdapter Scale47Width])
     .heightIs(9.0 * [UIAdapter Scale47Width])
-    .centerYEqualToView(self.contentView);
+    .centerYEqualToView(self);
     self.detailLabel.sd_layout
     .leftSpaceToView(self.themLabel, 10.0)
     .rightSpaceToView(self.iconImgV, 10.0)
-    .topEqualToView(self.contentView)
+    .topEqualToView(self)
     .bottomEqualToView(line);
     [self setupAutoHeightWithBottomView:self.themLabel bottomMargin:0.0];
     
@@ -62,21 +65,34 @@
     line.backgroundColor = [UIAdapter lightGray];
 }
 
--(void)setData:(ItemDataModel *)data {
-    if (data) {
-        _data = data;
-        self.themLabel.text = data.themTxt;
-        self.detailLabel.text = data.detailTxt;
-        self.iconImgV.image = [UIImage imageNamed:data.rightIConName];
-//        self.themLabel.backgroundColor = [UIColor redColor];
-//        self.detailLabel.backgroundColor = [UIColor orangeColor];
-//        self.iconImgV.backgroundColor = [UIColor cyanColor];
+- (void)updateContentWithThem:(NSString *)them tipMessage:(NSString *)msg {
+    
+    if (them) {
+        self.themLabel.text = them;
+    }
+    if (msg) {
+        self.detailLabel.text = msg;
+    }
+    
+}
+
+#pragma mark --- touch
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (self.headerEventBlock) {
+        self.headerEventBlock();
     }
 }
+
 
 -(UILabel *)themLabel {
     if (!_themLabel) {
         _themLabel = [UILabel new];
+        _themLabel.font = [UIAdapter font15];
+        _themLabel.textColor = [UIAdapter lightBlack];
+        _themLabel.backgroundColor = [UIColor clearColor];
+        _themLabel.textAlignment = NSTextAlignmentLeft;
+        _themLabel.text = @"几节课";
     }
     return _themLabel;
 }
@@ -84,6 +100,11 @@
 -(UILabel *)detailLabel {
     if (!_detailLabel) {
         _detailLabel = [UILabel new];
+        _detailLabel.font = [UIAdapter font15];
+        _detailLabel.textColor = [UIAdapter lightBlack];
+        _detailLabel.backgroundColor = [UIColor clearColor];
+        _detailLabel.textAlignment = NSTextAlignmentRight;
+        _detailLabel.text = @"点击选择";
     }
     return _detailLabel;
 }
@@ -94,5 +115,6 @@
     }
     return _iconImgV;
 }
+
 
 @end

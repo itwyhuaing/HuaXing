@@ -12,8 +12,11 @@
 		26024BFA22D8A2EA00143425 /* HXNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BF922D8A2EA00143425 /* HXNavigationVC.m */; };
 		2627405822DDDB9A00951856 /* CourseGridVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2627405522DDDB9A00951856 /* CourseGridVC.m */; };
 		2627405B22DDDDBA00951856 /* CourseConfigVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2627405A22DDDDBA00951856 /* CourseConfigVC.m */; };
-		2627405E22DEED4C00951856 /* HXPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2627405D22DEED4C00951856 /* HXPickView.m */; };
 		26496F5C22E06825002D0C0E /* HXDatePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26496F5B22E06825002D0C0E /* HXDatePickView.m */; };
+		26496F5F22E17479002D0C0E /* HXCourseItemsPKV.m in Sources */ = {isa = PBXBuildFile; fileRef = 26496F5E22E17479002D0C0E /* HXCourseItemsPKV.m */; };
+		26496F6222E1B5C5002D0C0E /* CourseTimeInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26496F6122E1B5C5002D0C0E /* CourseTimeInfoCell.m */; };
+		26496F6522E1B698002D0C0E /* ItemTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26496F6422E1B698002D0C0E /* ItemTimeModel.m */; };
+		26496F6822E1CBE0002D0C0E /* CourseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26496F6722E1CBE0002D0C0E /* CourseHeaderView.m */; };
 		466105B022E0B53900A4CAF8 /* CourseConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 466105AF22E0B53900A4CAF8 /* CourseConfigView.m */; };
 		469E585822D77F560077AE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585622D77F560077AE51 /* Main.storyboard */; };
 		469E585A22D77F580077AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E585922D77F580077AE51 /* Assets.xcassets */; };
@@ -53,10 +56,16 @@
 		2627405522DDDB9A00951856 /* CourseGridVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseGridVC.m; sourceTree = "<group>"; };
 		2627405922DDDDBA00951856 /* CourseConfigVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseConfigVC.h; sourceTree = "<group>"; };
 		2627405A22DDDDBA00951856 /* CourseConfigVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseConfigVC.m; sourceTree = "<group>"; };
-		2627405C22DEED4C00951856 /* HXPickView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXPickView.h; sourceTree = "<group>"; };
-		2627405D22DEED4C00951856 /* HXPickView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXPickView.m; sourceTree = "<group>"; };
 		26496F5A22E06825002D0C0E /* HXDatePickView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXDatePickView.h; sourceTree = "<group>"; };
 		26496F5B22E06825002D0C0E /* HXDatePickView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXDatePickView.m; sourceTree = "<group>"; };
+		26496F5D22E17479002D0C0E /* HXCourseItemsPKV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXCourseItemsPKV.h; sourceTree = "<group>"; };
+		26496F5E22E17479002D0C0E /* HXCourseItemsPKV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXCourseItemsPKV.m; sourceTree = "<group>"; };
+		26496F6022E1B5C5002D0C0E /* CourseTimeInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseTimeInfoCell.h; sourceTree = "<group>"; };
+		26496F6122E1B5C5002D0C0E /* CourseTimeInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseTimeInfoCell.m; sourceTree = "<group>"; };
+		26496F6322E1B698002D0C0E /* ItemTimeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemTimeModel.h; sourceTree = "<group>"; };
+		26496F6422E1B698002D0C0E /* ItemTimeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemTimeModel.m; sourceTree = "<group>"; };
+		26496F6622E1CBE0002D0C0E /* CourseHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseHeaderView.h; sourceTree = "<group>"; };
+		26496F6722E1CBE0002D0C0E /* CourseHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseHeaderView.m; sourceTree = "<group>"; };
 		466105AE22E0B53900A4CAF8 /* CourseConfigView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseConfigView.h; sourceTree = "<group>"; };
 		466105AF22E0B53900A4CAF8 /* CourseConfigView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseConfigView.m; sourceTree = "<group>"; };
 		469E584D22D77F560077AE51 /* HuaXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +156,8 @@
 		2627405622DDDB9A00951856 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				26496F6322E1B698002D0C0E /* ItemTimeModel.h */,
+				26496F6422E1B698002D0C0E /* ItemTimeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,12 +165,16 @@
 		2627405722DDDB9A00951856 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				26496F6622E1CBE0002D0C0E /* CourseHeaderView.h */,
+				26496F6722E1CBE0002D0C0E /* CourseHeaderView.m */,
 				466105AE22E0B53900A4CAF8 /* CourseConfigView.h */,
 				466105AF22E0B53900A4CAF8 /* CourseConfigView.m */,
-				2627405C22DEED4C00951856 /* HXPickView.h */,
-				2627405D22DEED4C00951856 /* HXPickView.m */,
+				26496F5D22E17479002D0C0E /* HXCourseItemsPKV.h */,
+				26496F5E22E17479002D0C0E /* HXCourseItemsPKV.m */,
 				26496F5A22E06825002D0C0E /* HXDatePickView.h */,
 				26496F5B22E06825002D0C0E /* HXDatePickView.m */,
+				26496F6022E1B5C5002D0C0E /* CourseTimeInfoCell.h */,
+				26496F6122E1B5C5002D0C0E /* CourseTimeInfoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -457,13 +472,14 @@
 				46BC16B822DA3A9C00A70F23 /* UIColor+Addition.m in Sources */,
 				46BC16C822DA3D9D00A70F23 /* PersonDataModel.m in Sources */,
 				469E586E22D780A80077AE51 /* ViewController.m in Sources */,
+				26496F6822E1CBE0002D0C0E /* CourseHeaderView.m in Sources */,
 				46BC16B922DA3A9C00A70F23 /* NSMutableDictionary+Addition.m in Sources */,
 				46BC16C522DA3D7900A70F23 /* PersonManager.m in Sources */,
 				46BC16CE22DAF0B900A70F23 /* BriefInfoCell.m in Sources */,
 				46BC16B522DA3A9C00A70F23 /* NSDate+Addition.m in Sources */,
 				2627405B22DDDDBA00951856 /* CourseConfigVC.m in Sources */,
+				26496F6222E1B5C5002D0C0E /* CourseTimeInfoCell.m in Sources */,
 				46BC169922DA347A00A70F23 /* UIAdapter.m in Sources */,
-				2627405E22DEED4C00951856 /* HXPickView.m in Sources */,
 				26024BEE22D8A1FD00143425 /* HXBaseVC.m in Sources */,
 				469E586022D77F580077AE51 /* main.m in Sources */,
 				46BC16BC22DA3A9C00A70F23 /* NSString+Addition.m in Sources */,
@@ -474,6 +490,8 @@
 				26024BFA22D8A2EA00143425 /* HXNavigationVC.m in Sources */,
 				46BC16B322DA3A9C00A70F23 /* UIImage+Addition.m in Sources */,
 				46BC16B222DA3A9C00A70F23 /* UIView+Addition.m in Sources */,
+				26496F5F22E17479002D0C0E /* HXCourseItemsPKV.m in Sources */,
+				26496F6522E1B698002D0C0E /* ItemTimeModel.m in Sources */,
 				46BC16B422DA3A9C00A70F23 /* NSArray+Addition.m in Sources */,
 				46BC16CB22DAC2DD00A70F23 /* PersonMainView.m in Sources */,
 				26024BF122D8A21600143425 /* HXTabAdapter.m in Sources */,
