@@ -25,6 +25,8 @@ typedef enum : NSUInteger {
 
 @property (nonatomic,copy) HXDatePickCompletion pickCompletion;
 
+@property (nonatomic,copy) NSString *barThem;
+
 - (void)showOnSView:(UIView *)sv;
 
 -(void)dismiss;

@@ -15,9 +15,11 @@
 
 @property (nonatomic,strong) UITableView *table;
 
-@property (nonatomic,strong) CourseHeaderView  *firstHv;
+@property (nonatomic,strong) CourseHeaderView  *dateHv;
 
-@property (nonatomic,strong) CourseHeaderView  *secondHv;
+@property (nonatomic,strong) CourseHeaderView  *amHv;
+
+@property (nonatomic,strong) CourseHeaderView  *pmHv;
 
 // 数据
 @property (nonatomic,strong) NSMutableArray<ItemTimeModel *> *amItems;
@@ -45,9 +47,9 @@
 
 - (void)updateTableWithCourseItems:(NSString *)itemsCount section:(NSInteger)section {
     // 数据组装
-    if (section == 0) {
+    if (section == CourseConfigViewHeaderAMLocation) {
         [self fillTheArr:self.amItems count:[itemsCount integerValue]];
-    }else if (section == 1) {
+    }else if (section == CourseConfigViewHeaderPMLocation) {
         [self fillTheArr:self.pmItems count:[itemsCount integerValue]];
     }
     // 刷新
@@ -66,33 +68,60 @@
 }
 
 - (void)updateHeaderViewWithThem:(nullable NSString *)them tipMessage:(NSString *)msg section:(NSInteger)section {
-    if (section == 0) {
-        [self.firstHv updateContentWithThem:them tipMessage:msg];
-    }else if (section == 1){
-        [self.secondHv updateContentWithThem:them tipMessage:msg];
+    if (section == CourseConfigViewHeaderAMLocation) {
+        [self.amHv updateContentWithThem:them tipMessage:msg];
+    }else if (section == CourseConfigViewHeaderPMLocation){
+        [self.pmHv updateContentWithThem:them tipMessage:msg];
+    }else if (section == CourseConfigViewHeaderCourseDateLocation){
+        [self.dateHv updateContentWithThem:them tipMessage:msg];
+    }
+}
+
+-(void)updateTableWithItemModel:(ItemTimeModel *)model cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (model) {
+        if (indexPath.section == CourseConfigViewHeaderAMLocation) {
+            [self.amItems replaceObjectAtIndex:indexPath.row withObject:model];
+        }else if (indexPath.section == CourseConfigViewHeaderPMLocation){
+            [self.pmItems replaceObjectAtIndex:indexPath.row withObject:model];
+        }
+        [self.table reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     }
 }
 
 #pragma mark ------ UITableViewDelegate,UITableViewDataSource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return CourseConfigViewHeaderLocationCount;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSInteger items = section == 0 ? self.amItems.count : self.pmItems.count;
+    NSInteger items = 0;
+    if (section == CourseConfigViewHeaderAMLocation) {
+        items = self.amItems.count;
+    }else if (section == CourseConfigViewHeaderPMLocation){
+        items = self.pmItems.count;
+    }
     return items;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CourseTimeInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_CourseTimeInfoCell];
-    cell.data = indexPath.section == 0 ? self.amItems[indexPath.row] : self.pmItems[indexPath.row];
+    if (indexPath.section == CourseConfigViewHeaderAMLocation) {
+        cell.data = self.amItems[indexPath.row];
+    }else if (indexPath.section == CourseConfigViewHeaderPMLocation){
+        cell.data = self.pmItems[indexPath.row];
+    }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    ItemTimeModel *dataModel = indexPath.section == 0 ? self.amItems[indexPath.row] : self.pmItems[indexPath.row];
+    ItemTimeModel *dataModel = [ItemTimeModel new];
+    if (indexPath.section == CourseConfigViewHeaderAMLocation) {
+        dataModel = self.amItems[indexPath.row];
+    }else if (indexPath.section == CourseConfigViewHeaderPMLocation){
+        dataModel = self.pmItems[indexPath.row];
+    }
     return [tableView cellHeightForIndexPath:indexPath model:dataModel keyPath:@"data" cellClass:[CourseTimeInfoCell class] contentViewWidth:[UIAdapter deviceWidth]];
 }
 
@@ -105,20 +134,31 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *hv =section == 0 ? self.firstHv : self.secondHv;
+    UIView *hv = self.dateHv;
+    if (section == CourseConfigViewHeaderAMLocation) {
+        hv = self.amHv;
+    }else if (section == CourseConfigViewHeaderPMLocation){
+        hv = self.pmHv;
+    }
     return hv;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UIView *fv = [UIView new];
-    fv.backgroundColor = [UIColor orangeColor];
+    //fv.backgroundColor = [UIColor orangeColor];
     return fv;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:FALSE];
-    if (_delegate && [_delegate respondsToSelector:@selector(courseConfigView:didSelectRowAtIndexPath:)]) {
-        [_delegate courseConfigView:self didSelectRowAtIndexPath:indexPath];
+    if (_delegate && [_delegate respondsToSelector:@selector(courseConfigView:cellModel:didSelectRowAtIndexPath:)]) {
+        ItemTimeModel *f = [ItemTimeModel new];
+        if (indexPath.section == CourseConfigViewHeaderAMLocation) {
+            f = self.amItems[indexPath.row];
+        }else if (indexPath.section == CourseConfigViewHeaderPMLocation){
+            f = self.pmItems[indexPath.row];
+        }
+        [_delegate courseConfigView:self cellModel:f didSelectRowAtIndexPath:indexPath];
     }
 }
 
@@ -129,38 +169,53 @@
         _table = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _table.separatorStyle = UITableViewCellSelectionStyleNone;
         [_table registerClass:[CourseTimeInfoCell class] forCellReuseIdentifier:cell_CourseTimeInfoCell];
+        _table.bounces = FALSE;
         _table.delegate = (id)self;
         _table.dataSource = (id)self;
     }
     return _table;
 }
 
--(CourseHeaderView *)firstHv {
-    if (!_firstHv) {
-        _firstHv = [CourseHeaderView new];
-        [_firstHv updateContentWithThem:@"上午几节课 ？" tipMessage:@"点击选择"];
+-(CourseHeaderView *)dateHv {
+    if (!_dateHv) {
+        _dateHv = [CourseHeaderView new];
+        [_dateHv updateContentWithThem:@"开课日期 ?" tipMessage:@"点击选择"];
         HXWeakSelf
-        _firstHv.headerEventBlock = ^{
+        _dateHv.headerEventBlock = ^{
             if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigView:headerEventLocation:)]) {
-                [weakSelf.delegate courseConfigView:weakSelf headerEventLocation:0];
+                [weakSelf.delegate courseConfigView:weakSelf headerEventLocation:CourseConfigViewHeaderCourseDateLocation];
             }
         };
     }
-    return _firstHv;
+    return _dateHv;
 }
 
--(CourseHeaderView *)secondHv {
-    if (!_secondHv) {
-        _secondHv = [CourseHeaderView new];
-        [_secondHv updateContentWithThem:@"下午几节课 ？" tipMessage:@"点击选择"];
+-(CourseHeaderView *)amHv {
+    if (!_amHv) {
+        _amHv = [CourseHeaderView new];
+        [_amHv updateContentWithThem:@"上午几节课 ？" tipMessage:@"点击选择"];
         HXWeakSelf
-        _secondHv.headerEventBlock = ^{
+        _amHv.headerEventBlock = ^{
             if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigView:headerEventLocation:)]) {
-                [weakSelf.delegate courseConfigView:weakSelf headerEventLocation:1];
+                [weakSelf.delegate courseConfigView:weakSelf headerEventLocation:CourseConfigViewHeaderAMLocation];
             }
         };
     }
-    return _secondHv;
+    return _amHv;
+}
+
+-(CourseHeaderView *)pmHv {
+    if (!_pmHv) {
+        _pmHv = [CourseHeaderView new];
+        [_pmHv updateContentWithThem:@"下午几节课 ？" tipMessage:@"点击选择"];
+        HXWeakSelf
+        _pmHv.headerEventBlock = ^{
+            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigView:headerEventLocation:)]) {
+                [weakSelf.delegate courseConfigView:weakSelf headerEventLocation:CourseConfigViewHeaderPMLocation];
+            }
+        };
+    }
+    return _pmHv;
 }
 
 @end

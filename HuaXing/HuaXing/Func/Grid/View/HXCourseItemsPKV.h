@@ -18,7 +18,7 @@ typedef void(^HXCourseItemsPKVCompletion)(NSString *pkvResult);
 
 @property (nonatomic,copy) HXCourseItemsPKVCompletion pkvCompletion;
 
-- (void)showOnSView:(UIView *)sv;
+- (void)showOnSView:(UIView *)sv barThem:(NSString *)them;
 
 -(void)dismiss;
 

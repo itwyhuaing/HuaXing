@@ -7,6 +7,7 @@
 //
 
 #import "CourseTimeInfoCell.h"
+#import "ItemTimeModel.h"
 
 @interface CourseTimeInfoCell ()
 

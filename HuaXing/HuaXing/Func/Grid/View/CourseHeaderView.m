@@ -41,7 +41,7 @@
     .bottomEqualToView(self)
     .heightIs(1.0);
     self.themLabel.sd_layout
-    .leftEqualToView(line)
+    .leftSpaceToView(self, [UIAdapter lrGap])
     .topEqualToView(self)
     .bottomEqualToView(line);
     [self.themLabel setSingleLineAutoResizeWithMaxWidth:100.0 * [UIAdapter Scale47Width]];
@@ -57,6 +57,7 @@
     .bottomEqualToView(line);
     [self setupAutoHeightWithBottomView:self.themLabel bottomMargin:0.0];
     
+    self.backgroundColor = [UIColor whiteColor];
     self.themLabel.font                         = [UIAdapter font15];
     self.themLabel.textColor                    = [UIAdapter lightBlack];
     self.detailLabel.font                         = [UIAdapter font15];

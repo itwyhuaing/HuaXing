@@ -7,13 +7,13 @@
 //
 
 #import "HXCourseItemsPKV.h"
-
-#define kBUuttonCancelTag 110
-#define kBUuttonConfirmTag 111
+#import "HXPickViewToolBar.h"
 
 @interface HXCourseItemsPKV ()
 
 @property (nonatomic,strong) UIPickerView  *pkv;
+
+@property (nonatomic,strong) HXPickViewToolBar *toolBar;
 
 @end
 
@@ -33,13 +33,9 @@
 
 - (void)configUI {
     //
-    UIView *bv = [UIView new];
-    UIButton* leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIButton* rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.toolBar = [HXPickViewToolBar new];
     [self addSubview:self.pkv];
-    [self addSubview:bv];
-    [bv addSubview:leftBtn];
-    [bv addSubview:rightBtn];
+    [self addSubview:self.toolBar];
     
     //
     self.pkv.sd_layout
@@ -47,48 +43,30 @@
     .rightEqualToView(self)
     .bottomSpaceToView(self, 30.0)
     .heightIs(160.0 * [UIAdapter Scale47Width]);
-    bv.sd_layout
+    self.toolBar.sd_layout
     .leftEqualToView(self)
     .rightEqualToView(self)
     .bottomSpaceToView(self.pkv, 0)
     .heightIs(40.0 * [UIAdapter Scale47Width]);
-    leftBtn.sd_layout
-    .leftEqualToView(bv)
-    .bottomEqualToView(bv)
-    .topEqualToView(bv)
-    .widthIs(60.0);
-    rightBtn.sd_layout
-    .rightEqualToView(bv)
-    .bottomEqualToView(bv)
-    .topEqualToView(bv)
-    .widthIs(60.0);
     
     self.backgroundColor = [UIAdapter maskLightBlack];
-    bv.backgroundColor = [UIColor whiteColor];
-    [self modifyButton:leftBtn title:@"取消" tag:kBUuttonCancelTag titileColor:[UIColor redColor]];
-    [self modifyButton:rightBtn title:@"确定" tag:kBUuttonConfirmTag titileColor:[UIColor blackColor]];
+    
+    // 点击回调
+    HXWeakSelf
+    self.toolBar.eventBlock = ^(NSInteger location) {
+        NSString *rlt = @"0";
+        if (location == kBUuttonConfirmTag) {
+            NSLog(@" \n 测试数据 :eventClick \n ");
+            NSInteger idx = [weakSelf.pkv selectedRowInComponent:0];
+            rlt = self.dataSource[idx];
+        }
+        if (weakSelf.pkvCompletion) {
+            weakSelf.pkvCompletion(rlt);
+        }
+        [weakSelf dismiss];
+    };
 }
 
-- (void)modifyButton:(UIButton *)btn title:(NSString *)title tag:(NSInteger)tag titileColor:(UIColor *)clr {
-    [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:clr forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIAdapter font17];
-    btn.tag = tag;
-    [btn addTarget:self action:@selector(eventClick:) forControlEvents:UIControlEventTouchUpInside];
-}
-
--(void)eventClick:(UIButton *)sender {
-    NSString *rlt = @"0";
-    if (sender.tag == kBUuttonConfirmTag) {
-        NSLog(@" \n 测试数据 :eventClick \n ");
-        NSInteger idx = [self.pkv selectedRowInComponent:0];
-        rlt = self.dataSource[idx];
-    }
-    if (self.pkvCompletion) {
-        self.pkvCompletion(rlt);
-    }
-    [self dismiss];
-}
 
 - (void)dealSelectedResult {
     NSInteger idx = [self.pkv selectedRowInComponent:0];
@@ -105,12 +83,13 @@
     }
 }
 
-- (void)showOnSView:(UIView *)sv {
+- (void)showOnSView:(UIView *)sv  barThem:(NSString *)them{
     if (sv) {
         [sv addSubview:self];
     }else{
         [[UIApplication sharedApplication].keyWindow addSubview:self];
     }
+    [self.toolBar updateThem:them];
     self.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
 }
 

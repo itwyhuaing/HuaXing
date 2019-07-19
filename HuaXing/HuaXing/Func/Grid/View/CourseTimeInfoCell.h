@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ItemTimeModel.h"
+@class ItemTimeModel;
 
 NS_ASSUME_NONNULL_BEGIN
 

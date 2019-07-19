@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^HeaderViewClickEventBlock)();
+typedef void(^HeaderViewClickEventBlock)(void);
 @interface CourseHeaderView : UIView
 
 @property (nonatomic,copy) HeaderViewClickEventBlock headerEventBlock;

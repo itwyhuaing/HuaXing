@@ -7,13 +7,13 @@
 //
 
 #import "HXDatePickView.h"
-
-#define kEventCancelTag 100
-#define kEventConfirmTag 101
+#import "HXPickViewToolBar.h"
 
 @interface HXDatePickView ()
 
 @property (nonatomic,strong) UIDatePicker *dp;
+
+@property (nonatomic,strong) HXPickViewToolBar *toolBar;
 
 @property (nonatomic,assign) HXDatePickViewType vType;
 
@@ -34,13 +34,9 @@
 - (void)configUIWithViewType:(HXDatePickViewType)type {
     //
     self.dp = [UIDatePicker new];
-    UIView *bv = [UIView new];
-    UIButton* leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIButton* rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.toolBar = [HXPickViewToolBar new];
     [self addSubview:self.dp];
-    [self addSubview:bv];
-    [bv addSubview:leftBtn];
-    [bv addSubview:rightBtn];
+    [self addSubview:self.toolBar];
     
     //
     self.dp.sd_layout
@@ -48,21 +44,11 @@
     .rightEqualToView(self)
     .bottomEqualToView(self)
     .heightIs(230.0 * [UIAdapter Scale47Width]);
-    bv.sd_layout
+    self.toolBar.sd_layout
     .leftEqualToView(self)
     .rightEqualToView(self)
     .bottomSpaceToView(self.dp, 0)
     .heightIs(40.0 * [UIAdapter Scale47Width]);
-    leftBtn.sd_layout
-    .leftEqualToView(bv)
-    .bottomEqualToView(bv)
-    .topEqualToView(bv)
-    .widthIs(60.0);
-    rightBtn.sd_layout
-    .rightEqualToView(bv)
-    .bottomEqualToView(bv)
-    .topEqualToView(bv)
-    .widthIs(60.0);
     
     self.backgroundColor = [UIAdapter maskLightBlack];
     self.dp.backgroundColor = [UIColor whiteColor];
@@ -72,28 +58,15 @@
         self.dp.datePickerMode = UIDatePickerModeDate;
     }
     self.dp.locale = [NSLocale localeWithLocaleIdentifier:@"zh-Hans"];
-    [self modifyButton:leftBtn title:@"取消" tag:kEventCancelTag titileColor:[UIColor redColor]];
-    [self modifyButton:rightBtn title:@"确定" tag:kEventConfirmTag titileColor:[UIColor blackColor]];
     
-    bv.backgroundColor = [UIColor whiteColor];
-    //    leftBtn.backgroundColor = [UIColor greenColor];
-    //    rightBtn.backgroundColor = [UIColor orangeColor];
-    
-}
-
-- (void)modifyButton:(UIButton *)btn title:(NSString *)title tag:(NSInteger)tag titileColor:(UIColor *)clr {
-    [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:clr forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIAdapter font17];
-    btn.tag = tag;
-    [btn addTarget:self action:@selector(eventClick:) forControlEvents:UIControlEventTouchUpInside];
-}
-
--(void)eventClick:(UIButton *)sender {
-    if (sender.tag == kEventConfirmTag) {
-        [self dealDate];
-    }
-    [self dismiss];
+    // 点击回调
+    HXWeakSelf
+    self.toolBar.eventBlock = ^(NSInteger location) {
+        [weakSelf dismiss];
+        if (location == kBUuttonConfirmTag) {
+            [weakSelf dealDate];
+        }
+    };
 }
 
 - (void)dealDate {
@@ -118,11 +91,16 @@
 - (void)showOnSView:(UIView *)sv {
     if (sv) {
         [sv addSubview:self];
-        
     }else{
         [[UIApplication sharedApplication].keyWindow addSubview:self];
     }
     self.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
+}
+
+-(void)setBarThem:(NSString *)barThem {
+    if (barThem) {
+        [self.toolBar updateThem:barThem];
+    }
 }
 
 -(void)dismiss {
