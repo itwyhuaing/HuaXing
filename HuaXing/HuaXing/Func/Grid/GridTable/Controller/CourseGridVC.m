@@ -8,6 +8,7 @@
 
 #import "CourseGridVC.h"
 #import "CourseConfigVC.h"
+#import "TestVC.h"
 
 @interface CourseGridVC ()
 
@@ -21,7 +22,8 @@
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    CourseConfigVC *vc = [CourseConfigVC new];
+    //CourseConfigVC *vc = [CourseConfigVC new];
+    TestVC *vc = [TestVC new];
     [self.navigationController pushViewController:vc animated:TRUE];
 }
 

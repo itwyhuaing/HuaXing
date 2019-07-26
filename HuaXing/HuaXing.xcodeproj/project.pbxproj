@@ -10,15 +10,21 @@
 		26024BEE22D8A1FD00143425 /* HXBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BED22D8A1FD00143425 /* HXBaseVC.m */; };
 		26024BF122D8A21600143425 /* HXTabAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BF022D8A21600143425 /* HXTabAdapter.m */; };
 		26024BFA22D8A2EA00143425 /* HXNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BF922D8A2EA00143425 /* HXNavigationVC.m */; };
-		2627405822DDDB9A00951856 /* CourseGridVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2627405522DDDB9A00951856 /* CourseGridVC.m */; };
-		2627405B22DDDDBA00951856 /* CourseConfigVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2627405A22DDDDBA00951856 /* CourseConfigVC.m */; };
-		26496F5C22E06825002D0C0E /* HXDatePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26496F5B22E06825002D0C0E /* HXDatePickView.m */; };
-		26496F5F22E17479002D0C0E /* HXCourseItemsPKV.m in Sources */ = {isa = PBXBuildFile; fileRef = 26496F5E22E17479002D0C0E /* HXCourseItemsPKV.m */; };
-		26496F6222E1B5C5002D0C0E /* CourseTimeInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26496F6122E1B5C5002D0C0E /* CourseTimeInfoCell.m */; };
-		26496F6522E1B698002D0C0E /* ItemTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26496F6422E1B698002D0C0E /* ItemTimeModel.m */; };
-		26496F6822E1CBE0002D0C0E /* CourseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26496F6722E1CBE0002D0C0E /* CourseHeaderView.m */; };
-		460FE73722E2122400C70623 /* HXPickViewToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 460FE73622E2122400C70623 /* HXPickViewToolBar.m */; };
-		466105B022E0B53900A4CAF8 /* CourseConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 466105AF22E0B53900A4CAF8 /* CourseConfigView.m */; };
+		26E0B12222EAE591005BE40D /* HXPickViewToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B11E22EAE591005BE40D /* HXPickViewToolBar.m */; };
+		26E0B12322EAE591005BE40D /* HXCourseItemsPKV.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B11F22EAE591005BE40D /* HXCourseItemsPKV.m */; };
+		26E0B12422EAE591005BE40D /* HXDatePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B12122EAE591005BE40D /* HXDatePickView.m */; };
+		26E0B13922EAE62E005BE40D /* CourseConfigVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B12722EAE62E005BE40D /* CourseConfigVC.m */; };
+		26E0B13A22EAE62E005BE40D /* CourseGridVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B12A22EAE62E005BE40D /* CourseGridVC.m */; };
+		26E0B13B22EAE62E005BE40D /* ItemTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B12C22EAE62E005BE40D /* ItemTimeModel.m */; };
+		26E0B13C22EAE62E005BE40D /* CourseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B12F22EAE62E005BE40D /* CourseHeaderView.m */; };
+		26E0B13D22EAE62E005BE40D /* CourseConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B13322EAE62E005BE40D /* CourseConfigView.m */; };
+		26E0B13E22EAE62E005BE40D /* CourseTimeInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B13422EAE62E005BE40D /* CourseTimeInfoCell.m */; };
+		26E0B14122EAE684005BE40D /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B14022EAE684005BE40D /* TestVC.m */; };
+		26E0B14422EAE6A7005BE40D /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B14322EAE6A7005BE40D /* GridView.m */; };
+		26E0B14722EAE85F005BE40D /* GridTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B14622EAE85F005BE40D /* GridTableCell.m */; };
+		26E0B14A22EAED4B005BE40D /* CourseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B14922EAED4B005BE40D /* CourseItem.m */; };
+		26E0B14D22EAEF47005BE40D /* GridCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B14C22EAEF47005BE40D /* GridCollectionView.m */; };
+		26E0B15022EAFE99005BE40D /* GridCollectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B14F22EAFE99005BE40D /* GridCollectionHeader.m */; };
 		469E585822D77F560077AE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585622D77F560077AE51 /* Main.storyboard */; };
 		469E585A22D77F580077AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E585922D77F580077AE51 /* Assets.xcassets */; };
 		469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585B22D77F580077AE51 /* LaunchScreen.storyboard */; };
@@ -53,24 +59,36 @@
 		26024BF022D8A21600143425 /* HXTabAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXTabAdapter.m; sourceTree = "<group>"; };
 		26024BF822D8A2EA00143425 /* HXNavigationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNavigationVC.h; sourceTree = "<group>"; };
 		26024BF922D8A2EA00143425 /* HXNavigationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXNavigationVC.m; sourceTree = "<group>"; };
-		2627405422DDDB9A00951856 /* CourseGridVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseGridVC.h; sourceTree = "<group>"; };
-		2627405522DDDB9A00951856 /* CourseGridVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseGridVC.m; sourceTree = "<group>"; };
-		2627405922DDDDBA00951856 /* CourseConfigVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseConfigVC.h; sourceTree = "<group>"; };
-		2627405A22DDDDBA00951856 /* CourseConfigVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseConfigVC.m; sourceTree = "<group>"; };
-		26496F5A22E06825002D0C0E /* HXDatePickView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXDatePickView.h; sourceTree = "<group>"; };
-		26496F5B22E06825002D0C0E /* HXDatePickView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXDatePickView.m; sourceTree = "<group>"; };
-		26496F5D22E17479002D0C0E /* HXCourseItemsPKV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXCourseItemsPKV.h; sourceTree = "<group>"; };
-		26496F5E22E17479002D0C0E /* HXCourseItemsPKV.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXCourseItemsPKV.m; sourceTree = "<group>"; };
-		26496F6022E1B5C5002D0C0E /* CourseTimeInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseTimeInfoCell.h; sourceTree = "<group>"; };
-		26496F6122E1B5C5002D0C0E /* CourseTimeInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseTimeInfoCell.m; sourceTree = "<group>"; };
-		26496F6322E1B698002D0C0E /* ItemTimeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemTimeModel.h; sourceTree = "<group>"; };
-		26496F6422E1B698002D0C0E /* ItemTimeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemTimeModel.m; sourceTree = "<group>"; };
-		26496F6622E1CBE0002D0C0E /* CourseHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseHeaderView.h; sourceTree = "<group>"; };
-		26496F6722E1CBE0002D0C0E /* CourseHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseHeaderView.m; sourceTree = "<group>"; };
-		460FE73522E2122400C70623 /* HXPickViewToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXPickViewToolBar.h; sourceTree = "<group>"; };
-		460FE73622E2122400C70623 /* HXPickViewToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXPickViewToolBar.m; sourceTree = "<group>"; };
-		466105AE22E0B53900A4CAF8 /* CourseConfigView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseConfigView.h; sourceTree = "<group>"; };
-		466105AF22E0B53900A4CAF8 /* CourseConfigView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseConfigView.m; sourceTree = "<group>"; };
+		26E0B11C22EAE591005BE40D /* HXCourseItemsPKV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXCourseItemsPKV.h; sourceTree = "<group>"; };
+		26E0B11D22EAE591005BE40D /* HXDatePickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXDatePickView.h; sourceTree = "<group>"; };
+		26E0B11E22EAE591005BE40D /* HXPickViewToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXPickViewToolBar.m; sourceTree = "<group>"; };
+		26E0B11F22EAE591005BE40D /* HXCourseItemsPKV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCourseItemsPKV.m; sourceTree = "<group>"; };
+		26E0B12022EAE591005BE40D /* HXPickViewToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPickViewToolBar.h; sourceTree = "<group>"; };
+		26E0B12122EAE591005BE40D /* HXDatePickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDatePickView.m; sourceTree = "<group>"; };
+		26E0B12722EAE62E005BE40D /* CourseConfigVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseConfigVC.m; sourceTree = "<group>"; };
+		26E0B12822EAE62E005BE40D /* CourseGridVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseGridVC.h; sourceTree = "<group>"; };
+		26E0B12922EAE62E005BE40D /* CourseConfigVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseConfigVC.h; sourceTree = "<group>"; };
+		26E0B12A22EAE62E005BE40D /* CourseGridVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseGridVC.m; sourceTree = "<group>"; };
+		26E0B12C22EAE62E005BE40D /* ItemTimeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTimeModel.m; sourceTree = "<group>"; };
+		26E0B12D22EAE62E005BE40D /* ItemTimeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTimeModel.h; sourceTree = "<group>"; };
+		26E0B12F22EAE62E005BE40D /* CourseHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseHeaderView.m; sourceTree = "<group>"; };
+		26E0B13022EAE62E005BE40D /* CourseTimeInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseTimeInfoCell.h; sourceTree = "<group>"; };
+		26E0B13122EAE62E005BE40D /* CourseConfigView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseConfigView.h; sourceTree = "<group>"; };
+		26E0B13222EAE62E005BE40D /* CourseHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseHeaderView.h; sourceTree = "<group>"; };
+		26E0B13322EAE62E005BE40D /* CourseConfigView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseConfigView.m; sourceTree = "<group>"; };
+		26E0B13422EAE62E005BE40D /* CourseTimeInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseTimeInfoCell.m; sourceTree = "<group>"; };
+		26E0B13F22EAE684005BE40D /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		26E0B14022EAE684005BE40D /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
+		26E0B14222EAE6A7005BE40D /* GridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
+		26E0B14322EAE6A7005BE40D /* GridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
+		26E0B14522EAE85F005BE40D /* GridTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridTableCell.h; sourceTree = "<group>"; };
+		26E0B14622EAE85F005BE40D /* GridTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridTableCell.m; sourceTree = "<group>"; };
+		26E0B14822EAED4B005BE40D /* CourseItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseItem.h; sourceTree = "<group>"; };
+		26E0B14922EAED4B005BE40D /* CourseItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseItem.m; sourceTree = "<group>"; };
+		26E0B14B22EAEF47005BE40D /* GridCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridCollectionView.h; sourceTree = "<group>"; };
+		26E0B14C22EAEF47005BE40D /* GridCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridCollectionView.m; sourceTree = "<group>"; };
+		26E0B14E22EAFE99005BE40D /* GridCollectionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridCollectionHeader.h; sourceTree = "<group>"; };
+		26E0B14F22EAFE99005BE40D /* GridCollectionHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridCollectionHeader.m; sourceTree = "<group>"; };
 		469E584D22D77F560077AE51 /* HuaXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E585722D77F560077AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		469E585922D77F580077AE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -145,45 +163,6 @@
 			path = BaseVC;
 			sourceTree = "<group>";
 		};
-		2627405322DDDB9A00951856 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				2627405422DDDB9A00951856 /* CourseGridVC.h */,
-				2627405522DDDB9A00951856 /* CourseGridVC.m */,
-				2627405922DDDDBA00951856 /* CourseConfigVC.h */,
-				2627405A22DDDDBA00951856 /* CourseConfigVC.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		2627405622DDDB9A00951856 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				26496F6322E1B698002D0C0E /* ItemTimeModel.h */,
-				26496F6422E1B698002D0C0E /* ItemTimeModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		2627405722DDDB9A00951856 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				26496F6622E1CBE0002D0C0E /* CourseHeaderView.h */,
-				26496F6722E1CBE0002D0C0E /* CourseHeaderView.m */,
-				466105AE22E0B53900A4CAF8 /* CourseConfigView.h */,
-				466105AF22E0B53900A4CAF8 /* CourseConfigView.m */,
-				460FE73522E2122400C70623 /* HXPickViewToolBar.h */,
-				460FE73622E2122400C70623 /* HXPickViewToolBar.m */,
-				26496F5D22E17479002D0C0E /* HXCourseItemsPKV.h */,
-				26496F5E22E17479002D0C0E /* HXCourseItemsPKV.m */,
-				26496F5A22E06825002D0C0E /* HXDatePickView.h */,
-				26496F5B22E06825002D0C0E /* HXDatePickView.m */,
-				26496F6022E1B5C5002D0C0E /* CourseTimeInfoCell.h */,
-				26496F6122E1B5C5002D0C0E /* CourseTimeInfoCell.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		26AD64C222D81B2C0087D3EB /* Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,11 +194,109 @@
 		26AD64C822D81C010087D3EB /* Grid */ = {
 			isa = PBXGroup;
 			children = (
-				2627405322DDDB9A00951856 /* Controller */,
-				2627405622DDDB9A00951856 /* Model */,
-				2627405722DDDB9A00951856 /* View */,
+				26E0B12522EAE62E005BE40D /* GridSetting */,
+				26E0B13522EAE62E005BE40D /* GridTable */,
 			);
 			path = Grid;
+			sourceTree = "<group>";
+		};
+		26E0B11B22EAE591005BE40D /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				26E0B11C22EAE591005BE40D /* HXCourseItemsPKV.h */,
+				26E0B11F22EAE591005BE40D /* HXCourseItemsPKV.m */,
+				26E0B12022EAE591005BE40D /* HXPickViewToolBar.h */,
+				26E0B11E22EAE591005BE40D /* HXPickViewToolBar.m */,
+				26E0B11D22EAE591005BE40D /* HXDatePickView.h */,
+				26E0B12122EAE591005BE40D /* HXDatePickView.m */,
+			);
+			path = UIComponent;
+			sourceTree = "<group>";
+		};
+		26E0B12522EAE62E005BE40D /* GridSetting */ = {
+			isa = PBXGroup;
+			children = (
+				26E0B12622EAE62E005BE40D /* Controller */,
+				26E0B12B22EAE62E005BE40D /* Model */,
+				26E0B12E22EAE62E005BE40D /* View */,
+			);
+			path = GridSetting;
+			sourceTree = "<group>";
+		};
+		26E0B12622EAE62E005BE40D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				26E0B12922EAE62E005BE40D /* CourseConfigVC.h */,
+				26E0B12722EAE62E005BE40D /* CourseConfigVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		26E0B12B22EAE62E005BE40D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				26E0B12C22EAE62E005BE40D /* ItemTimeModel.m */,
+				26E0B12D22EAE62E005BE40D /* ItemTimeModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26E0B12E22EAE62E005BE40D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26E0B12F22EAE62E005BE40D /* CourseHeaderView.m */,
+				26E0B13022EAE62E005BE40D /* CourseTimeInfoCell.h */,
+				26E0B13122EAE62E005BE40D /* CourseConfigView.h */,
+				26E0B13222EAE62E005BE40D /* CourseHeaderView.h */,
+				26E0B13322EAE62E005BE40D /* CourseConfigView.m */,
+				26E0B13422EAE62E005BE40D /* CourseTimeInfoCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		26E0B13522EAE62E005BE40D /* GridTable */ = {
+			isa = PBXGroup;
+			children = (
+				26E0B13622EAE62E005BE40D /* Controller */,
+				26E0B13722EAE62E005BE40D /* Model */,
+				26E0B13822EAE62E005BE40D /* View */,
+			);
+			path = GridTable;
+			sourceTree = "<group>";
+		};
+		26E0B13622EAE62E005BE40D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				26E0B12822EAE62E005BE40D /* CourseGridVC.h */,
+				26E0B12A22EAE62E005BE40D /* CourseGridVC.m */,
+				26E0B13F22EAE684005BE40D /* TestVC.h */,
+				26E0B14022EAE684005BE40D /* TestVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		26E0B13722EAE62E005BE40D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26E0B13822EAE62E005BE40D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				26E0B14222EAE6A7005BE40D /* GridView.h */,
+				26E0B14322EAE6A7005BE40D /* GridView.m */,
+				26E0B14522EAE85F005BE40D /* GridTableCell.h */,
+				26E0B14622EAE85F005BE40D /* GridTableCell.m */,
+				26E0B14B22EAEF47005BE40D /* GridCollectionView.h */,
+				26E0B14C22EAEF47005BE40D /* GridCollectionView.m */,
+				26E0B14E22EAFE99005BE40D /* GridCollectionHeader.h */,
+				26E0B14F22EAFE99005BE40D /* GridCollectionHeader.m */,
+				26E0B14822EAED4B005BE40D /* CourseItem.h */,
+				26E0B14922EAED4B005BE40D /* CourseItem.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		3481AF048D8EB8C186E2C3C4 /* Pods */ = {
@@ -260,10 +337,6 @@
 		469E584F22D77F560077AE51 /* HuaXing */ = {
 			isa = PBXGroup;
 			children = (
-				469E586922D780A70077AE51 /* AppDelegate.h */,
-				469E586B22D780A70077AE51 /* AppDelegate.m */,
-				469E586D22D780A70077AE51 /* ViewController.h */,
-				469E586A22D780A70077AE51 /* ViewController.m */,
 				469E586822D780A70077AE51 /* Main */,
 				46BC169522DA345400A70F23 /* Class */,
 				46BC169222DA33D100A70F23 /* Macro */,
@@ -280,6 +353,10 @@
 		469E586822D780A70077AE51 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				469E586922D780A70077AE51 /* AppDelegate.h */,
+				469E586B22D780A70077AE51 /* AppDelegate.m */,
+				469E586D22D780A70077AE51 /* ViewController.h */,
+				469E586A22D780A70077AE51 /* ViewController.m */,
 				26024BEB22D8A1EE00143425 /* BaseVC */,
 				26AD64C222D81B2C0087D3EB /* Tab */,
 			);
@@ -298,6 +375,7 @@
 		46BC169522DA345400A70F23 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				26E0B11B22EAE591005BE40D /* UIComponent */,
 				46BC169A22DA3A9C00A70F23 /* Addition */,
 				46BC169622DA347A00A70F23 /* UIAdapter */,
 			);
@@ -471,35 +549,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				46BC16B622DA3A9C00A70F23 /* NSDictionary+Addition.m in Sources */,
-				2627405822DDDB9A00951856 /* CourseGridVC.m in Sources */,
-				26496F5C22E06825002D0C0E /* HXDatePickView.m in Sources */,
-				460FE73722E2122400C70623 /* HXPickViewToolBar.m in Sources */,
-				466105B022E0B53900A4CAF8 /* CourseConfigView.m in Sources */,
+				26E0B12422EAE591005BE40D /* HXDatePickView.m in Sources */,
+				26E0B14422EAE6A7005BE40D /* GridView.m in Sources */,
+				26E0B12322EAE591005BE40D /* HXCourseItemsPKV.m in Sources */,
+				26E0B14722EAE85F005BE40D /* GridTableCell.m in Sources */,
+				26E0B14122EAE684005BE40D /* TestVC.m in Sources */,
 				46BC16B822DA3A9C00A70F23 /* UIColor+Addition.m in Sources */,
 				46BC16C822DA3D9D00A70F23 /* PersonDataModel.m in Sources */,
+				26E0B13A22EAE62E005BE40D /* CourseGridVC.m in Sources */,
 				469E586E22D780A80077AE51 /* ViewController.m in Sources */,
-				26496F6822E1CBE0002D0C0E /* CourseHeaderView.m in Sources */,
 				46BC16B922DA3A9C00A70F23 /* NSMutableDictionary+Addition.m in Sources */,
+				26E0B13C22EAE62E005BE40D /* CourseHeaderView.m in Sources */,
 				46BC16C522DA3D7900A70F23 /* PersonManager.m in Sources */,
 				46BC16CE22DAF0B900A70F23 /* BriefInfoCell.m in Sources */,
 				46BC16B522DA3A9C00A70F23 /* NSDate+Addition.m in Sources */,
-				2627405B22DDDDBA00951856 /* CourseConfigVC.m in Sources */,
-				26496F6222E1B5C5002D0C0E /* CourseTimeInfoCell.m in Sources */,
+				26E0B14A22EAED4B005BE40D /* CourseItem.m in Sources */,
 				46BC169922DA347A00A70F23 /* UIAdapter.m in Sources */,
 				26024BEE22D8A1FD00143425 /* HXBaseVC.m in Sources */,
 				469E586022D77F580077AE51 /* main.m in Sources */,
+				26E0B12222EAE591005BE40D /* HXPickViewToolBar.m in Sources */,
 				46BC16BC22DA3A9C00A70F23 /* NSString+Addition.m in Sources */,
 				46BC16B722DA3A9C00A70F23 /* NSObject+Addition.m in Sources */,
 				46BC16BB22DA3A9C00A70F23 /* NSData+Addition.m in Sources */,
+				26E0B13922EAE62E005BE40D /* CourseConfigVC.m in Sources */,
 				46BC16BA22DA3A9C00A70F23 /* UIFont+Addition.m in Sources */,
 				46BC16C222DA3D4D00A70F23 /* PersonVC.m in Sources */,
+				26E0B15022EAFE99005BE40D /* GridCollectionHeader.m in Sources */,
 				26024BFA22D8A2EA00143425 /* HXNavigationVC.m in Sources */,
 				46BC16B322DA3A9C00A70F23 /* UIImage+Addition.m in Sources */,
+				26E0B13B22EAE62E005BE40D /* ItemTimeModel.m in Sources */,
 				46BC16B222DA3A9C00A70F23 /* UIView+Addition.m in Sources */,
-				26496F5F22E17479002D0C0E /* HXCourseItemsPKV.m in Sources */,
-				26496F6522E1B698002D0C0E /* ItemTimeModel.m in Sources */,
 				46BC16B422DA3A9C00A70F23 /* NSArray+Addition.m in Sources */,
+				26E0B13E22EAE62E005BE40D /* CourseTimeInfoCell.m in Sources */,
 				46BC16CB22DAC2DD00A70F23 /* PersonMainView.m in Sources */,
+				26E0B14D22EAEF47005BE40D /* GridCollectionView.m in Sources */,
+				26E0B13D22EAE62E005BE40D /* CourseConfigView.m in Sources */,
 				26024BF122D8A21600143425 /* HXTabAdapter.m in Sources */,
 				469E586F22D780A80077AE51 /* AppDelegate.m in Sources */,
 			);
