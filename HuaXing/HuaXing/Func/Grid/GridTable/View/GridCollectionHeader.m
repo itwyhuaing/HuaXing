@@ -42,7 +42,7 @@
     [self addSubview:self.themLabel];
     
     
-    self.backgroundColor = [UIColor grayColor];
+    //self.backgroundColor = [UIColor grayColor];
     self.themLabel.backgroundColor = [UIColor grayColor];
 }
 

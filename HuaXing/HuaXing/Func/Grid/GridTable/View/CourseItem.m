@@ -30,7 +30,7 @@
     [self.contentView addSubview:self.cntLabel];
     self.cntLabel.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
     
-    self.cntLabel.backgroundColor = [UIColor orangeColor];
+//    self.cntLabel.backgroundColor = [UIColor orangeColor];
     
 }
 
@@ -43,6 +43,7 @@
 -(UILabel *)cntLabel {
     if (!_cntLabel) {
         _cntLabel = [UILabel new];
+        _cntLabel.backgroundColor = [UIColor whiteColor];
     }
     return _cntLabel;
 }

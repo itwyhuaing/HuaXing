@@ -1,8 +1,8 @@
 //
-//  GridView.h
+//  ClassTableHeaderCollectionView.h
 //  HuaXing
 //
-//  Created by hnbwyh on 2019/7/26.
+//  Created by hnbwyh on 2019/7/30.
 //  Copyright © 2019 HuaXing. All rights reserved.
 //
 
@@ -10,9 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-
-@interface GridView : UIView
+@interface ClassTableHeaderCollectionView : UIView
 
 @end
 

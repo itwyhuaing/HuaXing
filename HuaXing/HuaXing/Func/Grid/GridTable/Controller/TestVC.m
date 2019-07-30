@@ -7,11 +7,11 @@
 //
 
 #import "TestVC.h"
-#import "GridTableCell.h"
+#import "ClassTableMainView.h"
 
-@interface TestVC () <UITableViewDelegate,UITableViewDataSource>
+@interface TestVC () <ClassTableMainViewDataSource,ClassTableMainViewDelegate>
 
-@property (nonatomic,strong) UITableView *table;
+@property (nonatomic,strong) ClassTableMainView *ctv;
 
 @end
 
@@ -19,7 +19,8 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    [self.view addSubview:self.table];
+    [self.view addSubview:self.ctv];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -32,45 +33,64 @@
     
 }
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    return 2;
-//}
+#pragma mark --- ClassTableMainViewDataSource,ClassTableMainViewDelegate
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 30;
+
+-(NSArray<HorizontalItemDataModel *> *)datasOfFirstHorizontalRowInClassTableMainView:(ClassTableMainView *)classTable {
+    return [self generateHorizontalData];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+
+-(NSArray<VerticalItemDataModel *> *)datasOfFirstVerticalRowInClassTableMainView:(ClassTableMainView *)classTable {
+    return [self generateVerticalData];
+}
+
+
+- (NSArray *)generateHorizontalData {
+    NSMutableArray *hData = [NSMutableArray new];
+    for (NSInteger cou = 0; cou < 10; cou ++) {
+        HorizontalItemDataModel *f = [HorizontalItemDataModel new];
+        f.date = [NSString stringWithFormat:@"2019/08/%ld",cou];
+        f.weekDay = [NSString stringWithFormat:@"星期%ld",cou%7 + 1];
+        [hData addObject:f];
+    }
+    return hData;
+}
+
+
+- (NSArray *)generateVerticalData {
+    NSMutableArray *hData = [NSMutableArray new];
+    for (NSInteger cou = 0; cou < 10; cou ++) {
+        VerticalItemDataModel *f = [VerticalItemDataModel new];
+        f.sequence = [NSString stringWithFormat:@"第%ld节",cou+1];
+        [hData addObject:f];
+    }
+    return hData;
+}
+
+-(CGFloat)heightForFirstHorizontalRowInClassTableMainView:(ClassTableMainView *)classTable {
     return 60.0;
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *v = [UIView new];
-    v.backgroundColor = [UIColor redColor];
-    return v;
+- (CGFloat)heightForCommonHorizontalRowInClassTableMainView:(ClassTableMainView *)classTable {
+    return 100.0;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 0.0;
+-(void)classTableMainView:(ClassTableMainView *)classTable didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"\n %ld \n",indexPath.row);
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 160;
-}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GridTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cell_GridTableCell];
-    return cell;
-}
+#pragma mark --- lazy load
 
--(UITableView *)table {
-    if (!_table) {
-        _table = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStylePlain];
-        [_table registerClass:[GridTableCell class] forCellReuseIdentifier:cell_GridTableCell];
-        _table.delegate = (id)self;
-        _table.dataSource = (id)self;
+-(ClassTableMainView *)ctv {
+    if (!_ctv) {
+        _ctv = [ClassTableMainView new];
+        [_ctv setFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 30)];
+        _ctv.dataSource = (id)self;
+        _ctv.delegate   = (id)self;
     }
-    return _table;
+    return _ctv;
 }
 
 @end

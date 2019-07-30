@@ -1,12 +1,12 @@
 //
-//  GridCollectionView.m
+//  ClassTableClassItemCollectionView.m
 //  HuaXing
 //
-//  Created by hnbwyh on 2019/7/26.
+//  Created by hnbwyh on 2019/7/30.
 //  Copyright © 2019 HuaXing. All rights reserved.
 //
 
-#import "GridCollectionView.h"
+#import "ClassTableClassItemCollectionView.h"
 #import "GridCollectionHeader.h"
 #import "CourseItem.h"
 
@@ -15,18 +15,19 @@ static NSString *GridCollectionViewReusableViewFooter = @"GridCollectionViewReus
 
 
 static NSString *notifycationID = @"GridCollectionView_notifycationID";
-@interface GridCollectionView () <UICollectionViewDataSource,UICollectionViewDelegate>
+@interface ClassTableClassItemCollectionView () <UICollectionViewDataSource,UICollectionViewDelegate>
 {
     BOOL    _isAllowedNotification;
     CGFloat _lastOffX;
 }
 
+@property (nonatomic,strong) UILabel                            *bottomLine;
 @property (nonatomic,strong) UICollectionViewFlowLayout         *layout;
 @property (nonatomic,strong) UICollectionView                   *clv;
 
 @end
 
-@implementation GridCollectionView
+@implementation ClassTableClassItemCollectionView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -86,7 +87,14 @@ static NSString *notifycationID = @"GridCollectionView_notifycationID";
 
 - (void)configUI {
     [self addSubview:self.clv];
-    //self.clv.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
+    [self addSubview:self.bottomLine];
+}
+
+-(void)layoutSubviews {
+    CGRect rect = CGRectZero;
+    rect.origin.y = CGRectGetMaxY(self.clv.frame);
+    rect.size.height = 1.0;
+    [self.bottomLine setFrame:rect];
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -94,7 +102,7 @@ static NSString *notifycationID = @"GridCollectionView_notifycationID";
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CourseItem *item = [collectionView dequeueReusableCellWithReuseIdentifier:item_CourseItem forIndexPath:indexPath];
+    CourseItem *item = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(CourseItem.class) forIndexPath:indexPath];
     item.backgroundColor = [UIColor whiteColor];
     [item modifyItemWithData:[NSString stringWithFormat:@"Idx %ld - %ld",indexPath.section,indexPath.row]];
     return item;
@@ -108,24 +116,38 @@ static NSString *notifycationID = @"GridCollectionView_notifycationID";
         rltView = header;
     }else if ([kind isEqualToString:UICollectionElementKindSectionFooter]){
         rltView     = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:GridCollectionViewReusableViewFooter forIndexPath:indexPath];
-        rltView.backgroundColor     = [UIColor purpleColor];
+        rltView.backgroundColor     = [UIColor blueColor];
     }
     return rltView;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@" \n %@ \n ",[NSString stringWithFormat:@"%@",indexPath]);
-    if (self.gcvSelectedBlock) {
-        self.gcvSelectedBlock(indexPath);
+    if (self.selectedBlock) {
+        self.selectedBlock(indexPath);
     }
+}
+
+#pragma mark --- lazy load
+
+-(UILabel *)bottomLine {
+    if (!_bottomLine) {
+        _bottomLine = [UILabel new];
+        _bottomLine.backgroundColor = [UIColor redColor];//[UIAdapter lightGray];
+    }
+    return _bottomLine;
 }
 
 -(UICollectionView *)clv {
     if (!_clv) {
-        _clv = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, [UIAdapter deviceWidth], 160.0) collectionViewLayout:self.layout];
-        [_clv registerClass:[CourseItem class] forCellWithReuseIdentifier:item_CourseItem];
+        CGRect rect = self.frame;
+        rect.origin = CGPointZero;
+        rect.size.height = CGRectGetHeight(self.frame) - 2.0;
+        _clv = [[UICollectionView alloc] initWithFrame:rect collectionViewLayout:self.layout];
+        [_clv registerClass:[CourseItem class] forCellWithReuseIdentifier:NSStringFromClass(CourseItem.class)];
         [_clv registerClass:[GridCollectionHeader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:GridCollectionViewReusableViewHeader];
         [_clv registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:GridCollectionViewReusableViewFooter];
+        _clv.backgroundColor = [UIColor whiteColor];
         _clv.bounces = FALSE;
         _clv.delegate = (id)self;
         _clv.dataSource = (id)self;
@@ -142,7 +164,7 @@ static NSString *notifycationID = @"GridCollectionView_notifycationID";
         _layout.sectionInset = UIEdgeInsetsMake(0, 10.0, 0, 0);
         _layout.itemSize            = CGSizeMake(200.0, CGRectGetHeight(self.frame));
         _layout.headerReferenceSize         = CGSizeMake(100, 160);
-        _layout.footerReferenceSize         = CGSizeMake(30, 160);
+        _layout.footerReferenceSize         = CGSizeMake(10, 160);
         _layout.sectionHeadersPinToVisibleBounds = TRUE;
     }
     return _layout;

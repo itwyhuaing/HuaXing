@@ -10,7 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^GridCollectionViewSelectedBlock)(NSIndexPath *idx);
 @interface GridCollectionView : UIView
+
+@property (nonatomic,copy)  GridCollectionViewSelectedBlock gcvSelectedBlock;
 
 @end
 

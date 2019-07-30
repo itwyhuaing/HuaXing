@@ -27,13 +27,18 @@
 
 - (void)configUI {
     [self addSubview:self.gclv];
-    //self.gclv.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
 }
 
 -(GridCollectionView *)gclv {
     if (!_gclv) {
         _gclv = [[GridCollectionView alloc] initWithFrame:CGRectMake(0, 0, [UIAdapter deviceWidth], 160.0)];
         _gclv.backgroundColor = [UIColor whiteColor];
+        HXWeakSelf
+        _gclv.gcvSelectedBlock = ^(NSIndexPath * _Nonnull idx) {
+            if (weakSelf.gtcSelectedBlock) {
+                weakSelf.gtcSelectedBlock(idx);
+            }
+        };
     }
     return _gclv;
 }
