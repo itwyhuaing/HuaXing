@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ClassItemModel.h"
+#import "ClassItemDataModel.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,22 +20,21 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol ClassTableMainViewDataSource <NSObject>
 
 /**
- 设置课程表第一行数据
- 
- @param classTable 课程表
- @return 第一行所需数据
- */
-- (NSArray<HorizontalItemDataModel *> *)datasOfFirstHorizontalRowInClassTableMainView:(ClassTableMainView *)classTable;
-
-
-/**
  设置课程表第一列数据
 
  @param classTable 课程表
  @return 第一列所需数据
  */
-- (NSArray<VerticalItemDataModel *> *)datasOfFirstVerticalRowInClassTableMainView:(ClassTableMainView *)classTable;
+- (NSArray<SequenceItemModel *> *)datasOfFirstVerticalRowInClassTableMainView:(ClassTableMainView *)classTable;
 
+
+/**
+ 设置课程表数据
+
+ @param classTable 课程表
+ @return 课程表数据
+ */
+- (NSArray<ClassItemDataModel *> *)datasInClassTableMainView:(ClassTableMainView *)classTable;
 
 /**
  设置第一行的高度
@@ -51,6 +51,23 @@ NS_ASSUME_NONNULL_BEGIN
  @return 其他行高度
  */
 - (CGFloat)heightForCommonHorizontalRowInClassTableMainView:(ClassTableMainView *)classTable;
+
+
+/**
+ 设置第一列的宽度
+ 
+ @param classTable 课程表
+ @return 第一列宽度
+ */
+- (CGFloat)widthForFirstVerticalRowInClassTableMainView:(ClassTableMainView *)classTable;
+
+/**
+ 设置其他列的宽度
+ 
+ @param classTable 课程表
+ @return 其他列宽度
+ */
+- (CGFloat)widthForCommonVerticalRowInClassTableMainView:(ClassTableMainView *)classTable;
 
 @end
 

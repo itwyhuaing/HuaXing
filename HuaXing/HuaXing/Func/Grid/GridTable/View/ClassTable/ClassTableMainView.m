@@ -7,20 +7,30 @@
 //
 
 #import "ClassTableMainView.h"
+#import "ClassTableHeaderView.h"
 #import "ClassTableCell.h"
-#import "ClassTableClassItemCollectionView.h"
-#import "ClassTableHeaderCollectionView.h"
+//#import "ClassTableClassItemCollectionView.h"
+//#import "ClassTableHeaderCollectionView.h"
 
 @interface ClassTableMainView ()<UITableViewDelegate,UITableViewDataSource>
 {
+    // 行高
     CGFloat heightForTableHeader;
     CGFloat heightForTableCommonRow;
+    
+    // 列宽
+    CGFloat widthForFirstVerticalRow;
+    CGFloat widthForCommonVerticalRow;
 }
+// 课表每天课程数据
+@property (nonatomic,strong) NSArray<ClassItemDataModel *>      *ds_classItems;
+// 序列化信息数据
+@property (nonatomic,strong) NSArray<SequenceItemModel *>       *ds_sequences;
 
+
+// 数据表
 @property (nonatomic,strong) UITableView                        *table;
-
-//@property (nonatomic,strong) ClassTableHeaderCollectionView     *ctHeader;
-@property (nonatomic,strong) ClassTableClassItemCollectionView     *ctHeader;
+@property (nonatomic,strong) ClassTableHeaderView               *headerView;
 
 @end
 
@@ -37,8 +47,16 @@
     return self;
 }
 
+
 -(void)layoutSubviews {
-    // 初始化一些尺寸参数
+    // 初始化参数
+    // 数据源
+    if (_dataSource && [_dataSource respondsToSelector:@selector(datasInClassTableMainView:)]) {
+        self.ds_classItems = [_dataSource datasInClassTableMainView:self];
+    }
+    if (_dataSource && [_dataSource respondsToSelector:@selector(datasOfFirstVerticalRowInClassTableMainView:)]) {
+        self.ds_sequences = [_dataSource datasOfFirstVerticalRowInClassTableMainView:self];
+    }
     // 第一行高度
     if (_dataSource && [_dataSource respondsToSelector:@selector(heightForFirstHorizontalRowInClassTableMainView:)]) {
         heightForTableHeader = [_dataSource heightForFirstHorizontalRowInClassTableMainView:self];
@@ -46,6 +64,14 @@
     // 其他行高度
     if (_dataSource && [_dataSource respondsToSelector:@selector(heightForCommonHorizontalRowInClassTableMainView:)]) {
         heightForTableCommonRow = [_dataSource heightForCommonHorizontalRowInClassTableMainView:self];
+    }
+    // 第一列宽度
+    if (_dataSource && [_dataSource respondsToSelector:@selector(widthForFirstVerticalRowInClassTableMainView:)]) {
+        widthForFirstVerticalRow = [_dataSource widthForFirstVerticalRowInClassTableMainView:self];
+    }
+    // 其他列宽度
+    if (_dataSource && [_dataSource respondsToSelector:@selector(widthForCommonVerticalRowInClassTableMainView:)]) {
+        widthForCommonVerticalRow = [_dataSource widthForCommonVerticalRowInClassTableMainView:self];
     }
     // Table 尺寸设置
     CGRect rect = self.frame;
@@ -57,26 +83,30 @@
 
 // 设置行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSArray *vrs; // 上午两节，下午两节
-    if (_dataSource && [_dataSource respondsToSelector:@selector(datasOfFirstVerticalRowInClassTableMainView:)]) {
-        vrs = [_dataSource datasOfFirstVerticalRowInClassTableMainView:self];
-    }
-    return vrs ? vrs.count+kExtraCount : kExtraCount;
+    return self.ds_sequences ? self.ds_sequences.count+kExtraCount : kExtraCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ClassTableCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ClassTableCell.class)];
-    if (_dataSource && [_dataSource respondsToSelector:@selector(datasOfFirstHorizontalRowInClassTableMainView:)]) {
-        NSArray *hd = [_dataSource datasOfFirstHorizontalRowInClassTableMainView:self];
-        cell.itemsCount = hd ? hd.count + kExtraCount : kExtraCount;
-    }
+    // cell 所需的尺寸数据
+    [cell updateFrameWithCellWidth:CGRectGetWidth(self.table.frame)
+                        cellHeight:heightForTableCommonRow
+   widthForFirstVertivalRowInTable:widthForFirstVerticalRow
+   widthForOtherVertivalRowInTable:widthForCommonVerticalRow];
+    // cell 所需的数据源数据
+    [cell updateCellWithSequences:self.ds_sequences classData:self.ds_classItems];
     return cell;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *v = [UIView new];
-    v.backgroundColor = [UIColor redColor];
-    return v;
+    // headerView 所需的尺寸数据
+    [self.headerView updateFrameWithTableHeaderWidth:CGRectGetWidth(self.table.frame)
+                                   tableHeaderHeight:heightForTableHeader
+                     widthForFirstVertivalRowInTable:widthForFirstVerticalRow
+                     widthForOtherVertivalRowInTable:widthForCommonVerticalRow];
+    // headerView 所需的数据源数据
+    [self.headerView updateTableHeaderWithClassData:self.ds_classItems];
+    return self.headerView;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -107,12 +137,12 @@
     return _table;
 }
 
--(ClassTableClassItemCollectionView *)ctHeader {
-    if (!_ctHeader) {
-        _ctHeader = [[ClassTableClassItemCollectionView alloc] initWithFrame:CGRectMake(0, 0, [UIAdapter deviceWidth], heightForTableHeader)];
-        _ctHeader.backgroundColor = [UIColor whiteColor];
+-(ClassTableHeaderView *)headerView {
+    if (!_headerView) {
+        _headerView = [[ClassTableHeaderView alloc] init];
+
     }
-    return _ctHeader;
+    return _headerView;
 }
 
 @end
