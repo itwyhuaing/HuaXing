@@ -8,7 +8,7 @@
 
 #import "ClassTableCell.h"
 #import "GridCollectionHeader.h"
-#import "CourseItem.h"
+#import "CourseCollectionCell.h"
 
 static NSString *ClassTableCell_ReusableViewHeader = @"ClassTableCellReusableViewHeader";
 static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableViewFooter";
@@ -117,9 +117,17 @@ static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableVie
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CourseItem *item = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(CourseItem.class) forIndexPath:indexPath];
-    item.backgroundColor = [UIColor whiteColor];
-    [item modifyItemWithData:[NSString stringWithFormat:@"Idx %ld - %ld",indexPath.section,indexPath.row]];
+    CourseCollectionCell *item = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(CourseCollectionCell.class) forIndexPath:indexPath];
+    if (self.classItems) {
+        ClassItemDataModel *f = self.classItems[indexPath.row];
+        NSArray *f_items = f.courses;
+        if (f_items && f_items.count > self.currentIndexPathForCell) {
+            CourseItemModel *im = f_items[self.currentIndexPathForCell];
+            //if (im.idx == ) {
+                item.model = im;
+            //}
+        }
+    }
     return item;
 }
 
@@ -156,7 +164,7 @@ static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableVie
 -(UICollectionView *)clv {
     if (!_clv) {
         _clv = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.layout];
-        [_clv registerClass:[CourseItem class] forCellWithReuseIdentifier:NSStringFromClass(CourseItem.class)];
+        [_clv registerClass:[CourseCollectionCell class] forCellWithReuseIdentifier:NSStringFromClass(CourseCollectionCell.class)];
         [_clv registerClass:[GridCollectionHeader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:ClassTableCell_ReusableViewHeader];
         [_clv registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:ClassTableCell_ReusableViewFooter];
         _clv.backgroundColor = [UIColor whiteColor];

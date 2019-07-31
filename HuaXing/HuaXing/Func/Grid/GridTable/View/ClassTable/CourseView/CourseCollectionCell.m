@@ -1,21 +1,22 @@
 //
-//  DateCollectionViewCell.m
+//  CourseCollectionCell.m
 //  HuaXing
 //
-//  Created by hnbwyh on 2019/7/31.
+//  Created by wangyinghua on 2019/7/31.
 //  Copyright © 2019 HuaXing. All rights reserved.
 //
 
-#import "DateCollectionViewCell.h"
+#import "CourseCollectionCell.h"
 #import "ClassItemDataModel.h"
 
-@interface DateCollectionViewCell ()
+@interface CourseCollectionCell ()
 
 @property (nonatomic,strong) UILabel        *cntLabel;
 
 @end
 
-@implementation DateCollectionViewCell
+
+@implementation CourseCollectionCell
 
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -37,10 +38,10 @@
     [self.cntLabel setFrame:rect];
 }
 
--(void)setModel:(ClassItemDataModel *)model {
+-(void)setModel:(CourseItemModel *)model {
     if (model) {
         _model = model;
-        self.cntLabel.text = [NSString stringWithFormat:@"%@\n%@",model.date,model.weekDay];
+        self.cntLabel.text = [NSString stringWithFormat:@"%@\n%@\n%@",model.courseName,model.teacher,model.location];
     }
 }
 

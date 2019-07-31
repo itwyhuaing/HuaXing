@@ -43,6 +43,9 @@ typedef void(^ClassTableCellSelectedBlock)(NSIndexPath *idx);
 - (void)updateCellWithSequences:(NSArray<SequenceItemModel *> *)sequences
                       classData:(NSArray<ClassItemDataModel *> *)clsItems;
 
+// 记录当前 cell 所在行
+@property (nonatomic,assign) NSInteger currentIndexPathForCell;
+
 @end
 
 NS_ASSUME_NONNULL_END

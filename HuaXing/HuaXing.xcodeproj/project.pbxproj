@@ -33,6 +33,7 @@
 		26E0B14A22EAED4B005BE40D /* CourseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B14922EAED4B005BE40D /* CourseItem.m */; };
 		26E0B14D22EAEF47005BE40D /* GridCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B14C22EAEF47005BE40D /* GridCollectionView.m */; };
 		26E0B15022EAFE99005BE40D /* GridCollectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B14F22EAFE99005BE40D /* GridCollectionHeader.m */; };
+		469AB70D22F1DB1700232025 /* CourseCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 469AB70C22F1DB1600232025 /* CourseCollectionCell.m */; };
 		469E585822D77F560077AE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585622D77F560077AE51 /* Main.storyboard */; };
 		469E585A22D77F580077AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E585922D77F580077AE51 /* Assets.xcassets */; };
 		469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585B22D77F580077AE51 /* LaunchScreen.storyboard */; };
@@ -113,6 +114,8 @@
 		26E0B14C22EAEF47005BE40D /* GridCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridCollectionView.m; sourceTree = "<group>"; };
 		26E0B14E22EAFE99005BE40D /* GridCollectionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridCollectionHeader.h; sourceTree = "<group>"; };
 		26E0B14F22EAFE99005BE40D /* GridCollectionHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridCollectionHeader.m; sourceTree = "<group>"; };
+		469AB70B22F1DB1600232025 /* CourseCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseCollectionCell.h; sourceTree = "<group>"; };
+		469AB70C22F1DB1600232025 /* CourseCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseCollectionCell.m; sourceTree = "<group>"; };
 		469E584D22D77F560077AE51 /* HuaXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E585722D77F560077AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		469E585922D77F580077AE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -229,6 +232,8 @@
 			children = (
 				2650AFAD22F1A0AC006C7784 /* ClassTableCell.h */,
 				2650AFAC22F1A0AC006C7784 /* ClassTableCell.m */,
+				469AB70B22F1DB1600232025 /* CourseCollectionCell.h */,
+				469AB70C22F1DB1600232025 /* CourseCollectionCell.m */,
 			);
 			path = CourseView;
 			sourceTree = "<group>";
@@ -659,6 +664,7 @@
 				26E0B13B22EAE62E005BE40D /* ItemTimeModel.m in Sources */,
 				46BC16B222DA3A9C00A70F23 /* UIView+Addition.m in Sources */,
 				46BC16B422DA3A9C00A70F23 /* NSArray+Addition.m in Sources */,
+				469AB70D22F1DB1700232025 /* CourseCollectionCell.m in Sources */,
 				26E0B13E22EAE62E005BE40D /* CourseTimeInfoCell.m in Sources */,
 				46BC16CB22DAC2DD00A70F23 /* PersonMainView.m in Sources */,
 				26E0B14D22EAEF47005BE40D /* GridCollectionView.m in Sources */,

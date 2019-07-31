@@ -88,6 +88,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ClassTableCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ClassTableCell.class)];
+    // 通知位置
+    cell.currentIndexPathForCell = indexPath.row;
     // cell 所需的尺寸数据
     [cell updateFrameWithCellWidth:CGRectGetWidth(self.table.frame)
                         cellHeight:heightForTableCommonRow
