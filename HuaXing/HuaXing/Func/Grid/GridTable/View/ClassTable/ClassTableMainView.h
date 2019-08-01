@@ -13,7 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 // 第一列或第一行额外（课表左上角）
-#define kExtraCount 1
+#define kExtraCount 0
 
 @class ClassTableMainView;
 

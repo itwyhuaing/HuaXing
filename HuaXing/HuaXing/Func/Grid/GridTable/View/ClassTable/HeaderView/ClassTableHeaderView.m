@@ -158,6 +158,7 @@ static NSString *ClassTableHeaderView_ReusableViewFooter = @"ClassTableHeaderVie
         [_clv registerClass:[TableInfoHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:ClassTableHeaderView_ReusableViewHeader];
         [_clv registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:ClassTableHeaderView_ReusableViewFooter];
         _clv.backgroundColor = [UIColor whiteColor];
+        _clv.scrollsToTop = FALSE;
         _clv.bounces = FALSE;
         _clv.delegate = (id)self;
         _clv.dataSource = (id)self;

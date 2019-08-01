@@ -7,7 +7,8 @@
 //
 
 #import "ClassTableCell.h"
-#import "GridCollectionHeader.h"
+//#import "GridCollectionHeader.h"
+#import "SequenceHeaderView.h"
 #import "CourseCollectionCell.h"
 
 static NSString *ClassTableCell_ReusableViewHeader = @"ClassTableCellReusableViewHeader";
@@ -134,8 +135,8 @@ static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableVie
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     UICollectionReusableView *rltView;
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        GridCollectionHeader *header     = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:ClassTableCell_ReusableViewHeader forIndexPath:indexPath];
-        header.them                     = [NSString stringWithFormat:@"Header%ld",indexPath.section];
+        SequenceHeaderView *header     = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:ClassTableCell_ReusableViewHeader forIndexPath:indexPath];
+        header.model = self.sequences[self.currentIndexPathForCell];
         rltView = header;
     }else if ([kind isEqualToString:UICollectionElementKindSectionFooter]){
         rltView     = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:ClassTableCell_ReusableViewFooter forIndexPath:indexPath];
@@ -165,9 +166,10 @@ static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableVie
     if (!_clv) {
         _clv = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.layout];
         [_clv registerClass:[CourseCollectionCell class] forCellWithReuseIdentifier:NSStringFromClass(CourseCollectionCell.class)];
-        [_clv registerClass:[GridCollectionHeader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:ClassTableCell_ReusableViewHeader];
+        [_clv registerClass:[SequenceHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:ClassTableCell_ReusableViewHeader];
         [_clv registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:ClassTableCell_ReusableViewFooter];
         _clv.backgroundColor = [UIColor whiteColor];
+        _clv.scrollsToTop = FALSE;
         _clv.bounces = FALSE;
         _clv.delegate = (id)self;
         _clv.dataSource = (id)self;
