@@ -41,8 +41,32 @@
 -(void)setModel:(CourseItemModel *)model {
     if (model) {
         _model = model;
-        self.cntLabel.text = [NSString stringWithFormat:@"%@\n%@\n%@",model.courseName,model.teacher,model.location];
+        self.cntLabel.text = [self generateMutableString];
     }
+}
+
+- (NSMutableString *)generateMutableString {
+    NSMutableString *rlt = [NSMutableString new];
+    BOOL courseName = FALSE;
+    BOOL teacher = FALSE;
+    if (self.model.courseName && self.model.courseName.length > 0) {
+        courseName = TRUE;
+        [rlt appendString:self.model.courseName];
+    }
+    if (self.model.teacher && self.model.teacher.length > 0) {
+        teacher = TRUE;
+        if (courseName) {
+            [rlt appendString:@"\n"];
+        }
+        [rlt appendString:self.model.teacher];
+    }
+    if (self.model.location && self.model.location.length > 0) {
+        if (courseName || teacher) {
+            [rlt appendString:@"\n"];
+        }
+        [rlt appendString:self.model.location];
+    }
+    return rlt;
 }
 
 -(UILabel *)cntLabel {

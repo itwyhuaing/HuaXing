@@ -20,7 +20,8 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.ctv];
-    
+    self.ctv.ds_sequences = [self generateVerticalData];
+    self.ctv.ds_classItems = [self generateData];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -34,48 +35,6 @@
 }
 
 #pragma mark --- ClassTableMainViewDataSource,ClassTableMainViewDelegate
-
--(NSArray<SequenceItemModel *> *)datasOfFirstVerticalRowInClassTableMainView:(ClassTableMainView *)classTable {
-    return [self generateVerticalData];
-}
-
-- (NSArray *)generateVerticalData {
-    NSMutableArray *hData = [NSMutableArray new];
-    for (NSInteger cou = 0; cou < 10; cou ++) {
-        SequenceItemModel *f = [SequenceItemModel new];
-        f.sequence = cou;
-        [hData addObject:f];
-    }
-    return hData;
-}
-
--(NSArray<ClassItemDataModel *> *)datasInClassTableMainView:(ClassTableMainView *)classTable {
-    return [self generateData];
-}
-
-- (NSArray *)generateData {
-    NSMutableArray *d = [NSMutableArray new];
-    for (NSInteger cou = 0; cou < 10; cou ++) {
-        ClassItemDataModel *f = [ClassItemDataModel new];
-        f.maxCount = 8;
-        f.date = [NSString stringWithFormat:@"2019/08/%ld",cou];
-        f.weekDay = [NSString stringWithFormat:@"星期%ld",cou%7 + 1];
-        
-        NSMutableArray *items = [NSMutableArray new];
-        for (NSInteger i = 0; i < f.maxCount; i ++) {
-            CourseItemModel *c = [CourseItemModel new];
-            c.courseName = @"英语";
-            c.idx    = i;
-            c.teacher = @"Mr.Z";
-            c.location = [NSString stringWithFormat:@"紫薇新天大厦A座六栋9层%ld9室",i];
-            [items addObject:c];
-        }
-        f.courses = items;
-        
-        [d addObject:f];
-    }
-    return d;
-}
 
 -(CGFloat)heightForFirstHorizontalRowInClassTableMainView:(ClassTableMainView *)classTable {
     return 60.0;
@@ -93,17 +52,55 @@
     return 120.0;
 }
 
--(void)classTableMainView:(ClassTableMainView *)classTable didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"\n %ld \n",indexPath.row);
+-(void)classTableMainView:(ClassTableMainView *)classTable didSelectItemAtLocation:(HXLocation)l {
+    NSLog(@"\n 点击位置 - 行：%ld - 列：%ld \n",l.XLocation,l.YLocation);
 }
 
+
+#pragma mark --- generate data
+
+- (NSArray *)generateVerticalData {
+    NSMutableArray *hData = [NSMutableArray new];
+    for (NSInteger cou = 0; cou < 10; cou ++) {
+        SequenceItemModel *f = [SequenceItemModel new];
+        f.sequence = cou;
+        [hData addObject:f];
+    }
+    return hData;
+}
+
+- (NSArray *)generateData {
+    NSMutableArray *d = [NSMutableArray new];
+    for (NSInteger cou = 0; cou < 10; cou ++) {
+        ClassItemDataModel *f = [ClassItemDataModel new];
+        f.maxCount = [self generateVerticalData].count;
+        f.date = [NSString stringWithFormat:@"2019/08/%ld",cou];
+        f.weekDay = [NSString stringWithFormat:@"星期%ld",cou%7 + 1];
+        
+        NSMutableArray *items = [NSMutableArray new];
+        for (NSInteger i = 0; i < f.maxCount; i ++) {
+            CourseItemModel *c = [CourseItemModel new];
+//            c.courseName = [NSString stringWithFormat:@"今天第 %ld 节课",i];
+//            c.idx    = i;
+//            if (i % 2 == 0) {
+//                c.teacher = @"Mr.Z";
+//            }
+//            c.location = [NSString stringWithFormat:@"紫薇新天大厦A座9层%ld9室",i];
+//            [items addObject:c];
+        }
+        f.courses = items;
+        
+        [d addObject:f];
+    }
+    return d;
+}
 
 #pragma mark --- lazy load
 
 -(ClassTableMainView *)ctv {
     if (!_ctv) {
         _ctv = [ClassTableMainView new];
-        [_ctv setFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 30)];
+        [_ctv setFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 64)];
         _ctv.dataSource = (id)self;
         _ctv.delegate   = (id)self;
     }

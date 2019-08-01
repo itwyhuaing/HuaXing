@@ -122,8 +122,8 @@ static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableVie
     if (self.classItems) {
         ClassItemDataModel *f = self.classItems[indexPath.row];
         NSArray *f_items = f.courses;
-        if (f_items && f_items.count > self.currentIndexPathForCell) {
-            CourseItemModel *im = f_items[self.currentIndexPathForCell];
+        if (f_items && f_items.count > self.currentIndexForCell) {
+            CourseItemModel *im = f_items[self.currentIndexForCell];
             //if (im.idx == ) {
                 item.model = im;
             //}
@@ -136,7 +136,7 @@ static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableVie
     UICollectionReusableView *rltView;
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         SequenceHeaderView *header     = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:ClassTableCell_ReusableViewHeader forIndexPath:indexPath];
-        header.model = self.sequences[self.currentIndexPathForCell];
+        header.model = self.sequences[self.currentIndexForCell];
         rltView = header;
     }else if ([kind isEqualToString:UICollectionElementKindSectionFooter]){
         rltView     = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:ClassTableCell_ReusableViewFooter forIndexPath:indexPath];
@@ -146,10 +146,12 @@ static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableVie
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    //NSLog(@" \n %@ \n ",[NSString stringWithFormat:@"%@",indexPath]);
-//    if (self.selectedBlock) {
-//        self.selectedBlock(indexPath);
-//    }
+    if (self.itemSelectedBlock) {
+        HXLocation l;
+        l.XLocation = self.currentIndexForCell;
+        l.YLocation = indexPath.row;
+        self.itemSelectedBlock(l);
+    }
 }
 
 #pragma mark --- lazy load

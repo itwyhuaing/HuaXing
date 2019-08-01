@@ -12,29 +12,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-// 第一列或第一行额外（课表左上角）
-#define kExtraCount 0
-
 @class ClassTableMainView;
 
 @protocol ClassTableMainViewDataSource <NSObject>
-
-/**
- 设置课程表第一列数据
-
- @param classTable 课程表
- @return 第一列所需数据
- */
-- (NSArray<SequenceItemModel *> *)datasOfFirstVerticalRowInClassTableMainView:(ClassTableMainView *)classTable;
-
-
-/**
- 设置课程表数据
-
- @param classTable 课程表
- @return 课程表数据
- */
-- (NSArray<ClassItemDataModel *> *)datasInClassTableMainView:(ClassTableMainView *)classTable;
+@required
 
 /**
  设置第一行的高度
@@ -73,15 +54,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ClassTableMainViewDelegate <NSObject>
 
-- (void)classTableMainView:(ClassTableMainView *)classTable didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
+- (void)classTableMainView:(ClassTableMainView *)classTable didSelectItemAtLocation:(HXLocation)l;
 
 @end
 
 @interface ClassTableMainView : UIView
 
+// 序列化信息数据 - 第一列数据
+@property (nonatomic,strong) NSArray<SequenceItemModel *>       *ds_sequences;
+
+// 课表每天课程数据 - 其他列数据
+@property (nonatomic,strong) NSArray<ClassItemDataModel *>      *ds_classItems;
+
 @property (nonatomic,weak) id <ClassTableMainViewDataSource>    dataSource;
 
 @property (nonatomic,weak) id <ClassTableMainViewDelegate>    delegate;
+
+- (void)reloadClassTalbe;
 
 @end
 

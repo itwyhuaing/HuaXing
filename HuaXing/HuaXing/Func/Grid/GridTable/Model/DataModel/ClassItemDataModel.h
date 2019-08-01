@@ -10,11 +10,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// 课表位置 - 左上角 (0,0)
+typedef struct _HXLocation {
+    NSUInteger XLocation;
+    NSUInteger YLocation;
+} HXLocation;
+
+
 // 第一列 - 序列化数据信息数据模型
 @interface SequenceItemModel : NSObject
 
 // 第几节 - 从 0 开始
 @property (nonatomic,assign) NSInteger          sequence;
+
+@property (nonatomic,copy)   NSString           *time;
 
 @end
 

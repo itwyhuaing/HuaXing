@@ -13,19 +13,8 @@
 //#import "ClassTableHeaderCollectionView.h"
 
 @interface ClassTableMainView ()<UITableViewDelegate,UITableViewDataSource>
-{
-    // 行高
-    CGFloat heightForTableHeader;
-    CGFloat heightForTableCommonRow;
-    
-    // 列宽
-    CGFloat widthForFirstVerticalRow;
-    CGFloat widthForCommonVerticalRow;
-}
-// 课表每天课程数据
-@property (nonatomic,strong) NSArray<ClassItemDataModel *>      *ds_classItems;
-// 序列化信息数据
-@property (nonatomic,strong) NSArray<SequenceItemModel *>       *ds_sequences;
+
+
 
 
 // 数据表
@@ -49,70 +38,92 @@
 
 
 -(void)layoutSubviews {
-    // 初始化参数
-    // 数据源
-    if (_dataSource && [_dataSource respondsToSelector:@selector(datasInClassTableMainView:)]) {
-        self.ds_classItems = [_dataSource datasInClassTableMainView:self];
-    }
-    if (_dataSource && [_dataSource respondsToSelector:@selector(datasOfFirstVerticalRowInClassTableMainView:)]) {
-        self.ds_sequences = [_dataSource datasOfFirstVerticalRowInClassTableMainView:self];
-    }
-    // 第一行高度
-    if (_dataSource && [_dataSource respondsToSelector:@selector(heightForFirstHorizontalRowInClassTableMainView:)]) {
-        heightForTableHeader = [_dataSource heightForFirstHorizontalRowInClassTableMainView:self];
-    }
-    // 其他行高度
-    if (_dataSource && [_dataSource respondsToSelector:@selector(heightForCommonHorizontalRowInClassTableMainView:)]) {
-        heightForTableCommonRow = [_dataSource heightForCommonHorizontalRowInClassTableMainView:self];
-    }
-    // 第一列宽度
-    if (_dataSource && [_dataSource respondsToSelector:@selector(widthForFirstVerticalRowInClassTableMainView:)]) {
-        widthForFirstVerticalRow = [_dataSource widthForFirstVerticalRowInClassTableMainView:self];
-    }
-    // 其他列宽度
-    if (_dataSource && [_dataSource respondsToSelector:@selector(widthForCommonVerticalRowInClassTableMainView:)]) {
-        widthForCommonVerticalRow = [_dataSource widthForCommonVerticalRowInClassTableMainView:self];
-    }
     // Table 尺寸设置
     CGRect rect = self.frame;
     rect.origin = CGPointZero;
     [self.table setFrame:rect];
 }
 
+
+#pragma mark --- 代理取值
+
+// 第一行高度
+- (CGFloat)heightForTableHeader {
+    CGFloat rlt = 0.0;
+    if (_dataSource && [_dataSource respondsToSelector:@selector(heightForFirstHorizontalRowInClassTableMainView:)]) {
+        rlt = [_dataSource heightForFirstHorizontalRowInClassTableMainView:self];
+    }
+    return rlt;
+}
+
+// 其他行高度
+- (CGFloat)heightForTableCommonRow {
+    CGFloat rlt = 0.0;
+    if (_dataSource && [_dataSource respondsToSelector:@selector(heightForCommonHorizontalRowInClassTableMainView:)]) {
+        rlt = [_dataSource heightForCommonHorizontalRowInClassTableMainView:self];
+    }
+    return rlt;
+}
+
+// 第一列宽度
+- (CGFloat)widthForFirstVerticalRow {
+    CGFloat rlt = 0.0;
+    if (_dataSource && [_dataSource respondsToSelector:@selector(widthForFirstVerticalRowInClassTableMainView:)]) {
+        rlt = [_dataSource widthForFirstVerticalRowInClassTableMainView:self];
+    }
+    return rlt;
+}
+
+// 其他列宽度
+- (CGFloat)widthForCommonVerticalRow {
+    CGFloat rlt = 0.0;
+    if (_dataSource && [_dataSource respondsToSelector:@selector(widthForCommonVerticalRowInClassTableMainView:)]) {
+        rlt = [_dataSource widthForCommonVerticalRowInClassTableMainView:self];
+    }
+    return rlt;
+}
+
 #pragma mark --- UITableViewDelegate,UITableViewDataSource
 
 // 设置行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.ds_sequences ? self.ds_sequences.count+kExtraCount : kExtraCount;
+    return self.ds_sequences ? self.ds_sequences.count : 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ClassTableCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ClassTableCell.class)];
     // 通知位置
-    cell.currentIndexPathForCell = indexPath.row;
+    cell.currentIndexForCell = indexPath.row;
     // cell 所需的尺寸数据
     [cell updateFrameWithCellWidth:CGRectGetWidth(self.table.frame)
-                        cellHeight:heightForTableCommonRow
-   widthForFirstVertivalRowInTable:widthForFirstVerticalRow
-   widthForOtherVertivalRowInTable:widthForCommonVerticalRow];
+                        cellHeight:[self heightForTableCommonRow]
+   widthForFirstVertivalRowInTable:[self widthForFirstVerticalRow]
+   widthForOtherVertivalRowInTable:[self widthForCommonVerticalRow]];
     // cell 所需的数据源数据
     [cell updateCellWithSequences:self.ds_sequences classData:self.ds_classItems];
+    // 点击回调
+    HXWeakSelf
+    cell.itemSelectedBlock = ^(HXLocation location) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(classTableMainView:didSelectItemAtLocation:)]) {
+            [weakSelf.delegate classTableMainView:self didSelectItemAtLocation:location];
+        }
+    };
     return cell;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     // headerView 所需的尺寸数据
     [self.headerView updateFrameWithTableHeaderWidth:CGRectGetWidth(self.table.frame)
-                                   tableHeaderHeight:heightForTableHeader
-                     widthForFirstVertivalRowInTable:widthForFirstVerticalRow
-                     widthForOtherVertivalRowInTable:widthForCommonVerticalRow];
+                                   tableHeaderHeight:[self heightForTableHeader]
+                     widthForFirstVertivalRowInTable:[self widthForFirstVerticalRow]
+                     widthForOtherVertivalRowInTable:[self widthForCommonVerticalRow]];
     // headerView 所需的数据源数据
     [self.headerView updateTableHeaderWithClassData:self.ds_classItems];
     return self.headerView;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return heightForTableHeader;
+    return [self heightForTableHeader];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -120,10 +131,15 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return heightForTableCommonRow;
+    return [self heightForTableCommonRow];
 }
 
 
+#pragma mark --- reload View
+
+- (void)reloadClassTalbe {
+    [self.table reloadData];
+}
 
 #pragma mark --- lazy load
 

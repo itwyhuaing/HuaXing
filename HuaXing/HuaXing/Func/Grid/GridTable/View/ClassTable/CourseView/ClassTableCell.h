@@ -11,13 +11,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^ClassTableCellSelectedBlock)(NSIndexPath *idx);
+typedef void(^ClassTableCellSelectedBlock)(HXLocation location);
 
 @interface ClassTableCell : UITableViewCell
 
-//- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier heightForCell:(CGFloat)hc widthForCell:(CGFloat)fc;
-
-@property (nonatomic,copy)  ClassTableCellSelectedBlock cellSelectedBlock;
+@property (nonatomic,copy)  ClassTableCellSelectedBlock itemSelectedBlock;
 
 
 /**
@@ -44,7 +42,7 @@ typedef void(^ClassTableCellSelectedBlock)(NSIndexPath *idx);
                       classData:(NSArray<ClassItemDataModel *> *)clsItems;
 
 // 记录当前 cell 所在行
-@property (nonatomic,assign) NSInteger currentIndexPathForCell;
+@property (nonatomic,assign) NSInteger currentIndexForCell;
 
 @end
 
