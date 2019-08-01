@@ -7,7 +7,6 @@
 //
 
 #import "ClassTableCell.h"
-//#import "GridCollectionHeader.h"
 #import "SequenceHeaderView.h"
 #import "CourseCollectionCell.h"
 

@@ -54,6 +54,8 @@
 
 -(void)classTableMainView:(ClassTableMainView *)classTable didSelectItemAtLocation:(HXLocation)l {
     NSLog(@"\n 点击位置 - 行：%ld - 列：%ld \n",l.XLocation,l.YLocation);
+    self.ctv.ds_classItems = [self modifyDataSorce:self.ctv.ds_classItems modelAtHXLocation:l];
+    [self.ctv reloadClassTalbe];
 }
 
 
@@ -86,13 +88,30 @@
 //                c.teacher = @"Mr.Z";
 //            }
 //            c.location = [NSString stringWithFormat:@"紫薇新天大厦A座9层%ld9室",i];
-//            [items addObject:c];
+            [items addObject:c];
         }
         f.courses = items;
         
         [d addObject:f];
     }
     return d;
+}
+
+- (NSArray *)modifyDataSorce:(NSArray *)ds modelAtHXLocation:(HXLocation)l {
+    NSMutableArray *rlt = [NSMutableArray new];
+    if (ds) {
+        [rlt addObjectsFromArray:ds];
+        ClassItemDataModel *f = rlt[l.YLocation];
+        NSArray *courses = f.courses;
+        CourseItemModel *ff = courses[l.XLocation];
+        ff.courseName = [NSString stringWithFormat:@"今天第 %ld 节课",l.XLocation];
+        ff.idx    = l.XLocation;
+        if (l.XLocation % 2 == 0) {
+            ff.teacher = @"Mr.Z";
+        }
+        ff.location = [NSString stringWithFormat:@"紫薇新天大厦A座9层%ld9室",l.XLocation];
+    }
+    return rlt;
 }
 
 #pragma mark --- lazy load

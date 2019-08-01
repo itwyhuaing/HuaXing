@@ -9,13 +9,8 @@
 #import "ClassTableMainView.h"
 #import "ClassTableHeaderView.h"
 #import "ClassTableCell.h"
-//#import "ClassTableClassItemCollectionView.h"
-//#import "ClassTableHeaderCollectionView.h"
 
 @interface ClassTableMainView ()<UITableViewDelegate,UITableViewDataSource>
-
-
-
 
 // 数据表
 @property (nonatomic,strong) UITableView                        *table;
