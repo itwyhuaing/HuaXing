@@ -7,8 +7,11 @@
 //
 
 #import "AddCourseVC.h"
+#import "AddCourseView.h"
 
 @interface AddCourseVC ()
+
+@property (nonatomic,strong) AddCourseView *acv;
 
 @end
 
@@ -16,7 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.view addSubview:self.acv];
+}
+
+-(AddCourseView *)acv {
+    if (!_acv) {
+        _acv = [[AddCourseView alloc] init];
+    }
+    return _acv;
 }
 
 @end
