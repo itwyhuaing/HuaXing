@@ -8,6 +8,7 @@
 
 #import "TestVC.h"
 #import "ClassTableMainView.h"
+#import "AddCourseVC.h"
 
 @interface TestVC () <ClassTableMainViewDataSource,ClassTableMainViewDelegate>
 
@@ -26,12 +27,10 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
 }
 
 #pragma mark --- ClassTableMainViewDataSource,ClassTableMainViewDelegate
@@ -54,8 +53,10 @@
 
 -(void)classTableMainView:(ClassTableMainView *)classTable didSelectItemAtLocation:(HXLocation)l {
     NSLog(@"\n 点击位置 - 行：%ld - 列：%ld \n",l.XLocation,l.YLocation);
-    self.ctv.ds_classItems = [self modifyDataSorce:self.ctv.ds_classItems modelAtHXLocation:l];
-    [self.ctv reloadClassTalbe];
+    //self.ctv.ds_classItems = [self modifyDataSorce:self.ctv.ds_classItems modelAtHXLocation:l];
+    //[self.ctv reloadClassTalbe];
+    AddCourseVC *vc = [AddCourseVC new];
+    [self.navigationController pushViewController:vc animated:TRUE];
 }
 
 
