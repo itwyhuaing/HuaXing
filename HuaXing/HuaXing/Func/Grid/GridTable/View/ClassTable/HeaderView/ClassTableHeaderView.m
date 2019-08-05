@@ -50,7 +50,7 @@ static NSString *ClassTableHeaderView_ReusableViewFooter = @"ClassTableHeaderVie
     [self addSubview:self.clv];
     [self addSubview:self.bottomLine];
     
-    self.bottomLine.backgroundColor = [UIColor redColor];
+    self.bottomLine.backgroundColor = [UIAdapter lightGray];
 }
 
 -(void)setNotificationName:(NSString *)notificationName {
@@ -111,7 +111,7 @@ static NSString *ClassTableHeaderView_ReusableViewFooter = @"ClassTableHeaderVie
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
-    return CGSizeMake(10.0, CGRectGetHeight(collectionView.frame));
+    return CGSizeMake(0.0, CGRectGetHeight(collectionView.frame));
 }
 
 
@@ -220,7 +220,7 @@ static NSString *ClassTableHeaderView_ReusableViewFooter = @"ClassTableHeaderVie
         _clv.bounces = FALSE;
         _clv.delegate = (id)self;
         _clv.dataSource = (id)self;
-        _clv.showsHorizontalScrollIndicator = TRUE;
+        _clv.showsHorizontalScrollIndicator = FALSE;
     }
     return _clv;
 }

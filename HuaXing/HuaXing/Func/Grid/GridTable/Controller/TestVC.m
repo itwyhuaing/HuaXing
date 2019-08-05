@@ -55,7 +55,7 @@
 }
 
 -(CGFloat)widthForFirstVerticalRowInClassTableMainView:(ClassTableMainView *)classTable {
-    return 60.0;
+    return 80.0;
 }
 
 -(CGFloat)widthForCommonVerticalRowInClassTableMainView:(ClassTableMainView *)classTable {

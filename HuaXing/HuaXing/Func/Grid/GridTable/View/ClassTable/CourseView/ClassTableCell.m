@@ -48,7 +48,7 @@ static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableVie
 - (void)configUI {
     [self.contentView addSubview:self.clv];
     [self.contentView addSubview:self.bottomLine];
-    self.bottomLine.backgroundColor = [UIColor redColor];
+    self.bottomLine.backgroundColor = [UIAdapter lightGray];
 }
 
 -(void)setNotificationName:(NSString *)notificationName {
@@ -111,7 +111,7 @@ static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableVie
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
-    return CGSizeMake(10.0, CGRectGetHeight(collectionView.frame));
+    return CGSizeMake(0.0, CGRectGetHeight(collectionView.frame));
 }
 
 
@@ -210,7 +210,7 @@ static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableVie
 -(UILabel *)bottomLine {
     if (!_bottomLine) {
         _bottomLine = [UILabel new];
-        _bottomLine.backgroundColor = [UIColor blueColor];//[UIAdapter lightGray];
+        _bottomLine.backgroundColor = [UIColor blueColor]; //[UIAdapter lightGray];
     }
     return _bottomLine;
 }
@@ -226,7 +226,7 @@ static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableVie
         _clv.bounces = FALSE;
         _clv.delegate = (id)self;
         _clv.dataSource = (id)self;
-        _clv.showsHorizontalScrollIndicator = TRUE;
+        _clv.showsHorizontalScrollIndicator = FALSE;
     }
     return _clv;
 }

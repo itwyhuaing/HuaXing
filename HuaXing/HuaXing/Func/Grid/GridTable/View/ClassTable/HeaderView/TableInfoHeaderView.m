@@ -10,7 +10,9 @@
 
 @interface TableInfoHeaderView ()
 
-@property (nonatomic,strong) UILabel        *cntLabel;
+@property (nonatomic,strong) UILabel        *firstLabel;
+
+@property (nonatomic,strong) UILabel        *secondLabel;
 
 @end
 
@@ -27,27 +29,58 @@
 }
 
 - (void)configUI {
-    [self addSubview:self.cntLabel];
+    [self addSubview:self.firstLabel];
+    [self addSubview:self.secondLabel];
+    [self drawLine];
     self.backgroundColor = [UIColor whiteColor];
 }
 
 -(void)layoutSubviews {
     CGRect rect         = self.bounds;
     rect.origin         = CGPointZero;
-    [self.cntLabel setFrame:rect];
+    rect.size.height    = CGRectGetHeight(self.bounds)/2.0;
+    [self.firstLabel setFrame:rect];
+    
+    rect.origin.y       = CGRectGetHeight(self.bounds)/2.0;
+    [self.secondLabel setFrame:rect];
 }
 
--(UILabel *)cntLabel {
-    if (!_cntLabel) {
-        _cntLabel = [UILabel new];
-        _cntLabel.textColor = [UIColor blackColor];
-        _cntLabel.numberOfLines = 0;
-        _cntLabel.textAlignment = NSTextAlignmentCenter;
-        _cntLabel.layer.borderColor = [UIAdapter lightGray].CGColor;
-        _cntLabel.layer.borderWidth = 0.5;
-        _cntLabel.backgroundColor = [UIColor whiteColor];
+
+- (void)drawLine {
+    CGPoint sp = CGPointZero;
+    CGPoint ep = CGPointMake(CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+    UIBezierPath *bezierPath = [UIBezierPath bezierPath];
+    [bezierPath moveToPoint:sp];
+    [bezierPath addLineToPoint:ep];
+    [bezierPath closePath];
+    
+    CAShapeLayer *sl = [CAShapeLayer layer];
+    sl.strokeColor = [UIAdapter lightGray].CGColor;
+    sl.path = bezierPath.CGPath;
+    sl.fillColor = UIColor.clearColor.CGColor;
+    [self.layer addSublayer:sl];
+}
+
+-(UILabel *)firstLabel {
+    if (!_firstLabel) {
+        _firstLabel = [UILabel new];
+        _firstLabel.textColor = [UIAdapter lightBlack];
+        _firstLabel.textAlignment = NSTextAlignmentRight;
+        _firstLabel.backgroundColor = [UIColor whiteColor];
+        _firstLabel.text = @"日期";
     }
-    return _cntLabel;
+    return _firstLabel;
+}
+
+-(UILabel *)secondLabel {
+    if (!_secondLabel) {
+        _secondLabel = [UILabel new];
+        _secondLabel.textColor = [UIAdapter lightBlack];
+        _secondLabel.textAlignment = NSTextAlignmentLeft;
+        _secondLabel.backgroundColor = [UIColor whiteColor];
+        _secondLabel.text = @"课程";
+    }
+    return _secondLabel;
 }
 
 
