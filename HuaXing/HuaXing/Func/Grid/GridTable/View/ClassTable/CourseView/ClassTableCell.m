@@ -12,12 +12,15 @@
 
 static NSString *ClassTableCell_ReusableViewHeader = @"ClassTableCellReusableViewHeader";
 static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableViewFooter";
-@interface ClassTableCell () <UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface ClassTableCell () <UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIScrollViewDelegate>
 {
     CGFloat cellHeight;
     CGFloat cellWidth;
     CGFloat widthForHeader;
     CGFloat widthForCommonRow;
+    
+    BOOL    _isAllowedNotification;
+    CGFloat _lastOffX;
 }
 // UI
 @property (nonatomic,strong) UILabel                            *bottomLine;
@@ -45,14 +48,16 @@ static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableVie
 - (void)configUI {
     [self.contentView addSubview:self.clv];
     [self.contentView addSubview:self.bottomLine];
-    
     self.bottomLine.backgroundColor = [UIColor redColor];
 }
 
+-(void)setNotificationName:(NSString *)notificationName {
+    _notificationName = notificationName;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollMove:) name:notificationName object:nil];
+}
+
 -(void)updateFrameWithCellWidth:(CGFloat)cw cellHeight:(CGFloat)ch widthForFirstVertivalRowInTable:(CGFloat)w1 widthForOtherVertivalRowInTable:(CGFloat)w2 {
-    
     //NSLog(@"\n 测试点尺寸111 \n");
-    
     cellWidth = cw;
     cellHeight= ch;
     widthForHeader = w1;
@@ -152,6 +157,53 @@ static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableVie
         self.itemSelectedBlock(l);
     }
 }
+
+
+#pragma mark --- UIScrollViewDelegate
+
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    _isAllowedNotification = NO;//
+}
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    _isAllowedNotification = NO;
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (!_isAllowedNotification) {//是自身才发通知去tableView以及其他的cell
+        // 发送通知
+        [[NSNotificationCenter defaultCenter] postNotificationName:self.notificationName object:self userInfo:@{@"cellOffX":@(scrollView.contentOffset.x)}];
+    }
+    _isAllowedNotification = NO;
+}
+
+-(void)scrollMove:(NSNotification*)notification {
+    NSDictionary *noticeInfo = notification.userInfo;
+    NSObject *obj = notification.object;
+    float x = [noticeInfo[@"cellOffX"] floatValue];
+    if (obj!=self) {
+        _isAllowedNotification = YES;
+        if (_lastOffX != x) {
+            [self.clv setContentOffset:CGPointMake(x, 0) animated:NO];
+        }
+        _lastOffX = x;
+    }else{
+        _isAllowedNotification = NO;
+    }
+    obj = nil;
+}
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:self.notificationName object:nil];
+}
+//多种手势处理
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+//{
+//    if ([NSStringFromClass([touch.view class]) isEqualToString:@"UITableViewCellContentView"]) {
+//        return NO;
+//    }
+//    return YES;
+//}
 
 #pragma mark --- lazy load
 

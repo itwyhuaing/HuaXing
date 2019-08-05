@@ -42,6 +42,7 @@
     if (model) {
         _model = model;
         self.cntLabel.text = [self generateMutableString];
+        self.cntLabel.backgroundColor = model.clr;
     }
 }
 

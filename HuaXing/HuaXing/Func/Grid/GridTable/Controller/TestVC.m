@@ -89,7 +89,7 @@
         f.maxCount = [self generateVerticalData].count;
         f.date = [NSString stringWithFormat:@"2019/08/%ld",cou];
         f.weekDay = [NSString stringWithFormat:@"星期%ld",cou%7 + 1];
-        
+        UIColor *clr = [UIColor colorWithR:(arc4random()%255) G:(arc4random()%255) B:(arc4random()%255) A:1.0];
         NSMutableArray *items = [NSMutableArray new];
         for (NSInteger i = 0; i < f.maxCount; i ++) {
             CourseItemModel *c = [CourseItemModel new];
@@ -99,6 +99,7 @@
 //                c.teacher = @"Mr.Z";
 //            }
 //            c.location = [NSString stringWithFormat:@"紫薇新天大厦A座9层%ld9室",i];
+            c.clr = clr;
             [items addObject:c];
         }
         f.courses = items;

@@ -38,6 +38,8 @@ typedef struct _HXLocation {
 
 // 第几节 - 从 0 开始
 @property (nonatomic,assign)    NSInteger       idx;
+// 颜色标记
+@property (nonatomic,strong)    UIColor         *clr;
 
 
 @end

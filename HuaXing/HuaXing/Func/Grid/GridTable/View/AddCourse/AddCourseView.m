@@ -42,7 +42,6 @@
 }
 
 - (void)confirmEvent:(UIButton *)sender {
-    //[self.table resignFirstResponder];
     [self resignFirstResponderForCell];
     if (_delegate && [_delegate respondsToSelector:@selector(addCourseView:didClickEvent:)]) {
         [_delegate addCourseView:self didClickEvent:sender];

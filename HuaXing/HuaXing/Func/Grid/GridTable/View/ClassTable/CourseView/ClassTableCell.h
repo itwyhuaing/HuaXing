@@ -44,6 +44,9 @@ typedef void(^ClassTableCellSelectedBlock)(HXLocation location);
 // 记录当前 cell 所在行
 @property (nonatomic,assign) NSInteger currentIndexForCell;
 
+// 通知标识
+@property (nonatomic,copy)   NSString   *notificationName;
+
 @end
 
 NS_ASSUME_NONNULL_END

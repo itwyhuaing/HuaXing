@@ -16,6 +16,10 @@
 @property (nonatomic,strong) UITableView                        *table;
 @property (nonatomic,strong) ClassTableHeaderView               *headerView;
 
+// 通知标识
+@property (nonatomic,copy)   NSString   *notificationName;
+
+
 @end
 
 @implementation ClassTableMainView
@@ -26,6 +30,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        _notificationName = [NSString stringWithFormat:@"%@_%p",NSStringFromClass(self.class),self];
+        NSLog(@" \n %s \n %@ \n ",__FUNCTION__,_notificationName);
         [self addSubview:self.table];
     }
     return self;
@@ -87,7 +93,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ClassTableCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(ClassTableCell.class)];
-    // 通知位置
+    // 通知标识
+    cell.notificationName = self.notificationName;
+    // 记录位置
     cell.currentIndexForCell = indexPath.row;
     // cell 所需的尺寸数据
     [cell updateFrameWithCellWidth:CGRectGetWidth(self.table.frame)
@@ -107,6 +115,8 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    // 通知标识
+    self.headerView.notificationName = self.notificationName;
     // headerView 所需的尺寸数据
     [self.headerView updateFrameWithTableHeaderWidth:CGRectGetWidth(self.table.frame)
                                    tableHeaderHeight:[self heightForTableHeader]
@@ -153,7 +163,6 @@
 -(ClassTableHeaderView *)headerView {
     if (!_headerView) {
         _headerView = [[ClassTableHeaderView alloc] init];
-
     }
     return _headerView;
 }

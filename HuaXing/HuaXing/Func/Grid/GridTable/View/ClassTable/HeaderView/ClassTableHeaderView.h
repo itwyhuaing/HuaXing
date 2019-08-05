@@ -34,6 +34,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)updateTableHeaderWithClassData:(NSArray<ClassItemDataModel *> *)clsItems;
 
+// 通知标识
+@property (nonatomic,copy)   NSString   *notificationName;
+
 @end
 
 NS_ASSUME_NONNULL_END
