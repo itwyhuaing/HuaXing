@@ -8,6 +8,7 @@
 
 #import "TestVC.h"
 #import "ClassTableMainView.h"
+#import "CourseConfigVC.h"
 #import "AddCourseVC.h"
 
 @interface TestVC () <ClassTableMainViewDataSource,ClassTableMainViewDelegate>
@@ -29,6 +30,13 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    // UI
+    UIButton *confirmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [confirmBtn setFrame:CGRectMake(0, 0, 50, 30)];
+    UIBarButtonItem *confirmItem = [[UIBarButtonItem alloc] initWithTitle:@"课表设置" style:UIBarButtonItemStylePlain target:self action:@selector(configClassTable)];
+    self.navigationItem.rightBarButtonItem = confirmItem;
+
+    // 数据读取
     [[JXFileManager defaultManager] unarchiveObjWithFileKey:kAddCourseItem operateBlock:^(BOOL status, id  _Nonnull info) {
         if (info && [info isKindOfClass:[CourseItemModel class]]) {
             CourseItemModel *f = (CourseItemModel *)info;
@@ -42,6 +50,11 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+}
+
+- (void)configClassTable {
+    CourseConfigVC *vc = [[CourseConfigVC alloc] init];
+    [self.navigationController pushViewController:vc animated:FALSE];
 }
 
 #pragma mark --- ClassTableMainViewDataSource,ClassTableMainViewDelegate

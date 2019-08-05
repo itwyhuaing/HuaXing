@@ -23,17 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.acv];
+    self.navigationItem.title = @"添加课程";
     self.acv.ds = @[@"课程名称",@"授课老师",@"授课地点"];
 }
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-//    UIButton *confirmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [confirmBtn setFrame:CGRectMake(0, 0, 50, 30)];
-//    UIBarButtonItem *confirmItem = [[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStylePlain target:self action:@selector(confirmEvent:)];
-//    self.navigationItem.rightBarButtonItem = confirmItem;
-}
-
 
 -(void)addCourseView:(AddCourseView *)addV didSelectedAtIndexpath:(NSIndexPath *)idx inputCnt:(NSString *)cnt {
     NSLog(@"\n %ld - %@ \n",idx.row,cnt);
@@ -54,6 +46,16 @@
         [self.navigationController popViewControllerAnimated:FALSE];
     }else { // 有一个为输入
         NSLog(@" === ");
+        UIAlertController *altVC = [UIAlertController alertControllerWithTitle:@"" message:@"未设置任何信息，真的要离开吗？" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"再看看" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"真的要走了" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController popViewControllerAnimated:FALSE];
+        }];
+        [altVC addAction:cancelAction];
+        [altVC addAction:confirmAction];
+        [self presentViewController:altVC animated:FALSE completion:nil];
     }
 }
 

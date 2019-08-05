@@ -15,6 +15,7 @@
     #import "HXConfig.h"
     #import "Addition.h"
     #import "UIAdapter.h"
+    #import "HXToast.h"
     #import "JXFileManager.h"
 
 #endif /* HuaXing_pch */

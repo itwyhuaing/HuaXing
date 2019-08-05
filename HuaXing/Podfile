@@ -3,4 +3,5 @@ target "HuaXing" do
 #  pod 'MJRefresh', '~> 3.1.12'
 #  pod 'SDAutoLayout', '~> 2.1.8'
 #  pod 'CYLTabBarController', '~> 1.10.0'
+  pod 'MBProgressHUD', '~> 1.1.0'
 end
