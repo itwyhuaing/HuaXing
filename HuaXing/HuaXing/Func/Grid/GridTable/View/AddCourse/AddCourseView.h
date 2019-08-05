@@ -10,9 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class AddCourseView;
+@protocol AddCourseViewDelegate <NSObject>
+@optional
+- (void)addCourseView:(AddCourseView *)addV didSelectedAtIndexpath:(NSIndexPath *)idx inputCnt:(NSString *)cnt;
+
+@end
+
 @interface AddCourseView : UIView
 
 @property (nonatomic,strong) NSArray<NSString *> *ds;
+
+@property (nonatomic,weak) id <AddCourseViewDelegate> delegate;
 
 @end
 

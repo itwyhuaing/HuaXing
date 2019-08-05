@@ -8,7 +8,7 @@
 
 #import "AddCourseInputCell.h"
 
-@interface AddCourseInputCell ()
+@interface AddCourseInputCell () <UITextFieldDelegate>
 
 @property (nonatomic,strong) UIImageView    *leftIcon;
 @property (nonatomic,strong) UILabel        *themLabel;
@@ -27,13 +27,48 @@
 }
 
 - (void)configUI {
+    UILabel *line = [UILabel new];
     [self.contentView addSubview:self.leftIcon];
     [self.contentView addSubview:self.themLabel];
     [self.contentView addSubview:self.input];
+    [self.contentView addSubview:line];
+    line.sd_layout
+    .leftSpaceToView(self.contentView, 0.0)
+    .rightEqualToView(self.contentView)
+    .bottomEqualToView(self.contentView)
+    .heightIs(1.0);
+    
+    self.leftIcon.sd_layout
+    .widthIs(16.0 * [UIAdapter Scale47Width])
+    .heightEqualToWidth()
+    .centerYEqualToView(self.contentView).offset(-2.0)
+    .leftSpaceToView(self.contentView, [UIAdapter lrGap]);
+    self.themLabel.sd_layout
+    .topEqualToView(self.contentView)
+    .bottomSpaceToView(line, 0.0)
+    .leftSpaceToView(self.leftIcon, 5.0);
+    [self.themLabel setSingleLineAutoResizeWithMaxWidth:100.0 * [UIAdapter Scale47Width]];
+    self.input.sd_layout
+    .widthIs([UIAdapter deviceWidth]/2.0 - [UIAdapter lrGap])
+    .topEqualToView(self.contentView)
+    .bottomSpaceToView(line, 0.0)
+    .rightSpaceToView(self.contentView, [UIAdapter lrGap]);
+    
+    line.backgroundColor = [UIAdapter lightGray];
 }
 
--(void)layoutSubviews {
-    
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    if (self.endInputBlock) {
+        self.endInputBlock(textField.text);
+    }
+}
+
+-(void)setTxt:(NSString *)txt {
+    if (txt) {
+        _txt = txt;
+        self.leftIcon.image = [UIImage imageNamed:@"stress_mark"];
+        self.themLabel.text = txt;
+    }
 }
 
 -(UIImageView *)leftIcon {
@@ -55,6 +90,7 @@
 -(UITextField *)input {
     if (!_input) {
         _input = [[UITextField alloc] init];
+        _input.delegate = (id)self;
     }
     return _input;
 }

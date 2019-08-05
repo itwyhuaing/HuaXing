@@ -10,7 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^AddCourseInputCellEndInputBlock)(NSString *rlt);
 @interface AddCourseInputCell : UITableViewCell
+
+@property (nonatomic,copy) NSString *txt;
+
+@property (nonatomic,copy) AddCourseInputCellEndInputBlock endInputBlock;
 
 @end
 

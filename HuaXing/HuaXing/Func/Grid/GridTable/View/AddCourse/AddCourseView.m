@@ -45,12 +45,18 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AddCourseInputCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(AddCourseInputCell.class)];
-    cell.contentView.backgroundColor = [UIColor orangeColor];
+    cell.txt = self.ds[indexPath.row];
+    HXWeakSelf
+    cell.endInputBlock = ^(NSString * _Nonnull rlt) {
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(addCourseView:didSelectedAtIndexpath:inputCnt:)]) {
+            [weakSelf.delegate addCourseView:self didSelectedAtIndexpath:indexPath inputCnt:rlt];
+        }
+    };
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 46.0;
+    return 60.0;
 }
 
 #pragma mark ---- lazy load
@@ -59,6 +65,7 @@
     if (!_table) {
         _table = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         [_table registerClass:[AddCourseInputCell class] forCellReuseIdentifier:NSStringFromClass(AddCourseInputCell.class)];
+        _table.separatorStyle = UITableViewCellSeparatorStyleNone;
         _table.delegate = (id)self;
         _table.dataSource = (id)self;
     }
