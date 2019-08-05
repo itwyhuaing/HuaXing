@@ -57,6 +57,10 @@
     line.backgroundColor = [UIAdapter lightGray];
 }
 
+- (void)endEdit {
+    [self.input resignFirstResponder];
+}
+
 -(void)textFieldDidEndEditing:(UITextField *)textField {
     if (self.endInputBlock) {
         self.endInputBlock(textField.text);

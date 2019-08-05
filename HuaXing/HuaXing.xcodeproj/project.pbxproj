@@ -32,6 +32,8 @@
 		26E0B13D22EAE62E005BE40D /* CourseConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B13322EAE62E005BE40D /* CourseConfigView.m */; };
 		26E0B13E22EAE62E005BE40D /* CourseTimeInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B13422EAE62E005BE40D /* CourseTimeInfoCell.m */; };
 		26E0B14122EAE684005BE40D /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B14022EAE684005BE40D /* TestVC.m */; };
+		26EEACB622F7D39D00D8D079 /* JXFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACB522F7D39D00D8D079 /* JXFileManager.m */; };
+		26EEACBA22F7D80D00D8D079 /* BaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACB922F7D80D00D8D079 /* BaseDataModel.m */; };
 		469E585822D77F560077AE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585622D77F560077AE51 /* Main.storyboard */; };
 		469E585A22D77F580077AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E585922D77F580077AE51 /* Assets.xcassets */; };
 		469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585B22D77F580077AE51 /* LaunchScreen.storyboard */; };
@@ -110,6 +112,10 @@
 		26E0B13422EAE62E005BE40D /* CourseTimeInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseTimeInfoCell.m; sourceTree = "<group>"; };
 		26E0B13F22EAE684005BE40D /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
 		26E0B14022EAE684005BE40D /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
+		26EEACB422F7D39D00D8D079 /* JXFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXFileManager.h; sourceTree = "<group>"; };
+		26EEACB522F7D39D00D8D079 /* JXFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXFileManager.m; sourceTree = "<group>"; };
+		26EEACB822F7D80D00D8D079 /* BaseDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDataModel.h; sourceTree = "<group>"; };
+		26EEACB922F7D80D00D8D079 /* BaseDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseDataModel.m; sourceTree = "<group>"; };
 		469E584D22D77F560077AE51 /* HuaXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E585722D77F560077AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		469E585922D77F580077AE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -374,6 +380,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		26EEACB322F7D39D00D8D079 /* JXFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				26EEACB422F7D39D00D8D079 /* JXFileManager.h */,
+				26EEACB522F7D39D00D8D079 /* JXFileManager.m */,
+			);
+			path = JXFileManager;
+			sourceTree = "<group>";
+		};
+		26EEACB722F7D7E700D8D079 /* BaseDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				26EEACB822F7D80D00D8D079 /* BaseDataModel.h */,
+				26EEACB922F7D80D00D8D079 /* BaseDataModel.m */,
+			);
+			path = BaseDataModel;
+			sourceTree = "<group>";
+		};
 		3481AF048D8EB8C186E2C3C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +458,7 @@
 				469E586A22D780A70077AE51 /* ViewController.m */,
 				26024BEB22D8A1EE00143425 /* BaseVC */,
 				26AD64C222D81B2C0087D3EB /* Tab */,
+				26EEACB722F7D7E700D8D079 /* BaseDataModel */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -453,6 +478,7 @@
 				26E0B11B22EAE591005BE40D /* UIComponent */,
 				46BC169A22DA3A9C00A70F23 /* Addition */,
 				46BC169622DA347A00A70F23 /* UIAdapter */,
+				26EEACB322F7D39D00D8D079 /* JXFileManager */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -632,12 +658,14 @@
 				2650AFB822F1AAE0006C7784 /* TableInfoHeaderView.m in Sources */,
 				46BC16C822DA3D9D00A70F23 /* PersonDataModel.m in Sources */,
 				26E0B13A22EAE62E005BE40D /* CourseGridVC.m in Sources */,
+				26EEACB622F7D39D00D8D079 /* JXFileManager.m in Sources */,
 				469E586E22D780A80077AE51 /* ViewController.m in Sources */,
 				46BC16B922DA3A9C00A70F23 /* NSMutableDictionary+Addition.m in Sources */,
 				2650AFAE22F1A0AC006C7784 /* ClassTableHeaderView.m in Sources */,
 				2650AFAF22F1A0AC006C7784 /* ClassTableCell.m in Sources */,
 				2650AF9C22F19059006C7784 /* ClassItemDataModel.m in Sources */,
 				2650AFC122F2F983006C7784 /* AddCourseVC.m in Sources */,
+				26EEACBA22F7D80D00D8D079 /* BaseDataModel.m in Sources */,
 				26E0B13C22EAE62E005BE40D /* CourseHeaderView.m in Sources */,
 				46BC16C522DA3D7900A70F23 /* PersonManager.m in Sources */,
 				46BC16CE22DAF0B900A70F23 /* BriefInfoCell.m in Sources */,

@@ -13,15 +13,15 @@
 #pragma mark ------ 项目常用几种字体
 
 + (UIFont *)font10 {
-    return [UIFont systemFontOfSize:10.0];
+    return [UIFont systemFontOfSize:10.0 * [UIAdapter Scale47Width]];
 }
 
 + (UIFont *)font15 {
-    return [UIFont systemFontOfSize:15.0];
+    return [UIFont systemFontOfSize:15.0 * [UIAdapter Scale47Width]];
 }
 
 + (UIFont *)font17{
-    return [UIFont systemFontOfSize:17.0];
+    return [UIFont systemFontOfSize:17.0 * [UIAdapter Scale47Width]];
 }
 
 #pragma mark ------ 项目常用几种颜色

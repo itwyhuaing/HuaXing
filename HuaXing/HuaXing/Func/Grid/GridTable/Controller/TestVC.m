@@ -14,6 +14,8 @@
 
 @property (nonatomic,strong) ClassTableMainView *ctv;
 
+@property (nonatomic,assign) HXLocation         selectedLocation;
+
 @end
 
 @implementation TestVC
@@ -27,6 +29,15 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [[JXFileManager defaultManager] unarchiveObjWithFileKey:kAddCourseItem operateBlock:^(BOOL status, id  _Nonnull info) {
+        if (info && [info isKindOfClass:[CourseItemModel class]]) {
+            CourseItemModel *f = (CourseItemModel *)info;
+            [[JXFileManager defaultManager] clearArchivedRootObjWithKey:kAddCourseItem];
+            if (f) {
+                [self addCourseItem:f];
+            }
+        }
+    }];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -53,8 +64,7 @@
 
 -(void)classTableMainView:(ClassTableMainView *)classTable didSelectItemAtLocation:(HXLocation)l {
     NSLog(@"\n 点击位置 - 行：%ld - 列：%ld \n",l.XLocation,l.YLocation);
-    //self.ctv.ds_classItems = [self modifyDataSorce:self.ctv.ds_classItems modelAtHXLocation:l];
-    //[self.ctv reloadClassTalbe];
+    self.selectedLocation = l;
     AddCourseVC *vc = [AddCourseVC new];
     [self.navigationController pushViewController:vc animated:TRUE];
 }
@@ -98,21 +108,15 @@
     return d;
 }
 
-- (NSArray *)modifyDataSorce:(NSArray *)ds modelAtHXLocation:(HXLocation)l {
-    NSMutableArray *rlt = [NSMutableArray new];
-    if (ds) {
-        [rlt addObjectsFromArray:ds];
-        ClassItemDataModel *f = rlt[l.YLocation];
-        NSArray *courses = f.courses;
-        CourseItemModel *ff = courses[l.XLocation];
-        ff.courseName = [NSString stringWithFormat:@"今天第 %ld 节课",l.XLocation];
-        ff.idx    = l.XLocation;
-        if (l.XLocation % 2 == 0) {
-            ff.teacher = @"Mr.Z";
-        }
-        ff.location = [NSString stringWithFormat:@"紫薇新天大厦A座9层%ld9室",l.XLocation];
-    }
-    return rlt;
+- (void)addCourseItem:(CourseItemModel *)model {
+    // 修改数据源
+    ClassItemDataModel *items = self.ctv.ds_classItems[self.selectedLocation.XLocation];
+    NSMutableArray *tmp = [[NSMutableArray alloc] initWithArray:items.courses];
+    [tmp replaceObjectAtIndex:self.selectedLocation.YLocation withObject:model];
+    
+    // 更新数据源
+    items.courses = tmp;
+    [self.ctv reloadClassTalbe];
 }
 
 #pragma mark --- lazy load

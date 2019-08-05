@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 - (void)addCourseView:(AddCourseView *)addV didSelectedAtIndexpath:(NSIndexPath *)idx inputCnt:(NSString *)cnt;
 
+- (void)addCourseView:(AddCourseView *)addV didClickEvent:(UIButton *)btn;
+
 @end
 
 @interface AddCourseView : UIView

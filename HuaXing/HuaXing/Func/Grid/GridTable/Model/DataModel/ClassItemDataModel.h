@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseDataModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,7 +19,7 @@ typedef struct _HXLocation {
 
 
 // 第一列 - 序列化数据信息数据模型
-@interface SequenceItemModel : NSObject
+@interface SequenceItemModel : BaseDataModel
 
 // 第几节 - 从 0 开始
 @property (nonatomic,assign) NSInteger          sequence;
@@ -29,7 +30,7 @@ typedef struct _HXLocation {
 
 
 // 每节课数据模型
-@interface CourseItemModel : NSObject
+@interface CourseItemModel : BaseDataModel
 
 @property (nonatomic,copy)      NSString        *courseName;
 @property (nonatomic,copy)      NSString        *location;
@@ -42,7 +43,7 @@ typedef struct _HXLocation {
 @end
 
 // 每天课程数据模型
-@interface ClassItemDataModel : NSObject
+@interface ClassItemDataModel : BaseDataModel
 
 @property (nonatomic,copy)      NSString        *date;
 @property (nonatomic,copy)      NSString        *weekDay;

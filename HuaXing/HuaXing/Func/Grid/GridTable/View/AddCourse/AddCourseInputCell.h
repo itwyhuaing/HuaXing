@@ -17,6 +17,8 @@ typedef void(^AddCourseInputCellEndInputBlock)(NSString *rlt);
 
 @property (nonatomic,copy) AddCourseInputCellEndInputBlock endInputBlock;
 
+- (void)endEdit;
+
 @end
 
 NS_ASSUME_NONNULL_END

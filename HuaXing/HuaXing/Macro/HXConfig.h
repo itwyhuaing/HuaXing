@@ -11,4 +11,6 @@
 
 #define HXWeakSelf     __weak typeof(self) weakSelf = self;
 
+#define kAddCourseItem @"add.course.item"
+
 #endif /* HXConfig_h */
