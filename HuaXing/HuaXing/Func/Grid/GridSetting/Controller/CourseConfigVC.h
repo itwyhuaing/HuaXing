@@ -30,12 +30,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,weak) id <CourseConfigVCDelegate> delegate;
 
-@property (nonatomic,copy) NSString *lastSelectedDateString;
-
-@property (nonatomic,copy) NSString *lastSelectedAMax;
-
-@property (nonatomic,copy) NSString *lastSelectedPMax;
-
 @end
 
 NS_ASSUME_NONNULL_END

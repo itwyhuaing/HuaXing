@@ -44,7 +44,6 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self updateUI];
 }
 
 - (void)addMainView {
@@ -53,7 +52,7 @@
     HXWeakSelf
     // 日期选择器回调
     self.datePkv.pickCompletion = ^(NSString * _Nonnull dateResult) {
-        NSLog(@" \n 测试数据 : %@ \n ",dateResult);
+        //NSLog(@" \n 测试数据 : %@ \n ",dateResult);
         [weakSelf.ccv updateHeaderViewWithThem:@"开课日期" tipMessage:dateResult section:weakSelf.currentLocation];
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigVC:selectedTheStartDate:)]) {
             [weakSelf.delegate courseConfigVC:weakSelf selectedTheStartDate:dateResult];
@@ -62,7 +61,7 @@
     
     // 课程数选择器
     self.courseItemsPkv.pkvCompletion = ^(NSString * _Nonnull pkvResult) {
-        NSLog(@" \n 测试数据 : %@ \n ",pkvResult);
+        //NSLog(@" \n 测试数据 : %@ \n ",pkvResult);
         NSString *timePart = @"下午";
         if (weakSelf.currentLocation == CourseConfigViewHeaderAMLocation) {
             weakSelf.aMax = [pkvResult integerValue];
@@ -91,22 +90,6 @@
     };
     
 }
-
-
-- (void)updateUI {
-    if (self.lastSelectedDateString) {
-        [self.ccv updateHeaderViewWithThem:@"开课日期" tipMessage:self.lastSelectedDateString section:0];
-    }
-    if (self.lastSelectedAMax && self.lastSelectedAMax.integerValue > 0) {
-        [self.ccv updateHeaderViewWithThem:@"上午" tipMessage:[NSString stringWithFormat:@"%@节课",self.lastSelectedAMax] section:1];
-        [self.ccv updateTableWithCourseItems:self.lastSelectedAMax section:1];
-    }
-    if (self.lastSelectedPMax && self.lastSelectedPMax.integerValue > 0) {
-        [self.ccv updateHeaderViewWithThem:@"下午" tipMessage:[NSString stringWithFormat:@"%@节课",self.lastSelectedPMax] section:2];
-        [self.ccv updateTableWithCourseItems:self.lastSelectedPMax section:2];
-    }
-}
-
 
 #pragma mark ------ CourseConfigViewDelegate
 
@@ -197,10 +180,5 @@
     }
     return _courseItemsPkv;
 }
-
-
-#pragma mark --- Test
-
-
 
 @end

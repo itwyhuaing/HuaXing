@@ -56,7 +56,7 @@
     self.toolBar.eventBlock = ^(NSInteger location) {
         NSString *rlt = @"0";
         if (location == kBUuttonConfirmTag) {
-            NSLog(@" \n 测试数据 :eventClick \n ");
+            //NSLog(@" \n 测试数据 :eventClick \n ");
             NSInteger idx = [weakSelf.pkv selectedRowInComponent:0];
             rlt = self.dataSource[idx];
         }
@@ -121,7 +121,7 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    NSLog(@" \n 测试数据 : didSelectRow \n ");
+    //NSLog(@" \n 测试数据 : didSelectRow \n ");
     [self dealSelectedResult];
 }
 
