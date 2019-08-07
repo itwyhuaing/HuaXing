@@ -66,7 +66,9 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AddCourseInputCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(AddCourseInputCell.class)];
-    cell.txt = self.ds[indexPath.row];
+    if (self.ds && self.ds.count > indexPath.row) {
+        [cell modifyCellWithModel:self.ds[indexPath.row]];
+    }
     HXWeakSelf
     cell.endInputBlock = ^(NSString * _Nonnull rlt) {
         if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(addCourseView:didSelectedAtIndexpath:inputCnt:)]) {

@@ -10,13 +10,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AddCourseModel : NSObject
+@interface AddCourseInputTypeModel : NSObject
 
 @property (nonatomic,copy) NSString *leftIconName;
 
 @property (nonatomic,copy) NSString *them;
 
-@property (nonatomic,copy) NSString *rightIconName;
+@property (nonatomic,copy) NSString *placeHolder;
+
+@end
+
+
+@interface AddCourseModel : NSObject
+
+
 
 @end
 

@@ -86,6 +86,10 @@
 
 #pragma mark --- UITableViewDelegate,UITableViewDataSource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.ds_sequences ? 1 : 0;
+}
+
 // 设置行数
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.ds_sequences ? self.ds_sequences.count : 0;

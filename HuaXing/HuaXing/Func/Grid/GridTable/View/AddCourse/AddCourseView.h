@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AddCourseInputTypeModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AddCourseView : UIView
 
-@property (nonatomic,strong) NSArray<NSString *> *ds;
+@property (nonatomic,strong) NSArray<AddCourseInputTypeModel *> *ds;
 
 @property (nonatomic,weak) id <AddCourseViewDelegate> delegate;
 

@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AddCourseInputTypeModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^AddCourseInputCellEndInputBlock)(NSString *rlt);
 @interface AddCourseInputCell : UITableViewCell
 
-@property (nonatomic,copy) NSString *txt;
+- (void)modifyCellWithModel:(AddCourseInputTypeModel *)model;
 
 @property (nonatomic,copy) AddCourseInputCellEndInputBlock endInputBlock;
 

@@ -7,6 +7,7 @@
 //
 
 #import "AddCourseInputCell.h"
+#import "AddCourseModel.h"
 
 @interface AddCourseInputCell () <UITextFieldDelegate>
 
@@ -67,12 +68,10 @@
     }
 }
 
--(void)setTxt:(NSString *)txt {
-    if (txt) {
-        _txt = txt;
-        self.leftIcon.image = [UIImage imageNamed:@"stress_mark"];
-        self.themLabel.text = txt;
-    }
+-(void)modifyCellWithModel:(AddCourseInputTypeModel *)model {
+    self.leftIcon.image = [UIImage imageNamed:model.leftIconName];
+    self.themLabel.text = model.them;
+    self.input.placeholder = model.placeHolder;
 }
 
 -(UIImageView *)leftIcon {

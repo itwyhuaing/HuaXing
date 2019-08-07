@@ -66,6 +66,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIColor *)maskLightBlack;
 
+
+/**
+ 随机色
+
+ @return 随机色
+ */
++ (UIColor *)randomColor;
+
 #pragma mark ------ 设备尺寸相关参数
 
 /**

@@ -8,6 +8,7 @@
 
 #import "AddCourseVC.h"
 #import "AddCourseView.h"
+#import "AddCourseModel.h"
 #import "ClassItemDataModel.h"
 
 @interface AddCourseVC () <AddCourseViewDelegate>
@@ -24,7 +25,21 @@
     [super viewDidLoad];
     [self.view addSubview:self.acv];
     self.navigationItem.title = @"添加课程";
-    self.acv.ds = @[@"课程名称",@"授课老师",@"授课地点"];
+    [self generateDataSource];
+}
+
+- (void)generateDataSource {
+    NSArray *thems = @[@"课程名称",@"授课老师",@"授课地点"];
+    NSArray *holders = @[@"请输入课程名称",@"请输入授课老师",@"请输入授课地点"];
+    NSMutableArray *data = [NSMutableArray new];
+    for (NSInteger cou = 0; cou < 3; cou ++) {
+        AddCourseInputTypeModel *f = [AddCourseInputTypeModel new];
+        f.leftIconName = @"stress_mark";
+        f.them = thems[cou];
+        f.placeHolder = holders[cou];
+        [data addObject:f];
+    }
+    self.acv.ds = data;
 }
 
 -(void)addCourseView:(AddCourseView *)addV didSelectedAtIndexpath:(NSIndexPath *)idx inputCnt:(NSString *)cnt {
@@ -42,7 +57,9 @@
     NSLog(@" === ");
     [self.acv resignFirstResponder];
     if (self.itemData.courseName && self.itemData.teacher && self.itemData.location) { // 三者必须全部输入
-        [[JXFileManager defaultManager] archiveRootObj:self.itemData toFileWithKey:kAddCourseItem];
+        if (_delegate && [_delegate respondsToSelector:@selector(addCourseVC:didComposedModel:)]) {
+            [_delegate addCourseVC:self didComposedModel:self.itemData];
+        }
         [self.navigationController popViewControllerAnimated:FALSE];
     }else { // 有一个为输入
         NSLog(@" === ");

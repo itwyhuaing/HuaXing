@@ -8,6 +8,10 @@
 
 #import "AddCourseModel.h"
 
+@implementation AddCourseInputTypeModel
+
+@end
+
 @implementation AddCourseModel
 
 @end

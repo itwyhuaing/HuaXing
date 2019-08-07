@@ -8,10 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "HXBaseVC.h"
+@class CourseItemModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class AddCourseVC;
+@protocol AddCourseVCDelegate <NSObject>
+@optional
+- (void)addCourseVC:(AddCourseVC *)vc didComposedModel:(CourseItemModel *)model;
+
+@end
+
 @interface AddCourseVC : HXBaseVC
+
+@property (nonatomic,weak) id <AddCourseVCDelegate> delegate;
 
 @end
 

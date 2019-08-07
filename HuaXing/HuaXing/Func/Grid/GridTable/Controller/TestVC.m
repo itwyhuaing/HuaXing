@@ -11,13 +11,15 @@
 #import "CourseConfigVC.h"
 #import "AddCourseVC.h"
 
-@interface TestVC () <ClassTableMainViewDataSource,ClassTableMainViewDelegate,CourseConfigVCDelegate>
+@interface TestVC () <ClassTableMainViewDataSource,ClassTableMainViewDelegate,CourseConfigVCDelegate,AddCourseVCDelegate>
 
 @property (nonatomic,strong) ClassTableMainView *ctv;
 
 @property (nonatomic,assign) HXLocation         selectedLocation;
 
-@property (nonatomic,strong) CourseConfigVC *nextVC;
+@property (nonatomic,strong) CourseConfigVC *configTableVC;
+
+@property (nonatomic,strong) AddCourseVC   *addCourseVC;
 
 @end
 
@@ -26,8 +28,8 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.ctv];
-    self.ctv.ds_sequences = [self generateVerticalData];
-    self.ctv.ds_classItems = [self generateData];
+//    self.ctv.ds_sequences = [self generateVerticalData];
+//    self.ctv.ds_classItems = [self generateData];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -37,17 +39,6 @@
     [confirmBtn setFrame:CGRectMake(0, 0, 50, 30)];
     UIBarButtonItem *confirmItem = [[UIBarButtonItem alloc] initWithTitle:@"课表设置" style:UIBarButtonItemStylePlain target:self action:@selector(configClassTable)];
     self.navigationItem.rightBarButtonItem = confirmItem;
-
-    // 数据读取
-    [[JXFileManager defaultManager] unarchiveObjWithFileKey:kAddCourseItem operateBlock:^(BOOL status, id  _Nonnull info) {
-        if (info && [info isKindOfClass:[CourseItemModel class]]) {
-            CourseItemModel *f = (CourseItemModel *)info;
-            [[JXFileManager defaultManager] clearArchivedRootObjWithKey:kAddCourseItem];
-            if (f) {
-                [self addCourseItem:f];
-            }
-        }
-    }];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -55,10 +46,10 @@
 }
 
 - (void)configClassTable {
-    [self.navigationController pushViewController:self.nextVC animated:FALSE];
+    [self.navigationController pushViewController:self.configTableVC animated:FALSE];
 }
 
-#pragma mark --- ClassTableMainViewDataSource,ClassTableMainViewDelegate
+#pragma mark --- ClassTableMainViewDataSource
 
 -(CGFloat)heightForFirstHorizontalRowInClassTableMainView:(ClassTableMainView *)classTable {
     return 60.0;
@@ -76,11 +67,24 @@
     return 120.0;
 }
 
+#pragma mark --- ClassTableMainViewDelegate
+
 -(void)classTableMainView:(ClassTableMainView *)classTable didSelectItemAtLocation:(HXLocation)l {
     NSLog(@"\n 点击位置 - 行：%lu - 列：%ld \n",(unsigned long)l.XLocation,l.YLocation);
     self.selectedLocation = l;
-    AddCourseVC *vc = [AddCourseVC new];
-    [self.navigationController pushViewController:vc animated:TRUE];
+    [self.navigationController pushViewController:self.addCourseVC animated:TRUE];
+}
+
+
+#pragma mark --- AddCourseVCDelegate
+
+- (void)addCourseVC:(AddCourseVC *)vc didComposedModel:(ClassItemDataModel *)model {
+    if (model && [model isKindOfClass:[CourseItemModel class]]) {
+        CourseItemModel *f = (CourseItemModel *)model;
+        if (f) {
+            [self addCourseItem:f];
+        }
+    }
 }
 
 #pragma mark --- CourseConfigVCDelegate
@@ -126,48 +130,17 @@
     [self.ctv reloadClassTalbe];
 }
 
-#pragma mark --- generate data
-
-- (NSArray *)generateVerticalData {
-    NSMutableArray *hData = [NSMutableArray new];
-    for (NSInteger cou = 0; cou < 3; cou ++) {
-        SequenceItemModel *f = [SequenceItemModel new];
-        f.sequence = cou;
-        f.time = @"10:20-11:10";
-        [hData addObject:f];
-    }
-    return hData;
-}
-
-- (NSArray *)generateData {
-    NSMutableArray *d = [NSMutableArray new];
-    for (NSInteger cou = 0; cou < 6; cou ++) {
-        ClassItemDataModel *f = [ClassItemDataModel new];
-        f.maxCount = self.ctv.ds_sequences.count;
-        f.date = [NSString stringWithFormat:@"2019/08/%ld",(long)cou];
-        f.weekDay = [NSString stringWithFormat:@"星期%ld",cou%7 + 1];
-        UIColor *clr = [UIColor colorWithR:(arc4random()%255) G:(arc4random()%255) B:(arc4random()%255) A:1.0];
-        NSMutableArray *items = [NSMutableArray new];
-        for (NSInteger i = 0; i < f.maxCount; i ++) {
-            CourseItemModel *c = [CourseItemModel new];
-            c.clr = clr;
-            [items addObject:c];
-        }
-        f.courses = items;
-        
-        [d addObject:f];
-    }
-    return d;
-}
+#pragma mark --- handle data
 
 - (void)addCourseItem:(CourseItemModel *)model {
     // 修改数据源
-    ClassItemDataModel *items = self.ctv.ds_classItems[self.selectedLocation.XLocation];
-    NSMutableArray *tmp = [[NSMutableArray alloc] initWithArray:items.courses];
-    [tmp replaceObjectAtIndex:self.selectedLocation.YLocation withObject:model];
+    ClassItemDataModel *dayCourseModel = self.ctv.ds_classItems[self.selectedLocation.YLocation];
+    CourseItemModel *f = dayCourseModel.courses[self.selectedLocation.XLocation];
+    f.courseName = model.courseName;
+    f.teacher    = model.teacher;
+    f.location   = model.location;
     
     // 更新数据源
-    items.courses = tmp;
     [self.ctv reloadClassTalbe];
 }
 
@@ -202,7 +175,7 @@
     for (NSInteger cou = 0; cou < amCount; cou ++) {
         SequenceItemModel *f = [SequenceItemModel new];
         f.sequence = cou;
-        f.time = @"am";
+//        f.time = @"am";
         [aData addObject:f];
     }
     self.ctv.ds_amsequences = aData;
@@ -215,11 +188,7 @@
     [self.ctv.ds_classItems enumerateObjectsUsingBlock:^(ClassItemDataModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         obj.maxCount = weakSelf.ctv.ds_sequences.count;
         
-        UIColor *clr = [UIColor colorWithR:(arc4random()%255) G:(arc4random()%255) B:(arc4random()%255) A:1.0];
-        if (obj.courses && obj.courses.count > 0) {
-            CourseItemModel *item = obj.courses[0];
-            clr = item.clr;
-        }
+        UIColor *clr = [UIColor whiteColor];//[UIAdapter randomColor];
         NSMutableArray *items = [NSMutableArray new];
         for (NSInteger i = 0; i < obj.maxCount; i ++) {
             CourseItemModel *c = [CourseItemModel new];
@@ -240,7 +209,7 @@
     for (NSInteger cou = 0; cou < pmCount; cou ++) {
         SequenceItemModel *f = [SequenceItemModel new];
         f.sequence = cou;
-        f.time = @"pm";
+//        f.time = @"pm";
         [pData addObject:f];
     }
     self.ctv.ds_pmsequences = pData;
@@ -282,12 +251,20 @@
     return _ctv;
 }
 
--(CourseConfigVC *)nextVC {
-    if (!_nextVC) {
-        _nextVC = [CourseConfigVC new];
-        _nextVC.delegate = (id)self;
+-(CourseConfigVC *)configTableVC {
+    if (!_configTableVC) {
+        _configTableVC = [CourseConfigVC new];
+        _configTableVC.delegate = (id)self;
     }
-    return _nextVC;
+    return _configTableVC;
+}
+
+-(AddCourseVC *)addCourseVC {
+    if (!_addCourseVC) {
+        _addCourseVC = [[AddCourseVC alloc] init];
+        _addCourseVC.delegate = (id)self;
+    }
+    return _addCourseVC;
 }
 
 @end

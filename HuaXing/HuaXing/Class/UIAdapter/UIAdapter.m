@@ -42,6 +42,10 @@
     return [UIColor colorWithHexString:@"#000" alpha:0.3];
 }
 
++(UIColor *)randomColor {
+    return [UIColor colorWithR:(arc4random()%255) G:(arc4random()%255) B:(arc4random()%255) A:1.0];
+}
+
 #pragma mark ------ 设备尺寸相关参数
 
 + (CGFloat)lrGap {
