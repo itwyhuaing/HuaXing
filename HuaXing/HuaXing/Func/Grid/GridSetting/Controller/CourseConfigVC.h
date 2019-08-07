@@ -15,7 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @optional
 - (void)courseConfigVC:(CourseConfigVC *)vc selectedTheStartDate:(NSString *)startDateString;
 
-- (void)courseConfigVC:(CourseConfigVC *)vc amCourseMax:(NSInteger)aMax pmCourseMax:(NSInteger)pMax;
+- (void)courseConfigVC:(CourseConfigVC *)vc amCourseMax:(NSInteger)aMax;
+
+- (void)courseConfigVC:(CourseConfigVC *)vc pmCourseMax:(NSInteger)pMax;
 
 - (void)courseConfigVC:(CourseConfigVC *)vc amTimeTxt:(NSString *)time rowIndex:(NSInteger)idx;
 

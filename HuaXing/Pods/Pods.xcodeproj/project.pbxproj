@@ -7,14 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3879A2F7BAF5005544E7BB10C9A0F2E8 /* Pods-HuaXing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D99D0FBF48B9AC29FB2207735D94171 /* Pods-HuaXing-dummy.m */; };
-		C564C8D042998164475E13AD54B0A294 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = CC7CBAA80700DF4FC98F1110B1549283 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C7FD66D3D320095B45AD9D39EF1B858B /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34106BD88B9E67760252128749410720 /* MBProgressHUD-dummy.m */; };
-		D6438BA4F863AE0A7891F212EE3C06D0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB69FCA0C39E6D223D660F7B5240F19 /* MBProgressHUD.m */; };
+		1540AC2B99955BB3E752BB004E3C99A2 /* CYLTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 16E57A52137A92D8DD62DA2E7886B25E /* CYLTabBarController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1CB9E14BB1352E30E6E10647B4769B9E /* UIView+SDAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 5604261ECF5E9524FDD58B4EFE2DEB2B /* UIView+SDAutoLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		261C8AA6060E5E615F90EA70FAD7FCEF /* CYLConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0737CE714091850D84B424ADF9E0BC1A /* CYLConstants.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		334215D1ABA15CDE3F278DB3D0D4E18D /* SDAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F9AD13DE024E354E1F231474BAEE4B4 /* SDAutoLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5B6D66F1F968E3BA088B462B233E864B /* UIViewController+CYLTabBarControllerExtention.h in Headers */ = {isa = PBXBuildFile; fileRef = E99B984077A10C39165945A910D000B2 /* UIViewController+CYLTabBarControllerExtention.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		60FEABF185786CADAC724B61017A0ED4 /* SDAutoLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C1F1813F40E5D96BC7206F9CF74C09 /* SDAutoLayout-dummy.m */; };
+		9129267B164D96A8231FF4F59F44B5A7 /* CYLPlusButton.h in Headers */ = {isa = PBXBuildFile; fileRef = A1205FD7670751036C7EE4612FE21D33 /* CYLPlusButton.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		91802D2FEF62E5AD235103A3B1EB0A78 /* CYLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8B501C7352268A36FACD335E2AC4D3 /* CYLTabBar.m */; };
+		B6A09D2E042A673B3684798A9B0F6DEA /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = D774068DE8E07815D3662D297DFD6BA1 /* UITableView+SDAutoTableViewCellHeight.m */; };
+		BE8C25A3439B6342184E778C0DE48AE9 /* CYLTabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E276F9FDD724D24980F5AA03003F9E /* CYLTabBarController-dummy.m */; };
+		C3B2417428E3C214A7F2D0CA5B9CFDDE /* CYLTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CC5309C54340E33D1B7D4A8F153E695 /* CYLTabBar.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C417ED37E9350BF2E0DC825D022CF7F0 /* Pods-HuaXing-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D99D0FBF48B9AC29FB2207735D94171 /* Pods-HuaXing-dummy.m */; };
+		C564C8D042998164475E13AD54B0A294 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 125F308E7D9FEC26389B4D6F8451E4CC /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C6A28951BBB6B64D351DA8B342A4BAEB /* UIViewController+CYLTabBarControllerExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD7D7481EA66C95CFB91D9643C42372 /* UIViewController+CYLTabBarControllerExtention.m */; };
+		C7FD66D3D320095B45AD9D39EF1B858B /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD74E14407E7CE80DB1841AB50D189A1 /* MBProgressHUD-dummy.m */; };
+		CCD2075F8F0D4F94ECDC2AD8E4F470FB /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F233D1CBECA1E2A7A512D10FCC09DFED /* UIView+SDAutoLayout.m */; };
+		D0C54F4464900E485EAB1428B22514C7 /* CYLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0C9E90E3CE95E60EA22A1BCBF62196 /* CYLTabBarController.m */; };
+		D6438BA4F863AE0A7891F212EE3C06D0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B81C8B854817C8FC013C263A89E627 /* MBProgressHUD.m */; };
+		E2EC411158F38B903F4CA408A8DF5A6A /* UITableView+SDAutoTableViewCellHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = 9097DC7B201FDA81405CF4681589D56B /* UITableView+SDAutoTableViewCellHeight.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EC43318485E700F06195AB719A4FF721 /* CYLPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 42BB67BCFCF131FBDD4C43D894C87EB8 /* CYLPlusButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		758FA422B8298B92E86E155EB42C940F /* PBXContainerItemProxy */ = {
+		4CE2CAAEAA517F5E7637445185A67BA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03932C47FBFD347205B2F367F78E9B63;
+			remoteInfo = SDAutoLayout;
+		};
+		5923BD8A6DE73C51915DD57A8E0008FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8534B493C62D81C69516B0E9599CEF36;
+			remoteInfo = CYLTabBarController;
+		};
+		AFD408EB15F2517BFE44A1B86C6EEDCC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -24,23 +54,59 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0737CE714091850D84B424ADF9E0BC1A /* CYLConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CYLConstants.h; path = CYLTabBarController/CYLConstants.h; sourceTree = "<group>"; };
+		0FCA9F18C730A04628C5C5CE6B3CE384 /* CYLTabBarController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CYLTabBarController-prefix.pch"; sourceTree = "<group>"; };
+		125F308E7D9FEC26389B4D6F8451E4CC /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		16E57A52137A92D8DD62DA2E7886B25E /* CYLTabBarController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CYLTabBarController.h; path = CYLTabBarController/CYLTabBarController.h; sourceTree = "<group>"; };
+		1FD7D7481EA66C95CFB91D9643C42372 /* UIViewController+CYLTabBarControllerExtention.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+CYLTabBarControllerExtention.m"; path = "CYLTabBarController/UIViewController+CYLTabBarControllerExtention.m"; sourceTree = "<group>"; };
+		2CC5309C54340E33D1B7D4A8F153E695 /* CYLTabBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CYLTabBar.h; path = CYLTabBarController/CYLTabBar.h; sourceTree = "<group>"; };
+		2D24B4853EF5CE5AD7D4FA5E183BD6E2 /* libSDAutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSDAutoLayout.a; path = libSDAutoLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D99D0FBF48B9AC29FB2207735D94171 /* Pods-HuaXing-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HuaXing-dummy.m"; sourceTree = "<group>"; };
-		34106BD88B9E67760252128749410720 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		2F9AD13DE024E354E1F231474BAEE4B4 /* SDAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAutoLayout.h; path = SDAutoLayoutDemo/SDAutoLayout/SDAutoLayout.h; sourceTree = "<group>"; };
 		356FCED6D2C89303B4C5E8410D107ECB /* Pods-HuaXing-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HuaXing-acknowledgements.plist"; sourceTree = "<group>"; };
-		3D8BE18E4F956B8AFF4F9DBB579138DB /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		42BB67BCFCF131FBDD4C43D894C87EB8 /* CYLPlusButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CYLPlusButton.m; path = CYLTabBarController/CYLPlusButton.m; sourceTree = "<group>"; };
+		450C8E2E3956A1FA06D23C2F5357EF22 /* CYLTabBarController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CYLTabBarController.xcconfig; sourceTree = "<group>"; };
+		507C15344991B0B186F098980DFEE8D2 /* SDAutoLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDAutoLayout.xcconfig; sourceTree = "<group>"; };
+		5353CED97B8B04BBEBAAEE870BE63BBA /* SDAutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDAutoLayout-prefix.pch"; sourceTree = "<group>"; };
+		5604261ECF5E9524FDD58B4EFE2DEB2B /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+SDAutoLayout.h"; path = "SDAutoLayoutDemo/SDAutoLayout/UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
 		764B8A4D0B1ACB2A5260AD1CCA286C04 /* Pods-HuaXing-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HuaXing-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7F0401CACA82D2551C9ADF9C06A5ABE5 /* Pods-HuaXing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HuaXing.debug.xcconfig"; sourceTree = "<group>"; };
 		7FFB82534DD3109234E25B76FEB0ECAC /* libPods-HuaXing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-HuaXing.a"; path = "libPods-HuaXing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8326767FC35C7261B62294B9FE722883 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
 		8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C0C9E90E3CE95E60EA22A1BCBF62196 /* CYLTabBarController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CYLTabBarController.m; path = CYLTabBarController/CYLTabBarController.m; sourceTree = "<group>"; };
+		906A19E93F2CFBE91C4D117B04626B12 /* libCYLTabBarController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCYLTabBarController.a; path = libCYLTabBarController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9097DC7B201FDA81405CF4681589D56B /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+SDAutoTableViewCellHeight.h"; path = "SDAutoLayoutDemo/SDAutoLayout/UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		97B81C8B854817C8FC013C263A89E627 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BDD035A56272EB4368693B815DA5C8D5 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		CC7CBAA80700DF4FC98F1110B1549283 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		CDB69FCA0C39E6D223D660F7B5240F19 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		A1205FD7670751036C7EE4612FE21D33 /* CYLPlusButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CYLPlusButton.h; path = CYLTabBarController/CYLPlusButton.h; sourceTree = "<group>"; };
+		CD74E14407E7CE80DB1841AB50D189A1 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		D1C1F1813F40E5D96BC7206F9CF74C09 /* SDAutoLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDAutoLayout-dummy.m"; sourceTree = "<group>"; };
+		D774068DE8E07815D3662D297DFD6BA1 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+SDAutoTableViewCellHeight.m"; path = "SDAutoLayoutDemo/SDAutoLayout/UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		E3E276F9FDD724D24980F5AA03003F9E /* CYLTabBarController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CYLTabBarController-dummy.m"; sourceTree = "<group>"; };
+		E99B984077A10C39165945A910D000B2 /* UIViewController+CYLTabBarControllerExtention.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+CYLTabBarControllerExtention.h"; path = "CYLTabBarController/UIViewController+CYLTabBarControllerExtention.h"; sourceTree = "<group>"; };
 		EE9838D972B7408DBD69BCAFCB52DBC1 /* Pods-HuaXing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HuaXing.release.xcconfig"; sourceTree = "<group>"; };
+		F233D1CBECA1E2A7A512D10FCC09DFED /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+SDAutoLayout.m"; path = "SDAutoLayoutDemo/SDAutoLayout/UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		F89D1A6D3335E872E309359FDC60D71C /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		FB8B501C7352268A36FACD335E2AC4D3 /* CYLTabBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CYLTabBar.m; path = CYLTabBarController/CYLTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2083E00D663CFE425D6CAF58D349FD84 /* Frameworks */ = {
+		4914226E1746DE9DC5286E36762F7DBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5152C97152E78BAFBE4FAA9C316989B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D94E7C99709617638E21CB52600A3B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -65,32 +131,55 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2E741AC51ACD4EF689DA45A9376EEE26 /* Products */ = {
+		32801D290BEE613FE3EAB27C43CA52C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				906A19E93F2CFBE91C4D117B04626B12 /* libCYLTabBarController.a */,
 				8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */,
 				7FFB82534DD3109234E25B76FEB0ECAC /* libPods-HuaXing.a */,
+				2D24B4853EF5CE5AD7D4FA5E183BD6E2 /* libSDAutoLayout.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3F242479102E24C5847AB040CB8095A8 /* Pods */ = {
+		37828F731777CD7027E180276E82FAFF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				94341AC9A59B884BE70B96C53D2A35A5 /* MBProgressHUD */,
+				507C15344991B0B186F098980DFEE8D2 /* SDAutoLayout.xcconfig */,
+				D1C1F1813F40E5D96BC7206F9CF74C09 /* SDAutoLayout-dummy.m */,
+				5353CED97B8B04BBEBAAEE870BE63BBA /* SDAutoLayout-prefix.pch */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/SDAutoLayout";
 			sourceTree = "<group>";
 		};
-		475709C1269D147B1E64AF764B80BBE8 /* Support Files */ = {
+		4A7AFF480824FC1312719614364516DE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3D8BE18E4F956B8AFF4F9DBB579138DB /* MBProgressHUD.xcconfig */,
-				34106BD88B9E67760252128749410720 /* MBProgressHUD-dummy.m */,
-				BDD035A56272EB4368693B815DA5C8D5 /* MBProgressHUD-prefix.pch */,
+				8326767FC35C7261B62294B9FE722883 /* MBProgressHUD.xcconfig */,
+				CD74E14407E7CE80DB1841AB50D189A1 /* MBProgressHUD-dummy.m */,
+				F89D1A6D3335E872E309359FDC60D71C /* MBProgressHUD-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		54DD4AF94986933B74B40190DE89878C /* CYLTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				0737CE714091850D84B424ADF9E0BC1A /* CYLConstants.h */,
+				A1205FD7670751036C7EE4612FE21D33 /* CYLPlusButton.h */,
+				42BB67BCFCF131FBDD4C43D894C87EB8 /* CYLPlusButton.m */,
+				2CC5309C54340E33D1B7D4A8F153E695 /* CYLTabBar.h */,
+				FB8B501C7352268A36FACD335E2AC4D3 /* CYLTabBar.m */,
+				16E57A52137A92D8DD62DA2E7886B25E /* CYLTabBarController.h */,
+				8C0C9E90E3CE95E60EA22A1BCBF62196 /* CYLTabBarController.m */,
+				E99B984077A10C39165945A910D000B2 /* UIViewController+CYLTabBarControllerExtention.h */,
+				1FD7D7481EA66C95CFB91D9643C42372 /* UIViewController+CYLTabBarControllerExtention.m */,
+				FE467D48E630F77A937998BD8E490729 /* Support Files */,
+			);
+			name = CYLTabBarController;
+			path = CYLTabBarController;
 			sourceTree = "<group>";
 		};
 		8562EB02E55A93B0E448D2D3F078BCCE /* Pods-HuaXing */ = {
@@ -106,12 +195,12 @@
 			path = "Target Support Files/Pods-HuaXing";
 			sourceTree = "<group>";
 		};
-		94341AC9A59B884BE70B96C53D2A35A5 /* MBProgressHUD */ = {
+		C1DE78E8E4412D7FD1BB4369CBBD6E07 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				CC7CBAA80700DF4FC98F1110B1549283 /* MBProgressHUD.h */,
-				CDB69FCA0C39E6D223D660F7B5240F19 /* MBProgressHUD.m */,
-				475709C1269D147B1E64AF764B80BBE8 /* Support Files */,
+				125F308E7D9FEC26389B4D6F8451E4CC /* MBProgressHUD.h */,
+				97B81C8B854817C8FC013C263A89E627 /* MBProgressHUD.m */,
+				4A7AFF480824FC1312719614364516DE /* Support Files */,
 			);
 			name = MBProgressHUD;
 			path = MBProgressHUD;
@@ -122,8 +211,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				3F242479102E24C5847AB040CB8095A8 /* Pods */,
-				2E741AC51ACD4EF689DA45A9376EEE26 /* Products */,
+				E1C45E48A5770790C96D14431D393C90 /* Pods */,
+				32801D290BEE613FE3EAB27C43CA52C7 /* Products */,
 				25046D5FCBBDFC7CC12B48B58F75C98C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -135,10 +224,55 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E0ED9A00DDBC31A78685293FE9D1F1BB /* SDAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				2F9AD13DE024E354E1F231474BAEE4B4 /* SDAutoLayout.h */,
+				9097DC7B201FDA81405CF4681589D56B /* UITableView+SDAutoTableViewCellHeight.h */,
+				D774068DE8E07815D3662D297DFD6BA1 /* UITableView+SDAutoTableViewCellHeight.m */,
+				5604261ECF5E9524FDD58B4EFE2DEB2B /* UIView+SDAutoLayout.h */,
+				F233D1CBECA1E2A7A512D10FCC09DFED /* UIView+SDAutoLayout.m */,
+				37828F731777CD7027E180276E82FAFF /* Support Files */,
+			);
+			name = SDAutoLayout;
+			path = SDAutoLayout;
+			sourceTree = "<group>";
+		};
+		E1C45E48A5770790C96D14431D393C90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54DD4AF94986933B74B40190DE89878C /* CYLTabBarController */,
+				C1DE78E8E4412D7FD1BB4369CBBD6E07 /* MBProgressHUD */,
+				E0ED9A00DDBC31A78685293FE9D1F1BB /* SDAutoLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FE467D48E630F77A937998BD8E490729 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				450C8E2E3956A1FA06D23C2F5357EF22 /* CYLTabBarController.xcconfig */,
+				E3E276F9FDD724D24980F5AA03003F9E /* CYLTabBarController-dummy.m */,
+				0FCA9F18C730A04628C5C5CE6B3CE384 /* CYLTabBarController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CYLTabBarController";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8B549769919B795ECE435E9F36C62DB6 /* Headers */ = {
+		0E9BBBE6C214F8F308B522A6672FC2BF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				334215D1ABA15CDE3F278DB3D0D4E18D /* SDAutoLayout.h in Headers */,
+				E2EC411158F38B903F4CA408A8DF5A6A /* UITableView+SDAutoTableViewCellHeight.h in Headers */,
+				1CB9E14BB1352E30E6E10647B4769B9E /* UIView+SDAutoLayout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81E7BEDFAD0A8AFD61AD5E6A75871374 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -153,9 +287,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F862AE594FED6824CCDF3D49C1007C48 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				261C8AA6060E5E615F90EA70FAD7FCEF /* CYLConstants.h in Headers */,
+				9129267B164D96A8231FF4F59F44B5A7 /* CYLPlusButton.h in Headers */,
+				C3B2417428E3C214A7F2D0CA5B9CFDDE /* CYLTabBar.h in Headers */,
+				1540AC2B99955BB3E752BB004E3C99A2 /* CYLTabBarController.h in Headers */,
+				5B6D66F1F968E3BA088B462B233E864B /* UIViewController+CYLTabBarControllerExtention.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		03932C47FBFD347205B2F367F78E9B63 /* SDAutoLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06603CCDE4CA96E0044DC04792461DFD /* Build configuration list for PBXNativeTarget "SDAutoLayout" */;
+			buildPhases = (
+				0E9BBBE6C214F8F308B522A6672FC2BF /* Headers */,
+				9B03A2EF904AEA1648ABD878E85933D7 /* Sources */,
+				5152C97152E78BAFBE4FAA9C316989B0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDAutoLayout;
+			productName = SDAutoLayout;
+			productReference = 2D24B4853EF5CE5AD7D4FA5E183BD6E2 /* libSDAutoLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20217F7F18136BEC6503B8147352D3E3 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
@@ -173,18 +336,37 @@
 			productReference = 8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		F39425AD2B3FC268146CB875D15E8175 /* Pods-HuaXing */ = {
+		8534B493C62D81C69516B0E9599CEF36 /* CYLTabBarController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7FB15028815234C4D763C8014E836B15 /* Build configuration list for PBXNativeTarget "Pods-HuaXing" */;
+			buildConfigurationList = 161271F464E9366E72775B034124247D /* Build configuration list for PBXNativeTarget "CYLTabBarController" */;
 			buildPhases = (
-				8B549769919B795ECE435E9F36C62DB6 /* Headers */,
-				52B36E1434BA542BFDC070CB3850E3A0 /* Sources */,
-				2083E00D663CFE425D6CAF58D349FD84 /* Frameworks */,
+				F862AE594FED6824CCDF3D49C1007C48 /* Headers */,
+				460F2EEBCB02B7AF2EF698F2C5032407 /* Sources */,
+				8D94E7C99709617638E21CB52600A3B2 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DBFDBB0499D5F7EED89E2FDD1FD98AA3 /* PBXTargetDependency */,
+			);
+			name = CYLTabBarController;
+			productName = CYLTabBarController;
+			productReference = 906A19E93F2CFBE91C4D117B04626B12 /* libCYLTabBarController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F39425AD2B3FC268146CB875D15E8175 /* Pods-HuaXing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA62AC81C78C73B69443CB5CA1489F91 /* Build configuration list for PBXNativeTarget "Pods-HuaXing" */;
+			buildPhases = (
+				81E7BEDFAD0A8AFD61AD5E6A75871374 /* Headers */,
+				B4FE5F133E2E75378B41A9BE293E063B /* Sources */,
+				4914226E1746DE9DC5286E36762F7DBF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				791A6C8D6F81A5D85AE06E955A1F1A22 /* PBXTargetDependency */,
+				2CDCF442C8A07A924E8543258170F254 /* PBXTargetDependency */,
+				0CF57CE668931D67E937862777C936D5 /* PBXTargetDependency */,
 			);
 			name = "Pods-HuaXing";
 			productName = "Pods-HuaXing";
@@ -208,12 +390,14 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 2E741AC51ACD4EF689DA45A9376EEE26 /* Products */;
+			productRefGroup = 32801D290BEE613FE3EAB27C43CA52C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				8534B493C62D81C69516B0E9599CEF36 /* CYLTabBarController */,
 				82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */,
 				F39425AD2B3FC268146CB875D15E8175 /* Pods-HuaXing */,
+				03932C47FBFD347205B2F367F78E9B63 /* SDAutoLayout */,
 			);
 		};
 /* End PBXProject section */
@@ -228,29 +412,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52B36E1434BA542BFDC070CB3850E3A0 /* Sources */ = {
+		460F2EEBCB02B7AF2EF698F2C5032407 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3879A2F7BAF5005544E7BB10C9A0F2E8 /* Pods-HuaXing-dummy.m in Sources */,
+				EC43318485E700F06195AB719A4FF721 /* CYLPlusButton.m in Sources */,
+				91802D2FEF62E5AD235103A3B1EB0A78 /* CYLTabBar.m in Sources */,
+				BE8C25A3439B6342184E778C0DE48AE9 /* CYLTabBarController-dummy.m in Sources */,
+				D0C54F4464900E485EAB1428B22514C7 /* CYLTabBarController.m in Sources */,
+				C6A28951BBB6B64D351DA8B342A4BAEB /* UIViewController+CYLTabBarControllerExtention.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B03A2EF904AEA1648ABD878E85933D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60FEABF185786CADAC724B61017A0ED4 /* SDAutoLayout-dummy.m in Sources */,
+				B6A09D2E042A673B3684798A9B0F6DEA /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
+				CCD2075F8F0D4F94ECDC2AD8E4F470FB /* UIView+SDAutoLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4FE5F133E2E75378B41A9BE293E063B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C417ED37E9350BF2E0DC825D022CF7F0 /* Pods-HuaXing-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DBFDBB0499D5F7EED89E2FDD1FD98AA3 /* PBXTargetDependency */ = {
+		0CF57CE668931D67E937862777C936D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDAutoLayout;
+			target = 03932C47FBFD347205B2F367F78E9B63 /* SDAutoLayout */;
+			targetProxy = 4CE2CAAEAA517F5E7637445185A67BA2 /* PBXContainerItemProxy */;
+		};
+		2CDCF442C8A07A924E8543258170F254 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
 			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
-			targetProxy = 758FA422B8298B92E86E155EB42C940F /* PBXContainerItemProxy */;
+			targetProxy = AFD408EB15F2517BFE44A1B86C6EEDCC /* PBXContainerItemProxy */;
+		};
+		791A6C8D6F81A5D85AE06E955A1F1A22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CYLTabBarController;
+			target = 8534B493C62D81C69516B0E9599CEF36 /* CYLTabBarController */;
+			targetProxy = 5923BD8A6DE73C51915DD57A8E0008FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2713A1AD3CC7005816E6C476FEBAD19D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D8BE18E4F956B8AFF4F9DBB579138DB /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = 8326767FC35C7261B62294B9FE722883 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -272,9 +490,32 @@
 			};
 			name = Release;
 		};
+		4FB98C139D6803E0E6774F3AB18A822D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 450C8E2E3956A1FA06D23C2F5357EF22 /* CYLTabBarController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CYLTabBarController/CYLTabBarController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CYLTabBarController;
+				PRODUCT_NAME = CYLTabBarController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		690C1B11780ABBA0F742607D082E784B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D8BE18E4F956B8AFF4F9DBB579138DB /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = 8326767FC35C7261B62294B9FE722883 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -287,6 +528,29 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = MBProgressHUD;
 				PRODUCT_NAME = MBProgressHUD;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6EC9A01112AD24FB40B7DEC83B1CF124 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 507C15344991B0B186F098980DFEE8D2 /* SDAutoLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SDAutoLayout/SDAutoLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SDAutoLayout;
+				PRODUCT_NAME = SDAutoLayout;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -419,7 +683,7 @@
 			};
 			name = Debug;
 		};
-		B2246EE1A193A698D1D21271976A2208 /* Debug */ = {
+		AA07FFA9CBDC3493FF65E995F676C323 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F0401CACA82D2551C9ADF9C06A5ABE5 /* Pods-HuaXing.debug.xcconfig */;
 			buildSettings = {
@@ -440,7 +704,7 @@
 			};
 			name = Debug;
 		};
-		B344B75CE6EC0BA01C3431F960DD3A72 /* Release */ = {
+		B99CE9E23C5C093FC9F55CE1A2B10FB9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EE9838D972B7408DBD69BCAFCB52DBC1 /* Pods-HuaXing.release.xcconfig */;
 			buildSettings = {
@@ -462,9 +726,75 @@
 			};
 			name = Release;
 		};
+		CA17A49CB5C8E74B6045C760ADE3B464 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 450C8E2E3956A1FA06D23C2F5357EF22 /* CYLTabBarController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CYLTabBarController/CYLTabBarController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CYLTabBarController;
+				PRODUCT_NAME = CYLTabBarController;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E4A467FE441F76DE9A9E69AFB0E2D347 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 507C15344991B0B186F098980DFEE8D2 /* SDAutoLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SDAutoLayout/SDAutoLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SDAutoLayout;
+				PRODUCT_NAME = SDAutoLayout;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		06603CCDE4CA96E0044DC04792461DFD /* Build configuration list for PBXNativeTarget "SDAutoLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EC9A01112AD24FB40B7DEC83B1CF124 /* Debug */,
+				E4A467FE441F76DE9A9E69AFB0E2D347 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		161271F464E9366E72775B034124247D /* Build configuration list for PBXNativeTarget "CYLTabBarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FB98C139D6803E0E6774F3AB18A822D /* Debug */,
+				CA17A49CB5C8E74B6045C760ADE3B464 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		20217F7F18136BEC6503B8147352D3E3 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -483,11 +813,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7FB15028815234C4D763C8014E836B15 /* Build configuration list for PBXNativeTarget "Pods-HuaXing" */ = {
+		CA62AC81C78C73B69443CB5CA1489F91 /* Build configuration list for PBXNativeTarget "Pods-HuaXing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B2246EE1A193A698D1D21271976A2208 /* Debug */,
-				B344B75CE6EC0BA01C3431F960DD3A72 /* Release */,
+				AA07FFA9CBDC3493FF65E995F676C323 /* Debug */,
+				B99CE9E23C5C093FC9F55CE1A2B10FB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

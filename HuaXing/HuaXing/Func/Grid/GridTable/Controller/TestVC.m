@@ -112,13 +112,18 @@
     [self modifyDataSourceWithDates:dates weekDays:weekDays];
 }
 
--(void)courseConfigVC:(CourseConfigVC *)vc amCourseMax:(NSInteger)aMax pmCourseMax:(NSInteger)pMax {
+-(void)courseConfigVC:(CourseConfigVC *)vc amCourseMax:(NSInteger)aMax {
     // 1. 记录选择信息
     self.selected_amax = [NSString stringWithFormat:@"%ld",aMax];
-    self.selected_pmax = [NSString stringWithFormat:@"%ld",pMax];
-    
     // 2. 更新数据源
-    [self modifyDataSourceWithAMMax:aMax pmMax:pMax];
+    [self modifyDataSourceWithAMMax:aMax];
+}
+
+-(void)courseConfigVC:(CourseConfigVC *)vc pmCourseMax:(NSInteger)pMax {
+    // 1. 记录选择信息
+    self.selected_pmax = [NSString stringWithFormat:@"%ld",pMax];
+    // 2. 更新数据源
+    [self modifyDataSourceWithPMMax:pMax];
 }
 
 -(void)courseConfigVC:(CourseConfigVC *)vc amTimeTxt:(NSString *)time rowIndex:(NSInteger)idx {
@@ -198,30 +203,71 @@
     }
 }
 
-// 选完课程最大节数之后
-- (void)modifyDataSourceWithAMMax:(NSInteger)amCount pmMax:(NSInteger)pmCount {
-    self.maxCount = amCount + pmCount;
-    
+// 选完课程最大节数之后 - am
+- (void)modifyDataSourceWithAMMax:(NSInteger)amCount {
     // 1. 更新节数数据模型 - SequenceItemModel
-    NSInteger max = amCount + pmCount;
-    NSMutableArray *hData = [NSMutableArray new];
-    for (NSInteger cou = 0; cou < max; cou ++) {
+    NSMutableArray *aData = [NSMutableArray new];
+    for (NSInteger cou = 0; cou < amCount; cou ++) {
         SequenceItemModel *f = [SequenceItemModel new];
         f.sequence = cou;
-        f.time = @"09:20-10:10";
-        [hData addObject:f];
+        f.time = @"am";
+        [aData addObject:f];
     }
-    self.ctv.ds_sequences = hData;
+    self.ctv.ds_amsequences = aData;
+    NSMutableArray *tmp = [[NSMutableArray alloc] initWithArray:self.ctv.ds_amsequences];
+    [tmp addObjectsFromArray:self.ctv.ds_pmsequences];
+    self.ctv.ds_sequences = tmp;
+    self.maxCount = tmp.count;
     // 2. 更新课表每列数据模型 - ClassItemDataModel
+    HXWeakSelf
     [self.ctv.ds_classItems enumerateObjectsUsingBlock:^(ClassItemDataModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        obj.maxCount = max;
+        obj.maxCount = weakSelf.maxCount;
+        
         UIColor *clr = [UIColor colorWithR:(arc4random()%255) G:(arc4random()%255) B:(arc4random()%255) A:1.0];
         if (obj.courses && obj.courses.count > 0) {
             CourseItemModel *item = obj.courses[0];
             clr = item.clr;
         }
         NSMutableArray *items = [NSMutableArray new];
-        for (NSInteger i = 0; i < max; i ++) {
+        for (NSInteger i = 0; i < weakSelf.maxCount; i ++) {
+            CourseItemModel *c = [CourseItemModel new];
+            c.clr = clr;
+            [items addObject:c];
+        }
+        obj.courses = items;
+    }];
+    // 3. 刷新表格
+    [self.ctv reloadClassTalbe];
+}
+
+
+// 选完课程最大节数之后 - pm
+- (void)modifyDataSourceWithPMMax:(NSInteger)pmCount {
+    // 1. 更新节数数据模型 - SequenceItemModel
+    NSMutableArray *pData = [NSMutableArray new];
+    for (NSInteger cou = 0; cou < pmCount; cou ++) {
+        SequenceItemModel *f = [SequenceItemModel new];
+        f.sequence = cou;
+        f.time = @"pm";
+        [pData addObject:f];
+    }
+    self.ctv.ds_pmsequences = pData;
+    NSMutableArray *tmp = [[NSMutableArray alloc] initWithArray:self.ctv.ds_amsequences];
+    [tmp addObjectsFromArray:self.ctv.ds_pmsequences];
+    self.ctv.ds_sequences = tmp;
+    self.maxCount = tmp.count;
+    // 2. 更新课表每列数据模型 - ClassItemDataModel
+    HXWeakSelf
+    [self.ctv.ds_classItems enumerateObjectsUsingBlock:^(ClassItemDataModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        obj.maxCount = weakSelf.maxCount;
+        
+        UIColor *clr = [UIColor colorWithR:(arc4random()%255) G:(arc4random()%255) B:(arc4random()%255) A:1.0];
+        if (obj.courses && obj.courses.count > 0) {
+            CourseItemModel *item = obj.courses[0];
+            clr = item.clr;
+        }
+        NSMutableArray *items = [NSMutableArray new];
+        for (NSInteger i = 0; i < weakSelf.maxCount; i ++) {
             CourseItemModel *c = [CourseItemModel new];
             c.clr = clr;
             [items addObject:c];

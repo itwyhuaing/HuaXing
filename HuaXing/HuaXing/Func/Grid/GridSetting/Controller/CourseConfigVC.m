@@ -67,9 +67,17 @@
         if (weakSelf.currentLocation == CourseConfigViewHeaderAMLocation) {
             weakSelf.aMax = [pkvResult integerValue];
             timePart = @"上午";
+            // 代理通知
+            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigVC:amCourseMax:)]) {
+                [weakSelf.delegate courseConfigVC:weakSelf amCourseMax:weakSelf.aMax];
+            }
         }else {
             weakSelf.pMax = [pkvResult integerValue];
             timePart = @"下午";
+            // 代理通知
+            if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigVC:pmCourseMax:)]) {
+                [weakSelf.delegate courseConfigVC:weakSelf pmCourseMax:weakSelf.pMax];
+            }
         }
         
         // 当前页 UI 更新
@@ -79,11 +87,6 @@
             [weakSelf.ccv updateHeaderViewWithThem:timePart tipMessage:[NSString stringWithFormat:@"%@节课",pkvResult] section:weakSelf.currentLocation];
         }
         [weakSelf.ccv updateTableWithCourseItems:pkvResult section:weakSelf.currentLocation];
-        
-        // 代理通知
-        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigVC:amCourseMax:pmCourseMax:)]) {
-            [weakSelf.delegate courseConfigVC:weakSelf amCourseMax:weakSelf.aMax pmCourseMax:weakSelf.pMax];
-        }
         
     };
     
