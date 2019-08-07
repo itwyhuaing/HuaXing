@@ -35,6 +35,7 @@
 		26EEACC422F8307C00D8D079 /* HXCourseItemsPKV.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACBF22F8307C00D8D079 /* HXCourseItemsPKV.m */; };
 		26EEACC522F8307C00D8D079 /* HXDatePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACC122F8307C00D8D079 /* HXDatePickView.m */; };
 		26EEACC822F830AE00D8D079 /* HXToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACC722F830AE00D8D079 /* HXToast.m */; };
+		26EEACCF22F951A500D8D079 /* JXDateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACCD22F951A500D8D079 /* JXDateManager.m */; };
 		469E585822D77F560077AE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585622D77F560077AE51 /* Main.storyboard */; };
 		469E585A22D77F580077AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E585922D77F580077AE51 /* Assets.xcassets */; };
 		469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585B22D77F580077AE51 /* LaunchScreen.storyboard */; };
@@ -119,6 +120,8 @@
 		26EEACC122F8307C00D8D079 /* HXDatePickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDatePickView.m; sourceTree = "<group>"; };
 		26EEACC622F830AE00D8D079 /* HXToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXToast.h; sourceTree = "<group>"; };
 		26EEACC722F830AE00D8D079 /* HXToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXToast.m; sourceTree = "<group>"; };
+		26EEACCD22F951A500D8D079 /* JXDateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXDateManager.m; sourceTree = "<group>"; };
+		26EEACCE22F951A500D8D079 /* JXDateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXDateManager.h; sourceTree = "<group>"; };
 		469E584D22D77F560077AE51 /* HuaXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E585722D77F560077AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		469E585922D77F580077AE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -320,8 +323,8 @@
 		26E0B12B22EAE62E005BE40D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				26E0B12C22EAE62E005BE40D /* ItemTimeModel.m */,
 				26E0B12D22EAE62E005BE40D /* ItemTimeModel.h */,
+				26E0B12C22EAE62E005BE40D /* ItemTimeModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,6 +422,15 @@
 			path = HXToast;
 			sourceTree = "<group>";
 		};
+		26EEACCC22F951A500D8D079 /* JXDateManager */ = {
+			isa = PBXGroup;
+			children = (
+				26EEACCE22F951A500D8D079 /* JXDateManager.h */,
+				26EEACCD22F951A500D8D079 /* JXDateManager.m */,
+			);
+			path = JXDateManager;
+			sourceTree = "<group>";
+		};
 		3481AF048D8EB8C186E2C3C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +511,7 @@
 				26E0B11B22EAE591005BE40D /* UIComponent */,
 				46BC169A22DA3A9C00A70F23 /* Addition */,
 				46BC169622DA347A00A70F23 /* UIAdapter */,
+				26EEACCC22F951A500D8D079 /* JXDateManager */,
 				26EEACB322F7D39D00D8D079 /* JXFileManager */,
 			);
 			path = Class;
@@ -673,6 +686,7 @@
 				46BC16B622DA3A9C00A70F23 /* NSDictionary+Addition.m in Sources */,
 				2650AFCE22F42F08006C7784 /* AddCourseInputCell.m in Sources */,
 				26E0B14122EAE684005BE40D /* TestVC.m in Sources */,
+				26EEACCF22F951A500D8D079 /* JXDateManager.m in Sources */,
 				46BC16B822DA3A9C00A70F23 /* UIColor+Addition.m in Sources */,
 				2650AFB822F1AAE0006C7784 /* TableInfoHeaderView.m in Sources */,
 				46BC16C822DA3D9D00A70F23 /* PersonDataModel.m in Sources */,

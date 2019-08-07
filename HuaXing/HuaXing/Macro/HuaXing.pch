@@ -17,5 +17,6 @@
     #import "UIAdapter.h"
     #import "HXToast.h"
     #import "JXFileManager.h"
+    #import "JXDateManager.h"
 
 #endif /* HuaXing_pch */

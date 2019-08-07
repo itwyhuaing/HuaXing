@@ -193,7 +193,7 @@
 -(CourseHeaderView *)amHv {
     if (!_amHv) {
         _amHv = [CourseHeaderView new];
-        [_amHv updateContentWithThem:@"上午几节课 ？" tipMessage:@"点击选择"];
+        [_amHv updateContentWithThem:@"上午最多几节课 ？" tipMessage:@"点击选择"];
         HXWeakSelf
         _amHv.headerEventBlock = ^{
             if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigView:headerEventLocation:)]) {
@@ -207,7 +207,7 @@
 -(CourseHeaderView *)pmHv {
     if (!_pmHv) {
         _pmHv = [CourseHeaderView new];
-        [_pmHv updateContentWithThem:@"下午几节课 ？" tipMessage:@"点击选择"];
+        [_pmHv updateContentWithThem:@"下午最多几节课 ？" tipMessage:@"点击选择"];
         HXWeakSelf
         _pmHv.headerEventBlock = ^{
             if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigView:headerEventLocation:)]) {

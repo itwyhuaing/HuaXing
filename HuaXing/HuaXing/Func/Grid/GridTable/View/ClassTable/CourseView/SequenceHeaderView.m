@@ -40,7 +40,11 @@
 -(void)setModel:(SequenceItemModel *)model {
     if (model) {
         _model = model;
-        self.cntLabel.text = [NSString stringWithFormat:@"第 %ld 节",model.sequence+1];
+        if (model.time) {
+            self.cntLabel.text = [NSString stringWithFormat:@"第 %ld 节\n%@",model.sequence+1,model.time];
+        }else{
+            self.cntLabel.text = [NSString stringWithFormat:@"第 %ld 节",model.sequence+1];
+        }
     }
 }
 

@@ -22,7 +22,16 @@
 @property (nonatomic,strong) HXDatePickView     *timePkv;
 
 // 课程节数选择器
-@property (nonatomic,strong) HXCourseItemsPKV *courseItemsPkv;
+@property (nonatomic,strong) HXCourseItemsPKV   *courseItemsPkv;
+
+// 当前选中的 section header 位置
+@property (nonatomic,assign) NSInteger          currentLocation;
+
+// 上午最多几节课程
+@property (nonatomic,assign) NSInteger          aMax;
+
+// 下午最多几节课程
+@property (nonatomic,assign) NSInteger          pMax;
 
 @end
 
@@ -33,45 +42,83 @@
     [self addMainView];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self updateUI];
+}
+
 - (void)addMainView {
     [self.view addSubview:self.ccv];
-    self.ccv.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
+
+    HXWeakSelf
+    // 日期选择器回调
+    self.datePkv.pickCompletion = ^(NSString * _Nonnull dateResult) {
+        NSLog(@" \n 测试数据 : %@ \n ",dateResult);
+        [weakSelf.ccv updateHeaderViewWithThem:@"开课日期" tipMessage:dateResult section:weakSelf.currentLocation];
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigVC:selectedTheStartDate:)]) {
+            [weakSelf.delegate courseConfigVC:weakSelf selectedTheStartDate:dateResult];
+        }
+    };
+    
+    // 课程数选择器
+    self.courseItemsPkv.pkvCompletion = ^(NSString * _Nonnull pkvResult) {
+        NSLog(@" \n 测试数据 : %@ \n ",pkvResult);
+        NSString *timePart = @"下午";
+        if (weakSelf.currentLocation == CourseConfigViewHeaderAMLocation) {
+            weakSelf.aMax = [pkvResult integerValue];
+            timePart = @"上午";
+        }else {
+            weakSelf.pMax = [pkvResult integerValue];
+            timePart = @"下午";
+        }
+        
+        // 当前页 UI 更新
+        if ([pkvResult integerValue] == 0) {
+            [weakSelf.ccv updateHeaderViewWithThem:[NSString stringWithFormat:@"%@最多几节课 ？",timePart] tipMessage:@"点击选择" section:weakSelf.currentLocation];
+        }else{
+            [weakSelf.ccv updateHeaderViewWithThem:timePart tipMessage:[NSString stringWithFormat:@"%@节课",pkvResult] section:weakSelf.currentLocation];
+        }
+        [weakSelf.ccv updateTableWithCourseItems:pkvResult section:weakSelf.currentLocation];
+        
+        // 代理通知
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigVC:amCourseMax:pmCourseMax:)]) {
+            [weakSelf.delegate courseConfigVC:weakSelf amCourseMax:weakSelf.aMax pmCourseMax:weakSelf.pMax];
+        }
+        
+    };
+    
 }
+
+
+- (void)updateUI {
+    if (self.lastSelectedDateString) {
+        [self.ccv updateHeaderViewWithThem:@"开课日期" tipMessage:self.lastSelectedDateString section:0];
+    }
+    if (self.lastSelectedAMax && self.lastSelectedAMax.integerValue > 0) {
+        [self.ccv updateHeaderViewWithThem:@"上午" tipMessage:[NSString stringWithFormat:@"%@节课",self.lastSelectedAMax] section:1];
+        [self.ccv updateTableWithCourseItems:self.lastSelectedAMax section:1];
+    }
+    if (self.lastSelectedPMax && self.lastSelectedPMax.integerValue > 0) {
+        [self.ccv updateHeaderViewWithThem:@"下午" tipMessage:[NSString stringWithFormat:@"%@节课",self.lastSelectedPMax] section:2];
+        [self.ccv updateTableWithCourseItems:self.lastSelectedPMax section:2];
+    }
+}
+
 
 #pragma mark ------ CourseConfigViewDelegate
 
 -(void)courseConfigView:(CourseConfigView *)cv headerEventLocation:(NSInteger)location {
+    // 记录位置
+    self.currentLocation = location;
     // 展示选择器
     if (location == CourseConfigViewHeaderAMLocation) {
-        [self.courseItemsPkv showOnSView:self.view barThem:@"请选择上午有几节课"];
+        [self.courseItemsPkv showOnSView:self.view barThem:@"请选择上午最多有几节课"];
     }else if (location == CourseConfigViewHeaderPMLocation) {
-        [self.courseItemsPkv showOnSView:self.view barThem:@"请选择下午有几节课"];
+        [self.courseItemsPkv showOnSView:self.view barThem:@"请选择下午最多有几节课"];
     }else if (location == CourseConfigViewHeaderCourseDateLocation){
         [self.datePkv showOnSView:self.view];
         self.datePkv.barThem = @"请选择开课日期";
     }
-    
-    // 课程数选择器
-    HXWeakSelf
-    self.courseItemsPkv.pkvCompletion = ^(NSString * _Nonnull pkvResult) {
-        NSLog(@" \n 测试数据 : %@ \n ",pkvResult);
-        if (location == CourseConfigViewHeaderAMLocation ||
-            location == CourseConfigViewHeaderPMLocation) {
-            NSString *timePart = location == CourseConfigViewHeaderAMLocation ? @"上午" : @"下午";
-            if ([pkvResult integerValue] == 0) {
-                [weakSelf.ccv updateHeaderViewWithThem:[NSString stringWithFormat:@"%@几节课 ？",timePart] tipMessage:@"点击选择" section:location];
-            }else{
-                [weakSelf.ccv updateHeaderViewWithThem:timePart tipMessage:[NSString stringWithFormat:@"%@节课",pkvResult] section:location];
-            }
-            [weakSelf.ccv updateTableWithCourseItems:pkvResult section:location];
-        }
-    };
-    
-    // 日期选择器回调
-    self.datePkv.pickCompletion = ^(NSString * _Nonnull dateResult) {
-        NSLog(@" \n 测试数据 : %@ \n ",dateResult);
-        [weakSelf.ccv updateHeaderViewWithThem:@"开课日期" tipMessage:dateResult section:location];
-    };
 }
 
 -(void)courseConfigView:(CourseConfigView *)cv cellModel:(nonnull ItemTimeModel *)model didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -81,6 +128,8 @@
     // 课程
     [self.timePkv showOnSView:self.view];
     self.timePkv.barThem = @"请选择该节开始时间";
+    
+    // Blcok Event 事件处理
     self.timePkv.pickCompletion = ^(NSString * _Nonnull dateResult) {
         if (!isEnd) {
             ItemTimeModel *f = model;
@@ -97,6 +146,18 @@
             f.detailTxt = txt;
             f.rightIConName = @"";
             [weakSelf.ccv updateTableWithItemModel:f cellForRowAtIndexPath:indexPath];
+            
+            if (indexPath.section == CourseConfigViewHeaderAMLocation) { // 上午
+                // 代理
+                if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigVC:amTimeTxt:rowIndex:)]) {
+                    [weakSelf.delegate courseConfigVC:weakSelf amTimeTxt:txt rowIndex:indexPath.row];
+                }
+            }else {
+                // 代理
+                if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(courseConfigVC:pmTimeTxt:rowIndex:)]) {
+                    [weakSelf.delegate courseConfigVC:weakSelf pmTimeTxt:txt rowIndex:indexPath.row];
+                }
+            }
         }
     };
 }
@@ -105,7 +166,7 @@
 
 -(CourseConfigView *)ccv {
     if (!_ccv) {
-        _ccv = [[CourseConfigView alloc] init];
+        _ccv = [[CourseConfigView alloc] initWithFrame:self.view.bounds];
         _ccv.delegate = (id)self;
     }
     return _ccv;
@@ -133,5 +194,10 @@
     }
     return _courseItemsPkv;
 }
+
+
+#pragma mark --- Test
+
+
 
 @end

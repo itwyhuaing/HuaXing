@@ -128,9 +128,7 @@ static NSString *ClassTableCell_ReusableViewFooter = @"ClassTableCellReusableVie
         NSArray *f_items = f.courses;
         if (f_items && f_items.count > self.currentIndexForCell) {
             CourseItemModel *im = f_items[self.currentIndexForCell];
-            //if (im.idx == ) {
-                item.model = im;
-            //}
+            item.model = im;
         }
     }
     return item;

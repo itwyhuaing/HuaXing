@@ -63,6 +63,10 @@ NS_ASSUME_NONNULL_BEGIN
 // 序列化信息数据 - 第一列数据
 @property (nonatomic,strong) NSArray<SequenceItemModel *>       *ds_sequences;
 
+@property (nonatomic,strong) NSArray<SequenceItemModel *>       *ds_amsequences;
+
+@property (nonatomic,strong) NSArray<SequenceItemModel *>       *ds_pmsequences;
+
 // 课表每天课程数据 - 其他列数据
 @property (nonatomic,strong) NSArray<ClassItemDataModel *>      *ds_classItems;
 
