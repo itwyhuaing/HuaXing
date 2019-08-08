@@ -7,6 +7,7 @@
 //
 
 #import "PersonMainView.h"
+#import "BriefInfoHeaderView.h"
 #import "BriefInfoCell.h"
 
 @interface PersonMainView () <UITableViewDelegate,UITableViewDataSource>
@@ -33,9 +34,6 @@
     if (pm && [pm isKindOfClass:[PersonDataModel class]]) {
         _pm = pm;
         [self.listTable reloadData];
-//        GroupDataModel *gm = pm.data[0];
-//        ItemDataModel  *im = gm.items[0];
-//        NSLog(@"");
     }
 }
 
@@ -63,6 +61,11 @@
     return cell;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    BriefInfoHeaderView *bfh = [BriefInfoHeaderView new];
+    return bfh;
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat h = [tableView cellHeightForIndexPath:indexPath model:[self currentModelAtIndexPath:indexPath] keyPath:@"data" cellClass:[BriefInfoCell class] contentViewWidth:[UIAdapter deviceWidth]];
     return h;
@@ -87,15 +90,13 @@
 
 -(UITableView *)listTable {
     if (!_listTable) {
-        _listTable = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
-        _listTable.estimatedSectionFooterHeight = 0.0;
-        _listTable.estimatedSectionHeaderHeight = 20.0;
+        _listTable = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _listTable.delegate = (id)self;
         _listTable.dataSource = (id)self;
         [_listTable registerClass:[BriefInfoCell class] forCellReuseIdentifier:cell_BriefInfoCell];
         _listTable.separatorStyle = UITableViewCellSeparatorStyleNone;
         _listTable.bounces = FALSE;
-        _listTable.backgroundColor = [UIColor whiteColor];
+        _listTable.backgroundColor = [UIAdapter lightGray];
     }
     return _listTable;
 }

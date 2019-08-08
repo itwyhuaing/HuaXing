@@ -12,15 +12,15 @@
 @implementation PersonManager
 
 - (id)generateLocalData {
-    NSArray *thems = @[@[@"使用帮助",@"支持小主"],
-                       @[@"反馈",@"分享",@"评价"],
-                       @[@"缓存",@"关于"]];
-    NSArray *details = @[@[@"使用帮助",@"支持小主"],
-                         @[@"反馈",@"分享",@"评价"],
-                         @[@"缓存",@"关于"]];
+    NSArray *thems = @[@[@"使用帮助",@"关于"],
+                       @[@"提出您宝贵的使用意见",@"去应用市场给个好评",@"分享给小伙伴",@"微信或支付宝支付支持"],
+                       @[@"清理缓存"]];
+    NSArray *details = @[@[@"",@""],
+                         @[@"",@"",@"",@""],
+                         @[@""]];
     NSArray *icons = @[@[@"personal_arrow",@"personal_arrow"],
-                         @[@"personal_arrow",@"personal_arrow",@"personal_arrow"],
-                         @[@"personal_arrow",@"personal_arrow"]];
+                         @[@"personal_arrow",@"personal_arrow",@"personal_arrow",@"personal_arrow"],
+                         @[@"personal_arrow"]];
     NSMutableArray *tmp = [NSMutableArray new];
     for (NSInteger i = 0; i < thems.count; i ++) {
         NSMutableArray *items = [NSMutableArray new];

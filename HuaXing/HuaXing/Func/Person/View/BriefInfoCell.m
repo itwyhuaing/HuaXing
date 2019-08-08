@@ -41,7 +41,7 @@
     .leftSpaceToView(self.contentView, [UIAdapter lrGap])
     .topEqualToView(self.contentView)
     .bottomEqualToView(line);
-    [self.themLabel setSingleLineAutoResizeWithMaxWidth:100.0 * [UIAdapter Scale47Width]];
+    [self.themLabel setSingleLineAutoResizeWithMaxWidth:[UIAdapter deviceWidth]/2.0 * [UIAdapter Scale47Width]];
     self.iconImgV.sd_layout
     .rightSpaceToView(self.contentView, 24.0 * [UIAdapter Scale47Width])
     .widthIs(5.0 * [UIAdapter Scale47Width])

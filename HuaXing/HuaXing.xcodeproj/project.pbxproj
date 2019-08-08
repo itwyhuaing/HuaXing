@@ -36,6 +36,16 @@
 		26EEACC522F8307C00D8D079 /* HXDatePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACC122F8307C00D8D079 /* HXDatePickView.m */; };
 		26EEACC822F830AE00D8D079 /* HXToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACC722F830AE00D8D079 /* HXToast.m */; };
 		26EEACCF22F951A500D8D079 /* JXDateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACCD22F951A500D8D079 /* JXDateManager.m */; };
+		26EEACD222FBBA3900D8D079 /* UseHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACD122FBBA3900D8D079 /* UseHelpVC.m */; };
+		26EEACD822FBBA7700D8D079 /* FeedBackVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACD722FBBA7700D8D079 /* FeedBackVC.m */; };
+		26EEACDB22FBBAAE00D8D079 /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACDA22FBBAAE00D8D079 /* AboutVC.m */; };
+		26EEACDE22FBC82F00D8D079 /* BriefInfoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACDD22FBC82F00D8D079 /* BriefInfoHeaderView.m */; };
+		26EEACE122FBCB1500D8D079 /* PaySupportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACE022FBCB1500D8D079 /* PaySupportVC.m */; };
+		26EEACE722FBCCF900D8D079 /* abouthx.html in Resources */ = {isa = PBXBuildFile; fileRef = 26EEACE422FBCCF900D8D079 /* abouthx.html */; };
+		26EEACE822FBCCF900D8D079 /* abouthx.js in Resources */ = {isa = PBXBuildFile; fileRef = 26EEACE522FBCCF900D8D079 /* abouthx.js */; };
+		26EEACE922FBCCF900D8D079 /* abouthx.css in Resources */ = {isa = PBXBuildFile; fileRef = 26EEACE622FBCCF900D8D079 /* abouthx.css */; };
+		26EEACF422FBFFE100D8D079 /* pay_wx.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EEACF222FBFFE100D8D079 /* pay_wx.png */; };
+		26EEACF522FBFFE100D8D079 /* pay_zfb.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EEACF322FBFFE100D8D079 /* pay_zfb.png */; };
 		469E585822D77F560077AE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585622D77F560077AE51 /* Main.storyboard */; };
 		469E585A22D77F580077AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E585922D77F580077AE51 /* Assets.xcassets */; };
 		469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585B22D77F580077AE51 /* LaunchScreen.storyboard */; };
@@ -122,6 +132,21 @@
 		26EEACC722F830AE00D8D079 /* HXToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXToast.m; sourceTree = "<group>"; };
 		26EEACCD22F951A500D8D079 /* JXDateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXDateManager.m; sourceTree = "<group>"; };
 		26EEACCE22F951A500D8D079 /* JXDateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXDateManager.h; sourceTree = "<group>"; };
+		26EEACD022FBBA3900D8D079 /* UseHelpVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UseHelpVC.h; sourceTree = "<group>"; };
+		26EEACD122FBBA3900D8D079 /* UseHelpVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UseHelpVC.m; sourceTree = "<group>"; };
+		26EEACD622FBBA7700D8D079 /* FeedBackVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedBackVC.h; sourceTree = "<group>"; };
+		26EEACD722FBBA7700D8D079 /* FeedBackVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedBackVC.m; sourceTree = "<group>"; };
+		26EEACD922FBBAAE00D8D079 /* AboutVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutVC.h; sourceTree = "<group>"; };
+		26EEACDA22FBBAAE00D8D079 /* AboutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutVC.m; sourceTree = "<group>"; };
+		26EEACDC22FBC82F00D8D079 /* BriefInfoHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BriefInfoHeaderView.h; sourceTree = "<group>"; };
+		26EEACDD22FBC82F00D8D079 /* BriefInfoHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BriefInfoHeaderView.m; sourceTree = "<group>"; };
+		26EEACDF22FBCB1500D8D079 /* PaySupportVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaySupportVC.h; sourceTree = "<group>"; };
+		26EEACE022FBCB1500D8D079 /* PaySupportVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaySupportVC.m; sourceTree = "<group>"; };
+		26EEACE422FBCCF900D8D079 /* abouthx.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = abouthx.html; sourceTree = "<group>"; };
+		26EEACE522FBCCF900D8D079 /* abouthx.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = abouthx.js; sourceTree = "<group>"; };
+		26EEACE622FBCCF900D8D079 /* abouthx.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = abouthx.css; sourceTree = "<group>"; };
+		26EEACF222FBFFE100D8D079 /* pay_wx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay_wx.png; sourceTree = "<group>"; };
+		26EEACF322FBFFE100D8D079 /* pay_zfb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay_zfb.png; sourceTree = "<group>"; };
 		469E584D22D77F560077AE51 /* HuaXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E585722D77F560077AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		469E585922D77F580077AE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -431,6 +456,34 @@
 			path = JXDateManager;
 			sourceTree = "<group>";
 		};
+		26EEACE222FBCC6C00D8D079 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				26EEACF122FBFFE100D8D079 /* Pay */,
+				26EEACE322FBCC6C00D8D079 /* About */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		26EEACE322FBCC6C00D8D079 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				26EEACE622FBCCF900D8D079 /* abouthx.css */,
+				26EEACE422FBCCF900D8D079 /* abouthx.html */,
+				26EEACE522FBCCF900D8D079 /* abouthx.js */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		26EEACF122FBFFE100D8D079 /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				26EEACF222FBFFE100D8D079 /* pay_wx.png */,
+				26EEACF322FBFFE100D8D079 /* pay_zfb.png */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
 		3481AF048D8EB8C186E2C3C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,6 +522,7 @@
 		469E584F22D77F560077AE51 /* HuaXing */ = {
 			isa = PBXGroup;
 			children = (
+				26EEACE222FBCC6C00D8D079 /* Resource */,
 				469E586822D780A70077AE51 /* Main */,
 				46BC169522DA345400A70F23 /* Class */,
 				46BC169222DA33D100A70F23 /* Macro */,
@@ -561,6 +615,14 @@
 			children = (
 				46BC16BF22DA3D4D00A70F23 /* PersonVC.h */,
 				46BC16BE22DA3D4D00A70F23 /* PersonVC.m */,
+				26EEACD022FBBA3900D8D079 /* UseHelpVC.h */,
+				26EEACD122FBBA3900D8D079 /* UseHelpVC.m */,
+				26EEACD622FBBA7700D8D079 /* FeedBackVC.h */,
+				26EEACD722FBBA7700D8D079 /* FeedBackVC.m */,
+				26EEACDF22FBCB1500D8D079 /* PaySupportVC.h */,
+				26EEACE022FBCB1500D8D079 /* PaySupportVC.m */,
+				26EEACD922FBBAAE00D8D079 /* AboutVC.h */,
+				26EEACDA22FBBAAE00D8D079 /* AboutVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -572,6 +634,8 @@
 				46BC16CA22DAC2DD00A70F23 /* PersonMainView.m */,
 				46BC16CC22DAF0B900A70F23 /* BriefInfoCell.h */,
 				46BC16CD22DAF0B900A70F23 /* BriefInfoCell.m */,
+				26EEACDC22FBC82F00D8D079 /* BriefInfoHeaderView.h */,
+				26EEACDD22FBC82F00D8D079 /* BriefInfoHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -646,8 +710,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */,
+				26EEACF522FBFFE100D8D079 /* pay_zfb.png in Resources */,
 				469E585A22D77F580077AE51 /* Assets.xcassets in Resources */,
+				26EEACE922FBCCF900D8D079 /* abouthx.css in Resources */,
+				26EEACE822FBCCF900D8D079 /* abouthx.js in Resources */,
 				469E585822D77F560077AE51 /* Main.storyboard in Resources */,
+				26EEACF422FBFFE100D8D079 /* pay_wx.png in Resources */,
+				26EEACE722FBCCF900D8D079 /* abouthx.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,12 +769,16 @@
 				2650AFC122F2F983006C7784 /* AddCourseVC.m in Sources */,
 				26EEACBA22F7D80D00D8D079 /* BaseDataModel.m in Sources */,
 				26EEACC822F830AE00D8D079 /* HXToast.m in Sources */,
+				26EEACD822FBBA7700D8D079 /* FeedBackVC.m in Sources */,
 				26EEACC322F8307C00D8D079 /* HXPickViewToolBar.m in Sources */,
 				26E0B13C22EAE62E005BE40D /* CourseHeaderView.m in Sources */,
 				46BC16C522DA3D7900A70F23 /* PersonManager.m in Sources */,
 				46BC16CE22DAF0B900A70F23 /* BriefInfoCell.m in Sources */,
 				2650AFB222F1A233006C7784 /* DateCollectionViewCell.m in Sources */,
+				26EEACE122FBCB1500D8D079 /* PaySupportVC.m in Sources */,
 				46BC16B522DA3A9C00A70F23 /* NSDate+Addition.m in Sources */,
+				26EEACDB22FBBAAE00D8D079 /* AboutVC.m in Sources */,
+				26EEACD222FBBA3900D8D079 /* UseHelpVC.m in Sources */,
 				46BC169922DA347A00A70F23 /* UIAdapter.m in Sources */,
 				26024BEE22D8A1FD00143425 /* HXBaseVC.m in Sources */,
 				26EEACC422F8307C00D8D079 /* HXCourseItemsPKV.m in Sources */,
@@ -714,6 +787,7 @@
 				2650AFBE22F2872B006C7784 /* SequenceHeaderView.m in Sources */,
 				46BC16B722DA3A9C00A70F23 /* NSObject+Addition.m in Sources */,
 				2650AFCB22F42CD3006C7784 /* AddCourseModel.m in Sources */,
+				26EEACDE22FBC82F00D8D079 /* BriefInfoHeaderView.m in Sources */,
 				2650AFC522F42A8D006C7784 /* AddCourseView.m in Sources */,
 				46BC16BB22DA3A9C00A70F23 /* NSData+Addition.m in Sources */,
 				26E0B13922EAE62E005BE40D /* CourseConfigVC.m in Sources */,

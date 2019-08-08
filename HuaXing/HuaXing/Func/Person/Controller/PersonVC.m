@@ -40,7 +40,40 @@
 #pragma mark ------ PersonMainViewDelegate
 
 -(void)personMainView:(PersonMainView *)pv didSelectedAtIndexPath:(NSIndexPath *)idx {
-    NSLog(@" \n ====== \n ");
+    NSLog(@" \n ====== %@\n ",idx);
+    if (idx.section == 0) {
+        
+        if (idx.row == 0) {
+            [self handleEvent_UserHelp];
+        }else if (idx.row == 1) {
+            [self handleEvent_about];
+        }else if (idx.row == 2) {
+            
+        }
+        
+    }else if (idx.section == 1) {
+        
+        if (idx.row == 0) {
+            [self handleEvent_FeedBack];
+        }else if (idx.row == 1) {
+            
+        }else if (idx.row == 2) {
+            
+        }else if (idx.row == 3) {
+            [self handleEvent_PaySupportAuthor];
+        }
+        
+    }else if (idx.section == 2) {
+        
+        if (idx.row == 0) {
+            
+        }else if (idx.row == 1) {
+            
+        }else if (idx.row == 2) {
+            
+        }
+        
+    }
 }
 
 #pragma mark ------ lazy load
@@ -58,6 +91,34 @@
         _pv.delegate = (id)self;
     }
     return _pv;
+}
+
+#pragma mark --- handle router
+
+- (void)handleEvent_UserHelp {
+    UIViewController *vc = (UIViewController *)[[NSClassFromString(@"UseHelpVC") alloc] init];
+    [self.navigationController pushViewController:vc animated:TRUE];
+}
+
+- (void)handleEvent_PaySupportAuthor {
+    UIViewController *vc = (UIViewController *)[[NSClassFromString(@"PaySupportVC") alloc] init];
+    [self.navigationController pushViewController:vc animated:TRUE];
+}
+
+- (void)handleEvent_FeedBack {
+    UIViewController *vc = (UIViewController *)[[NSClassFromString(@"FeedBackVC") alloc] init];
+    [self.navigationController pushViewController:vc animated:TRUE];
+}
+
+- (void)handleEvent_Share {}
+
+- (void)handleEvent_evaluate {}
+
+- (void)handleEvent_cache {}
+
+- (void)handleEvent_about {
+    UIViewController *vc = (UIViewController *)[[NSClassFromString(@"AboutVC") alloc] init];
+    [self.navigationController pushViewController:vc animated:TRUE];
 }
 
 @end
