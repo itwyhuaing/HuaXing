@@ -39,7 +39,6 @@
 		26EEACD222FBBA3900D8D079 /* UseHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACD122FBBA3900D8D079 /* UseHelpVC.m */; };
 		26EEACDB22FBBAAE00D8D079 /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACDA22FBBAAE00D8D079 /* AboutVC.m */; };
 		26EEACDE22FBC82F00D8D079 /* BriefInfoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACDD22FBC82F00D8D079 /* BriefInfoHeaderView.m */; };
-		26EEACE122FBCB1500D8D079 /* PaySupportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACE022FBCB1500D8D079 /* PaySupportVC.m */; };
 		26EEACE722FBCCF900D8D079 /* abouthx.html in Resources */ = {isa = PBXBuildFile; fileRef = 26EEACE422FBCCF900D8D079 /* abouthx.html */; };
 		26EEACE822FBCCF900D8D079 /* abouthx.js in Resources */ = {isa = PBXBuildFile; fileRef = 26EEACE522FBCCF900D8D079 /* abouthx.js */; };
 		26EEACE922FBCCF900D8D079 /* abouthx.css in Resources */ = {isa = PBXBuildFile; fileRef = 26EEACE622FBCCF900D8D079 /* abouthx.css */; };
@@ -53,6 +52,11 @@
 		26EEAD0A22FD429E00D8D079 /* IdeaBackSuccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEAD0822FD429E00D8D079 /* IdeaBackSuccessView.m */; };
 		26EEAD1122FD441100D8D079 /* TZTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEAD0D22FD441100D8D079 /* TZTestCell.m */; };
 		26EEAD1222FD441100D8D079 /* LxGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEAD1022FD441100D8D079 /* LxGridViewFlowLayout.m */; };
+		26EEAD3A22FD6E5900D8D079 /* HXInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEAD3922FD6E5900D8D079 /* HXInfo.m */; };
+		26EEAD3E22FD6FFF00D8D079 /* HXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEAD3D22FD6FFF00D8D079 /* HXUtil.m */; };
+		26EEAD4322FD820300D8D079 /* PaySupportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEAD4222FD820300D8D079 /* PaySupportVC.m */; };
+		26EEAD4622FD823000D8D079 /* PaySupportView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEAD4522FD823000D8D079 /* PaySupportView.m */; };
+		26EEAD4922FD824A00D8D079 /* PayItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEAD4822FD824A00D8D079 /* PayItemView.m */; };
 		469E585822D77F560077AE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585622D77F560077AE51 /* Main.storyboard */; };
 		469E585A22D77F580077AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E585922D77F580077AE51 /* Assets.xcassets */; };
 		469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585B22D77F580077AE51 /* LaunchScreen.storyboard */; };
@@ -145,8 +149,6 @@
 		26EEACDA22FBBAAE00D8D079 /* AboutVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutVC.m; sourceTree = "<group>"; };
 		26EEACDC22FBC82F00D8D079 /* BriefInfoHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BriefInfoHeaderView.h; sourceTree = "<group>"; };
 		26EEACDD22FBC82F00D8D079 /* BriefInfoHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BriefInfoHeaderView.m; sourceTree = "<group>"; };
-		26EEACDF22FBCB1500D8D079 /* PaySupportVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaySupportVC.h; sourceTree = "<group>"; };
-		26EEACE022FBCB1500D8D079 /* PaySupportVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaySupportVC.m; sourceTree = "<group>"; };
 		26EEACE422FBCCF900D8D079 /* abouthx.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = abouthx.html; sourceTree = "<group>"; };
 		26EEACE522FBCCF900D8D079 /* abouthx.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = abouthx.js; sourceTree = "<group>"; };
 		26EEACE622FBCCF900D8D079 /* abouthx.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = abouthx.css; sourceTree = "<group>"; };
@@ -167,6 +169,16 @@
 		26EEAD0E22FD441100D8D079 /* LxGridViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxGridViewFlowLayout.h; sourceTree = "<group>"; };
 		26EEAD0F22FD441100D8D079 /* TZTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZTestCell.h; sourceTree = "<group>"; };
 		26EEAD1022FD441100D8D079 /* LxGridViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxGridViewFlowLayout.m; sourceTree = "<group>"; };
+		26EEAD3822FD6E5900D8D079 /* HXInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXInfo.h; sourceTree = "<group>"; };
+		26EEAD3922FD6E5900D8D079 /* HXInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXInfo.m; sourceTree = "<group>"; };
+		26EEAD3C22FD6FFF00D8D079 /* HXUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXUtil.h; sourceTree = "<group>"; };
+		26EEAD3D22FD6FFF00D8D079 /* HXUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXUtil.m; sourceTree = "<group>"; };
+		26EEAD4122FD820300D8D079 /* PaySupportVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaySupportVC.h; sourceTree = "<group>"; };
+		26EEAD4222FD820300D8D079 /* PaySupportVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaySupportVC.m; sourceTree = "<group>"; };
+		26EEAD4422FD823000D8D079 /* PaySupportView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaySupportView.h; sourceTree = "<group>"; };
+		26EEAD4522FD823000D8D079 /* PaySupportView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaySupportView.m; sourceTree = "<group>"; };
+		26EEAD4722FD824A00D8D079 /* PayItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayItemView.h; sourceTree = "<group>"; };
+		26EEAD4822FD824A00D8D079 /* PayItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayItemView.m; sourceTree = "<group>"; };
 		469E584D22D77F560077AE51 /* HuaXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E585722D77F560077AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		469E585922D77F580077AE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -563,6 +575,44 @@
 			path = TZImageCell;
 			sourceTree = "<group>";
 		};
+		26EEAD3722FD6E2600D8D079 /* HXInfo */ = {
+			isa = PBXGroup;
+			children = (
+				26EEAD3822FD6E5900D8D079 /* HXInfo.h */,
+				26EEAD3922FD6E5900D8D079 /* HXInfo.m */,
+			);
+			path = HXInfo;
+			sourceTree = "<group>";
+		};
+		26EEAD3B22FD6FEA00D8D079 /* HXUtil */ = {
+			isa = PBXGroup;
+			children = (
+				26EEAD3C22FD6FFF00D8D079 /* HXUtil.h */,
+				26EEAD3D22FD6FFF00D8D079 /* HXUtil.m */,
+			);
+			path = HXUtil;
+			sourceTree = "<group>";
+		};
+		26EEAD3F22FD81F500D8D079 /* PaySupport */ = {
+			isa = PBXGroup;
+			children = (
+				26EEAD4422FD823000D8D079 /* PaySupportView.h */,
+				26EEAD4522FD823000D8D079 /* PaySupportView.m */,
+				26EEAD4722FD824A00D8D079 /* PayItemView.h */,
+				26EEAD4822FD824A00D8D079 /* PayItemView.m */,
+			);
+			path = PaySupport;
+			sourceTree = "<group>";
+		};
+		26EEAD4022FD820300D8D079 /* PaySupport */ = {
+			isa = PBXGroup;
+			children = (
+				26EEAD4122FD820300D8D079 /* PaySupportVC.h */,
+				26EEAD4222FD820300D8D079 /* PaySupportVC.m */,
+			);
+			path = PaySupport;
+			sourceTree = "<group>";
+		};
 		3481AF048D8EB8C186E2C3C4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -642,6 +692,8 @@
 		46BC169522DA345400A70F23 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				26EEAD3B22FD6FEA00D8D079 /* HXUtil */,
+				26EEAD3722FD6E2600D8D079 /* HXInfo */,
 				26EEACF622FD0DC500D8D079 /* HXWebHandle */,
 				26E0B11B22EAE591005BE40D /* UIComponent */,
 				46BC169A22DA3A9C00A70F23 /* Addition */,
@@ -694,13 +746,12 @@
 		46BC16BD22DA3D4D00A70F23 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				26EEAD4022FD820300D8D079 /* PaySupport */,
 				26EEAD0022FD428F00D8D079 /* FeedBack */,
 				46BC16BF22DA3D4D00A70F23 /* PersonVC.h */,
 				46BC16BE22DA3D4D00A70F23 /* PersonVC.m */,
 				26EEACD022FBBA3900D8D079 /* UseHelpVC.h */,
 				26EEACD122FBBA3900D8D079 /* UseHelpVC.m */,
-				26EEACDF22FBCB1500D8D079 /* PaySupportVC.h */,
-				26EEACE022FBCB1500D8D079 /* PaySupportVC.m */,
 				26EEACD922FBBAAE00D8D079 /* AboutVC.h */,
 				26EEACDA22FBBAAE00D8D079 /* AboutVC.m */,
 			);
@@ -710,6 +761,7 @@
 		46BC16C022DA3D4D00A70F23 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				26EEAD3F22FD81F500D8D079 /* PaySupport */,
 				26EEAD0422FD429E00D8D079 /* FeedBack */,
 				46BC16C922DAC2DD00A70F23 /* PersonMainView.h */,
 				46BC16CA22DAC2DD00A70F23 /* PersonMainView.m */,
@@ -862,6 +914,7 @@
 				46BC16C822DA3D9D00A70F23 /* PersonDataModel.m in Sources */,
 				26EEAD1222FD441100D8D079 /* LxGridViewFlowLayout.m in Sources */,
 				26E0B13A22EAE62E005BE40D /* CourseGridVC.m in Sources */,
+				26EEAD4622FD823000D8D079 /* PaySupportView.m in Sources */,
 				26EEACB622F7D39D00D8D079 /* JXFileManager.m in Sources */,
 				469E586E22D780A80077AE51 /* ViewController.m in Sources */,
 				46BC16B922DA3A9C00A70F23 /* NSMutableDictionary+Addition.m in Sources */,
@@ -877,7 +930,7 @@
 				46BC16C522DA3D7900A70F23 /* PersonManager.m in Sources */,
 				46BC16CE22DAF0B900A70F23 /* BriefInfoCell.m in Sources */,
 				2650AFB222F1A233006C7784 /* DateCollectionViewCell.m in Sources */,
-				26EEACE122FBCB1500D8D079 /* PaySupportVC.m in Sources */,
+				26EEAD4322FD820300D8D079 /* PaySupportVC.m in Sources */,
 				46BC16B522DA3A9C00A70F23 /* NSDate+Addition.m in Sources */,
 				26EEACDB22FBBAAE00D8D079 /* AboutVC.m in Sources */,
 				26EEAD0322FD428F00D8D079 /* FeedBackVC.m in Sources */,
@@ -899,16 +952,19 @@
 				46BC16BA22DA3A9C00A70F23 /* UIFont+Addition.m in Sources */,
 				46BC16C222DA3D4D00A70F23 /* PersonVC.m in Sources */,
 				26024BFA22D8A2EA00143425 /* HXNavigationVC.m in Sources */,
+				26EEAD3A22FD6E5900D8D079 /* HXInfo.m in Sources */,
 				26EEACC522F8307C00D8D079 /* HXDatePickView.m in Sources */,
 				46BC16B322DA3A9C00A70F23 /* UIImage+Addition.m in Sources */,
 				26E0B13B22EAE62E005BE40D /* ItemTimeModel.m in Sources */,
 				46BC16B222DA3A9C00A70F23 /* UIView+Addition.m in Sources */,
 				46BC16B422DA3A9C00A70F23 /* NSArray+Addition.m in Sources */,
+				26EEAD3E22FD6FFF00D8D079 /* HXUtil.m in Sources */,
 				2650AFBB22F28684006C7784 /* CourseCollectionCell.m in Sources */,
 				26E0B13E22EAE62E005BE40D /* CourseTimeInfoCell.m in Sources */,
 				46BC16CB22DAC2DD00A70F23 /* PersonMainView.m in Sources */,
 				26E0B13D22EAE62E005BE40D /* CourseConfigView.m in Sources */,
 				26024BF122D8A21600143425 /* HXTabAdapter.m in Sources */,
+				26EEAD4922FD824A00D8D079 /* PayItemView.m in Sources */,
 				26EEAD1122FD441100D8D079 /* TZTestCell.m in Sources */,
 				2650AF8322EFEB36006C7784 /* ClassTableMainView.m in Sources */,
 				469E586F22D780A80077AE51 /* AppDelegate.m in Sources */,

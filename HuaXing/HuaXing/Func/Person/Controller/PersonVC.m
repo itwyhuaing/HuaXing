@@ -56,7 +56,7 @@
         if (idx.row == 0) {
             [self handleEvent_FeedBack];
         }else if (idx.row == 1) {
-            
+            [HXUtil gotoAppStoreEvaluteWithAppID:[HXInfo currentInfo].appId];
         }else if (idx.row == 2) {
             
         }else if (idx.row == 3) {

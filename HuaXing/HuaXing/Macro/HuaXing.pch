@@ -13,6 +13,8 @@
     #import <SDAutoLayout/SDAutoLayout.h>
     #import <CYLTabBarController/CYLTabBarController.h>
     #import "HXConfig.h"
+    #import "HXUtil.h"
+    #import "HXInfo.h"
     #import "Addition.h"
     #import "UIAdapter.h"
     #import "HXToast.h"
