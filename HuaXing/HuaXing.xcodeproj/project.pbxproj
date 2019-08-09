@@ -46,6 +46,9 @@
 		26EEACE922FBCCF900D8D079 /* abouthx.css in Resources */ = {isa = PBXBuildFile; fileRef = 26EEACE622FBCCF900D8D079 /* abouthx.css */; };
 		26EEACF422FBFFE100D8D079 /* pay_wx.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EEACF222FBFFE100D8D079 /* pay_wx.png */; };
 		26EEACF522FBFFE100D8D079 /* pay_zfb.png in Resources */ = {isa = PBXBuildFile; fileRef = 26EEACF322FBFFE100D8D079 /* pay_zfb.png */; };
+		26EEACF922FD0DEF00D8D079 /* HXWebController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACF822FD0DEF00D8D079 /* HXWebController.m */; };
+		26EEACFC22FD0F1F00D8D079 /* JXWKWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACFA22FD0F1F00D8D079 /* JXWKWeb.m */; };
+		26EEACFF22FD1D4400D8D079 /* help.gif in Resources */ = {isa = PBXBuildFile; fileRef = 26EEACFE22FD1D4400D8D079 /* help.gif */; };
 		469E585822D77F560077AE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585622D77F560077AE51 /* Main.storyboard */; };
 		469E585A22D77F580077AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E585922D77F580077AE51 /* Assets.xcassets */; };
 		469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585B22D77F580077AE51 /* LaunchScreen.storyboard */; };
@@ -147,6 +150,11 @@
 		26EEACE622FBCCF900D8D079 /* abouthx.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = abouthx.css; sourceTree = "<group>"; };
 		26EEACF222FBFFE100D8D079 /* pay_wx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay_wx.png; sourceTree = "<group>"; };
 		26EEACF322FBFFE100D8D079 /* pay_zfb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay_zfb.png; sourceTree = "<group>"; };
+		26EEACF722FD0DEF00D8D079 /* HXWebController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXWebController.h; sourceTree = "<group>"; };
+		26EEACF822FD0DEF00D8D079 /* HXWebController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXWebController.m; sourceTree = "<group>"; };
+		26EEACFA22FD0F1F00D8D079 /* JXWKWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXWKWeb.m; sourceTree = "<group>"; };
+		26EEACFB22FD0F1F00D8D079 /* JXWKWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXWKWeb.h; sourceTree = "<group>"; };
+		26EEACFE22FD1D4400D8D079 /* help.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = help.gif; sourceTree = "<group>"; };
 		469E584D22D77F560077AE51 /* HuaXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E585722D77F560077AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		469E585922D77F580077AE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -459,6 +467,7 @@
 		26EEACE222FBCC6C00D8D079 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				26EEACFD22FD1D4400D8D079 /* Help */,
 				26EEACF122FBFFE100D8D079 /* Pay */,
 				26EEACE322FBCC6C00D8D079 /* About */,
 			);
@@ -482,6 +491,25 @@
 				26EEACF322FBFFE100D8D079 /* pay_zfb.png */,
 			);
 			path = Pay;
+			sourceTree = "<group>";
+		};
+		26EEACF622FD0DC500D8D079 /* HXWebHandle */ = {
+			isa = PBXGroup;
+			children = (
+				26EEACF722FD0DEF00D8D079 /* HXWebController.h */,
+				26EEACF822FD0DEF00D8D079 /* HXWebController.m */,
+				26EEACFB22FD0F1F00D8D079 /* JXWKWeb.h */,
+				26EEACFA22FD0F1F00D8D079 /* JXWKWeb.m */,
+			);
+			path = HXWebHandle;
+			sourceTree = "<group>";
+		};
+		26EEACFD22FD1D4400D8D079 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				26EEACFE22FD1D4400D8D079 /* help.gif */,
+			);
+			path = Help;
 			sourceTree = "<group>";
 		};
 		3481AF048D8EB8C186E2C3C4 /* Pods */ = {
@@ -562,6 +590,7 @@
 		46BC169522DA345400A70F23 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				26EEACF622FD0DC500D8D079 /* HXWebHandle */,
 				26E0B11B22EAE591005BE40D /* UIComponent */,
 				46BC169A22DA3A9C00A70F23 /* Addition */,
 				46BC169622DA347A00A70F23 /* UIAdapter */,
@@ -712,6 +741,7 @@
 				469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */,
 				26EEACF522FBFFE100D8D079 /* pay_zfb.png in Resources */,
 				469E585A22D77F580077AE51 /* Assets.xcassets in Resources */,
+				26EEACFF22FD1D4400D8D079 /* help.gif in Resources */,
 				26EEACE922FBCCF900D8D079 /* abouthx.css in Resources */,
 				26EEACE822FBCCF900D8D079 /* abouthx.js in Resources */,
 				469E585822D77F560077AE51 /* Main.storyboard in Resources */,
@@ -763,6 +793,7 @@
 				26EEACB622F7D39D00D8D079 /* JXFileManager.m in Sources */,
 				469E586E22D780A80077AE51 /* ViewController.m in Sources */,
 				46BC16B922DA3A9C00A70F23 /* NSMutableDictionary+Addition.m in Sources */,
+				26EEACF922FD0DEF00D8D079 /* HXWebController.m in Sources */,
 				2650AFAE22F1A0AC006C7784 /* ClassTableHeaderView.m in Sources */,
 				2650AFAF22F1A0AC006C7784 /* ClassTableCell.m in Sources */,
 				2650AF9C22F19059006C7784 /* ClassItemDataModel.m in Sources */,
@@ -781,6 +812,7 @@
 				26EEACD222FBBA3900D8D079 /* UseHelpVC.m in Sources */,
 				46BC169922DA347A00A70F23 /* UIAdapter.m in Sources */,
 				26024BEE22D8A1FD00143425 /* HXBaseVC.m in Sources */,
+				26EEACFC22FD0F1F00D8D079 /* JXWKWeb.m in Sources */,
 				26EEACC422F8307C00D8D079 /* HXCourseItemsPKV.m in Sources */,
 				469E586022D77F580077AE51 /* main.m in Sources */,
 				46BC16BC22DA3A9C00A70F23 /* NSString+Addition.m in Sources */,

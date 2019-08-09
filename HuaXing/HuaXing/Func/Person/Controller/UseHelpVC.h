@@ -7,10 +7,11 @@
 //
 
 #import "HXBaseVC.h"
+#import "HXWebController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UseHelpVC : HXBaseVC
+@interface UseHelpVC : HXWebController
 
 @end
 

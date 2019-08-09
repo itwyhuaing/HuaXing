@@ -13,6 +13,9 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"帮助文档";
+    NSBundle *mainBudle = [NSBundle mainBundle];
+    NSString *filePath  = [mainBudle pathForResource:@"help" ofType:@"gif"];
+    self.filePath = filePath;
 }
 
 @end
