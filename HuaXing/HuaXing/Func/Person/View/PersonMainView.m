@@ -96,7 +96,7 @@
         [_listTable registerClass:[BriefInfoCell class] forCellReuseIdentifier:cell_BriefInfoCell];
         _listTable.separatorStyle = UITableViewCellSeparatorStyleNone;
         _listTable.bounces = FALSE;
-        _listTable.backgroundColor = [UIAdapter lightGray];
+        _listTable.backgroundColor = [UIAdapter lineGray];
     }
     return _listTable;
 }

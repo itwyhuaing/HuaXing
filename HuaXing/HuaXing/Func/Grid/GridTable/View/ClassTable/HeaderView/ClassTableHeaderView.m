@@ -50,7 +50,7 @@ static NSString *ClassTableHeaderView_ReusableViewFooter = @"ClassTableHeaderVie
     [self addSubview:self.clv];
     [self addSubview:self.bottomLine];
     
-    self.bottomLine.backgroundColor = [UIAdapter lightGray];
+    self.bottomLine.backgroundColor = [UIAdapter lineGray];
 }
 
 -(void)setNotificationName:(NSString *)notificationName {
@@ -204,7 +204,7 @@ static NSString *ClassTableHeaderView_ReusableViewFooter = @"ClassTableHeaderVie
 -(UILabel *)bottomLine {
     if (!_bottomLine) {
         _bottomLine = [UILabel new];
-        _bottomLine.backgroundColor = [UIColor blueColor];//[UIAdapter lightGray];
+        _bottomLine.backgroundColor = [UIColor blueColor];//[UIAdapter lineGray];
     }
     return _bottomLine;
 }

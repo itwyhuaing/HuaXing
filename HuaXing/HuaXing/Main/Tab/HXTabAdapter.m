@@ -37,7 +37,7 @@
 
 - (void)customizeInterface {
     UIFont *unSelectFont = [UIAdapter font10];
-    UIColor *unSelectColor = [UIAdapter lightBlack];
+    UIColor *unSelectColor = [UIAdapter lightTintBlack];
     UIFont *selectFont = [UIAdapter font10];
     UIColor *selectColor = [UIAdapter mainBlue];
     

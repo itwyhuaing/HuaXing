@@ -59,11 +59,11 @@
     
     self.backgroundColor = [UIColor whiteColor];
     self.themLabel.font                         = [UIAdapter font15];
-    self.themLabel.textColor                    = [UIAdapter lightBlack];
+    self.themLabel.textColor                    = [UIAdapter lightTintBlack];
     self.detailLabel.font                         = [UIAdapter font15];
-    self.detailLabel.textColor                    = [UIAdapter lightBlack];
+    self.detailLabel.textColor                    = [UIAdapter lightTintBlack];
     self.detailLabel.textAlignment = NSTextAlignmentRight;
-    line.backgroundColor = [UIAdapter lightGray];
+    line.backgroundColor = [UIAdapter lineGray];
 }
 
 - (void)updateContentWithThem:(NSString *)them tipMessage:(NSString *)msg {
@@ -90,7 +90,7 @@
     if (!_themLabel) {
         _themLabel = [UILabel new];
         _themLabel.font = [UIAdapter font15];
-        _themLabel.textColor = [UIAdapter lightBlack];
+        _themLabel.textColor = [UIAdapter lightTintBlack];
         _themLabel.backgroundColor = [UIColor clearColor];
         _themLabel.textAlignment = NSTextAlignmentLeft;
         _themLabel.text = @"几节课";
@@ -102,7 +102,7 @@
     if (!_detailLabel) {
         _detailLabel = [UILabel new];
         _detailLabel.font = [UIAdapter font15];
-        _detailLabel.textColor = [UIAdapter lightBlack];
+        _detailLabel.textColor = [UIAdapter lightTintBlack];
         _detailLabel.backgroundColor = [UIColor clearColor];
         _detailLabel.textAlignment = NSTextAlignmentRight;
         _detailLabel.text = @"点击选择";

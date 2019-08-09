@@ -45,19 +45,35 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIColor *)mainBlue;
 
+
+/**
+ 工程主题色
+
+ @param alpha 透明度
+ @return 颜色
+ */
++ (UIColor *)mainBlueWithAlpha:(CGFloat)alpha;
+
 /**
  主要用于分割线颜色设置
  
  @return 颜色
  */
-+ (UIColor *)lightGray;
++ (UIColor *)lineGray;
+
+/**
+ 主要用于分割线颜色设置
+ 
+ @return 颜色
+ */
++ (UIColor *)lightTintGray;
 
 /**
  主要用于字体颜色设置
  
  @return 颜色
  */
-+ (UIColor *)lightBlack;
++ (UIColor *)lightTintBlack;
 
 /**
  主要用于有一定透明度蒙版颜色设置
@@ -82,6 +98,22 @@ NS_ASSUME_NONNULL_BEGIN
  @return 左右的间距
  */
 + (CGFloat)lrGap;
+
+
+/**
+ 普通屏幕设备的导航栏高度
+
+ @return 高度
+ */
++ (CGFloat)normalNavBarHeight;
+
+
+/**
+ 适配类似 X 系列设备导航栏时高度调整
+
+ @return 高度
+ */
++ (CGFloat)suitHeightForX_Device;
 
 /**
  设备宽度

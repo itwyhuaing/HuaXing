@@ -30,12 +30,20 @@
     return [UIColor colorWithHexString:@"#3FA2FF"];
 }
 
-+ (UIColor *)lightGray {
++ (UIColor *)mainBlueWithAlpha:(CGFloat)alpha{
+    return [UIColor colorWithHexString:@"#3FA2FF" alpha:alpha];
+}
+
++ (UIColor *)lineGray {
     return [UIColor colorWithHexString:@"#EDEDED" alpha:1.0];
 }
 
-+ (UIColor *)lightBlack {
++ (UIColor *)lightTintBlack {
     return [UIColor colorWithHexString:@"#333333" alpha:1.0];
+}
+
++ (UIColor *)lightTintGray {
+    return [UIColor colorWithHexString:@"#999999" alpha:1.0];
 }
 
 + (UIColor *)maskLightBlack {
@@ -50,6 +58,19 @@
 
 + (CGFloat)lrGap {
     return 20.0 * [UIAdapter Scale47Width];
+}
+
++(CGFloat)normalNavBarHeight {
+    return 44.0f;
+}
+
++ (CGFloat)suitHeightForX_Device {
+    CGFloat h = 0.f;
+    if ([UIAdapter device5_5Inch] || [UIAdapter device5_8Inch] ||
+        [UIAdapter device6_1Inch] || [UIAdapter device6_5Inch]) {
+        h = 34.f;
+    }
+    return h;
 }
 
 // 设备宽度

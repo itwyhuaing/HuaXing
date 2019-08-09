@@ -55,7 +55,7 @@
     .bottomSpaceToView(line, 0.0)
     .rightSpaceToView(self.contentView, [UIAdapter lrGap]);
     
-    line.backgroundColor = [UIAdapter lightGray];
+    line.backgroundColor = [UIAdapter lineGray];
 }
 
 - (void)endEdit {

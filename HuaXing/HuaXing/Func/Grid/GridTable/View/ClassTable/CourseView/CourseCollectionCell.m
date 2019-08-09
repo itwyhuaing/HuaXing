@@ -73,10 +73,10 @@
 -(UILabel *)cntLabel {
     if (!_cntLabel) {
         _cntLabel = [UILabel new];
-        _cntLabel.textColor = [UIAdapter lightBlack];
+        _cntLabel.textColor = [UIAdapter lightTintBlack];
         _cntLabel.numberOfLines = 0;
         _cntLabel.textAlignment = NSTextAlignmentCenter;
-        _cntLabel.layer.borderColor = [UIAdapter lightGray].CGColor;
+        _cntLabel.layer.borderColor = [UIAdapter lineGray].CGColor;
         _cntLabel.layer.borderWidth = 0.5;
         _cntLabel.backgroundColor = [UIColor whiteColor];
     }

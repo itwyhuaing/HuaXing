@@ -98,7 +98,7 @@
  移除hud
  */
 - (void)dismiss {
-    [[HXToast shareManager]dismiss:nil];
+    [[HXToast shareManager] dismiss:nil];
 }
 
 /**

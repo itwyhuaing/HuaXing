@@ -55,11 +55,11 @@
     [self setupAutoHeightWithBottomView:self.themLabel bottomMargin:0.0];
     
     self.themLabel.font                         = [UIAdapter font15];
-    self.themLabel.textColor                    = [UIAdapter lightBlack];
+    self.themLabel.textColor                    = [UIAdapter lightTintBlack];
     self.detailLabel.font                         = [UIAdapter font15];
-    self.detailLabel.textColor                    = [UIAdapter lightBlack];
+    self.detailLabel.textColor                    = [UIAdapter lightTintBlack];
     self.detailLabel.textAlignment = NSTextAlignmentRight;
-    line.backgroundColor = [UIAdapter lightGray];
+    line.backgroundColor = [UIAdapter lineGray];
 }
 
 -(void)setData:(ItemDataModel *)data {

@@ -46,7 +46,7 @@
     if (!_cntLabel) {
         _cntLabel = [UILabel new];
         _cntLabel.font                         = [UIAdapter font15];
-        _cntLabel.textColor                    = [UIAdapter lightBlack];
+        _cntLabel.textColor                    = [UIAdapter lightTintBlack];
     }
     return _cntLabel;
 }

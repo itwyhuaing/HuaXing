@@ -55,7 +55,7 @@
     [bezierPath closePath];
     
     CAShapeLayer *sl = [CAShapeLayer layer];
-    sl.strokeColor = [UIAdapter lightGray].CGColor;
+    sl.strokeColor = [UIAdapter lineGray].CGColor;
     sl.path = bezierPath.CGPath;
     sl.fillColor = UIColor.clearColor.CGColor;
     [self.layer addSublayer:sl];
@@ -64,7 +64,7 @@
 -(UILabel *)firstLabel {
     if (!_firstLabel) {
         _firstLabel = [UILabel new];
-        _firstLabel.textColor = [UIAdapter lightBlack];
+        _firstLabel.textColor = [UIAdapter lightTintBlack];
         _firstLabel.textAlignment = NSTextAlignmentRight;
         _firstLabel.backgroundColor = [UIColor whiteColor];
         _firstLabel.text = @"日期";
@@ -75,7 +75,7 @@
 -(UILabel *)secondLabel {
     if (!_secondLabel) {
         _secondLabel = [UILabel new];
-        _secondLabel.textColor = [UIAdapter lightBlack];
+        _secondLabel.textColor = [UIAdapter lightTintBlack];
         _secondLabel.textAlignment = NSTextAlignmentLeft;
         _secondLabel.backgroundColor = [UIColor whiteColor];
         _secondLabel.text = @"课程";
