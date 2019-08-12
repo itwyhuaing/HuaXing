@@ -10,6 +10,8 @@
 		26024BEE22D8A1FD00143425 /* HXBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BED22D8A1FD00143425 /* HXBaseVC.m */; };
 		26024BF122D8A21600143425 /* HXTabAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BF022D8A21600143425 /* HXTabAdapter.m */; };
 		26024BFA22D8A2EA00143425 /* HXNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BF922D8A2EA00143425 /* HXNavigationVC.m */; };
+		2617CF04230140A4005F4558 /* HXLaunchConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF03230140A4005F4558 /* HXLaunchConfig.m */; };
+		2617CF082301412B005F4558 /* HXShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF072301412B005F4558 /* HXShareManager.m */; };
 		2650AF8322EFEB36006C7784 /* ClassTableMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AF8222EFEB36006C7784 /* ClassTableMainView.m */; };
 		2650AF9C22F19059006C7784 /* ClassItemDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AF9B22F19059006C7784 /* ClassItemDataModel.m */; };
 		2650AFAE22F1A0AC006C7784 /* ClassTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AFA922F1A0AC006C7784 /* ClassTableHeaderView.m */; };
@@ -57,11 +59,9 @@
 		26EEAD4322FD820300D8D079 /* PaySupportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEAD4222FD820300D8D079 /* PaySupportVC.m */; };
 		26EEAD4622FD823000D8D079 /* PaySupportView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEAD4522FD823000D8D079 /* PaySupportView.m */; };
 		26EEAD4922FD824A00D8D079 /* PayItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEAD4822FD824A00D8D079 /* PayItemView.m */; };
-		469E585822D77F560077AE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585622D77F560077AE51 /* Main.storyboard */; };
 		469E585A22D77F580077AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E585922D77F580077AE51 /* Assets.xcassets */; };
 		469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585B22D77F580077AE51 /* LaunchScreen.storyboard */; };
 		469E586022D77F580077AE51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 469E585F22D77F580077AE51 /* main.m */; };
-		469E586E22D780A80077AE51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469E586A22D780A70077AE51 /* ViewController.m */; };
 		469E586F22D780A80077AE51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 469E586B22D780A70077AE51 /* AppDelegate.m */; };
 		46BC169922DA347A00A70F23 /* UIAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC169722DA347A00A70F23 /* UIAdapter.m */; };
 		46BC16B222DA3A9C00A70F23 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC169B22DA3A9C00A70F23 /* UIView+Addition.m */; };
@@ -91,6 +91,10 @@
 		26024BF022D8A21600143425 /* HXTabAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXTabAdapter.m; sourceTree = "<group>"; };
 		26024BF822D8A2EA00143425 /* HXNavigationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXNavigationVC.h; sourceTree = "<group>"; };
 		26024BF922D8A2EA00143425 /* HXNavigationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXNavigationVC.m; sourceTree = "<group>"; };
+		2617CF02230140A4005F4558 /* HXLaunchConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXLaunchConfig.h; sourceTree = "<group>"; };
+		2617CF03230140A4005F4558 /* HXLaunchConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXLaunchConfig.m; sourceTree = "<group>"; };
+		2617CF062301412B005F4558 /* HXShareManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXShareManager.h; sourceTree = "<group>"; };
+		2617CF072301412B005F4558 /* HXShareManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXShareManager.m; sourceTree = "<group>"; };
 		2650AF8122EFEB36006C7784 /* ClassTableMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassTableMainView.h; sourceTree = "<group>"; };
 		2650AF8222EFEB36006C7784 /* ClassTableMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassTableMainView.m; sourceTree = "<group>"; };
 		2650AF9A22F19059006C7784 /* ClassItemDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassItemDataModel.h; sourceTree = "<group>"; };
@@ -180,15 +184,12 @@
 		26EEAD4722FD824A00D8D079 /* PayItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayItemView.h; sourceTree = "<group>"; };
 		26EEAD4822FD824A00D8D079 /* PayItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayItemView.m; sourceTree = "<group>"; };
 		469E584D22D77F560077AE51 /* HuaXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		469E585722D77F560077AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		469E585922D77F580077AE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		469E585C22D77F580077AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		469E585E22D77F580077AE51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		469E585F22D77F580077AE51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		469E586922D780A70077AE51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		469E586A22D780A70077AE51 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		469E586B22D780A70077AE51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		469E586D22D780A70077AE51 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		46BC169322DA33FC00A70F23 /* HuaXing.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HuaXing.pch; sourceTree = "<group>"; };
 		46BC169422DA343200A70F23 /* HXConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXConfig.h; sourceTree = "<group>"; };
 		46BC169722DA347A00A70F23 /* UIAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAdapter.m; sourceTree = "<group>"; };
@@ -251,6 +252,15 @@
 				26024BF922D8A2EA00143425 /* HXNavigationVC.m */,
 			);
 			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		2617CF0523014115005F4558 /* HXShareManager */ = {
+			isa = PBXGroup;
+			children = (
+				2617CF062301412B005F4558 /* HXShareManager.h */,
+				2617CF072301412B005F4558 /* HXShareManager.m */,
+			);
+			path = HXShareManager;
 			sourceTree = "<group>";
 		};
 		2650AF8022EFEAE7006C7784 /* ClassTable */ = {
@@ -657,7 +667,6 @@
 				46BC169522DA345400A70F23 /* Class */,
 				46BC169222DA33D100A70F23 /* Macro */,
 				26AD64C622D81C010087D3EB /* Func */,
-				469E585622D77F560077AE51 /* Main.storyboard */,
 				469E585922D77F580077AE51 /* Assets.xcassets */,
 				469E585B22D77F580077AE51 /* LaunchScreen.storyboard */,
 				469E585E22D77F580077AE51 /* Info.plist */,
@@ -671,8 +680,8 @@
 			children = (
 				469E586922D780A70077AE51 /* AppDelegate.h */,
 				469E586B22D780A70077AE51 /* AppDelegate.m */,
-				469E586D22D780A70077AE51 /* ViewController.h */,
-				469E586A22D780A70077AE51 /* ViewController.m */,
+				2617CF02230140A4005F4558 /* HXLaunchConfig.h */,
+				2617CF03230140A4005F4558 /* HXLaunchConfig.m */,
 				26024BEB22D8A1EE00143425 /* BaseVC */,
 				26AD64C222D81B2C0087D3EB /* Tab */,
 				26EEACB722F7D7E700D8D079 /* BaseDataModel */,
@@ -692,6 +701,7 @@
 		46BC169522DA345400A70F23 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				2617CF0523014115005F4558 /* HXShareManager */,
 				26EEAD3B22FD6FEA00D8D079 /* HXUtil */,
 				26EEAD3722FD6E2600D8D079 /* HXInfo */,
 				26EEACF622FD0DC500D8D079 /* HXWebHandle */,
@@ -746,14 +756,14 @@
 		46BC16BD22DA3D4D00A70F23 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				26EEAD4022FD820300D8D079 /* PaySupport */,
-				26EEAD0022FD428F00D8D079 /* FeedBack */,
 				46BC16BF22DA3D4D00A70F23 /* PersonVC.h */,
 				46BC16BE22DA3D4D00A70F23 /* PersonVC.m */,
 				26EEACD022FBBA3900D8D079 /* UseHelpVC.h */,
 				26EEACD122FBBA3900D8D079 /* UseHelpVC.m */,
 				26EEACD922FBBAAE00D8D079 /* AboutVC.h */,
 				26EEACDA22FBBAAE00D8D079 /* AboutVC.m */,
+				26EEAD4022FD820300D8D079 /* PaySupport */,
+				26EEAD0022FD428F00D8D079 /* FeedBack */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -849,7 +859,6 @@
 				26EEACFF22FD1D4400D8D079 /* help.gif in Resources */,
 				26EEACE922FBCCF900D8D079 /* abouthx.css in Resources */,
 				26EEACE822FBCCF900D8D079 /* abouthx.js in Resources */,
-				469E585822D77F560077AE51 /* Main.storyboard in Resources */,
 				26EEACF422FBFFE100D8D079 /* pay_wx.png in Resources */,
 				26EEACE722FBCCF900D8D079 /* abouthx.html in Resources */,
 			);
@@ -916,7 +925,6 @@
 				26E0B13A22EAE62E005BE40D /* CourseGridVC.m in Sources */,
 				26EEAD4622FD823000D8D079 /* PaySupportView.m in Sources */,
 				26EEACB622F7D39D00D8D079 /* JXFileManager.m in Sources */,
-				469E586E22D780A80077AE51 /* ViewController.m in Sources */,
 				46BC16B922DA3A9C00A70F23 /* NSMutableDictionary+Addition.m in Sources */,
 				26EEACF922FD0DEF00D8D079 /* HXWebController.m in Sources */,
 				2650AFAE22F1A0AC006C7784 /* ClassTableHeaderView.m in Sources */,
@@ -939,6 +947,7 @@
 				46BC169922DA347A00A70F23 /* UIAdapter.m in Sources */,
 				26024BEE22D8A1FD00143425 /* HXBaseVC.m in Sources */,
 				26EEACFC22FD0F1F00D8D079 /* JXWKWeb.m in Sources */,
+				2617CF082301412B005F4558 /* HXShareManager.m in Sources */,
 				26EEACC422F8307C00D8D079 /* HXCourseItemsPKV.m in Sources */,
 				469E586022D77F580077AE51 /* main.m in Sources */,
 				46BC16BC22DA3A9C00A70F23 /* NSString+Addition.m in Sources */,
@@ -958,6 +967,7 @@
 				26E0B13B22EAE62E005BE40D /* ItemTimeModel.m in Sources */,
 				46BC16B222DA3A9C00A70F23 /* UIView+Addition.m in Sources */,
 				46BC16B422DA3A9C00A70F23 /* NSArray+Addition.m in Sources */,
+				2617CF04230140A4005F4558 /* HXLaunchConfig.m in Sources */,
 				26EEAD3E22FD6FFF00D8D079 /* HXUtil.m in Sources */,
 				2650AFBB22F28684006C7784 /* CourseCollectionCell.m in Sources */,
 				26E0B13E22EAE62E005BE40D /* CourseTimeInfoCell.m in Sources */,
@@ -974,14 +984,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		469E585622D77F560077AE51 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				469E585722D77F560077AE51 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		469E585B22D77F580077AE51 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1120,7 +1122,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hinabian.hinabian;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hinabian.hainabian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1141,7 +1143,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hinabian.hinabian;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hinabian.hainabian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

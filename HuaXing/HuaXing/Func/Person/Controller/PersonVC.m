@@ -2,18 +2,21 @@
 //  PersonVC.m
 //  HuaXing
 //
-//  Created by hnbwyh on 2019/7/12.
+//  Created by hxwyh on 2019/7/12.
 //  Copyright © 2019 HuaXing. All rights reserved.
 //
 
 #import "PersonVC.h"
 #import "PersonManager.h"
 #import "PersonMainView.h"
+#import "PersonDataModel.h"
 
 @interface PersonVC ()<PersonMainViewDelegate>
 
 @property (nonatomic,strong)    PersonManager       *manager;
 @property (nonatomic,strong)    PersonMainView      *pv;
+
+@property (nonatomic,copy)      NSString            *preCacheData;
 
 @end
 
@@ -23,19 +26,38 @@
     [super viewDidLoad];
     [self addSubV];
     self.pv.pm = [self.manager generateLocalData];
+    self.preCacheData = @"0";
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    //self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = FALSE;
     self.navigationItem.title = @"我的";
+    [self updateTheLocalCache];
 }
 
 - (void)addSubV {
     [self.view addSubview:self.pv];
     self.pv.sd_layout.spaceToSuperView(UIEdgeInsetsZero);
 }
+
+- (void)updateTheLocalCache {
+    if (self.pv.pm) {
+        PersonDataModel *f = self.pv.pm;
+        GroupDataModel  *g = [f.data lastObject];
+        ItemDataModel   *i = [g.items lastObject];
+        HXWeakSelf
+        [[JXFileManager defaultManager] calculateSizeAtFileFolder:JXFileFoldersSet completeBlock:^(NSString * _Nonnull info) {
+            weakSelf.preCacheData = info;
+            ItemDataModel   *tmp_i = i;
+            tmp_i.detailTxt = info;
+            NSLog(@"\n 缓存数据测试 %@ \n",info);
+            [weakSelf.pv.listTable reloadData];
+            
+        }];
+    }
+}
+
 
 #pragma mark ------ PersonMainViewDelegate
 
@@ -66,11 +88,11 @@
     }else if (idx.section == 2) {
         
         if (idx.row == 0) {
-            
-        }else if (idx.row == 1) {
-            
-        }else if (idx.row == 2) {
-            
+            BOOL rlt = [[JXFileManager defaultManager] clearUpFileFolder:JXFileFoldersSet];
+            if (rlt) {
+                [[HXToast shareManager] toast:[NSString stringWithFormat:@"成功为您清理%@缓存",self.preCacheData] afterDelay:1.0 style:HXToastHudOnlyText];
+                [self updateTheLocalCache];
+            }
         }
         
     }

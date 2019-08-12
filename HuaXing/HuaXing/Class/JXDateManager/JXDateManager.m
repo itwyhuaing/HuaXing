@@ -2,7 +2,7 @@
 //  JXDateManager.m
 //  HuaXing
 //
-//  Created by hnbwyh on 2019/8/6.
+//  Created by hxwyh on 2019/8/6.
 //  Copyright © 2019 HuaXing. All rights reserved.
 //
 

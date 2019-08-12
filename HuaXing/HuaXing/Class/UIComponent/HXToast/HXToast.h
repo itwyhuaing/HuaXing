@@ -2,7 +2,7 @@
 //  HXToast.h
 //  HuaXing
 //
-//  Created by hnbwyh on 2019/8/5.
+//  Created by hxwyh on 2019/8/5.
 //  Copyright © 2019 HuaXing. All rights reserved.
 //
 

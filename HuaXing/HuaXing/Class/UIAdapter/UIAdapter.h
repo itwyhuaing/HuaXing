@@ -2,7 +2,7 @@
 //  UIAdapter.h
 //  hinabian
 //
-//  Created by hnbwyh on 2019/6/20.
+//  Created by hxwyh on 2019/6/20.
 //  Copyright © 2019 HuaXing. All rights reserved.
 //
 

@@ -20,5 +20,6 @@
     #import "HXToast.h"
     #import "JXFileManager.h"
     #import "JXDateManager.h"
+    #import "HXShareManager.h"
 
 #endif /* HuaXing_pch */

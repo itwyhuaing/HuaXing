@@ -9,8 +9,14 @@
 #ifndef HXConfig_h
 #define HXConfig_h
 
+#pragma mark ---------------------------- Global Setting ----------------------------
 #define HXWeakSelf     __weak typeof(self) weakSelf = self;
 
-#define kAddCourseItem @"add.course.item"
+#pragma mark ---------------------------- Third Key ----------------------------
+
+#define UMKEY                   @"55a31f0367e58e5109006156"
+#define QQKEY                   @"101187770"
+#define WXKEY                   @"wx12f1387805bf2897"
+#define WXSECRET                @"02579a2f2d658644e905e14efb48460f"
 
 #endif /* HXConfig_h */

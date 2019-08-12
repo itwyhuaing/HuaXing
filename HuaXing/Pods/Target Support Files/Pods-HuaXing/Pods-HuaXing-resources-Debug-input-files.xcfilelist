@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-HuaXing/Pods-HuaXing-resources.sh
 ${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle
+${PODS_ROOT}/UMCCommonLog/UMCommonLog/UMCommonLog.bundle
+${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle

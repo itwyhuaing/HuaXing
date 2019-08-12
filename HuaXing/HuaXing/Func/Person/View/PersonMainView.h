@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "PersonDataModel.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class PersonMainView;
 @protocol PersonMainViewDelegate <NSObject>
 @optional
 - (void)personMainView:(PersonMainView *)pv didSelectedAtIndexPath:(NSIndexPath *)idx;
 
 @end
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface PersonMainView : UIView
 

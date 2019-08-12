@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HXTabAdapter.h"
+#import "HXLaunchConfig.h"
 
 @interface AppDelegate ()
 
@@ -15,6 +16,10 @@
 
 @implementation AppDelegate
 
+-(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[HXLaunchConfig currentConfig] appWillFinishLaunchingThenStartConfig];
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -24,6 +29,9 @@
     return YES;
 }
 
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    return [HXShareManager handleOpenURL:url options:options];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

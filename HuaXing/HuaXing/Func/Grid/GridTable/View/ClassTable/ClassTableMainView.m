@@ -2,7 +2,7 @@
 //  ClassTableMainView.m
 //  HuaXing
 //
-//  Created by hnbwyh on 2019/7/30.
+//  Created by hxwyh on 2019/7/30.
 //  Copyright © 2019 HuaXing. All rights reserved.
 //
 

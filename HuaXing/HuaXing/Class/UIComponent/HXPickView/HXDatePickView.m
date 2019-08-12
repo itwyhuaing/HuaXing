@@ -2,7 +2,7 @@
 //  HXDatePickView.m
 //  HuaXing
 //
-//  Created by hnbwyh on 2019/7/18.
+//  Created by hxwyh on 2019/7/18.
 //  Copyright © 2019 HuaXing. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  JXFileManager.h
 //  JXFileDemo
 //
-//  Created by hnbwyh on 2016/3/26.
+//  Created by hxwyh on 2016/3/26.
 //  Copyright © 2019 JiXia. All rights reserved.
 //
 
@@ -80,7 +80,7 @@ typedef void(^JXFileManagerOperateBlock)(BOOL status,id info);
 
 // 20190805 新增
 - (void)unarchiveObjWithFileKey:(NSString *)key operateBlock:(JXFileManagerOperateBlock)operateBlock;                // 解档
-- (void)clearArchivedRootObjWithKey:(NSString *)key;
+- (BOOL)clearArchivedRootObjWithKey:(NSString *)key;
 
 #pragma mark - 通用类数据读写 - 字符串 数组 字典 图片
 

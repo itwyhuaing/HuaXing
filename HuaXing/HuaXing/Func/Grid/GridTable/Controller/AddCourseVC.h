@@ -2,7 +2,7 @@
 //  AddCourseVC.h
 //  HuaXing
 //
-//  Created by hnbwyh on 2019/8/1.
+//  Created by hxwyh on 2019/8/1.
 //  Copyright © 2019 HuaXing. All rights reserved.
 //
 
