@@ -1,22 +1,19 @@
 //
-//  HXToast.h
-//  HuaXing
+//  HXToast
+//  hinabian
 //
-//  Created by hxwyh on 2019/8/5.
-//  Copyright © 2019 HuaXing. All rights reserved.
+//  Created by hnbwyh on 16/9/1.
+//  Copyright © 2016年 &#20313;&#22362;. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
 
 // toast 延时时间
 #define DELAY_TIME 1.5
 
 /**
  HXToastHudStyle
- 
+
  - HXToastHudWaiting: HXToastHudWaiting
  - HXToastHudSuccession: HXToastHudSuccession
  - HXToastHudFailure: HXToastHudFailure
@@ -32,7 +29,6 @@ typedef NS_ENUM(NSUInteger, HXToastHudStyle) {
 };
 
 @interface HXToast : NSObject
-
 
 /**
  * hud 上第一个最上面的子控件距离顶部的偏移
@@ -73,5 +69,3 @@ typedef NS_ENUM(NSUInteger, HXToastHudStyle) {
 - (void)dismiss:(UIView *)view;
 
 @end
-
-NS_ASSUME_NONNULL_END

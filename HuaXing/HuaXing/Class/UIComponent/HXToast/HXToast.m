@@ -1,23 +1,26 @@
 //
 //  HXToast.m
-//  HuaXing
+//  hinabian
 //
-//  Created by hxwyh on 2019/8/5.
-//  Copyright © 2019 HuaXing. All rights reserved.
+//  Created by hnbwyh on 16/9/1.
+//  Copyright © 2016年 &#20313;&#22362;. All rights reserved.
 //
 
 #import "HXToast.h"
 #import "MBProgressHUD.h"
 
 //190 x 110 单行最多容纳 10 个字 & 2行
-#define HUD_WIDTH  (190 * [UIAdapter Scale47Width])
+#define HUD_WIDTH  (190*[UIAdapter Scale47Width])
 #define HUD_HEIGHT (110)
 
 #define HUD_WIDTH_SQURE (100)
 
 #define WORD_MUN_MIN (4)
-#define WORD_MUN_MAX (10 * [UIAdapter Scale47Width])
+#define WORD_MUN_MAX (10*[UIAdapter Scale47Width])
 
+@interface HXToast ()
+
+@end
 
 @implementation HXToast
 
@@ -50,31 +53,31 @@
     [self dismiss:view];
     MBProgressHUD *hud = nil;
     switch (hudStyle) {
-            case HXToastHudWaiting:
+        case HXToastHudWaiting:
         {
             hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
             [self modifyHXToastHudWaitingToastWithMsg:hud msg:msg];
         }
             break;
-            case HXToastHudSuccession:
+        case HXToastHudSuccession:
         {
             hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
             [self modifyToastWithMsg:hud msg:msg imgName:@"toast_success"];
         }
             break;
-            case HXToastHudFailure:
+        case HXToastHudFailure:
         {
             hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
             [self modifyToastWithMsg:hud msg:msg imgName:@"toast_problem"];
         }
             break;
-            case HXToastHudOnlyText:
+        case HXToastHudOnlyText:
         {
             hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
             [self modifyToastWithMsg:hud msg:msg imgName:nil];
         }
             break;
-            case HXToastHudOnlyTitleAndDetailText:
+        case HXToastHudOnlyTitleAndDetailText:
         {
             hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
             [self modifyTitleAndDetailTextToastWithMsg:hud msg:msg];
@@ -98,7 +101,7 @@
  移除hud
  */
 - (void)dismiss {
-    [[HXToast shareManager] dismiss:nil];
+    [[HXToast shareManager]dismiss:nil];
 }
 
 /**
@@ -220,6 +223,5 @@
 - (void)setBgColor:(UIColor *)bgColor{
     _bgColor = bgColor;
 }
-
 
 @end

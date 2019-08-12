@@ -12,6 +12,8 @@
 		26024BFA22D8A2EA00143425 /* HXNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26024BF922D8A2EA00143425 /* HXNavigationVC.m */; };
 		2617CF04230140A4005F4558 /* HXLaunchConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF03230140A4005F4558 /* HXLaunchConfig.m */; };
 		2617CF082301412B005F4558 /* HXShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF072301412B005F4558 /* HXShareManager.m */; };
+		2617CF0E230169B9005F4558 /* HXToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF0A230169B9005F4558 /* HXToast.m */; };
+		2617CF0F230169B9005F4558 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF0C230169B9005F4558 /* MBProgressHUD.m */; };
 		2650AF8322EFEB36006C7784 /* ClassTableMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AF8222EFEB36006C7784 /* ClassTableMainView.m */; };
 		2650AF9C22F19059006C7784 /* ClassItemDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AF9B22F19059006C7784 /* ClassItemDataModel.m */; };
 		2650AFAE22F1A0AC006C7784 /* ClassTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AFA922F1A0AC006C7784 /* ClassTableHeaderView.m */; };
@@ -36,7 +38,6 @@
 		26EEACC322F8307C00D8D079 /* HXPickViewToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACBE22F8307C00D8D079 /* HXPickViewToolBar.m */; };
 		26EEACC422F8307C00D8D079 /* HXCourseItemsPKV.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACBF22F8307C00D8D079 /* HXCourseItemsPKV.m */; };
 		26EEACC522F8307C00D8D079 /* HXDatePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACC122F8307C00D8D079 /* HXDatePickView.m */; };
-		26EEACC822F830AE00D8D079 /* HXToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACC722F830AE00D8D079 /* HXToast.m */; };
 		26EEACCF22F951A500D8D079 /* JXDateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACCD22F951A500D8D079 /* JXDateManager.m */; };
 		26EEACD222FBBA3900D8D079 /* UseHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACD122FBBA3900D8D079 /* UseHelpVC.m */; };
 		26EEACDB22FBBAAE00D8D079 /* AboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACDA22FBBAAE00D8D079 /* AboutVC.m */; };
@@ -95,6 +96,10 @@
 		2617CF03230140A4005F4558 /* HXLaunchConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXLaunchConfig.m; sourceTree = "<group>"; };
 		2617CF062301412B005F4558 /* HXShareManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXShareManager.h; sourceTree = "<group>"; };
 		2617CF072301412B005F4558 /* HXShareManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXShareManager.m; sourceTree = "<group>"; };
+		2617CF09230169B8005F4558 /* HXToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXToast.h; sourceTree = "<group>"; };
+		2617CF0A230169B9005F4558 /* HXToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXToast.m; sourceTree = "<group>"; };
+		2617CF0C230169B9005F4558 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		2617CF0D230169B9005F4558 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		2650AF8122EFEB36006C7784 /* ClassTableMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassTableMainView.h; sourceTree = "<group>"; };
 		2650AF8222EFEB36006C7784 /* ClassTableMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassTableMainView.m; sourceTree = "<group>"; };
 		2650AF9A22F19059006C7784 /* ClassItemDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassItemDataModel.h; sourceTree = "<group>"; };
@@ -143,8 +148,6 @@
 		26EEACBF22F8307C00D8D079 /* HXCourseItemsPKV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXCourseItemsPKV.m; sourceTree = "<group>"; };
 		26EEACC022F8307C00D8D079 /* HXPickViewToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXPickViewToolBar.h; sourceTree = "<group>"; };
 		26EEACC122F8307C00D8D079 /* HXDatePickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXDatePickView.m; sourceTree = "<group>"; };
-		26EEACC622F830AE00D8D079 /* HXToast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXToast.h; sourceTree = "<group>"; };
-		26EEACC722F830AE00D8D079 /* HXToast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXToast.m; sourceTree = "<group>"; };
 		26EEACCD22F951A500D8D079 /* JXDateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXDateManager.m; sourceTree = "<group>"; };
 		26EEACCE22F951A500D8D079 /* JXDateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXDateManager.h; sourceTree = "<group>"; };
 		26EEACD022FBBA3900D8D079 /* UseHelpVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UseHelpVC.h; sourceTree = "<group>"; };
@@ -261,6 +264,15 @@
 				2617CF072301412B005F4558 /* HXShareManager.m */,
 			);
 			path = HXShareManager;
+			sourceTree = "<group>";
+		};
+		2617CF0B230169B9005F4558 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				2617CF0C230169B9005F4558 /* MBProgressHUD.m */,
+				2617CF0D230169B9005F4558 /* MBProgressHUD.h */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		2650AF8022EFEAE7006C7784 /* ClassTable */ = {
@@ -483,8 +495,9 @@
 		26EEACC222F8307C00D8D079 /* HXToast */ = {
 			isa = PBXGroup;
 			children = (
-				26EEACC622F830AE00D8D079 /* HXToast.h */,
-				26EEACC722F830AE00D8D079 /* HXToast.m */,
+				2617CF09230169B8005F4558 /* HXToast.h */,
+				2617CF0A230169B9005F4558 /* HXToast.m */,
+				2617CF0B230169B9005F4558 /* MBProgressHUD */,
 			);
 			path = HXToast;
 			sourceTree = "<group>";
@@ -917,6 +930,7 @@
 				2650AFCE22F42F08006C7784 /* AddCourseInputCell.m in Sources */,
 				26E0B14122EAE684005BE40D /* TestVC.m in Sources */,
 				26EEACCF22F951A500D8D079 /* JXDateManager.m in Sources */,
+				2617CF0E230169B9005F4558 /* HXToast.m in Sources */,
 				46BC16B822DA3A9C00A70F23 /* UIColor+Addition.m in Sources */,
 				2650AFB822F1AAE0006C7784 /* TableInfoHeaderView.m in Sources */,
 				26EEAD0922FD429E00D8D079 /* IdeaBackMainView.m in Sources */,
@@ -932,7 +946,6 @@
 				2650AF9C22F19059006C7784 /* ClassItemDataModel.m in Sources */,
 				2650AFC122F2F983006C7784 /* AddCourseVC.m in Sources */,
 				26EEACBA22F7D80D00D8D079 /* BaseDataModel.m in Sources */,
-				26EEACC822F830AE00D8D079 /* HXToast.m in Sources */,
 				26EEACC322F8307C00D8D079 /* HXPickViewToolBar.m in Sources */,
 				26E0B13C22EAE62E005BE40D /* CourseHeaderView.m in Sources */,
 				46BC16C522DA3D7900A70F23 /* PersonManager.m in Sources */,
@@ -950,6 +963,7 @@
 				2617CF082301412B005F4558 /* HXShareManager.m in Sources */,
 				26EEACC422F8307C00D8D079 /* HXCourseItemsPKV.m in Sources */,
 				469E586022D77F580077AE51 /* main.m in Sources */,
+				2617CF0F230169B9005F4558 /* MBProgressHUD.m in Sources */,
 				46BC16BC22DA3A9C00A70F23 /* NSString+Addition.m in Sources */,
 				2650AFBE22F2872B006C7784 /* SequenceHeaderView.m in Sources */,
 				46BC16B722DA3A9C00A70F23 /* NSObject+Addition.m in Sources */,
