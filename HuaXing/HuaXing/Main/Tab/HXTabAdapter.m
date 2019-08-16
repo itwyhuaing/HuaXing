@@ -8,6 +8,7 @@
 
 #import "HXTabAdapter.h"
 #import "HXNavigationVC.h"
+#import "TodayVC.h"
 #import "CourseGridVC.h"
 #import "PersonVC.h"
 
@@ -49,7 +50,7 @@
     [attributDicSelect setValue:selectFont forKey:NSFontAttributeName];
     [attributDicSelect setValue:selectColor forKey:NSForegroundColorAttributeName];
     
-    UITabBarItem *tabBar = [UITabBarItem appearance];
+    //UITabBarItem *tabBar = [UITabBarItem appearance];
     //[tabBar setTitlePositionAdjustment:UIOffsetMake(0, -3)];
     //    [tabBar setTitleTextAttributes:attributDicNor forState:UIControlStateNormal];
     //    [tabBar setTitleTextAttributes:attributDicSelect forState:UIControlStateSelected];
@@ -60,10 +61,10 @@
 -(NSMutableArray *)vcs {
     if (!_vcs) {
         _vcs = [NSMutableArray new];
-        HXNavigationVC *firstNav = [[HXNavigationVC alloc] initWithRootViewController:[CourseGridVC new]];
-        HXNavigationVC *fourthNav = [[HXNavigationVC alloc] initWithRootViewController:[PersonVC new]];
-        [_vcs addObject:firstNav];
-        [_vcs addObject:fourthNav];
+        HXNavigationVC *todayNav = [[HXNavigationVC alloc] initWithRootViewController:[TodayVC new]];
+        HXNavigationVC *gridNav = [[HXNavigationVC alloc] initWithRootViewController:[CourseGridVC new]];
+        HXNavigationVC *personNav = [[HXNavigationVC alloc] initWithRootViewController:[PersonVC new]];
+        [_vcs addObjectsFromArray:@[todayNav,gridNav,personNav]];
     }
     return _vcs;
 }
@@ -72,17 +73,22 @@
     if (!_items) {
         _items = [NSMutableArray new];
         NSDictionary *dic1 = @{
-                               CYLTabBarItemTitle:@"首页",
+                               CYLTabBarItemTitle:@"今日",
+                               CYLTabBarItemImage:@"tab_sun_normal",
+                               CYLTabBarItemSelectedImage:@"tab_sun_press"
+                               };
+        NSDictionary *dic2 = @{
+                               CYLTabBarItemTitle:@"格子",
                                CYLTabBarItemImage:@"tab_grid_normal",
                                CYLTabBarItemSelectedImage:@"tab_grid_pressed"
                                };
         
-        NSDictionary *dic4 = @{
+        NSDictionary *dic3 = @{
                                CYLTabBarItemTitle:@"我的",
                                CYLTabBarItemImage:@"tab_my_normal",
                                CYLTabBarItemSelectedImage:@"tab_my_pressed"
                                };
-        [_items addObjectsFromArray:@[dic1,dic4]];
+        [_items addObjectsFromArray:@[dic1,dic2,dic3]];
     }
     return _items;
 }

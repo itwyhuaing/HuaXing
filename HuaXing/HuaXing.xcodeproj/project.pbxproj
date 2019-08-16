@@ -14,6 +14,21 @@
 		2617CF082301412B005F4558 /* HXShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF072301412B005F4558 /* HXShareManager.m */; };
 		2617CF0E230169B9005F4558 /* HXToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF0A230169B9005F4558 /* HXToast.m */; };
 		2617CF0F230169B9005F4558 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF0C230169B9005F4558 /* MBProgressHUD.m */; };
+		2617CF16230656B1005F4558 /* TodayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF15230656B1005F4558 /* TodayVC.m */; };
+		2617CF352306A180005F4558 /* LTSCalendarBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF1C2306A180005F4558 /* LTSCalendarBaseViewController.m */; };
+		2617CF362306A180005F4558 /* LTSCalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF1D2306A180005F4558 /* LTSCalendarManager.m */; };
+		2617CF372306A180005F4558 /* LTSCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF1E2306A180005F4558 /* LTSCalendarDayView.m */; };
+		2617CF382306A180005F4558 /* LTSCalendarSelectedWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF1F2306A180005F4558 /* LTSCalendarSelectedWeekView.m */; };
+		2617CF392306A180005F4558 /* LTSCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF202306A180005F4558 /* LTSCircleView.m */; };
+		2617CF3A2306A180005F4558 /* LTSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF212306A180005F4558 /* LTSCalendarAppearance.m */; };
+		2617CF3B2306A180005F4558 /* LTSCalendarDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF222306A180005F4558 /* LTSCalendarDataCache.m */; };
+		2617CF3C2306A180005F4558 /* LTSCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF252306A180005F4558 /* LTSCalendarView.m */; };
+		2617CF3D2306A180005F4558 /* LTSCalendarContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF262306A180005F4558 /* LTSCalendarContentView.m */; };
+		2617CF3E2306A180005F4558 /* LTSCalendarMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF272306A180005F4558 /* LTSCalendarMonthView.m */; };
+		2617CF3F2306A180005F4558 /* LTSCalendarWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF312306A180005F4558 /* LTSCalendarWeekView.m */; };
+		2617CF402306A180005F4558 /* LTSCalendarWeekDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF322306A180005F4558 /* LTSCalendarWeekDayView.m */; };
+		2617CF462306BA0B005F4558 /* TodayBriefInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF452306BA0B005F4558 /* TodayBriefInfoView.m */; };
+		2617CF492306C169005F4558 /* TodayDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF482306C169005F4558 /* TodayDataManager.m */; };
 		2650AF8322EFEB36006C7784 /* ClassTableMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AF8222EFEB36006C7784 /* ClassTableMainView.m */; };
 		2650AF9C22F19059006C7784 /* ClassItemDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AF9B22F19059006C7784 /* ClassItemDataModel.m */; };
 		2650AFAE22F1A0AC006C7784 /* ClassTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AFA922F1A0AC006C7784 /* ClassTableHeaderView.m */; };
@@ -100,6 +115,37 @@
 		2617CF0A230169B9005F4558 /* HXToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXToast.m; sourceTree = "<group>"; };
 		2617CF0C230169B9005F4558 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		2617CF0D230169B9005F4558 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		2617CF14230656B1005F4558 /* TodayVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayVC.h; sourceTree = "<group>"; };
+		2617CF15230656B1005F4558 /* TodayVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayVC.m; sourceTree = "<group>"; };
+		2617CF1C2306A180005F4558 /* LTSCalendarBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarBaseViewController.m; sourceTree = "<group>"; };
+		2617CF1D2306A180005F4558 /* LTSCalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarManager.m; sourceTree = "<group>"; };
+		2617CF1E2306A180005F4558 /* LTSCalendarDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarDayView.m; sourceTree = "<group>"; };
+		2617CF1F2306A180005F4558 /* LTSCalendarSelectedWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarSelectedWeekView.m; sourceTree = "<group>"; };
+		2617CF202306A180005F4558 /* LTSCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCircleView.m; sourceTree = "<group>"; };
+		2617CF212306A180005F4558 /* LTSCalendarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarAppearance.m; sourceTree = "<group>"; };
+		2617CF222306A180005F4558 /* LTSCalendarDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarDataCache.m; sourceTree = "<group>"; };
+		2617CF232306A180005F4558 /* LTSCalendarWeekDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCalendarWeekDayView.h; sourceTree = "<group>"; };
+		2617CF242306A180005F4558 /* LTSCalendarWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCalendarWeekView.h; sourceTree = "<group>"; };
+		2617CF252306A180005F4558 /* LTSCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarView.m; sourceTree = "<group>"; };
+		2617CF262306A180005F4558 /* LTSCalendarContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarContentView.m; sourceTree = "<group>"; };
+		2617CF272306A180005F4558 /* LTSCalendarMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarMonthView.m; sourceTree = "<group>"; };
+		2617CF282306A180005F4558 /* LTSCalendarBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCalendarBaseViewController.h; sourceTree = "<group>"; };
+		2617CF292306A180005F4558 /* LTSCalendarDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCalendarDataCache.h; sourceTree = "<group>"; };
+		2617CF2A2306A180005F4558 /* LTSCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCalendarAppearance.h; sourceTree = "<group>"; };
+		2617CF2B2306A180005F4558 /* LTSCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCircleView.h; sourceTree = "<group>"; };
+		2617CF2C2306A180005F4558 /* LTSCalendarDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCalendarDayView.h; sourceTree = "<group>"; };
+		2617CF2D2306A180005F4558 /* LTSCalendarSelectedWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCalendarSelectedWeekView.h; sourceTree = "<group>"; };
+		2617CF2E2306A180005F4558 /* LTSCalendarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCalendarManager.h; sourceTree = "<group>"; };
+		2617CF2F2306A180005F4558 /* LTSCalendarContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCalendarContentView.h; sourceTree = "<group>"; };
+		2617CF302306A180005F4558 /* LTSCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCalendarView.h; sourceTree = "<group>"; };
+		2617CF312306A180005F4558 /* LTSCalendarWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarWeekView.m; sourceTree = "<group>"; };
+		2617CF322306A180005F4558 /* LTSCalendarWeekDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarWeekDayView.m; sourceTree = "<group>"; };
+		2617CF332306A180005F4558 /* LTSCalendarEventSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCalendarEventSource.h; sourceTree = "<group>"; };
+		2617CF342306A180005F4558 /* LTSCalendarMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCalendarMonthView.h; sourceTree = "<group>"; };
+		2617CF442306BA0B005F4558 /* TodayBriefInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayBriefInfoView.h; sourceTree = "<group>"; };
+		2617CF452306BA0B005F4558 /* TodayBriefInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayBriefInfoView.m; sourceTree = "<group>"; };
+		2617CF472306C169005F4558 /* TodayDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayDataManager.h; sourceTree = "<group>"; };
+		2617CF482306C169005F4558 /* TodayDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayDataManager.m; sourceTree = "<group>"; };
 		2650AF8122EFEB36006C7784 /* ClassTableMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassTableMainView.h; sourceTree = "<group>"; };
 		2650AF8222EFEB36006C7784 /* ClassTableMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassTableMainView.m; sourceTree = "<group>"; };
 		2650AF9A22F19059006C7784 /* ClassItemDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassItemDataModel.h; sourceTree = "<group>"; };
@@ -275,6 +321,83 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		2617CF102306565B005F4558 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				2617CF112306569D005F4558 /* Controller */,
+				2617CF132306569D005F4558 /* Model */,
+				2617CF122306569D005F4558 /* View */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		2617CF112306569D005F4558 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2617CF14230656B1005F4558 /* TodayVC.h */,
+				2617CF15230656B1005F4558 /* TodayVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2617CF122306569D005F4558 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2617CF442306BA0B005F4558 /* TodayBriefInfoView.h */,
+				2617CF452306BA0B005F4558 /* TodayBriefInfoView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2617CF132306569D005F4558 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2617CF472306C169005F4558 /* TodayDataManager.h */,
+				2617CF482306C169005F4558 /* TodayDataManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2617CF1A2306A180005F4558 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				2617CF1B2306A180005F4558 /* LTSCalendar */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		2617CF1B2306A180005F4558 /* LTSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				2617CF282306A180005F4558 /* LTSCalendarBaseViewController.h */,
+				2617CF1C2306A180005F4558 /* LTSCalendarBaseViewController.m */,
+				2617CF302306A180005F4558 /* LTSCalendarView.h */,
+				2617CF252306A180005F4558 /* LTSCalendarView.m */,
+				2617CF2F2306A180005F4558 /* LTSCalendarContentView.h */,
+				2617CF262306A180005F4558 /* LTSCalendarContentView.m */,
+				2617CF2E2306A180005F4558 /* LTSCalendarManager.h */,
+				2617CF1D2306A180005F4558 /* LTSCalendarManager.m */,
+				2617CF2A2306A180005F4558 /* LTSCalendarAppearance.h */,
+				2617CF212306A180005F4558 /* LTSCalendarAppearance.m */,
+				2617CF342306A180005F4558 /* LTSCalendarMonthView.h */,
+				2617CF272306A180005F4558 /* LTSCalendarMonthView.m */,
+				2617CF242306A180005F4558 /* LTSCalendarWeekView.h */,
+				2617CF312306A180005F4558 /* LTSCalendarWeekView.m */,
+				2617CF232306A180005F4558 /* LTSCalendarWeekDayView.h */,
+				2617CF322306A180005F4558 /* LTSCalendarWeekDayView.m */,
+				2617CF2C2306A180005F4558 /* LTSCalendarDayView.h */,
+				2617CF1E2306A180005F4558 /* LTSCalendarDayView.m */,
+				2617CF2D2306A180005F4558 /* LTSCalendarSelectedWeekView.h */,
+				2617CF1F2306A180005F4558 /* LTSCalendarSelectedWeekView.m */,
+				2617CF2B2306A180005F4558 /* LTSCircleView.h */,
+				2617CF202306A180005F4558 /* LTSCircleView.m */,
+				2617CF292306A180005F4558 /* LTSCalendarDataCache.h */,
+				2617CF222306A180005F4558 /* LTSCalendarDataCache.m */,
+				2617CF332306A180005F4558 /* LTSCalendarEventSource.h */,
+			);
+			path = LTSCalendar;
+			sourceTree = "<group>";
+		};
 		2650AF8022EFEAE7006C7784 /* ClassTable */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,6 +469,7 @@
 		26AD64C622D81C010087D3EB /* Func */ = {
 			isa = PBXGroup;
 			children = (
+				2617CF102306565B005F4558 /* Today */,
 				26AD64C822D81C010087D3EB /* Grid */,
 				26AD64C722D81C010087D3EB /* Person */,
 			);
@@ -374,6 +498,7 @@
 		26E0B11B22EAE591005BE40D /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				2617CF1A2306A180005F4558 /* Calendar */,
 				26EEACBB22F8307C00D8D079 /* HXPickView */,
 				26EEACC222F8307C00D8D079 /* HXToast */,
 			);
@@ -939,6 +1064,8 @@
 				26E0B13A22EAE62E005BE40D /* CourseGridVC.m in Sources */,
 				26EEAD4622FD823000D8D079 /* PaySupportView.m in Sources */,
 				26EEACB622F7D39D00D8D079 /* JXFileManager.m in Sources */,
+				2617CF362306A180005F4558 /* LTSCalendarManager.m in Sources */,
+				2617CF392306A180005F4558 /* LTSCircleView.m in Sources */,
 				46BC16B922DA3A9C00A70F23 /* NSMutableDictionary+Addition.m in Sources */,
 				26EEACF922FD0DEF00D8D079 /* HXWebController.m in Sources */,
 				2650AFAE22F1A0AC006C7784 /* ClassTableHeaderView.m in Sources */,
@@ -950,15 +1077,19 @@
 				26E0B13C22EAE62E005BE40D /* CourseHeaderView.m in Sources */,
 				46BC16C522DA3D7900A70F23 /* PersonManager.m in Sources */,
 				46BC16CE22DAF0B900A70F23 /* BriefInfoCell.m in Sources */,
+				2617CF462306BA0B005F4558 /* TodayBriefInfoView.m in Sources */,
 				2650AFB222F1A233006C7784 /* DateCollectionViewCell.m in Sources */,
 				26EEAD4322FD820300D8D079 /* PaySupportVC.m in Sources */,
+				2617CF3D2306A180005F4558 /* LTSCalendarContentView.m in Sources */,
 				46BC16B522DA3A9C00A70F23 /* NSDate+Addition.m in Sources */,
 				26EEACDB22FBBAAE00D8D079 /* AboutVC.m in Sources */,
 				26EEAD0322FD428F00D8D079 /* FeedBackVC.m in Sources */,
 				26EEAD0A22FD429E00D8D079 /* IdeaBackSuccessView.m in Sources */,
+				2617CF3C2306A180005F4558 /* LTSCalendarView.m in Sources */,
 				26EEACD222FBBA3900D8D079 /* UseHelpVC.m in Sources */,
 				46BC169922DA347A00A70F23 /* UIAdapter.m in Sources */,
 				26024BEE22D8A1FD00143425 /* HXBaseVC.m in Sources */,
+				2617CF3E2306A180005F4558 /* LTSCalendarMonthView.m in Sources */,
 				26EEACFC22FD0F1F00D8D079 /* JXWKWeb.m in Sources */,
 				2617CF082301412B005F4558 /* HXShareManager.m in Sources */,
 				26EEACC422F8307C00D8D079 /* HXCourseItemsPKV.m in Sources */,
@@ -977,13 +1108,22 @@
 				26024BFA22D8A2EA00143425 /* HXNavigationVC.m in Sources */,
 				26EEAD3A22FD6E5900D8D079 /* HXInfo.m in Sources */,
 				26EEACC522F8307C00D8D079 /* HXDatePickView.m in Sources */,
+				2617CF16230656B1005F4558 /* TodayVC.m in Sources */,
+				2617CF3B2306A180005F4558 /* LTSCalendarDataCache.m in Sources */,
 				46BC16B322DA3A9C00A70F23 /* UIImage+Addition.m in Sources */,
 				26E0B13B22EAE62E005BE40D /* ItemTimeModel.m in Sources */,
 				46BC16B222DA3A9C00A70F23 /* UIView+Addition.m in Sources */,
+				2617CF352306A180005F4558 /* LTSCalendarBaseViewController.m in Sources */,
 				46BC16B422DA3A9C00A70F23 /* NSArray+Addition.m in Sources */,
+				2617CF3A2306A180005F4558 /* LTSCalendarAppearance.m in Sources */,
+				2617CF3F2306A180005F4558 /* LTSCalendarWeekView.m in Sources */,
 				2617CF04230140A4005F4558 /* HXLaunchConfig.m in Sources */,
 				26EEAD3E22FD6FFF00D8D079 /* HXUtil.m in Sources */,
+				2617CF372306A180005F4558 /* LTSCalendarDayView.m in Sources */,
+				2617CF382306A180005F4558 /* LTSCalendarSelectedWeekView.m in Sources */,
+				2617CF402306A180005F4558 /* LTSCalendarWeekDayView.m in Sources */,
 				2650AFBB22F28684006C7784 /* CourseCollectionCell.m in Sources */,
+				2617CF492306C169005F4558 /* TodayDataManager.m in Sources */,
 				26E0B13E22EAE62E005BE40D /* CourseTimeInfoCell.m in Sources */,
 				46BC16CB22DAC2DD00A70F23 /* PersonMainView.m in Sources */,
 				26E0B13D22EAE62E005BE40D /* CourseConfigView.m in Sources */,
@@ -1136,7 +1276,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hinabian.hainabian;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hinabian.rain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1157,7 +1297,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hinabian.hainabian;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hinabian.rain;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
