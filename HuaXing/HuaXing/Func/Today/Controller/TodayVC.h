@@ -8,10 +8,13 @@
 
 #import "HXBaseVC.h"
 #import "LTSCalendarBaseViewController.H"
+@class TodayNoteModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TodayVC : LTSCalendarBaseViewController
+
+@property (nonatomic,strong) NSArray<TodayNoteModel *> *dataSource;
 
 @end
 

@@ -21,5 +21,6 @@
     #import "JXFileManager.h"
     #import "JXDateManager.h"
     #import "HXShareManager.h"
+    #import "UIButton+ClickEventTime.h"
 
 #endif /* HuaXing_pch */

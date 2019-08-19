@@ -24,6 +24,18 @@
     return [UIFont systemFontOfSize:17.0 * [UIAdapter Scale47Width]];
 }
 
+/*
+ UIFontWeightMedium
+ UIFontWeightSemibold
+ UIFontWeightBold
+ UIFontWeightHeavy
+ UIFontWeightBlack
+ */
+
++ (UIFont *)font17_Medium {
+    return [UIFont fontOfSize:17.0 weight:UIFontWeightMedium];
+}
+
 #pragma mark ------ 项目常用几种颜色
 
 + (UIColor *)mainBlue {
@@ -36,6 +48,10 @@
 
 + (UIColor *)lineGray {
     return [UIColor colorWithHexString:@"#EDEDED" alpha:1.0];
+}
+
++ (UIColor *)normalBackgroudColorGray {
+    return [UIColor colorWithHexString:@"#fafafa" alpha:1.0];
 }
 
 + (UIColor *)lightTintBlack {

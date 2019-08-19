@@ -14,7 +14,6 @@
 		2617CF082301412B005F4558 /* HXShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF072301412B005F4558 /* HXShareManager.m */; };
 		2617CF0E230169B9005F4558 /* HXToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF0A230169B9005F4558 /* HXToast.m */; };
 		2617CF0F230169B9005F4558 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF0C230169B9005F4558 /* MBProgressHUD.m */; };
-		2617CF16230656B1005F4558 /* TodayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF15230656B1005F4558 /* TodayVC.m */; };
 		2617CF352306A180005F4558 /* LTSCalendarBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF1C2306A180005F4558 /* LTSCalendarBaseViewController.m */; };
 		2617CF362306A180005F4558 /* LTSCalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF1D2306A180005F4558 /* LTSCalendarManager.m */; };
 		2617CF372306A180005F4558 /* LTSCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF1E2306A180005F4558 /* LTSCalendarDayView.m */; };
@@ -27,8 +26,6 @@
 		2617CF3E2306A180005F4558 /* LTSCalendarMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF272306A180005F4558 /* LTSCalendarMonthView.m */; };
 		2617CF3F2306A180005F4558 /* LTSCalendarWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF312306A180005F4558 /* LTSCalendarWeekView.m */; };
 		2617CF402306A180005F4558 /* LTSCalendarWeekDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF322306A180005F4558 /* LTSCalendarWeekDayView.m */; };
-		2617CF462306BA0B005F4558 /* TodayBriefInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF452306BA0B005F4558 /* TodayBriefInfoView.m */; };
-		2617CF492306C169005F4558 /* TodayDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF482306C169005F4558 /* TodayDataManager.m */; };
 		2650AF8322EFEB36006C7784 /* ClassTableMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AF8222EFEB36006C7784 /* ClassTableMainView.m */; };
 		2650AF9C22F19059006C7784 /* ClassItemDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AF9B22F19059006C7784 /* ClassItemDataModel.m */; };
 		2650AFAE22F1A0AC006C7784 /* ClassTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AFA922F1A0AC006C7784 /* ClassTableHeaderView.m */; };
@@ -41,6 +38,23 @@
 		2650AFC522F42A8D006C7784 /* AddCourseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AFC422F42A8D006C7784 /* AddCourseView.m */; };
 		2650AFCB22F42CD3006C7784 /* AddCourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AFCA22F42CD3006C7784 /* AddCourseModel.m */; };
 		2650AFCE22F42F08006C7784 /* AddCourseInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2650AFCD22F42F08006C7784 /* AddCourseInputCell.m */; };
+		269472F9230A395800F3C20E /* TodayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 269472ED230A395800F3C20E /* TodayVC.m */; };
+		269472FA230A395800F3C20E /* TodayNoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 269472F0230A395800F3C20E /* TodayNoteModel.m */; };
+		269472FB230A395800F3C20E /* TodayDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 269472F3230A395800F3C20E /* TodayDataManager.m */; };
+		269472FC230A395800F3C20E /* TodayBriefInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 269472F5230A395800F3C20E /* TodayBriefInfoView.m */; };
+		269472FD230A395800F3C20E /* TodayNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 269472F8230A395800F3C20E /* TodayNoteCell.m */; };
+		26947324230A756100F3C20E /* UIButton+ClickEventTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 26947322230A756100F3C20E /* UIButton+ClickEventTime.m */; };
+		2694733D230A758900F3C20E /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 26947326230A758900F3C20E /* UIView+Addition.m */; };
+		2694733E230A758900F3C20E /* UIImage+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2694732A230A758900F3C20E /* UIImage+Addition.m */; };
+		2694733F230A758900F3C20E /* NSArray+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2694732D230A758900F3C20E /* NSArray+Addition.m */; };
+		26947340230A758900F3C20E /* NSDate+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 26947330230A758900F3C20E /* NSDate+Addition.m */; };
+		26947341230A758900F3C20E /* NSDictionary+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 26947331230A758900F3C20E /* NSDictionary+Addition.m */; };
+		26947342230A758900F3C20E /* NSObject+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 26947332230A758900F3C20E /* NSObject+Addition.m */; };
+		26947343230A758900F3C20E /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 26947334230A758900F3C20E /* UIColor+Addition.m */; };
+		26947344230A758900F3C20E /* NSMutableDictionary+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 26947337230A758900F3C20E /* NSMutableDictionary+Addition.m */; };
+		26947345230A758900F3C20E /* UIFont+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 26947338230A758900F3C20E /* UIFont+Addition.m */; };
+		26947346230A758900F3C20E /* NSData+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2694733B230A758900F3C20E /* NSData+Addition.m */; };
+		26947347230A758900F3C20E /* NSString+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2694733C230A758900F3C20E /* NSString+Addition.m */; };
 		26E0B13922EAE62E005BE40D /* CourseConfigVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B12722EAE62E005BE40D /* CourseConfigVC.m */; };
 		26E0B13A22EAE62E005BE40D /* CourseGridVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B12A22EAE62E005BE40D /* CourseGridVC.m */; };
 		26E0B13B22EAE62E005BE40D /* ItemTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B12C22EAE62E005BE40D /* ItemTimeModel.m */; };
@@ -80,17 +94,6 @@
 		469E586022D77F580077AE51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 469E585F22D77F580077AE51 /* main.m */; };
 		469E586F22D780A80077AE51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 469E586B22D780A70077AE51 /* AppDelegate.m */; };
 		46BC169922DA347A00A70F23 /* UIAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC169722DA347A00A70F23 /* UIAdapter.m */; };
-		46BC16B222DA3A9C00A70F23 /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC169B22DA3A9C00A70F23 /* UIView+Addition.m */; };
-		46BC16B322DA3A9C00A70F23 /* UIImage+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC169F22DA3A9C00A70F23 /* UIImage+Addition.m */; };
-		46BC16B422DA3A9C00A70F23 /* NSArray+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16A222DA3A9C00A70F23 /* NSArray+Addition.m */; };
-		46BC16B522DA3A9C00A70F23 /* NSDate+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16A522DA3A9C00A70F23 /* NSDate+Addition.m */; };
-		46BC16B622DA3A9C00A70F23 /* NSDictionary+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16A622DA3A9C00A70F23 /* NSDictionary+Addition.m */; };
-		46BC16B722DA3A9C00A70F23 /* NSObject+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16A722DA3A9C00A70F23 /* NSObject+Addition.m */; };
-		46BC16B822DA3A9C00A70F23 /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16A922DA3A9C00A70F23 /* UIColor+Addition.m */; };
-		46BC16B922DA3A9C00A70F23 /* NSMutableDictionary+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16AC22DA3A9C00A70F23 /* NSMutableDictionary+Addition.m */; };
-		46BC16BA22DA3A9C00A70F23 /* UIFont+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16AD22DA3A9C00A70F23 /* UIFont+Addition.m */; };
-		46BC16BB22DA3A9C00A70F23 /* NSData+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16B022DA3A9C00A70F23 /* NSData+Addition.m */; };
-		46BC16BC22DA3A9C00A70F23 /* NSString+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16B122DA3A9C00A70F23 /* NSString+Addition.m */; };
 		46BC16C222DA3D4D00A70F23 /* PersonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16BE22DA3D4D00A70F23 /* PersonVC.m */; };
 		46BC16C522DA3D7900A70F23 /* PersonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16C422DA3D7900A70F23 /* PersonManager.m */; };
 		46BC16C822DA3D9D00A70F23 /* PersonDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BC16C722DA3D9D00A70F23 /* PersonDataModel.m */; };
@@ -115,8 +118,6 @@
 		2617CF0A230169B9005F4558 /* HXToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXToast.m; sourceTree = "<group>"; };
 		2617CF0C230169B9005F4558 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		2617CF0D230169B9005F4558 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		2617CF14230656B1005F4558 /* TodayVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayVC.h; sourceTree = "<group>"; };
-		2617CF15230656B1005F4558 /* TodayVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayVC.m; sourceTree = "<group>"; };
 		2617CF1C2306A180005F4558 /* LTSCalendarBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarBaseViewController.m; sourceTree = "<group>"; };
 		2617CF1D2306A180005F4558 /* LTSCalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarManager.m; sourceTree = "<group>"; };
 		2617CF1E2306A180005F4558 /* LTSCalendarDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarDayView.m; sourceTree = "<group>"; };
@@ -142,10 +143,6 @@
 		2617CF322306A180005F4558 /* LTSCalendarWeekDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarWeekDayView.m; sourceTree = "<group>"; };
 		2617CF332306A180005F4558 /* LTSCalendarEventSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCalendarEventSource.h; sourceTree = "<group>"; };
 		2617CF342306A180005F4558 /* LTSCalendarMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTSCalendarMonthView.h; sourceTree = "<group>"; };
-		2617CF442306BA0B005F4558 /* TodayBriefInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayBriefInfoView.h; sourceTree = "<group>"; };
-		2617CF452306BA0B005F4558 /* TodayBriefInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayBriefInfoView.m; sourceTree = "<group>"; };
-		2617CF472306C169005F4558 /* TodayDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayDataManager.h; sourceTree = "<group>"; };
-		2617CF482306C169005F4558 /* TodayDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayDataManager.m; sourceTree = "<group>"; };
 		2650AF8122EFEB36006C7784 /* ClassTableMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassTableMainView.h; sourceTree = "<group>"; };
 		2650AF8222EFEB36006C7784 /* ClassTableMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassTableMainView.m; sourceTree = "<group>"; };
 		2650AF9A22F19059006C7784 /* ClassItemDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassItemDataModel.h; sourceTree = "<group>"; };
@@ -170,6 +167,41 @@
 		2650AFCA22F42CD3006C7784 /* AddCourseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCourseModel.m; sourceTree = "<group>"; };
 		2650AFCC22F42F08006C7784 /* AddCourseInputCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddCourseInputCell.h; sourceTree = "<group>"; };
 		2650AFCD22F42F08006C7784 /* AddCourseInputCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCourseInputCell.m; sourceTree = "<group>"; };
+		269472ED230A395800F3C20E /* TodayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayVC.m; sourceTree = "<group>"; };
+		269472EE230A395800F3C20E /* TodayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayVC.h; sourceTree = "<group>"; };
+		269472F0230A395800F3C20E /* TodayNoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayNoteModel.m; sourceTree = "<group>"; };
+		269472F1230A395800F3C20E /* TodayDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayDataManager.h; sourceTree = "<group>"; };
+		269472F2230A395800F3C20E /* TodayNoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayNoteModel.h; sourceTree = "<group>"; };
+		269472F3230A395800F3C20E /* TodayDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayDataManager.m; sourceTree = "<group>"; };
+		269472F5230A395800F3C20E /* TodayBriefInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayBriefInfoView.m; sourceTree = "<group>"; };
+		269472F6230A395800F3C20E /* TodayNoteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayNoteCell.h; sourceTree = "<group>"; };
+		269472F7230A395800F3C20E /* TodayBriefInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayBriefInfoView.h; sourceTree = "<group>"; };
+		269472F8230A395800F3C20E /* TodayNoteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayNoteCell.m; sourceTree = "<group>"; };
+		26947322230A756100F3C20E /* UIButton+ClickEventTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ClickEventTime.m"; sourceTree = "<group>"; };
+		26947323230A756100F3C20E /* UIButton+ClickEventTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ClickEventTime.h"; sourceTree = "<group>"; };
+		26947326230A758900F3C20E /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
+		26947327230A758900F3C20E /* UIColor+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Addition.h"; sourceTree = "<group>"; };
+		26947328230A758900F3C20E /* NSObject+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Addition.h"; sourceTree = "<group>"; };
+		26947329230A758900F3C20E /* NSDictionary+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Addition.h"; sourceTree = "<group>"; };
+		2694732A230A758900F3C20E /* UIImage+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Addition.m"; sourceTree = "<group>"; };
+		2694732B230A758900F3C20E /* UIFont+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Addition.h"; sourceTree = "<group>"; };
+		2694732C230A758900F3C20E /* NSMutableDictionary+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Addition.h"; sourceTree = "<group>"; };
+		2694732D230A758900F3C20E /* NSArray+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Addition.m"; sourceTree = "<group>"; };
+		2694732E230A758900F3C20E /* NSString+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Addition.h"; sourceTree = "<group>"; };
+		2694732F230A758900F3C20E /* NSData+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Addition.h"; sourceTree = "<group>"; };
+		26947330230A758900F3C20E /* NSDate+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Addition.m"; sourceTree = "<group>"; };
+		26947331230A758900F3C20E /* NSDictionary+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Addition.m"; sourceTree = "<group>"; };
+		26947332230A758900F3C20E /* NSObject+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Addition.m"; sourceTree = "<group>"; };
+		26947333230A758900F3C20E /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		26947334230A758900F3C20E /* UIColor+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Addition.m"; sourceTree = "<group>"; };
+		26947335230A758900F3C20E /* NSArray+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Addition.h"; sourceTree = "<group>"; };
+		26947336230A758900F3C20E /* Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Addition.h; sourceTree = "<group>"; };
+		26947337230A758900F3C20E /* NSMutableDictionary+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Addition.m"; sourceTree = "<group>"; };
+		26947338230A758900F3C20E /* UIFont+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Addition.m"; sourceTree = "<group>"; };
+		26947339230A758900F3C20E /* UIImage+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Addition.h"; sourceTree = "<group>"; };
+		2694733A230A758900F3C20E /* NSDate+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Addition.h"; sourceTree = "<group>"; };
+		2694733B230A758900F3C20E /* NSData+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Addition.m"; sourceTree = "<group>"; };
+		2694733C230A758900F3C20E /* NSString+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Addition.m"; sourceTree = "<group>"; };
 		26E0B12722EAE62E005BE40D /* CourseConfigVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseConfigVC.m; sourceTree = "<group>"; };
 		26E0B12822EAE62E005BE40D /* CourseGridVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseGridVC.h; sourceTree = "<group>"; };
 		26E0B12922EAE62E005BE40D /* CourseConfigVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseConfigVC.h; sourceTree = "<group>"; };
@@ -243,29 +275,6 @@
 		46BC169422DA343200A70F23 /* HXConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXConfig.h; sourceTree = "<group>"; };
 		46BC169722DA347A00A70F23 /* UIAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAdapter.m; sourceTree = "<group>"; };
 		46BC169822DA347A00A70F23 /* UIAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAdapter.h; sourceTree = "<group>"; };
-		46BC169B22DA3A9C00A70F23 /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
-		46BC169C22DA3A9C00A70F23 /* UIColor+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Addition.h"; sourceTree = "<group>"; };
-		46BC169D22DA3A9C00A70F23 /* NSObject+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Addition.h"; sourceTree = "<group>"; };
-		46BC169E22DA3A9C00A70F23 /* NSDictionary+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Addition.h"; sourceTree = "<group>"; };
-		46BC169F22DA3A9C00A70F23 /* UIImage+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Addition.m"; sourceTree = "<group>"; };
-		46BC16A022DA3A9C00A70F23 /* UIFont+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Addition.h"; sourceTree = "<group>"; };
-		46BC16A122DA3A9C00A70F23 /* NSMutableDictionary+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Addition.h"; sourceTree = "<group>"; };
-		46BC16A222DA3A9C00A70F23 /* NSArray+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Addition.m"; sourceTree = "<group>"; };
-		46BC16A322DA3A9C00A70F23 /* NSString+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Addition.h"; sourceTree = "<group>"; };
-		46BC16A422DA3A9C00A70F23 /* NSData+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Addition.h"; sourceTree = "<group>"; };
-		46BC16A522DA3A9C00A70F23 /* NSDate+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Addition.m"; sourceTree = "<group>"; };
-		46BC16A622DA3A9C00A70F23 /* NSDictionary+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Addition.m"; sourceTree = "<group>"; };
-		46BC16A722DA3A9C00A70F23 /* NSObject+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Addition.m"; sourceTree = "<group>"; };
-		46BC16A822DA3A9C00A70F23 /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
-		46BC16A922DA3A9C00A70F23 /* UIColor+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Addition.m"; sourceTree = "<group>"; };
-		46BC16AA22DA3A9C00A70F23 /* NSArray+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Addition.h"; sourceTree = "<group>"; };
-		46BC16AB22DA3A9C00A70F23 /* Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Addition.h; sourceTree = "<group>"; };
-		46BC16AC22DA3A9C00A70F23 /* NSMutableDictionary+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Addition.m"; sourceTree = "<group>"; };
-		46BC16AD22DA3A9C00A70F23 /* UIFont+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Addition.m"; sourceTree = "<group>"; };
-		46BC16AE22DA3A9C00A70F23 /* UIImage+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Addition.h"; sourceTree = "<group>"; };
-		46BC16AF22DA3A9C00A70F23 /* NSDate+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Addition.h"; sourceTree = "<group>"; };
-		46BC16B022DA3A9C00A70F23 /* NSData+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Addition.m"; sourceTree = "<group>"; };
-		46BC16B122DA3A9C00A70F23 /* NSString+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Addition.m"; sourceTree = "<group>"; };
 		46BC16BE22DA3D4D00A70F23 /* PersonVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonVC.m; sourceTree = "<group>"; };
 		46BC16BF22DA3D4D00A70F23 /* PersonVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonVC.h; sourceTree = "<group>"; };
 		46BC16C322DA3D7900A70F23 /* PersonManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonManager.h; sourceTree = "<group>"; };
@@ -319,43 +328,6 @@
 				2617CF0D230169B9005F4558 /* MBProgressHUD.h */,
 			);
 			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		2617CF102306565B005F4558 /* Today */ = {
-			isa = PBXGroup;
-			children = (
-				2617CF112306569D005F4558 /* Controller */,
-				2617CF132306569D005F4558 /* Model */,
-				2617CF122306569D005F4558 /* View */,
-			);
-			path = Today;
-			sourceTree = "<group>";
-		};
-		2617CF112306569D005F4558 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				2617CF14230656B1005F4558 /* TodayVC.h */,
-				2617CF15230656B1005F4558 /* TodayVC.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		2617CF122306569D005F4558 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2617CF442306BA0B005F4558 /* TodayBriefInfoView.h */,
-				2617CF452306BA0B005F4558 /* TodayBriefInfoView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		2617CF132306569D005F4558 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				2617CF472306C169005F4558 /* TodayDataManager.h */,
-				2617CF482306C169005F4558 /* TodayDataManager.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		2617CF1A2306A180005F4558 /* Calendar */ = {
@@ -457,6 +429,86 @@
 			path = AddCourse;
 			sourceTree = "<group>";
 		};
+		269472EB230A395800F3C20E /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				269472EC230A395800F3C20E /* Controller */,
+				269472EF230A395800F3C20E /* Model */,
+				269472F4230A395800F3C20E /* View */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		269472EC230A395800F3C20E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				269472EE230A395800F3C20E /* TodayVC.h */,
+				269472ED230A395800F3C20E /* TodayVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		269472EF230A395800F3C20E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				269472F1230A395800F3C20E /* TodayDataManager.h */,
+				269472F3230A395800F3C20E /* TodayDataManager.m */,
+				269472F2230A395800F3C20E /* TodayNoteModel.h */,
+				269472F0230A395800F3C20E /* TodayNoteModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		269472F4230A395800F3C20E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				269472F7230A395800F3C20E /* TodayBriefInfoView.h */,
+				269472F5230A395800F3C20E /* TodayBriefInfoView.m */,
+				269472F6230A395800F3C20E /* TodayNoteCell.h */,
+				269472F8230A395800F3C20E /* TodayNoteCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		26947321230A756100F3C20E /* Categary */ = {
+			isa = PBXGroup;
+			children = (
+				26947323230A756100F3C20E /* UIButton+ClickEventTime.h */,
+				26947322230A756100F3C20E /* UIButton+ClickEventTime.m */,
+			);
+			path = Categary;
+			sourceTree = "<group>";
+		};
+		26947325230A758900F3C20E /* Addition */ = {
+			isa = PBXGroup;
+			children = (
+				26947326230A758900F3C20E /* UIView+Addition.m */,
+				26947327230A758900F3C20E /* UIColor+Addition.h */,
+				26947328230A758900F3C20E /* NSObject+Addition.h */,
+				26947329230A758900F3C20E /* NSDictionary+Addition.h */,
+				2694732A230A758900F3C20E /* UIImage+Addition.m */,
+				2694732B230A758900F3C20E /* UIFont+Addition.h */,
+				2694732C230A758900F3C20E /* NSMutableDictionary+Addition.h */,
+				2694732D230A758900F3C20E /* NSArray+Addition.m */,
+				2694732E230A758900F3C20E /* NSString+Addition.h */,
+				2694732F230A758900F3C20E /* NSData+Addition.h */,
+				26947330230A758900F3C20E /* NSDate+Addition.m */,
+				26947331230A758900F3C20E /* NSDictionary+Addition.m */,
+				26947332230A758900F3C20E /* NSObject+Addition.m */,
+				26947333230A758900F3C20E /* UIView+Addition.h */,
+				26947334230A758900F3C20E /* UIColor+Addition.m */,
+				26947335230A758900F3C20E /* NSArray+Addition.h */,
+				26947336230A758900F3C20E /* Addition.h */,
+				26947337230A758900F3C20E /* NSMutableDictionary+Addition.m */,
+				26947338230A758900F3C20E /* UIFont+Addition.m */,
+				26947339230A758900F3C20E /* UIImage+Addition.h */,
+				2694733A230A758900F3C20E /* NSDate+Addition.h */,
+				2694733B230A758900F3C20E /* NSData+Addition.m */,
+				2694733C230A758900F3C20E /* NSString+Addition.m */,
+			);
+			path = Addition;
+			sourceTree = "<group>";
+		};
 		26AD64C222D81B2C0087D3EB /* Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,7 +521,7 @@
 		26AD64C622D81C010087D3EB /* Func */ = {
 			isa = PBXGroup;
 			children = (
-				2617CF102306565B005F4558 /* Today */,
+				269472EB230A395800F3C20E /* Today */,
 				26AD64C822D81C010087D3EB /* Grid */,
 				26AD64C722D81C010087D3EB /* Person */,
 			);
@@ -799,11 +851,11 @@
 		469E584F22D77F560077AE51 /* HuaXing */ = {
 			isa = PBXGroup;
 			children = (
+				46BC169222DA33D100A70F23 /* Macro */,
 				26EEAD0B22FD441100D8D079 /* Libs */,
 				26EEACE222FBCC6C00D8D079 /* Resource */,
 				469E586822D780A70077AE51 /* Main */,
 				46BC169522DA345400A70F23 /* Class */,
-				46BC169222DA33D100A70F23 /* Macro */,
 				26AD64C622D81C010087D3EB /* Func */,
 				469E585922D77F580077AE51 /* Assets.xcassets */,
 				469E585B22D77F580077AE51 /* LaunchScreen.storyboard */,
@@ -839,12 +891,13 @@
 		46BC169522DA345400A70F23 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				26947325230A758900F3C20E /* Addition */,
+				26947321230A756100F3C20E /* Categary */,
 				2617CF0523014115005F4558 /* HXShareManager */,
 				26EEAD3B22FD6FEA00D8D079 /* HXUtil */,
 				26EEAD3722FD6E2600D8D079 /* HXInfo */,
 				26EEACF622FD0DC500D8D079 /* HXWebHandle */,
 				26E0B11B22EAE591005BE40D /* UIComponent */,
-				46BC169A22DA3A9C00A70F23 /* Addition */,
 				46BC169622DA347A00A70F23 /* UIAdapter */,
 				26EEACCC22F951A500D8D079 /* JXDateManager */,
 				26EEACB322F7D39D00D8D079 /* JXFileManager */,
@@ -859,36 +912,6 @@
 				46BC169722DA347A00A70F23 /* UIAdapter.m */,
 			);
 			path = UIAdapter;
-			sourceTree = "<group>";
-		};
-		46BC169A22DA3A9C00A70F23 /* Addition */ = {
-			isa = PBXGroup;
-			children = (
-				46BC169B22DA3A9C00A70F23 /* UIView+Addition.m */,
-				46BC169C22DA3A9C00A70F23 /* UIColor+Addition.h */,
-				46BC169D22DA3A9C00A70F23 /* NSObject+Addition.h */,
-				46BC169E22DA3A9C00A70F23 /* NSDictionary+Addition.h */,
-				46BC169F22DA3A9C00A70F23 /* UIImage+Addition.m */,
-				46BC16A022DA3A9C00A70F23 /* UIFont+Addition.h */,
-				46BC16A122DA3A9C00A70F23 /* NSMutableDictionary+Addition.h */,
-				46BC16A222DA3A9C00A70F23 /* NSArray+Addition.m */,
-				46BC16A322DA3A9C00A70F23 /* NSString+Addition.h */,
-				46BC16A422DA3A9C00A70F23 /* NSData+Addition.h */,
-				46BC16A522DA3A9C00A70F23 /* NSDate+Addition.m */,
-				46BC16A622DA3A9C00A70F23 /* NSDictionary+Addition.m */,
-				46BC16A722DA3A9C00A70F23 /* NSObject+Addition.m */,
-				46BC16A822DA3A9C00A70F23 /* UIView+Addition.h */,
-				46BC16A922DA3A9C00A70F23 /* UIColor+Addition.m */,
-				46BC16AA22DA3A9C00A70F23 /* NSArray+Addition.h */,
-				46BC16AB22DA3A9C00A70F23 /* Addition.h */,
-				46BC16AC22DA3A9C00A70F23 /* NSMutableDictionary+Addition.m */,
-				46BC16AD22DA3A9C00A70F23 /* UIFont+Addition.m */,
-				46BC16AE22DA3A9C00A70F23 /* UIImage+Addition.h */,
-				46BC16AF22DA3A9C00A70F23 /* NSDate+Addition.h */,
-				46BC16B022DA3A9C00A70F23 /* NSData+Addition.m */,
-				46BC16B122DA3A9C00A70F23 /* NSString+Addition.m */,
-			);
-			path = Addition;
 			sourceTree = "<group>";
 		};
 		46BC16BD22DA3D4D00A70F23 /* Controller */ = {
@@ -1051,12 +1074,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46BC16B622DA3A9C00A70F23 /* NSDictionary+Addition.m in Sources */,
 				2650AFCE22F42F08006C7784 /* AddCourseInputCell.m in Sources */,
 				26E0B14122EAE684005BE40D /* TestVC.m in Sources */,
 				26EEACCF22F951A500D8D079 /* JXDateManager.m in Sources */,
 				2617CF0E230169B9005F4558 /* HXToast.m in Sources */,
-				46BC16B822DA3A9C00A70F23 /* UIColor+Addition.m in Sources */,
 				2650AFB822F1AAE0006C7784 /* TableInfoHeaderView.m in Sources */,
 				26EEAD0922FD429E00D8D079 /* IdeaBackMainView.m in Sources */,
 				46BC16C822DA3D9D00A70F23 /* PersonDataModel.m in Sources */,
@@ -1066,22 +1087,22 @@
 				26EEACB622F7D39D00D8D079 /* JXFileManager.m in Sources */,
 				2617CF362306A180005F4558 /* LTSCalendarManager.m in Sources */,
 				2617CF392306A180005F4558 /* LTSCircleView.m in Sources */,
-				46BC16B922DA3A9C00A70F23 /* NSMutableDictionary+Addition.m in Sources */,
 				26EEACF922FD0DEF00D8D079 /* HXWebController.m in Sources */,
 				2650AFAE22F1A0AC006C7784 /* ClassTableHeaderView.m in Sources */,
 				2650AFAF22F1A0AC006C7784 /* ClassTableCell.m in Sources */,
+				26947340230A758900F3C20E /* NSDate+Addition.m in Sources */,
+				269472FA230A395800F3C20E /* TodayNoteModel.m in Sources */,
 				2650AF9C22F19059006C7784 /* ClassItemDataModel.m in Sources */,
 				2650AFC122F2F983006C7784 /* AddCourseVC.m in Sources */,
+				269472FD230A395800F3C20E /* TodayNoteCell.m in Sources */,
 				26EEACBA22F7D80D00D8D079 /* BaseDataModel.m in Sources */,
 				26EEACC322F8307C00D8D079 /* HXPickViewToolBar.m in Sources */,
 				26E0B13C22EAE62E005BE40D /* CourseHeaderView.m in Sources */,
 				46BC16C522DA3D7900A70F23 /* PersonManager.m in Sources */,
 				46BC16CE22DAF0B900A70F23 /* BriefInfoCell.m in Sources */,
-				2617CF462306BA0B005F4558 /* TodayBriefInfoView.m in Sources */,
 				2650AFB222F1A233006C7784 /* DateCollectionViewCell.m in Sources */,
 				26EEAD4322FD820300D8D079 /* PaySupportVC.m in Sources */,
 				2617CF3D2306A180005F4558 /* LTSCalendarContentView.m in Sources */,
-				46BC16B522DA3A9C00A70F23 /* NSDate+Addition.m in Sources */,
 				26EEACDB22FBBAAE00D8D079 /* AboutVC.m in Sources */,
 				26EEAD0322FD428F00D8D079 /* FeedBackVC.m in Sources */,
 				26EEAD0A22FD429E00D8D079 /* IdeaBackSuccessView.m in Sources */,
@@ -1090,45 +1111,50 @@
 				46BC169922DA347A00A70F23 /* UIAdapter.m in Sources */,
 				26024BEE22D8A1FD00143425 /* HXBaseVC.m in Sources */,
 				2617CF3E2306A180005F4558 /* LTSCalendarMonthView.m in Sources */,
+				26947347230A758900F3C20E /* NSString+Addition.m in Sources */,
 				26EEACFC22FD0F1F00D8D079 /* JXWKWeb.m in Sources */,
+				26947345230A758900F3C20E /* UIFont+Addition.m in Sources */,
 				2617CF082301412B005F4558 /* HXShareManager.m in Sources */,
 				26EEACC422F8307C00D8D079 /* HXCourseItemsPKV.m in Sources */,
 				469E586022D77F580077AE51 /* main.m in Sources */,
+				26947344230A758900F3C20E /* NSMutableDictionary+Addition.m in Sources */,
 				2617CF0F230169B9005F4558 /* MBProgressHUD.m in Sources */,
-				46BC16BC22DA3A9C00A70F23 /* NSString+Addition.m in Sources */,
 				2650AFBE22F2872B006C7784 /* SequenceHeaderView.m in Sources */,
-				46BC16B722DA3A9C00A70F23 /* NSObject+Addition.m in Sources */,
 				2650AFCB22F42CD3006C7784 /* AddCourseModel.m in Sources */,
 				26EEACDE22FBC82F00D8D079 /* BriefInfoHeaderView.m in Sources */,
 				2650AFC522F42A8D006C7784 /* AddCourseView.m in Sources */,
-				46BC16BB22DA3A9C00A70F23 /* NSData+Addition.m in Sources */,
 				26E0B13922EAE62E005BE40D /* CourseConfigVC.m in Sources */,
-				46BC16BA22DA3A9C00A70F23 /* UIFont+Addition.m in Sources */,
+				269472FC230A395800F3C20E /* TodayBriefInfoView.m in Sources */,
 				46BC16C222DA3D4D00A70F23 /* PersonVC.m in Sources */,
+				26947343230A758900F3C20E /* UIColor+Addition.m in Sources */,
 				26024BFA22D8A2EA00143425 /* HXNavigationVC.m in Sources */,
 				26EEAD3A22FD6E5900D8D079 /* HXInfo.m in Sources */,
 				26EEACC522F8307C00D8D079 /* HXDatePickView.m in Sources */,
-				2617CF16230656B1005F4558 /* TodayVC.m in Sources */,
+				269472F9230A395800F3C20E /* TodayVC.m in Sources */,
 				2617CF3B2306A180005F4558 /* LTSCalendarDataCache.m in Sources */,
-				46BC16B322DA3A9C00A70F23 /* UIImage+Addition.m in Sources */,
 				26E0B13B22EAE62E005BE40D /* ItemTimeModel.m in Sources */,
-				46BC16B222DA3A9C00A70F23 /* UIView+Addition.m in Sources */,
 				2617CF352306A180005F4558 /* LTSCalendarBaseViewController.m in Sources */,
-				46BC16B422DA3A9C00A70F23 /* NSArray+Addition.m in Sources */,
 				2617CF3A2306A180005F4558 /* LTSCalendarAppearance.m in Sources */,
 				2617CF3F2306A180005F4558 /* LTSCalendarWeekView.m in Sources */,
 				2617CF04230140A4005F4558 /* HXLaunchConfig.m in Sources */,
 				26EEAD3E22FD6FFF00D8D079 /* HXUtil.m in Sources */,
 				2617CF372306A180005F4558 /* LTSCalendarDayView.m in Sources */,
+				26947342230A758900F3C20E /* NSObject+Addition.m in Sources */,
 				2617CF382306A180005F4558 /* LTSCalendarSelectedWeekView.m in Sources */,
 				2617CF402306A180005F4558 /* LTSCalendarWeekDayView.m in Sources */,
 				2650AFBB22F28684006C7784 /* CourseCollectionCell.m in Sources */,
-				2617CF492306C169005F4558 /* TodayDataManager.m in Sources */,
+				269472FB230A395800F3C20E /* TodayDataManager.m in Sources */,
+				2694733F230A758900F3C20E /* NSArray+Addition.m in Sources */,
+				26947341230A758900F3C20E /* NSDictionary+Addition.m in Sources */,
+				2694733D230A758900F3C20E /* UIView+Addition.m in Sources */,
 				26E0B13E22EAE62E005BE40D /* CourseTimeInfoCell.m in Sources */,
 				46BC16CB22DAC2DD00A70F23 /* PersonMainView.m in Sources */,
 				26E0B13D22EAE62E005BE40D /* CourseConfigView.m in Sources */,
+				2694733E230A758900F3C20E /* UIImage+Addition.m in Sources */,
 				26024BF122D8A21600143425 /* HXTabAdapter.m in Sources */,
 				26EEAD4922FD824A00D8D079 /* PayItemView.m in Sources */,
+				26947324230A756100F3C20E /* UIButton+ClickEventTime.m in Sources */,
+				26947346230A758900F3C20E /* NSData+Addition.m in Sources */,
 				26EEAD1122FD441100D8D079 /* TZTestCell.m in Sources */,
 				2650AF8322EFEB36006C7784 /* ClassTableMainView.m in Sources */,
 				469E586F22D780A80077AE51 /* AppDelegate.m in Sources */,

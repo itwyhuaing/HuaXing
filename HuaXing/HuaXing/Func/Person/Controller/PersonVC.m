@@ -51,7 +51,7 @@
             weakSelf.preCacheData = info;
             ItemDataModel   *tmp_i = i;
             tmp_i.detailTxt = info;
-            NSLog(@"\n 缓存数据测试 %@ \n",info);
+            //NSLog(@"\n 缓存数据测试 %@ \n",info);
             [weakSelf.pv.listTable reloadData];
             
         }];

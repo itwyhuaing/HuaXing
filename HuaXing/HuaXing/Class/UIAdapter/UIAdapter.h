@@ -36,6 +36,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIFont *)font17;
 
+/**
+ 标题常用字体 - 加粗
+ 
+ @return 字体
+ */
++ (UIFont *)font17_Medium;
+
 #pragma mark ------ 项目常用几种颜色
 
 /**
@@ -60,6 +67,13 @@ NS_ASSUME_NONNULL_BEGIN
  @return 颜色
  */
 + (UIColor *)lineGray;
+
+/**
+ 主要用于普通背景颜色设置
+ 
+ @return 颜色
+ */
++ (UIColor *)normalBackgroudColorGray;
 
 /**
  主要用于分割线颜色设置
