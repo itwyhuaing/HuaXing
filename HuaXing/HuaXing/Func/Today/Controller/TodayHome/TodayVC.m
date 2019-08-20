@@ -7,6 +7,7 @@
 //
 
 #import "TodayVC.h"
+#import "HXNoteEditVC.h"
 #import "TodayBriefInfoView.h"
 #import "TodayNoteCell.h"
 #import "TodayDataManager.h"
@@ -108,6 +109,11 @@
     };
     rtnCell.editEventBlock = ^(NSString * _Nonnull cnt) {
         NSLog(@"\n 编辑备忘录 \n");
+        HXNoteEditVC *vc = [HXNoteEditVC new];
+        [self.navigationController pushViewController:vc animated:TRUE];
+    };
+    rtnCell.deleteEventBlock = ^(NSString * _Nonnull cnt) {
+        NSLog(@"\n 删除备忘录 \n");
     };
     // cell 样式
     rtnCell.selectionStyle = UITableViewCellSelectionStyleNone;

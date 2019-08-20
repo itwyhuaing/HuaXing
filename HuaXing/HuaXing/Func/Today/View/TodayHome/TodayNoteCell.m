@@ -22,6 +22,8 @@
 
 @property (nonatomic,strong) UIButton *editButton;
 
+@property (nonatomic,strong) UIButton *deleteButton;
+
 @property (nonatomic,strong) UIView   *line;
 
 @end
@@ -44,27 +46,27 @@
     [self.contentView addSubview:self.detailLabel];
     [self.contentView addSubview:self.unfoldButton];
     [self.contentView addSubview:self.editButton];
+    [self.contentView addSubview:self.deleteButton];
     //[self.contentView addSubview:self.line];
     
     self.themLabel.sd_layout
-    .topSpaceToView(self.contentView, 15.0 * [UIAdapter Scale47Width])
-    .leftSpaceToView(self.contentView, 10.0 * [UIAdapter Scale47Width])
+    .topSpaceToView(self.contentView, [UIAdapter lrGap])
+    .leftSpaceToView(self.contentView, [UIAdapter lrGap]/2.0)
     //.widthIs(33.0 * [UIAdapter Scale47Width])
     .heightIs(20.0 * [UIAdapter Scale47Width]);
     [self.themLabel setSingleLineAutoResizeWithMaxWidth:36.0 * [UIAdapter Scale47Width]];
     
     self.blockImageV.sd_layout
     .centerYEqualToView(self.themLabel)
-    .leftSpaceToView(self.themLabel, 10.0 * [UIAdapter Scale47Width])
-    .widthIs(10.0 * [UIAdapter Scale47Width])
-    .heightIs(10.0 * [UIAdapter Scale47Width]);
+    .leftSpaceToView(self.themLabel, [UIAdapter lrGap]/2.0)
+    .widthIs([UIAdapter lrGap]/2.0)
+    .heightEqualToWidth();
     
     self.briefLabel.sd_layout
     .centerYEqualToView(self.themLabel)
-    .leftSpaceToView(self.blockImageV, 10.0 * [UIAdapter Scale47Width])
-    .rightSpaceToView(self.contentView, 10.0 * [UIAdapter Scale47Width])
+    .leftSpaceToView(self.blockImageV, [UIAdapter lrGap]/2.0)
+    .rightSpaceToView(self.contentView, [UIAdapter lrGap]/2.0)
     .autoHeightRatio(0.f);
-    
     
     self.detailLabel.sd_layout
     .topSpaceToView(self.briefLabel, 6.0 * [UIAdapter Scale47Width])
@@ -87,55 +89,68 @@
     .leftSpaceToView(self.unfoldButton.titleLabel, 0.f)
     .heightRatioToView(self.unfoldButton, 0.8)
     .widthEqualToHeight();
+
+    self.deleteButton.sd_layout
+    .rightEqualToView(self.briefLabel)
+    .topEqualToView(self.unfoldButton)
+    .bottomEqualToView(self.unfoldButton)
+    .widthEqualToHeight();
+    self.deleteButton.imageView.sd_layout
+    .centerXEqualToView(self.deleteButton)
+    .centerYEqualToView(self.deleteButton)
+    .heightRatioToView(self.deleteButton, 0.66)
+    .widthEqualToHeight();
     
     self.editButton.sd_layout
+    .rightSpaceToView(self.deleteButton, [UIAdapter lrGap])
     .topEqualToView(self.unfoldButton)
-    .rightEqualToView(self.briefLabel)
-    .widthRatioToView(self.unfoldButton, 1.0)
-    .heightRatioToView(self.unfoldButton, 1.0);
-    self.editButton.imageView.sd_layout
-    .centerYEqualToView(self.editButton)
-    .heightRatioToView(self.editButton, 0.8)
-    .rightEqualToView(self.editButton)
+    .bottomEqualToView(self.unfoldButton)
     .widthEqualToHeight();
-    self.editButton.titleLabel.sd_layout
-    .topEqualToView(self.editButton)
-    .bottomEqualToView(self.editButton)
-    .leftEqualToView(self.editButton)
-    .rightSpaceToView(self.editButton.imageView, 0.f);
+    self.editButton.imageView.sd_layout
+    .centerXEqualToView(self.editButton)
+    .centerYEqualToView(self.editButton)
+    .heightRatioToView(self.editButton, 0.66)
+    .widthEqualToHeight();
     
     // 分割线
 //    self.line.sd_layout
-//    .topSpaceToView(self.unfoldButton, 10.0 * [UIAdapter Scale47Width])
+//    .topSpaceToView(self.unfoldButton, [UIAdapter lrGap])
 //    .leftEqualToView(self.contentView)
 //    .rightEqualToView(self.contentView)
 //    .heightIs(1.0);
 //    [self setupAutoHeightWithBottomView:self.line bottomMargin:0.f];
 
-    [self setupAutoHeightWithBottomView:self.unfoldButton bottomMargin:10.0 * [UIAdapter Scale47Width]];
+    [self setupAutoHeightWithBottomView:self.unfoldButton bottomMargin:[UIAdapter lrGap]];
     
     self.unfoldButton.custom_acceptEventInterval = .5;
     self.editButton.custom_acceptEventInterval   = .5;
     [self.unfoldButton addTarget:self action:@selector(clickEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self.editButton addTarget:self action:@selector(clickEvent:) forControlEvents:UIControlEventTouchUpInside];
+    [self.deleteButton addTarget:self action:@selector(clickEvent:) forControlEvents:UIControlEventTouchUpInside];
     
 //    self.themLabel.backgroundColor   = [UIColor purpleColor];
 //    self.briefLabel.backgroundColor  = [UIColor redColor];
 //    self.unfoldButton.backgroundColor = [UIColor orangeColor];
-//    self.editButton.backgroundColor  = [UIColor orangeColor];
+//    self.editButton.backgroundColor  = [UIColor redColor];
 //    self.editButton.titleLabel.backgroundColor = [UIColor cyanColor];
-//    self.editButton.imageView.backgroundColor = [UIColor redColor];
+//    self.editButton.imageView.backgroundColor = [UIColor purpleColor];
+//    self.deleteButton.backgroundColor = [UIColor redColor];
+//    self.deleteButton.imageView.backgroundColor = [UIColor purpleColor];
 }
 
 - (void)clickEvent:(UIButton *)btn {
-    NSString *showTxt = self.model.showInfo;
     if (btn.tag == TodayNoteCellEventTypeFold) {
         if (self.foldEventBlock) {
+            NSString *showTxt = self.model.showInfo;
             self.foldEventBlock(showTxt);
         }
-    }else {
+    }else if (btn.tag == TodayNoteCellEventTypeEdit){
         if (self.editEventBlock) {
-            self.editEventBlock(showTxt);
+            self.editEventBlock(@"");
+        }
+    }else if (btn.tag == TodayNoteCellEventTypeDelete){
+        if (self.deleteEventBlock) {
+            self.deleteEventBlock(@"");
         }
     }
 }
@@ -152,6 +167,7 @@
         [self.unfoldButton setTitle:@"展开" forState:UIControlStateNormal];
         [self.unfoldButton setImage:[UIImage imageNamed:model.foldImageName] forState:UIControlStateNormal];
         [self.editButton setImage:[UIImage imageNamed:@"today_note_edit"] forState:UIControlStateNormal];
+        [self.deleteButton setImage:[UIImage imageNamed:@"today_note_delete"] forState:UIControlStateNormal];
     }
 }
 
@@ -206,12 +222,17 @@
 -(UIButton *)editButton {
     if (!_editButton) {
         _editButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_editButton setTitleColor:[UIAdapter lightTintGray] forState:UIControlStateNormal];
-        _editButton.titleLabel.font = [UIFont systemFontOfSize:13.f];
         _editButton.tag = TodayNoteCellEventTypeEdit;
-        _editButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _editButton;
+}
+
+-(UIButton *)deleteButton {
+    if (!_deleteButton) {
+        _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _deleteButton.tag = TodayNoteCellEventTypeDelete;
+    }
+    return _deleteButton;
 }
 
 -(UIView *)line {

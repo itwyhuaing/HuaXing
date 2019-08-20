@@ -13,7 +13,7 @@
 
 @property (nonatomic,strong)    UILabel         *themLabel;
 @property (nonatomic,strong)    UILabel         *detailLabel;
-@property (nonatomic,strong)    UIImageView     *iconImgV;
+@property (nonatomic,strong)    UIImageView     *arrowImgV;
 
 @end
 
@@ -31,7 +31,7 @@
     UILabel *line = [UILabel new];
     [self.contentView addSubview:self.themLabel];
     [self.contentView addSubview:self.detailLabel];
-    [self.contentView addSubview:self.iconImgV];
+    [self.contentView addSubview:self.arrowImgV];
     [self.contentView addSubview:line];
     line.sd_layout
     .leftSpaceToView(self.contentView, [UIAdapter lrGap] * 2.0)
@@ -43,14 +43,14 @@
     .topEqualToView(self.contentView)
     .bottomEqualToView(line);
     [self.themLabel setSingleLineAutoResizeWithMaxWidth:100.0 * [UIAdapter Scale47Width]];
-    self.iconImgV.sd_layout
+    self.arrowImgV.sd_layout
     .rightSpaceToView(self.contentView, 24.0 * [UIAdapter Scale47Width])
     .widthIs(5.0 * [UIAdapter Scale47Width])
     .heightIs(9.0 * [UIAdapter Scale47Width])
     .centerYEqualToView(self.contentView);
     self.detailLabel.sd_layout
     .leftSpaceToView(self.themLabel, 10.0)
-    .rightSpaceToView(self.iconImgV, 10.0)
+    .rightSpaceToView(self.arrowImgV, 10.0)
     .topEqualToView(self.contentView)
     .bottomEqualToView(line);
     [self setupAutoHeightWithBottomView:self.themLabel bottomMargin:0.0];
@@ -68,10 +68,10 @@
         _data = data;
         self.themLabel.text = data.themTxt;
         self.detailLabel.text = data.detailTxt;
-        self.iconImgV.image = [UIImage imageNamed:data.rightIConName];
+        self.arrowImgV.image = [UIImage imageNamed:data.rightIConName];
         //        self.themLabel.backgroundColor = [UIColor redColor];
         //        self.detailLabel.backgroundColor = [UIColor orangeColor];
-        //        self.iconImgV.backgroundColor = [UIColor cyanColor];
+        //        self.arrowImgV.backgroundColor = [UIColor cyanColor];
     }
 }
 
@@ -89,11 +89,11 @@
     return _detailLabel;
 }
 
--(UIImageView *)iconImgV {
-    if (!_iconImgV) {
-        _iconImgV = [UIImageView new];
+-(UIImageView *)arrowImgV {
+    if (!_arrowImgV) {
+        _arrowImgV = [UIImageView new];
     }
-    return _iconImgV;
+    return _arrowImgV;
 }
 
 @end

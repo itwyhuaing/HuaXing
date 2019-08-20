@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef enum : NSUInteger {
     TodayNoteCellEventTypeFold = 990,
     TodayNoteCellEventTypeEdit,
+    TodayNoteCellEventTypeDelete,
 } TodayNoteCellEventType;
 
 typedef void(^TodayNoteEventBlock)(NSString *cnt);
@@ -24,6 +25,8 @@ typedef void(^TodayNoteEventBlock)(NSString *cnt);
 @property (nonatomic,copy)   TodayNoteEventBlock foldEventBlock;
 
 @property (nonatomic,copy)   TodayNoteEventBlock editEventBlock;
+
+@property (nonatomic,copy)   TodayNoteEventBlock deleteEventBlock;
 
 @end
 
