@@ -13,7 +13,6 @@
 		2617CF04230140A4005F4558 /* HXLaunchConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF03230140A4005F4558 /* HXLaunchConfig.m */; };
 		2617CF082301412B005F4558 /* HXShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF072301412B005F4558 /* HXShareManager.m */; };
 		2617CF0E230169B9005F4558 /* HXToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF0A230169B9005F4558 /* HXToast.m */; };
-		2617CF0F230169B9005F4558 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF0C230169B9005F4558 /* MBProgressHUD.m */; };
 		2617CF352306A180005F4558 /* LTSCalendarBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF1C2306A180005F4558 /* LTSCalendarBaseViewController.m */; };
 		2617CF362306A180005F4558 /* LTSCalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF1D2306A180005F4558 /* LTSCalendarManager.m */; };
 		2617CF372306A180005F4558 /* LTSCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2617CF1E2306A180005F4558 /* LTSCalendarDayView.m */; };
@@ -95,6 +94,7 @@
 		26EEAD4322FD820300D8D079 /* PaySupportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEAD4222FD820300D8D079 /* PaySupportVC.m */; };
 		26EEAD4622FD823000D8D079 /* PaySupportView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEAD4522FD823000D8D079 /* PaySupportView.m */; };
 		26EEAD4922FD824A00D8D079 /* PayItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEAD4822FD824A00D8D079 /* PayItemView.m */; };
+		464E1EE7230C265A0064DB86 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E1EE6230C265A0064DB86 /* MBProgressHUD.m */; };
 		469E585A22D77F580077AE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E585922D77F580077AE51 /* Assets.xcassets */; };
 		469E585D22D77F580077AE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469E585B22D77F580077AE51 /* LaunchScreen.storyboard */; };
 		469E586022D77F580077AE51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 469E585F22D77F580077AE51 /* main.m */; };
@@ -122,8 +122,6 @@
 		2617CF072301412B005F4558 /* HXShareManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXShareManager.m; sourceTree = "<group>"; };
 		2617CF09230169B8005F4558 /* HXToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXToast.h; sourceTree = "<group>"; };
 		2617CF0A230169B9005F4558 /* HXToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXToast.m; sourceTree = "<group>"; };
-		2617CF0C230169B9005F4558 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		2617CF0D230169B9005F4558 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		2617CF1C2306A180005F4558 /* LTSCalendarBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarBaseViewController.m; sourceTree = "<group>"; };
 		2617CF1D2306A180005F4558 /* LTSCalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarManager.m; sourceTree = "<group>"; };
 		2617CF1E2306A180005F4558 /* LTSCalendarDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTSCalendarDayView.m; sourceTree = "<group>"; };
@@ -282,6 +280,8 @@
 		26EEAD4522FD823000D8D079 /* PaySupportView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaySupportView.m; sourceTree = "<group>"; };
 		26EEAD4722FD824A00D8D079 /* PayItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayItemView.h; sourceTree = "<group>"; };
 		26EEAD4822FD824A00D8D079 /* PayItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayItemView.m; sourceTree = "<group>"; };
+		464E1EE5230C265A0064DB86 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		464E1EE6230C265A0064DB86 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		469E584D22D77F560077AE51 /* HuaXing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HuaXing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469E585922D77F580077AE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		469E585C22D77F580077AE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -342,8 +342,8 @@
 		2617CF0B230169B9005F4558 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				2617CF0C230169B9005F4558 /* MBProgressHUD.m */,
-				2617CF0D230169B9005F4558 /* MBProgressHUD.h */,
+				464E1EE5230C265A0064DB86 /* MBProgressHUD.h */,
+				464E1EE6230C265A0064DB86 /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
 			sourceTree = "<group>";
@@ -1195,7 +1195,6 @@
 				26EEACC422F8307C00D8D079 /* HXCourseItemsPKV.m in Sources */,
 				469E586022D77F580077AE51 /* main.m in Sources */,
 				26947344230A758900F3C20E /* NSMutableDictionary+Addition.m in Sources */,
-				2617CF0F230169B9005F4558 /* MBProgressHUD.m in Sources */,
 				2650AFBE22F2872B006C7784 /* SequenceHeaderView.m in Sources */,
 				2650AFCB22F42CD3006C7784 /* AddCourseModel.m in Sources */,
 				26EEACDE22FBC82F00D8D079 /* BriefInfoHeaderView.m in Sources */,
@@ -1212,6 +1211,7 @@
 				2617CF352306A180005F4558 /* LTSCalendarBaseViewController.m in Sources */,
 				2617CF3A2306A180005F4558 /* LTSCalendarAppearance.m in Sources */,
 				2617CF3F2306A180005F4558 /* LTSCalendarWeekView.m in Sources */,
+				464E1EE7230C265A0064DB86 /* MBProgressHUD.m in Sources */,
 				2617CF04230140A4005F4558 /* HXLaunchConfig.m in Sources */,
 				26EEAD3E22FD6FFF00D8D079 /* HXUtil.m in Sources */,
 				2617CF372306A180005F4558 /* LTSCalendarDayView.m in Sources */,
