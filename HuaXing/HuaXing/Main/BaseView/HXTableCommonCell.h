@@ -25,6 +25,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HXTableCommonCell : UITableViewCell
 
+@property (nonatomic,strong,readonly)    UIImageView     *leftIcon;
+
+@property (nonatomic,strong,readonly)    UILabel         *themLabel;
+
+@property (nonatomic,strong,readonly)    UILabel         *detailLabel;
+
+@property (nonatomic,strong,readonly)    UIImageView     *righIcon;
+
+@property (nonatomic,strong,readonly)    UIView          *line;
+
++ (CGFloat)cellHeight;
+
 @property (nonatomic,strong) CommonCellTypeModel *model;
 
 @end

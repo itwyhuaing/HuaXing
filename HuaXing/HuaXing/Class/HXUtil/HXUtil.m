@@ -51,4 +51,14 @@
 }
 
 
++(int)randomFrom:(int)from to:(int)to closed:(BOOL)closed {
+    int rlt;
+    if (closed) {
+        rlt = (int)(from + arc4random() % (to - from + 1));
+    }else{
+        rlt = (int)(from + arc4random() % (to - from));
+    }
+    return rlt;
+}
+
 @end

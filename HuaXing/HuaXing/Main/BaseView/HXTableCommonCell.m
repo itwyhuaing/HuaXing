@@ -23,15 +23,15 @@
 
 @interface HXTableCommonCell ()
 
-@property (nonatomic,strong)    UIImageView     *leftIcon;
+@property (nonatomic,strong,readwrite)    UIImageView     *leftIcon;
 
-@property (nonatomic,strong)    UILabel         *themLabel;
+@property (nonatomic,strong,readwrite)    UILabel         *themLabel;
 
-@property (nonatomic,strong)    UILabel         *detailLabel;
+@property (nonatomic,strong,readwrite)    UILabel         *detailLabel;
 
-@property (nonatomic,strong)    UIImageView     *righIcon;
+@property (nonatomic,strong,readwrite)    UIImageView     *righIcon;
 
-@property (nonatomic,strong)    UIView          *line;
+@property (nonatomic,strong,readwrite)    UIView          *line;
 
 @end
 
@@ -86,6 +86,10 @@
     .bottomSpaceToView(self.contentView, 1.0)
     .leftSpaceToView(self.leftIcon, 10.0 * [UIAdapter Scale47Width]);
     [self.themLabel setSingleLineAutoResizeWithMaxWidth:100.0 * [UIAdapter Scale47Width]];
+}
+
++ (CGFloat)cellHeight {
+    return 44.0;
 }
 
 -(void)setModel:(CommonCellTypeModel *)model {

@@ -23,6 +23,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)gotoAppStoreEvaluteWithAppID:(NSString *)appID;
 
+/**
+ 获取随机数
+
+ @param from 起始值
+ @param to   终止值
+ @param closed 是否闭合
+ @return 返回随机数
+ */
++ (int)randomFrom:(int)from to:(int)to closed:(BOOL)closed;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -6,6 +6,10 @@
 //  Copyright © 2019 HuaXing. All rights reserved.
 //
 
+/**
+ 2019.8.21 
+ */
+
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -23,6 +27,14 @@ static NSString *dateFormat_md_V  = @"MM/dd";
 + (instancetype)shareInstance;
 
 - (NSString *)getCurrentDate;
+
+
+/**
+ 获取当前时间 - 返回结果格式: xx:xx
+
+ @return 返回当前设备系统时间
+ */
+- (NSString *)getCurrentTime;
 
 - (NSString *)getTheYearWithDateString:(NSString *)dateStr;
 

@@ -58,8 +58,8 @@
 		26947368230BE6B700F3C20E /* TodayNoteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26947364230BE6B600F3C20E /* TodayNoteCell.m */; };
 		2694736F230BE6DA00F3C20E /* HXNoteEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2694736A230BE6D900F3C20E /* HXNoteEditVC.m */; };
 		26947370230BE6DA00F3C20E /* TodayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2694736D230BE6D900F3C20E /* TodayVC.m */; };
-		26947373230BFEEE00F3C20E /* AddNoteNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26947372230BFEEE00F3C20E /* AddNoteNameCell.m */; };
-		26947376230BFF2300F3C20E /* AddNoteTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26947375230BFF2300F3C20E /* AddNoteTimeCell.m */; };
+		26947379230CEAA400F3C20E /* HXInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26947378230CEAA400F3C20E /* HXInputView.m */; };
+		2694737C230D280B00F3C20E /* AddNoteTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2694737B230D280B00F3C20E /* AddNoteTimeCell.m */; };
 		26E0B13922EAE62E005BE40D /* CourseConfigVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B12722EAE62E005BE40D /* CourseConfigVC.m */; };
 		26E0B13A22EAE62E005BE40D /* CourseGridVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B12A22EAE62E005BE40D /* CourseGridVC.m */; };
 		26E0B13B22EAE62E005BE40D /* ItemTimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B12C22EAE62E005BE40D /* ItemTimeModel.m */; };
@@ -214,10 +214,10 @@
 		2694736B230BE6D900F3C20E /* HXNoteEditVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXNoteEditVC.h; sourceTree = "<group>"; };
 		2694736D230BE6D900F3C20E /* TodayVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayVC.m; sourceTree = "<group>"; };
 		2694736E230BE6D900F3C20E /* TodayVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayVC.h; sourceTree = "<group>"; };
-		26947371230BFEEE00F3C20E /* AddNoteNameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddNoteNameCell.h; sourceTree = "<group>"; };
-		26947372230BFEEE00F3C20E /* AddNoteNameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddNoteNameCell.m; sourceTree = "<group>"; };
-		26947374230BFF2300F3C20E /* AddNoteTimeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddNoteTimeCell.h; sourceTree = "<group>"; };
-		26947375230BFF2300F3C20E /* AddNoteTimeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddNoteTimeCell.m; sourceTree = "<group>"; };
+		26947377230CEAA400F3C20E /* HXInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HXInputView.h; sourceTree = "<group>"; };
+		26947378230CEAA400F3C20E /* HXInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HXInputView.m; sourceTree = "<group>"; };
+		2694737A230D280B00F3C20E /* AddNoteTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNoteTimeCell.h; sourceTree = "<group>"; };
+		2694737B230D280B00F3C20E /* AddNoteTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNoteTimeCell.m; sourceTree = "<group>"; };
 		26E0B12722EAE62E005BE40D /* CourseConfigVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseConfigVC.m; sourceTree = "<group>"; };
 		26E0B12822EAE62E005BE40D /* CourseGridVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseGridVC.h; sourceTree = "<group>"; };
 		26E0B12922EAE62E005BE40D /* CourseConfigVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseConfigVC.h; sourceTree = "<group>"; };
@@ -541,10 +541,10 @@
 			children = (
 				2694735E230BE6B600F3C20E /* AddNoteView.h */,
 				2694735C230BE6B600F3C20E /* AddNoteView.m */,
-				26947371230BFEEE00F3C20E /* AddNoteNameCell.h */,
-				26947372230BFEEE00F3C20E /* AddNoteNameCell.m */,
-				26947374230BFF2300F3C20E /* AddNoteTimeCell.h */,
-				26947375230BFF2300F3C20E /* AddNoteTimeCell.m */,
+				2694737A230D280B00F3C20E /* AddNoteTimeCell.h */,
+				2694737B230D280B00F3C20E /* AddNoteTimeCell.m */,
+				26947377230CEAA400F3C20E /* HXInputView.h */,
+				26947378230CEAA400F3C20E /* HXInputView.m */,
 			);
 			path = AddNoteView;
 			sourceTree = "<group>";
@@ -1158,7 +1158,7 @@
 				26EEAD4622FD823000D8D079 /* PaySupportView.m in Sources */,
 				26EEACB622F7D39D00D8D079 /* JXFileManager.m in Sources */,
 				2617CF362306A180005F4558 /* LTSCalendarManager.m in Sources */,
-				26947376230BFF2300F3C20E /* AddNoteTimeCell.m in Sources */,
+				2694737C230D280B00F3C20E /* AddNoteTimeCell.m in Sources */,
 				2617CF392306A180005F4558 /* LTSCircleView.m in Sources */,
 				26EEACF922FD0DEF00D8D079 /* HXWebController.m in Sources */,
 				2650AFAE22F1A0AC006C7784 /* ClassTableHeaderView.m in Sources */,
@@ -1183,6 +1183,7 @@
 				26EEAD0322FD428F00D8D079 /* FeedBackVC.m in Sources */,
 				26EEAD0A22FD429E00D8D079 /* IdeaBackSuccessView.m in Sources */,
 				2617CF3C2306A180005F4558 /* LTSCalendarView.m in Sources */,
+				26947379230CEAA400F3C20E /* HXInputView.m in Sources */,
 				26EEACD222FBBA3900D8D079 /* UseHelpVC.m in Sources */,
 				46BC169922DA347A00A70F23 /* UIAdapter.m in Sources */,
 				26024BEE22D8A1FD00143425 /* HXBaseVC.m in Sources */,
@@ -1207,7 +1208,6 @@
 				26EEACC522F8307C00D8D079 /* HXDatePickView.m in Sources */,
 				2617CF3B2306A180005F4558 /* LTSCalendarDataCache.m in Sources */,
 				26E0B13B22EAE62E005BE40D /* ItemTimeModel.m in Sources */,
-				26947373230BFEEE00F3C20E /* AddNoteNameCell.m in Sources */,
 				2617CF352306A180005F4558 /* LTSCalendarBaseViewController.m in Sources */,
 				2617CF3A2306A180005F4558 /* LTSCalendarAppearance.m in Sources */,
 				2617CF3F2306A180005F4558 /* LTSCalendarWeekView.m in Sources */,

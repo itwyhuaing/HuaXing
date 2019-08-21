@@ -12,7 +12,7 @@
 #import "TodayNoteCell.h"
 #import "TodayDataManager.h"
 
-@interface TodayVC ()
+@interface TodayVC ()<HXNoteEditVCDelegate>
 {
     NSMutableDictionary *eventsByDate;
 }
@@ -32,6 +32,10 @@
     [self addOtherSubViews];
     //[self createRandomEvents]; 可用来处理节日
     self.dataSource = [self generateData];
+    
+    [self.dataManager orderedByTimeWithDataSource:self.dataSource];
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -47,6 +51,17 @@
 
 - (void)backToToday {
     [self.calendarView backToToday];
+}
+
+#pragma mark --- HXNoteEditVCDelegate
+
+-(void)hxNoteEditVC:(HXNoteEditVC *)vc popWithModel:(TodayNoteModel *)model {
+    if (model) {
+        NSMutableArray *tmp = [[NSMutableArray alloc] initWithArray:self.dataSource];
+        [tmp insertObject:model atIndex:0];
+        self.dataSource = tmp;
+        [self.calendarView.tableView reloadData];
+    }
 }
 
 #pragma mark --- LTSCalendarEventSource
@@ -109,7 +124,10 @@
     };
     rtnCell.editEventBlock = ^(NSString * _Nonnull cnt) {
         NSLog(@"\n 编辑备忘录 \n");
+        TodayNoteModel *f = self.dataSource[indexPath.row];
         HXNoteEditVC *vc = [HXNoteEditVC new];
+        vc.model = f;
+        vc.delegate = (id)self;
         [self.navigationController pushViewController:vc animated:TRUE];
     };
     rtnCell.deleteEventBlock = ^(NSString * _Nonnull cnt) {
@@ -225,13 +243,37 @@
     return _dataManager;
 }
 
+
+
 - (NSArray *)generateData {
     NSMutableArray *rlt = [NSMutableArray new];
-    for (NSInteger cou = 0; cou < 80; cou ++) {
+    for (NSInteger cou = 0; cou < 8; cou ++) {
         TodayNoteModel *f = [TodayNoteModel new];
+        NSInteger hour = [HXUtil randomFrom:10 to:23 closed:TRUE];
+        NSInteger min  = [HXUtil randomFrom:10 to:59 closed:TRUE];
+        f.time = [NSString stringWithFormat:@"%ld:%ld",hour,min];
+        f.briefInfo = @"中国ETC服务平台正式上线运营";
+        f.detailInfo = @"中国ETC服务平台于8月18日正式上线提供服务，车主可通过国务院客户端小程序ETC服务专区或交通运输部官方微信ETC服务平台免费在线申办ETC。";
+        f.showInfo = @"";
+        f.foldImageName = @"today_unfold";
         [rlt addObject:f];
     }
-    return rlt;
+    NSArray *tmp = [self.dataManager orderedByTimeWithDataSource:rlt];
+    
+    NSLog(@"\n 排序前 ==================== \n");
+    [self printWithDta:rlt];
+    NSLog(@"\n 排序后 ==================== \n");
+    [self printWithDta:tmp];
+    return tmp;
+}
+
+- (void)printWithDta:(NSArray *)data {
+    if (data) {
+        for (NSInteger cou = 0; cou < data.count; cou ++) {
+            TodayNoteModel *f = data[cou];
+            NSLog(@"%@",f.time);
+        }
+    }
 }
 
 @end

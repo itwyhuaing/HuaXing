@@ -27,6 +27,20 @@
     return rlt;
 }
 
+- (NSString *)getCurrentTime {
+    NSString *rlt;
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *comps = [calendar components:NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond fromDate:[NSDate date]];
+    NSInteger hour = [comps hour];
+    NSInteger min  = [comps minute];
+    if (min <= 9) {
+        rlt = [NSString stringWithFormat:@"%ld:0%ld",hour,min];
+    }else {
+        rlt = [NSString stringWithFormat:@"%ld:%ld",hour,min];
+    }
+    return rlt;
+}
+
 - (NSString *)getTheYearWithDateString:(NSString *)dateStr {
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     //字符串转时间
