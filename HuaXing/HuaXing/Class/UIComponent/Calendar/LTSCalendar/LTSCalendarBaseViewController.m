@@ -44,18 +44,13 @@
     
 }
 // 该日期是否有事件
-- (BOOL)calendarHaveEvent:(LTSCalendarManager *)calendar date:(NSDate *)date
-{
+- (BOOL)calendarHaveEvent:(LTSCalendarManager *)calendar date:(NSDate *)date {
     return NO;
 }
 //当前 选中的日期  执行的方法
-- (void)calendarDidDateSelected:(LTSCalendarManager *)calendar date:(NSDate *)date
-{
+- (void)calendarDidDateSelected:(LTSCalendarManager *)calendar date:(NSDate *)date {
     
 }
-
-
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 150;
@@ -84,7 +79,7 @@
     CGFloat startSingleOriginY = self.calendarView.calendar.calendarAppearance.weekDayHeight*5;
     
     self.calendarView.dragEndOffectY  = scrollView.contentOffset.y;
-    //<0方向向上 >0 方向向下
+    // < 0 方向向上    >0 方向向下
     
     //用于判断滑动方向
     CGFloat distance = self.calendarView.dragStartOffectY - self.calendarView.dragEndOffectY;
@@ -118,7 +113,7 @@
     CGFloat startSingleOriginY = self.calendarView.calendar.calendarAppearance.weekDayHeight*5;
     
     self.calendarView.dragEndOffectY  = scrollView.contentOffset.y;
-    //<0方向向上 >0 方向向下
+    // < 0 方向向上   >0 方向向下
     CGFloat distance = self.calendarView.dragStartOffectY - self.calendarView.dragEndOffectY;
     
     

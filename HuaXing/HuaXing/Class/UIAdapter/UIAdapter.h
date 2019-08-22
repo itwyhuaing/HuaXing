@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *)normalBackgroudColorGray;
 
 /**
- 主要用于分割线颜色设置
+ 主要用于灰色字体颜色设置
  
  @return 颜色
  */

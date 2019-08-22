@@ -32,10 +32,7 @@
     [self addOtherSubViews];
     //[self createRandomEvents]; 可用来处理节日
     self.dataSource = [self generateData];
-    
     [self.dataManager orderedByTimeWithDataSource:self.dataSource];
-    
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -43,7 +40,7 @@
     [self setupNav];
 }
 
-#pragma mark --- event
+#pragma mark --- target
 
 - (void)basePopVC {
     [self.navigationController popViewControllerAnimated:FALSE];
@@ -51,6 +48,11 @@
 
 - (void)backToToday {
     [self.calendarView backToToday];
+}
+
+- (void)addNote {
+    HXNoteEditVC *vc = [HXNoteEditVC new];
+    [self.navigationController pushViewController:vc animated:TRUE];
 }
 
 #pragma mark --- HXNoteEditVCDelegate
@@ -172,25 +174,10 @@
                                                                       NSFontAttributeName:[UIFont boldSystemFontOfSize:17.0],
                                                                       NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
-    UIImageView *todayImageV = [[UIImageView alloc] init];
-    [todayImageV setImage:[UIImage imageNamed:@"today_nav_icon"]];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backToToday)];
-    todayImageV.userInteractionEnabled = TRUE;
-    [todayImageV addGestureRecognizer:tap];
-    UIBarButtonItem *confirmItem = [[UIBarButtonItem alloc] initWithCustomView:todayImageV];
-    self.navigationItem.rightBarButtonItems = @[confirmItem];
+    UIBarButtonItem *todayItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"today_nav_today"] style:UIBarButtonItemStylePlain target:self action:@selector(backToToday)];
+    UIBarButtonItem *addItem   = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"today_nav_add"] style:UIBarButtonItemStylePlain target:self action:@selector(addNote)];
+    self.navigationItem.rightBarButtonItems = @[addItem,todayItem];;
     
-//    todayImageV.backgroundColor = [UIColor orangeColor];
-    
-    // 原生返回按钮
-    if (self.navigationController.viewControllers.count > 1) {
-        [self customNavBackItem];
-    }
-}
-
-- (void)customNavBackItem{
-    UIBarButtonItem *customBackItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_back_white"] style:UIBarButtonItemStylePlain target:self action:@selector(basePopVC)];
-    self.navigationItem.leftBarButtonItem = customBackItem;
 }
 
 -(void)lts_InitUI {
@@ -201,15 +188,22 @@
     CGRect  briefInfoFrame = self.todayInfoView.frame;
     CGFloat h_offset = CGRectGetMaxY(viewFrame) - y_min;
     self.calendarView.frame = CGRectMake(0, CGRectGetMaxY(self.todayInfoView.frame), CGRectGetWidth(viewFrame), CGRectGetHeight(viewFrame) - h_offset - CGRectGetHeight(briefInfoFrame));
-    self.calendarView.calendar.calendarAppearance.weekDayFormat = LTSCalendarWeekDayFormatShort;
+    self.calendarView.calendar.calendarAppearance.weekDayFormat = LTSCalendarWeekDayFormatZHFull;//LTSCalendarWeekDayFormatShort;
     self.calendarView.calendar.calendarAppearance.firstWeekday = 2;
     self.calendarView.calendar.calendarAppearance.isShowLunarCalender = !self.calendarView.calendar.calendarAppearance.isShowLunarCalender;
     self.calendarView.tableView.bounces = FALSE;
     self.calendarView.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//    self.calendarView.calendar.calendarAppearance.backgroundColor = [UIColor whiteColor];
-//    self.calendarView.calendar.calendarAppearance.weekDayTextColor = [UIColor greenColor];
-//    self.calendarView.calendar.calendarAppearance.dayTextColorOtherMonth = [UIColor blueColor];
-//    self.calendarView.calendar.calendarAppearance.lunarDayTextColorOtherMonth = [UIColor purpleColor];
+    
+    self.calendarView.calendar.calendarAppearance.backgroundColor                   = [UIColor whiteColor];
+    self.calendarView.calendar.calendarAppearance.weekDayTextColor                  = [UIAdapter mainBlue];
+    self.calendarView.calendar.calendarAppearance.dayTextColor                      = [UIAdapter lightTintBlack];
+    self.calendarView.calendar.calendarAppearance.lunarDayTextColor                 = [UIAdapter lightTintBlack];
+    self.calendarView.calendar.calendarAppearance.dayTextColorOtherMonth            = [UIAdapter lightTintGray];
+    self.calendarView.calendar.calendarAppearance.lunarDayTextColorOtherMonth       = [UIAdapter lightTintGray];
+    self.calendarView.calendar.calendarAppearance.dayBorderColorToday               = [UIAdapter mainBlue];
+    self.calendarView.calendar.calendarAppearance.dayCircleColorToday               = [UIAdapter mainBlue];
+    self.calendarView.calendar.calendarAppearance.dayCircleColorSelected            = [UIAdapter mainBlue];
+    self.calendarView.calendar.calendarAppearance.dayCircleSize                     = 39.f;
     
     [self.calendarView.calendar reloadAppearance];
 }
@@ -220,8 +214,7 @@
 
 - (void)modifyTodayBriefInfoWithCurDate:(NSDate *)date {
     NSString *global = [[self dateFormatter] stringFromDate:date];
-    NSString *chinese = [self.dataManager getChineseCalendarWithDate:global];
-    //NSLog(@"\n 数据测试 ：\n %@ \n %@ \n",global,chinese);
+    NSString *chinese = [[JXDateManager shareInstance] getChineseCalendarWithDate:global];
     NSString *global_cnt = [NSString stringWithFormat:@"阳历 %@",global];
     NSString *chinese_cnt = [NSString stringWithFormat:@"农历 %@",chinese];
     self.todayInfoView.cnts = @[global_cnt,chinese_cnt];
@@ -231,7 +224,6 @@
     if (!_todayInfoView) {
         CGRect  viewFrame = self.view.frame;
         _todayInfoView = [[TodayBriefInfoView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(viewFrame), [TodayBriefInfoView minHeight])];
-        _todayInfoView.cnts = @[@"阳历 2019年8月16日",@"农历 七月十六 辛丑 兔年"];
     }
     return _todayInfoView;
 }
@@ -242,7 +234,6 @@
     }
     return _dataManager;
 }
-
 
 
 - (NSArray *)generateData {

@@ -58,6 +58,17 @@ static NSArray *cacheDaysOfWeeks;
     
     switch(self.calendarManager.calendarAppearance.weekDayFormat) {
         case LTSCalendarWeekDayFormatSingle:
+            /**
+             (
+             S,
+             M,
+             T,
+             W,
+             T,
+             F,
+             S
+             )
+             */
             days = [[dateFormatter veryShortStandaloneWeekdaySymbols] mutableCopy];
             break;
         case LTSCalendarWeekDayFormatShort:
@@ -65,6 +76,13 @@ static NSArray *cacheDaysOfWeeks;
             break;
         case LTSCalendarWeekDayFormatFull:
             days = [[dateFormatter standaloneWeekdaySymbols] mutableCopy];
+            break;
+            
+        case LTSCalendarWeekDayFormatZHShort:
+            days = [@[@"日",@"一",@"二",@"三",@"四",@"五",@"六"] mutableCopy];
+            break;
+        case LTSCalendarWeekDayFormatZHFull:
+            days = [@[@"周日",@"周一",@"周二",@"周三",@"周四",@"周五",@"周六"] mutableCopy];
             break;
     }
     

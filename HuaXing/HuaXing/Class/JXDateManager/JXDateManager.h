@@ -46,6 +46,15 @@ static NSString *dateFormat_md_V  = @"MM/dd";
 
 - (NSArray *)getWeekDaysWithStartDate:(NSString *)startDate endDate:(NSString *)endDate;
 
+
+/**
+ 给定日期字符串转换为相应的农历年月信息
+
+ @param date 阳历日期,格式为 (年.月.日)、(年/月/日)、(年-月-日)
+ @return 农历年月信息
+ */
+-(NSString *)getChineseCalendarWithDate:(NSString *)date;
+
 @end
 
 NS_ASSUME_NONNULL_END

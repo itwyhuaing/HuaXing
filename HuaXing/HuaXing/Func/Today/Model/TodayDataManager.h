@@ -13,8 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TodayDataManager : NSObject
 
--(NSString *)getChineseCalendarWithDate:(NSString *)date;
-
 - (NSArray *)orderedByTimeWithDataSource:(NSArray<TodayNoteModel *> *)dataSource;
 
 @end

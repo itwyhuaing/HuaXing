@@ -11,7 +11,11 @@
 typedef NS_ENUM(NSInteger, LTSCalendarWeekDayFormat) {
     LTSCalendarWeekDayFormatSingle,
     LTSCalendarWeekDayFormatShort,
-    LTSCalendarWeekDayFormatFull
+    LTSCalendarWeekDayFormatFull,
+
+#pragma mark - rain 新增
+    LTSCalendarWeekDayFormatZHShort,
+    LTSCalendarWeekDayFormatZHFull,
 };
 
 

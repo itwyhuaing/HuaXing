@@ -82,19 +82,17 @@
    
     
     UIView *headerView = [UIView new];
-    
     headerView.backgroundColor = [UIColor clearColor];
     [headerView addSubview:contentView];
     [headerView addSubview:weekView];
-    
     self.headerView = headerView;
+    
+#pragma mark - rain 新增
+    headerView.layer.borderColor = [UIAdapter lineGray].CGColor;
+    headerView.layer.borderWidth = 1.f;
     
     self.tableView.tableHeaderView = headerView;
     self.tableView.backgroundColor = [UIColor clearColor];
-    
-    
-    
-    //    view.backgroundColor = [UIColor grayColor];
     
     [self.calendar.calendarAppearance addObserver:self forKeyPath:@"weekDayHeight" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:nil];
    
@@ -137,7 +135,7 @@
     self.calendar.calendarAppearance.isShowLunarCalender = NO;
     self.calendar.calendarAppearance.dayDotSize = 6;
     self.calendar.calendarAppearance.dayCircleSize = 30;
-//    self.calendar.calendarAppearance.dayBorderColorToday = [UIColor clearColor];
+    self.calendar.calendarAppearance.dayBorderColorToday = [UIColor clearColor];
     self.calendar.calendarAppearance.weekDayHeight = 40;
     
     [self.calendar reloadAppearance];
