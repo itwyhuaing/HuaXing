@@ -74,19 +74,19 @@
         _items = [NSMutableArray new];
         NSDictionary *dic1 = @{
                                CYLTabBarItemTitle:@"今日",
-                               CYLTabBarItemImage:@"tab_sun_normal",
-                               CYLTabBarItemSelectedImage:@"tab_sun_press"
+                               CYLTabBarItemImage:@"tab_today_normal",
+                               CYLTabBarItemSelectedImage:@"tab_today_press"
                                };
         NSDictionary *dic2 = @{
                                CYLTabBarItemTitle:@"格子",
-                               CYLTabBarItemImage:@"tab_grid_normal",
-                               CYLTabBarItemSelectedImage:@"tab_grid_pressed"
+                               CYLTabBarItemImage:@"tab_table_normal",
+                               CYLTabBarItemSelectedImage:@"tab_table_press"
                                };
         
         NSDictionary *dic3 = @{
                                CYLTabBarItemTitle:@"我的",
-                               CYLTabBarItemImage:@"tab_my_normal",
-                               CYLTabBarItemSelectedImage:@"tab_my_pressed"
+                               CYLTabBarItemImage:@"tab_person_normal",
+                               CYLTabBarItemSelectedImage:@"tab_person_press"
                                };
         [_items addObjectsFromArray:@[dic1,dic2,dic3]];
     }

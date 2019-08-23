@@ -90,12 +90,14 @@
 
 #pragma mark ------ setter
 
--(void)setModel:(TodayNoteModel *)model {
-    if (model) {
+-(void)setCarriedNoteModel:(TodayNoteModel *)carriedNoteModel {
+    if (carriedNoteModel) {
+        _carriedNoteModel = carriedNoteModel;
         // 绑定数据
-        self.inputNoteModel = model;
+        self.inputNoteModel = [TodayNoteModel mj_objectWithKeyValues:[carriedNoteModel mj_keyValues]];
         // UI 填充
-        [self.adv handleWithThem:model.briefInfo detail:model.detailInfo];
+        [self.adv handleWithThem:carriedNoteModel.briefInfo detail:carriedNoteModel.detailInfo];
+        self.adv.model.detail = carriedNoteModel.time;
     }
 }
 

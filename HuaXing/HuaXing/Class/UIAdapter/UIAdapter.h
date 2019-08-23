@@ -10,6 +10,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ 图片 ： 灰色色值 #EAEAEA
+        主题色  #3FA2FF
+ 
+ 分割线：灰色色值 #EDEDED
+ 
+ 背景色：灰色色值 #F6F6F6
+ 
+ 字体 ：灰色色值 #999999 #333333
+ */
+
 @interface UIAdapter : NSObject
 
 

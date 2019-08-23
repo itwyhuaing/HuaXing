@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,weak) id <HXNoteEditVCDelegate> delegate;
 
 // 修改场景中需要携带模型数据源
-@property (nonatomic,strong) TodayNoteModel *model;
+@property (nonatomic,strong) TodayNoteModel *carriedNoteModel;
 
 @end
 

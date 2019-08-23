@@ -51,7 +51,7 @@
 }
 
 + (UIColor *)normalBackgroudColorGray {
-    return [UIColor colorWithHexString:@"#fafafa" alpha:1.0];
+    return [UIColor colorWithHexString:@"#F6F6F6" alpha:1.0];
 }
 
 + (UIColor *)lightTintBlack {

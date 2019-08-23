@@ -52,6 +52,7 @@
 
 - (void)addNote {
     HXNoteEditVC *vc = [HXNoteEditVC new];
+    vc.delegate = (id)self;
     [self.navigationController pushViewController:vc animated:TRUE];
 }
 
@@ -60,8 +61,8 @@
 -(void)hxNoteEditVC:(HXNoteEditVC *)vc popWithModel:(TodayNoteModel *)model {
     if (model) {
         NSMutableArray *tmp = [[NSMutableArray alloc] initWithArray:self.dataSource];
-        [tmp insertObject:model atIndex:0];
-        self.dataSource = tmp;
+        [tmp addObject:model];
+        self.dataSource = [self.dataManager orderedByTimeWithDataSource:tmp];
         [self.calendarView.tableView reloadData];
     }
 }
@@ -120,20 +121,24 @@
     // cell 点击事件
     rtnCell.foldEventBlock = ^(NSString * _Nonnull cnt) {
         TodayNoteModel *f = self.dataSource[indexPath.row];
-        f.showInfo = cnt.length <= 0 ? f.detailInfo : @"";
-        f.foldImageName = cnt.length <= 0 ? @"today_fold" : @"today_unfold";
+        f.foldStatus = !f.foldStatus;
         [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     };
     rtnCell.editEventBlock = ^(NSString * _Nonnull cnt) {
         NSLog(@"\n 编辑备忘录 \n");
         TodayNoteModel *f = self.dataSource[indexPath.row];
         HXNoteEditVC *vc = [HXNoteEditVC new];
-        vc.model = f;
+        vc.carriedNoteModel = f;
         vc.delegate = (id)self;
         [self.navigationController pushViewController:vc animated:TRUE];
     };
     rtnCell.deleteEventBlock = ^(NSString * _Nonnull cnt) {
         NSLog(@"\n 删除备忘录 \n");
+        TodayNoteModel *f = self.dataSource[indexPath.row];
+        NSMutableArray *tmp = [[NSMutableArray alloc] initWithArray:self.dataSource];
+        [tmp removeObject:f];
+        self.dataSource = tmp;
+        [self.calendarView.tableView reloadData];
     };
     // cell 样式
     rtnCell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -238,31 +243,26 @@
 
 - (NSArray *)generateData {
     NSMutableArray *rlt = [NSMutableArray new];
-    for (NSInteger cou = 0; cou < 8; cou ++) {
+    for (NSInteger cou = 0; cou < 9; cou ++) {
         TodayNoteModel *f = [TodayNoteModel new];
-        NSInteger hour = [HXUtil randomFrom:10 to:23 closed:TRUE];
-        NSInteger min  = [HXUtil randomFrom:10 to:59 closed:TRUE];
+        NSInteger hour = [HXUtil randomFrom:0 to:23 closed:TRUE];
+        NSInteger min  = [HXUtil randomFrom:0 to:59 closed:TRUE];
         f.time = [NSString stringWithFormat:@"%ld:%ld",hour,min];
         f.briefInfo = @"中国ETC服务平台正式上线运营";
-        f.detailInfo = @"中国ETC服务平台于8月18日正式上线提供服务，车主可通过国务院客户端小程序ETC服务专区或交通运输部官方微信ETC服务平台免费在线申办ETC。";
-        f.showInfo = @"";
-        f.foldImageName = @"today_unfold";
+        f.detailInfo = @"中国ETC服务平台于8月申办ETC。";
         [rlt addObject:f];
     }
-    NSArray *tmp = [self.dataManager orderedByTimeWithDataSource:rlt];
-    
-    NSLog(@"\n 排序前 ==================== \n");
     [self printWithDta:rlt];
-    NSLog(@"\n 排序后 ==================== \n");
-    [self printWithDta:tmp];
-    return tmp;
+    return [self.dataManager orderedByTimeWithDataSource:rlt];
 }
+
 
 - (void)printWithDta:(NSArray *)data {
     if (data) {
+        NSLog(@" \n ================== 备忘录事项 \n ");
         for (NSInteger cou = 0; cou < data.count; cou ++) {
             TodayNoteModel *f = data[cou];
-            NSLog(@"%@",f.time);
+            NSLog(@"%@ - %@",f.time,f.itemID);
         }
     }
 }

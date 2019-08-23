@@ -20,19 +20,20 @@
      */
     NSMutableArray *rlt= [NSMutableArray new];
     if (dataSource) {
-        
-        for (NSInteger cou = 0; cou < dataSource.count; cou ++) {
+        [rlt addObjectsFromArray:dataSource];
+        for (NSInteger cou = 0; cou < rlt.count; cou ++) {
             
-            TodayNoteModel *f   = dataSource[cou];
-            NSString *f_time    = f.time;
-            TodayNoteModel *min = f;
+            NSInteger      min_location = cou;
+            TodayNoteModel *min_model   = rlt[min_location];
+            NSString       *min_time    = min_model.time;
             
             
-            for (NSInteger next = cou+1; next < dataSource.count; next ++) {
-                TodayNoteModel *n   = dataSource[next];
-                NSString *n_time    = n.time;
+            // 查找当前余下数据项中的最小值
+            for (NSInteger next = cou+1; next < rlt.count; next ++) {
+                TodayNoteModel *n_model   = rlt[next];
+                NSString *n_time          = n_model.time;
                 
-                NSArray *f_arr = [f_time componentsSeparatedByString:@":"];
+                NSArray *f_arr = [min_time componentsSeparatedByString:@":"];
                 NSArray *n_arr = [n_time componentsSeparatedByString:@":"];
                 
                 NSString *f_arr_first = [f_arr firstObject];
@@ -40,30 +41,31 @@
                 
                 NSString *n_arr_first = [n_arr firstObject];
                 NSString *n_arr_last = [n_arr lastObject];
-                
+
                 if (f_arr_first.integerValue < n_arr_first.integerValue) {
-                    min = f;
+                    
                 }else if (f_arr_first.integerValue > n_arr_first.integerValue){
-                    min = n;
+                    min_location = next;
                 }else {
                     if (f_arr_last.integerValue < n_arr_last.integerValue) {
-                        min = f;
+                        
                     }else if (f_arr_last.integerValue > n_arr_last.integerValue){
-                        min = n;
+                        min_location = next;
                     }else{
-                        min = f;
+
                     }
                 }
                 
+                min_model = rlt[min_location];
+                min_time    = min_model.time;
             }
-            
-            [rlt addObject:min];
-            
+            TodayNoteModel *tmp = rlt[cou];
+            [rlt replaceObjectAtIndex:cou withObject:min_model];
+            [rlt replaceObjectAtIndex:min_location withObject:tmp];
         }
         
     }
     return rlt;
 }
-
 
 @end

@@ -141,8 +141,7 @@
 - (void)clickEvent:(UIButton *)btn {
     if (btn.tag == TodayNoteCellEventTypeFold) {
         if (self.foldEventBlock) {
-            NSString *showTxt = self.model.showInfo;
-            self.foldEventBlock(showTxt);
+            self.foldEventBlock(@"");
         }
     }else if (btn.tag == TodayNoteCellEventTypeEdit){
         if (self.editEventBlock) {
@@ -161,11 +160,17 @@
         _model = model;
         self.themLabel.text = model.time;
         self.briefLabel.text = model.briefInfo;
-        self.detailLabel.text = model.showInfo;
+        if (model.foldStatus) {
+            [self.unfoldButton setTitle:@"展开" forState:UIControlStateNormal];
+            [self.unfoldButton setImage:[UIImage imageNamed:@"today_unfold"] forState:UIControlStateNormal];
+            self.detailLabel.text = @"";
+        }else {
+            [self.unfoldButton setTitle:@"折叠" forState:UIControlStateNormal];
+            [self.unfoldButton setImage:[UIImage imageNamed:@"today_fold"] forState:UIControlStateNormal];
+            self.detailLabel.text = model.detailInfo;
+        }
         self.detailLabel.backgroundColor = [UIAdapter normalBackgroudColorGray];
         self.blockImageV.image = [UIImage imageNamed:@"today_note_mark"];
-        [self.unfoldButton setTitle:@"展开" forState:UIControlStateNormal];
-        [self.unfoldButton setImage:[UIImage imageNamed:model.foldImageName] forState:UIControlStateNormal];
         [self.editButton setImage:[UIImage imageNamed:@"today_note_edit"] forState:UIControlStateNormal];
         [self.deleteButton setImage:[UIImage imageNamed:@"today_note_delete"] forState:UIControlStateNormal];
     }

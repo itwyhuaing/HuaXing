@@ -14,9 +14,16 @@
 {
     self = [super init];
     if (self) {
-        _foldImageName = @"today_unfold";
+        self.foldStatus = TRUE;
+        self.itemID = [HXUtil md5HexDigest:@""];
     }
     return self;
+}
+
+
+-(void)setTime:(NSString *)time {
+    _time = time;
+    _itemID = [HXUtil md5HexDigest:time];
 }
 
 @end

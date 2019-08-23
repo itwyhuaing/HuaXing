@@ -4,6 +4,7 @@ target "HuaXing" do
   pod 'SDAutoLayout', '~> 2.1.8'
   pod 'CYLTabBarController', '~> 1.10.0'
   pod 'TZImagePickerController', '~> 3.2.1'
+  pod 'MJExtension', '~> 3.1.0'
   
 #  友盟
   pod 'UMCCommon'

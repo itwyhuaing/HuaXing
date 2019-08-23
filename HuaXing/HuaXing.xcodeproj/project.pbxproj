@@ -66,7 +66,6 @@
 		26E0B13C22EAE62E005BE40D /* CourseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B12F22EAE62E005BE40D /* CourseHeaderView.m */; };
 		26E0B13D22EAE62E005BE40D /* CourseConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B13322EAE62E005BE40D /* CourseConfigView.m */; };
 		26E0B13E22EAE62E005BE40D /* CourseTimeInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B13422EAE62E005BE40D /* CourseTimeInfoCell.m */; };
-		26E0B14122EAE684005BE40D /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0B14022EAE684005BE40D /* TestVC.m */; };
 		26EEACB622F7D39D00D8D079 /* JXFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACB522F7D39D00D8D079 /* JXFileManager.m */; };
 		26EEACBA22F7D80D00D8D079 /* BaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACB922F7D80D00D8D079 /* BaseDataModel.m */; };
 		26EEACC322F8307C00D8D079 /* HXPickViewToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EEACBE22F8307C00D8D079 /* HXPickViewToolBar.m */; };
@@ -230,8 +229,6 @@
 		26E0B13222EAE62E005BE40D /* CourseHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseHeaderView.h; sourceTree = "<group>"; };
 		26E0B13322EAE62E005BE40D /* CourseConfigView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseConfigView.m; sourceTree = "<group>"; };
 		26E0B13422EAE62E005BE40D /* CourseTimeInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseTimeInfoCell.m; sourceTree = "<group>"; };
-		26E0B13F22EAE684005BE40D /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
-		26E0B14022EAE684005BE40D /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		26EEACB422F7D39D00D8D079 /* JXFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXFileManager.h; sourceTree = "<group>"; };
 		26EEACB522F7D39D00D8D079 /* JXFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXFileManager.m; sourceTree = "<group>"; };
 		26EEACB822F7D80D00D8D079 /* BaseDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDataModel.h; sourceTree = "<group>"; };
@@ -682,8 +679,6 @@
 			children = (
 				26E0B12822EAE62E005BE40D /* CourseGridVC.h */,
 				26E0B12A22EAE62E005BE40D /* CourseGridVC.m */,
-				26E0B13F22EAE684005BE40D /* TestVC.h */,
-				26E0B14022EAE684005BE40D /* TestVC.m */,
 				2650AFBF22F2F983006C7784 /* AddCourseVC.h */,
 				2650AFC022F2F983006C7784 /* AddCourseVC.m */,
 			);
@@ -1146,7 +1141,6 @@
 			files = (
 				2694734E230BE1DB00F3C20E /* HXTableCommonCell.m in Sources */,
 				2650AFCE22F42F08006C7784 /* AddCourseInputCell.m in Sources */,
-				26E0B14122EAE684005BE40D /* TestVC.m in Sources */,
 				26EEACCF22F951A500D8D079 /* JXDateManager.m in Sources */,
 				2617CF0E230169B9005F4558 /* HXToast.m in Sources */,
 				26947365230BE6B700F3C20E /* AddNoteView.m in Sources */,
