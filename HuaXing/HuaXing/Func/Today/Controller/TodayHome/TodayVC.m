@@ -31,7 +31,7 @@
     [super viewDidLoad];
     [self addOtherSubViews];
     //[self createRandomEvents]; 可用来处理节日
-    self.dataSource = [self generateData];
+    //self.dataSource = [self generateData];
     [self.dataManager orderedByTimeWithDataSource:self.dataSource];
 }
 

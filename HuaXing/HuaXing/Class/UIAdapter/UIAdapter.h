@@ -183,21 +183,21 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)device5_5Inch;
 
 /**
-    5.8     1125×2436({375,812})       @3x        5.8                       iPhoneX/iPhoneXS
+    5.8     1125×2436({375,812})       @3x        5.8                       iPhoneX/iPhoneXS、iPhone 11 Pro、
  
  @return 5.8 inch
  */
 + (BOOL)device5_8Inch;
 
 /**
-    6.1 828x1792({414,896})         @2x                             iPhoneXR
+    6.1 828x1792({414,896})         @2x                             iPhoneXR、iPhone 11、
  
  @return    6.1 inch
  */
 + (BOOL)device6_1Inch;
 
 /**
-    6.5     1242x2688({414, 896})        @3x                    iPhoneX/S  Max
+    6.5     1242x2688({414, 896})        @3x                    iPhoneX/S  Max、iPhone 11 Pro Max
  
  @return    6.5 inch
  */
@@ -208,9 +208,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  4.7         750×1334(375 * 667)       @2x         Retina4.7                 iPhone6/6s/7/7s/8/8s
  5.5        1242×2208(414 * 736)      @3x        Retina 5.5                 iPhone6P/iPhone7P/iPhone8P
- 5.8        1125×2436(375 * 812)      @3x        iPhone X/ XS            iPhoneX/iPhoneXS
- 6.1        828x1792(414 * 896)       @2x        iPhoneXR                   iPhoneXR
- 6.5        1242x2688(414 * 896)      @3x        iPhoneXMax             iPhoneX Max
+ 5.8        1125×2436(375 * 812)      @3x        iPhone X/ XS            iPhoneX/iPhoneXS/iPhone 11 Pro
+ 6.1        828x1792(414 * 896)       @2x        iPhoneXR                   iPhoneXR/iPhone 11
+ 6.5        1242x2688(414 * 896)      @3x        iPhoneXMax             iPhoneX Max/iPhone 11 Pro Max
  */
 
 @end
