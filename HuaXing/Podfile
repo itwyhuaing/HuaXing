@@ -1,6 +1,7 @@
 platform :ios,'9.0'
 target "HuaXing" do
 #  pod 'MBProgressHUD', '~> 1.1.0'
+  pod 'Masonry', '~> 1.1.0'
   pod 'SDAutoLayout', '~> 2.1.8'
   pod 'CYLTabBarController', '~> 1.10.0'
   pod 'TZImagePickerController', '~> 3.2.1'

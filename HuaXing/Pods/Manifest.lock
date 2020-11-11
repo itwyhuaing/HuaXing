@@ -1,5 +1,6 @@
 PODS:
   - CYLTabBarController (1.10.0)
+  - Masonry (1.1.0)
   - MJExtension (3.1.0)
   - SDAutoLayout (2.1.9)
   - TZImagePickerController (3.2.1)
@@ -20,6 +21,7 @@ PODS:
 
 DEPENDENCIES:
   - CYLTabBarController (~> 1.10.0)
+  - Masonry (~> 1.1.0)
   - MJExtension (~> 3.1.0)
   - SDAutoLayout (~> 2.1.8)
   - TZImagePickerController (~> 3.2.1)
@@ -31,18 +33,21 @@ DEPENDENCIES:
   - UMCShare/UI
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - CYLTabBarController
     - MJExtension
-    - SDAutoLayout
     - TZImagePickerController
     - UMCCommon
     - UMCCommonLog
     - UMCSecurityPlugins
     - UMCShare
+  trunk:
+    - Masonry
+    - SDAutoLayout
 
 SPEC CHECKSUMS:
   CYLTabBarController: 2de9a4c26f50d33574398becf8e7b0aaed794240
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 6b69b3bef2864fd550ce1a184eda219e321209d2
   SDAutoLayout: 6b6f4db0d009dfc46cef14ef710dbb164e86616c
   TZImagePickerController: bf4c57b98d8707fce41ea6be872414a71c7a8c9d
@@ -51,6 +56,6 @@ SPEC CHECKSUMS:
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   UMCShare: e0cef55c0fd6051254c8cda1d0630eb578b27bad
 
-PODFILE CHECKSUM: 6325141b648235c92faf9ea79a4d0e5135c81ded
+PODFILE CHECKSUM: 4d0a8c32cc2253a1d803485632195f2c1cef5036
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.9.3
